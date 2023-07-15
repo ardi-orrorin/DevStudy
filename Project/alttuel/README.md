@@ -9,7 +9,7 @@ Backend Framwork : SpringBoot
 Frontend : HTML, Javascript, CSS  
 Frontend WebFramework : Svelte, Bootstrap  
 Server : Nginx  
-other : Docker  
+Other : Docker  
 
 <br>
 
@@ -25,7 +25,7 @@ other : Docker
 
 
 
-### [주요 코드(크롤링) - 비동기 크롤링](https://github.com/yoosc89/web-svlete-alttuel/blob/master/crawlling/start.py) <- Link Github Repository
+## [주요 코드(크롤링) - 비동기 크롤링](https://github.com/yoosc89/web-svlete-alttuel/blob/master/crawlling/start.py) <- Link Github Repository
 ![](images/02.jpg)
  
  
