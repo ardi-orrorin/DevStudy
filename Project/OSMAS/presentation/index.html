@@ -31,7 +31,7 @@
 
 			.grid-col2>div:first-child>h1{
 				text-align: right;
-				font-size: 4vw;
+				font-size: 3.5vw;
 			}
 			.grid-col2>div:first-child>h1:last-child{
 				text-align: right;
@@ -40,7 +40,7 @@
 
 			.grid-col2>div:last-child{
 				text-align: left;
-				font-size: 0.8vw;
+				font-size: 0.7vw;
 			}
 
 			.grid-col2>div:last-child>h1{
@@ -178,8 +178,10 @@
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
 			Reveal.initialize({
-				hash: true,
-
+				maxScale : 1,
+				width : '70%',
+				center : true,
+				
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
