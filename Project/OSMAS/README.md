@@ -1,7 +1,18 @@
-# [OSMAS PROJECT(Comming Soon)](https://github.com/i-DLE1/OSMASbySpringBoot)
-
+# [OSMAS PROJECT](https://github.com/i-DLE1/OSMASbySpringBoot) <-Link Github Repository
 
 ### Other Size, Main Size (기타 사이즈, 우린에겐 메인사이즈)
+
+<br>
+
+# 기술 스택
+DB : Oracle
+Backend Leanguage : JAVA  
+Backend FrameWork : Spring Boot, MyBatis  
+Frontend : HTML, JavaScript, CSS  
+Frontend Library : jQeury, Thyemleaf  
+
+
+
 <br>
 
 # 프로젝트 참여 인원(6명)
@@ -11,7 +22,7 @@
 
 <br>
 
-# Introduce
+# 프로젝트 개요
 
 신체 구조가 매우 왜소하거나 매우 크거나, 또는 장애를 가진 사람들은 일반적인 시중 의류에서 자신에게 맞는 크기의 옷을 찾는 데 어려움을 겪을 수 있습니다.
 
