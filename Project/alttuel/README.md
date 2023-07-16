@@ -9,7 +9,8 @@ Backend Framwork : SpringBoot
 Frontend : HTML, Javascript, CSS  
 Frontend WebFramework : Svelte, Bootstrap  
 Server : Nginx  
-Other : Docker  
+Other : Docker
+IDE : VScode  
 
 <br>
 

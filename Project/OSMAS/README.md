@@ -4,13 +4,18 @@
 
 <br>
 
+# 프레젠테이션
+Link : [Reveal-JS](/Project//OSMAS//presentation/index.html)
+
+<br>
+
 # 기술 스택
 DB : Oracle
 Backend Leanguage : JAVA  
 Backend FrameWork : Spring Boot, MyBatis  
 Frontend : HTML, JavaScript, CSS  
 Frontend Library : jQeury, Thyemleaf  
-
+IDE : InteliJ
 
 
 <br>
