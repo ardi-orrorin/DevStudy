@@ -5,7 +5,7 @@
 <br>
 
 # 프레젠테이션
-Link : [Reveal-JS](/Project//OSMAS//presentation/index.html)
+Link : [Reveal-JS](https://yoosc89.github.io/study/Project/OSMAS/presentation/)
 
 <br>
 
@@ -15,7 +15,7 @@ Backend Leanguage : JAVA
 Backend FrameWork : Spring Boot, MyBatis  
 Frontend : HTML, JavaScript, CSS  
 Frontend Library : jQeury, Thyemleaf  
-IDE : InteliJ
+IDE : IntelliJ
 
 
 <br>
@@ -24,6 +24,24 @@ IDE : InteliJ
 ### 사용자 페이지 2명 - 허**, 홍**
 ### 판매자 페이지 2명 - 유**, 여** 
 ### ADMIN 페이지 2명 - 김**, 정**
+
+<br>
+
+# 담당 내용(판매자 영역)
+1. 펀딩 등록 및 수정
+   1. 펀딩 정보 등록
+   2. 상세 정도 등록
+   3. FAQ 등록
+   4. 새소식 등록  
+2. 펀딩 관리 페이지
+   1. 펀딩 취소
+   2. 펀딩 통계
+   3. 등록된 펀딩 리스트 조회 및 검색
+   4. Q/A 리스트 조회 및 답변
+3. 몌인 페이지 펀딩 리스트 출력
+   1. 카테고리별 조회
+   2. 오픈예정 조회
+   3. 오늘오픈 조회
 
 <br>
 
