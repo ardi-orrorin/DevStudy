@@ -14,7 +14,7 @@ DB : Oracle
 Backend Leanguage : JAVA  
 Backend FrameWork : Spring Boot, MyBatis  
 Frontend : HTML, JavaScript, CSS  
-Frontend Library : jQeury, Thyemleaf  
+Frontend Library : jQeury, Thyemleaf, Sunediter  
 IDE : IntelliJ
 
 
@@ -86,3 +86,11 @@ IDE : IntelliJ
 ![](./presentation/images/figma_full.jpg)
 
 <br>
+
+# DB 모델링
+![](./presentation/images/DB.jpg)
+
+
+# 실제 구현 화면
+![](./presentation/images/01.jpg)
+![](./presentation/images/02.jpg)
