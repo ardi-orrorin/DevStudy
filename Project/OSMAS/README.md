@@ -5,7 +5,7 @@
 <br>
 
 # 프레젠테이션
-Link : [Reveal-JS](https://yoosc89.github.io/study/Project/OSMAS/presentation/)
+Link : [Reveal-JS](https://yoosc89.github.io/DevStudy/Project/OSMAS/presentation/)
 
 <br>
 
