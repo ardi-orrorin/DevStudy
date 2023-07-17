@@ -11,11 +11,11 @@ Link : [Reveal-JS](https://yoosc89.github.io/study/Project/OSMAS/presentation/)
 
 # 기술 스택
 DB : Oracle
-Backend Leanguage : JAVA  
+Language : JAVA, JavaScript  
+Markup Language : HTML, CSS  
 Backend FrameWork : Spring Boot, MyBatis  
-Frontend : HTML, JavaScript, CSS  
 Frontend Library : jQeury, Thyemleaf, Sunediter  
-IDE : IntelliJ
+IDE : IntelliJ, VScode, DA#5
 
 
 <br>
@@ -65,6 +65,9 @@ IDE : IntelliJ
 
 <br>
 
+## 주요 기능 분석(담당영역)
+![](presentation/images/func.jpg)
+
 ## 요구 사항 멩세서 Notion (일부)
 ![](./presentation/images/reSpecification.jpg)
 
@@ -90,7 +93,11 @@ IDE : IntelliJ
 # DB 모델링
 ![](./presentation/images/DB.jpg)
 
+# DB 작명
+![](presentation/images/DBName.jpg)
 
 # 실제 구현 화면
 ![](./presentation/images/01.jpg)
 ![](./presentation/images/02.jpg)
+
+# 인상깊은 코드들
