@@ -15,9 +15,21 @@
 DB : PogreSQL  
 Language : Python, javaScript  
 Makrup Language : CSS  
-Backend Framework : FastApi  
+Backend Framework : Fastapi  
 Front Framework : Svelte  
 IDE : Vscode  
 Platfrom Software : Docker  
 
 <br>
+
+# 구현 화면
+고객 정보 등록
+
+![](./images/02.jpg)
+
+고객 상담 내역 조회
+![](./images/01.jpg)
+
+고객 리스트 조히
+![](./images/03.jpg)
+![](./images/04.jpg)
