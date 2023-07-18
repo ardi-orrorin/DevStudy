@@ -102,7 +102,7 @@ IDE : IntelliJ, VScode, DA#5
 
 # 인상깊은 혹은 주요 코드들
 
-## [SQL 프로젝트 조회 쿼리문](ttps://github.com/i-DLE1/OSMASbySpringBoot/blob/6addba45050a01c39bc37c697712c0121bf0f36c/src/main/resources/mybatis/mapper/seller/ProjectMapper.xml#L142-L207) <-Link
+## [SQL 프로젝트 조회 쿼리문](https://github.com/i-DLE1/OSMASbySpringBoot/blob/6addba45050a01c39bc37c697712c0121bf0f36c/src/main/resources/mybatis/mapper/seller/ProjectMapper.xml#L142-L207) <-Link
 ![](./presentation/images/code3.jpg)
 
 ## [Controller](https://github.com/i-DLE1/OSMASbySpringBoot/blob/6addba45050a01c39bc37c697712c0121bf0f36c/src/main/java/com/idle/osmas/seller/controller/SaleListController.java#L54-L144) <- Link
