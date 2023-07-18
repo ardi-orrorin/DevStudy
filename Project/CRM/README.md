@@ -12,7 +12,7 @@
 <br>
 
 # 개발 스텍
-DB : PogreSQL  
+DB : Mysql, MariaDB
 Language : Python, javaScript  
 Makrup Language : CSS  
 Backend Framework : Fastapi  

@@ -3,7 +3,7 @@
 <br>
 
 # 기술 스텍
-DB : PogreSQL  
+DB : PostgreSQL  
 Backend : Java, Python  
 Backend Framwork : SpringBoot  
 Frontend : HTML, Javascript, CSS  
