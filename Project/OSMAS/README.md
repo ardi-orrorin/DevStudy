@@ -100,4 +100,14 @@ IDE : IntelliJ, VScode, DA#5
 ![](./presentation/images/01.jpg)
 ![](./presentation/images/02.jpg)
 
-# 인상깊은 코드들
+# 인상깊은 혹은 주요 코드들
+
+## [SQL 프로젝트 조회 쿼리문](ttps://github.com/i-DLE1/OSMASbySpringBoot/blob/6addba45050a01c39bc37c697712c0121bf0f36c/src/main/resources/mybatis/mapper/seller/ProjectMapper.xml#L142-L207) <-Link
+![](./presentation/images/code3.jpg)
+
+## [Controller](https://github.com/i-DLE1/OSMASbySpringBoot/blob/6addba45050a01c39bc37c697712c0121bf0f36c/src/main/java/com/idle/osmas/seller/controller/SaleListController.java#L54-L144) <- Link
+![](./presentation/images/code1.jpg)
+![](./presentation/images/code2.jpg)
+
+## [Front - Javascript](https://github.com/i-DLE1/OSMASbySpringBoot/blob/6addba45050a01c39bc37c697712c0121bf0f36c/src/main/resources/static/js/seller/projectListView.js#L139-L172) <-Link
+![](./presentation/images/code04.jpg)
