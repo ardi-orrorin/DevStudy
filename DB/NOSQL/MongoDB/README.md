@@ -1,6 +1,23 @@
 # 몽고 DB
 
+
 # MongoDB Docker 설치
+
+## MACOSX - VERSION
+<pre>
+<code>
+
+$ docker pull mongo
+$ docker run --name mongodb-container -v ~/data:/data/db -d -p 27017:27017 mongo
+
+// mongoDB 기본 포트 27017
+
+// 컨테이너 접속 후 
+
+$ mongo
+
+</code>
+</pre>
 
 # 개념
 
