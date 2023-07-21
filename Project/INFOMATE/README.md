@@ -1,11 +1,11 @@
-# [OSMAS PROJECT](https://github.com/i-DLE1/OSMASbySpringBoot) <-Link Github Repository
+# [INFOMATE PROJECT](https://github.com/i-DLE1/OSMASbySpringBoot) <-Link Github Repository
 
-### 제목 이유
+### INFOMATE 프로젝트 설명
 
 <br>
 
 # 프레젠테이션
-Link : [Reveal-JS]()
+Link : [Reveal-JS](https://yoosc89.github.io/DevStudy/Project/INFOMATE/presentation/)
 
 <br>
 
@@ -13,15 +13,22 @@ Link : [Reveal-JS]()
 DB : Oracle
 Language : JAVA, JavaScript  
 Markup Language : HTML, CSS  
-Backend FrameWork : Spring Boot, MyBatis  
-Frontend Library : jQeury, Thyemleaf, Sunediter  
-IDE : IntelliJ, VScode, DA#5
+Backend FrameWork : Spring Boot  
+FrontFramework : React  
+Frontend Library : Thyemleaf, Sunediter,  
+IDE : IntelliJ  
+OtherSoftware : DA#5
 
 
 <br>
 
 # 프로젝트 참여 인원(6명)
-### 캘린더 1명 - 유**
+### 1. 스케쥴관리(캘린더) - 유**
+### 2. 회원정보 - 송**
+### 3. 전자결재 - 주**
+### 4. 쪽지/주소록 관리 - 이**
+### 5. 조직도-인사관리 - 장**
+### 6. 근태 관리,게시판 - 김**
 
 
 <br>
@@ -79,10 +86,10 @@ IDE : IntelliJ, VScode, DA#5
 
 # 인상깊은 혹은 주요 코드들
 
-## [SQL 프로젝트 조회 쿼리문]() <-Link
+## [SQL 프로젝트 조회 쿼리문]() <- Link
 
 
 ## [Controller]() <- Link
 
 
-## [Front - Javascript]()
+## [Front - Javascript]() <- Link
