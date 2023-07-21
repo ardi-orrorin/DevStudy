@@ -6,7 +6,7 @@ Project 각 폴더에 해당하는 레포지토리로 연결하는 링크가 포
 
 
 # ProjectList
-1. OSMAS(Punding Site)(팀프로젝트) 개요 : [Link](/Project/OSMAS/)
-2. INFOMATE(OFFICE GROUPWARE) 개요 : [link](/Project/INFOMATE/) 
-3. Alttuel(Crawlling Site)(개인프로젝트) 개요 : [Link](/Project/alttuel/)
-4. CRM(CRM)(개인프로젝트) 개요 : [Link](/Project/CRM/)
+1. OSMAS(Punding Site)(팀프로젝트) 개요 : [Link](./Project/OSMAS/)
+2. INFOMATE(OFFICE GROUPWARE) 개요 : [link](./Project/INFOMATE/) 
+3. Alttuel(Crawlling Site)(개인프로젝트) 개요 : [Link](./Project/alttuel/)
+4. CRM(CRM)(개인프로젝트) 개요 : [Link](./Project/CRM/)
