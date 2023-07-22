@@ -16,3 +16,5 @@ Project 각 폴더에 해당하는 레포지토리로 연결하는 링크가 포
 # Study History
 2023-07-21 [MongoDB](./DB//NOSQL/MongoDB/) 기본 개념 및 구조, 컬렉력 및 DB 조회 및 insert 명령어 체험  
 2023-07-22 [ShellScript](./Langauge/ShellScript/) 파일생성 스크립트 인식
+
+문제 해결 테스트
