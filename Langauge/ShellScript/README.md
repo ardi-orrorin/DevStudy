@@ -1,9 +1,4 @@
 # Shell Script
 
-### sh시작
-<pre>
-<code>
-#!/bin/sh
-echo "Hello, World"
-</code>
-</pre>
+# [01 Tutorial](./01.Tutorial/)
+#### 스크립트 시작 및 선언
