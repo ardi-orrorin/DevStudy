@@ -40,12 +40,12 @@ db.컬렉션01.find({ "Key": "Value" }) <- 키-값을 입력해서 조회할 수
 
 ## Collection
 
-
-
-
 ### Document들이 Collection내부에 위치하고 있으며, RDMS의 table과 비슷하지만 RDMS와 달리 schema를 갖고 있지 않다.
 
-show collections <-으로 컬렉션 목록 조회
+show collections <-으로 컬렉션 document 포함 목록 조회
+db.collection.getCollectionNames() <- 컬렉션 이름만 조회
+db.collection.find()
+db.collection.find(name, option)  
 
 ## Database
 ### Database는 Collection들의 물리적인 컨테이너 저장소.
