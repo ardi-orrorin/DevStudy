@@ -25,6 +25,9 @@ Snake_Case에서, 각 단어의 맨 앞글자를 대문자로 표기하는 것�
 - **spinal_case**  
 snake_case에서, 각 단어의 맨 앞글자를 소문자로 표기하는 것을 뜻합니다.
 
+- **Kebab-Case**
+각 단어 사이에 '-' 하이픈으로 구분하는 표기법이다.
+
 ## Hungarian Notation
 변수의 자료형을 알 수 있도록 자료형을 명시  
 int i → i_inputA

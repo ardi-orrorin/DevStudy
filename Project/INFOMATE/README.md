@@ -15,7 +15,7 @@ Language : JAVA, JavaScript
 Markup Language : HTML, CSS  
 Backend FrameWork : Spring Boot  
 FrontFramework : React  
-Frontend Library : Thyemleaf, Sunediter,  
+Frontend Library : Sunediter,  
 IDE : IntelliJ  
 OtherSoftware : DA#5
 
