@@ -65,8 +65,8 @@ IDE : IntelliJ, VScode, DA#5
 
 <br>
 
-## 주요 기능 분석(담당영역)
-![](presentation/images/func.jpg)
+<!-- ## 주요 기능 분석(담당영역) -->
+<!-- ![](presentation/images/func.jpg) -->
 
 ## 요구 사항 멩세서 Notion (일부)
 ![](./presentation/images/reSpecification.jpg)
@@ -93,15 +93,16 @@ IDE : IntelliJ, VScode, DA#5
 # DB 모델링
 ![](./presentation/images/DB.jpg)
 
-# DB 작명
-![](presentation/images/DBName.jpg)
+<!-- # DB 작명 -->
+<!-- ![](presentation/images/DBName.jpg) -->
 
 # 실제 구현 화면
-![](./presentation/images/01.jpg)
+![](./presentation/images/01.jpg) // 프로세서 구현 리뷰
 ![](./presentation/images/02.jpg)
 
 # 인상깊은 혹은 주요 코드들
-
+<!-- 코드 리뷰 내용 추가 사용이유, 논리적으로 설명 -->
+<!-- 코드 리뷰 내용 비중이 적음 내용 추가 예정  -->
 ## [SQL 프로젝트 조회 쿼리문](https://github.com/i-DLE1/OSMASbySpringBoot/blob/6addba45050a01c39bc37c697712c0121bf0f36c/src/main/resources/mybatis/mapper/seller/ProjectMapper.xml#L142-L207) <-Link
 ![](./presentation/images/code3.jpg)
 

@@ -32,6 +32,14 @@ db.book.insert({
     "date" : "2023-07-23",
 })
 
+// 다중 document insert
+db.book.insert([{
+    "name" : "책1",
+    "amount" : 100
+},{
+    "name" : "책2",
+    "amount" : 200
+}])
 
 
 // db.book.find() // 컬렉내 document 조회
