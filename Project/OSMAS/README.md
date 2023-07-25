@@ -112,3 +112,9 @@ IDE : IntelliJ, VScode, DA#5
 
 ## [Front - Javascript](https://github.com/i-DLE1/OSMASbySpringBoot/blob/6addba45050a01c39bc37c697712c0121bf0f36c/src/main/resources/static/js/seller/projectListView.js#L139-L172) <-Link
 ![](./presentation/images/code04.jpg)
+
+## [프로젝트 삭제 쿼리문](https://github.com/i-DLE1/OSMASbySpringBoot/blob/6addba45050a01c39bc37c697712c0121bf0f36c/src/main/resources/mybatis/mapper/seller/ProjectMapper.xml#L337-L352)
+![](./presentation/images/code06.jpg)
+
+## [Controller](https://github.com/i-DLE1/OSMASbySpringBoot/blob/6addba45050a01c39bc37c697712c0121bf0f36c/src/main/java/com/idle/osmas/seller/controller/SellerController.java#L289-L318)
+![](./presentation/images/code05.jpg)
