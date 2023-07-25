@@ -101,8 +101,6 @@ IDE : IntelliJ, VScode, DA#5
 ![](./presentation/images/02.jpg)
 
 # 인상깊은 혹은 주요 코드들
-<!-- 코드 리뷰 내용 추가 사용이유, 논리적으로 설명 -->
-<!-- 코드 리뷰 내용 비중이 적음 내용 추가 예정  -->
 ## [SQL 프로젝트 조회 쿼리문](https://github.com/i-DLE1/OSMASbySpringBoot/blob/6addba45050a01c39bc37c697712c0121bf0f36c/src/main/resources/mybatis/mapper/seller/ProjectMapper.xml#L142-L207) <-Link
 ![](./presentation/images/code3.jpg)
 
@@ -118,3 +116,11 @@ IDE : IntelliJ, VScode, DA#5
 
 ## [Controller](https://github.com/i-DLE1/OSMASbySpringBoot/blob/6addba45050a01c39bc37c697712c0121bf0f36c/src/main/java/com/idle/osmas/seller/controller/SellerController.java#L289-L318)
 ![](./presentation/images/code05.jpg)
+
+
+## [프로젝트 상품 등록 쿼리문](https://github.com/i-DLE1/OSMASbySpringBoot/blob/6addba45050a01c39bc37c697712c0121bf0f36c/src/main/resources/mybatis/mapper/seller/ProductMapper.xml#L109-L129)
+![](./presentation/images/code07.jpg)
+
+## [Controller](https://github.com/i-DLE1/OSMASbySpringBoot/blob/6addba45050a01c39bc37c697712c0121bf0f36c/src/main/java/com/idle/osmas/seller/controller/RegistProjectController.java#L335-L409)
+![](./presentation/images/code08.jpg)
+![](./presentation/images/code09.jpg)
