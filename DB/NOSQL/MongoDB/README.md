@@ -69,5 +69,20 @@ show dbs <- DB목록 조회
 6. 구분자 '-' , '_'를 사용하지 않아도 된다.
 
 
+## Regex Pattern
+1. **i(ignore case)** : 대소문자 구별 안함
+2. **m(multi line)** : 여러 줄
+3. **x** : 모든 공백 및 주석 무시
+4. **s** : 개행 문자 포함 
+5. **g(global)** : 문자열 내의 모든 패턴 검색
+6. **u(unicode)** : 유니코드 전체를 지원
+7. **y(sticky)** : 문자 내 특정 위치에서 검색을 진행 'sticky' 모드를 활성화
+
+
+## Meta Charactor
+![](./03_Document/regex.jpg)
+
+
 # 참고자료 및 링크
-### [Inpa-Dev](https://inpa.tistory.com/entry/MONGO-%F0%9F%93%9A-%EB%AA%BD%EA%B3%A0%EB%94%94%EB%B9%84-%EC%BF%BC%EB%A6%AC-%EC%A0%95%EB%A6%AC#%EC%BB%AC%EB%A0%89%EC%85%98_%EC%A1%B0%ED%9A%8C)
+### [1. MongoDB Homepage Manual Reference](https://www.mongodb.com/docs/manual/reference/)
+### [2. Inpa-Dev](https://inpa.tistory.com/entry/MONGO-%F0%9F%93%9A-%EB%AA%BD%EA%B3%A0%EB%94%94%EB%B9%84-%EC%BF%BC%EB%A6%AC-%EC%A0%95%EB%A6%AC#%EC%BB%AC%EB%A0%89%EC%85%98_%EC%A1%B0%ED%9A%8C)
