@@ -20,4 +20,4 @@ Project 각 폴더에 해당하는 레포지토리로 연결하는 링크가 포
 2023-07-24 [MongoDB](./DB//NOSQL/MongoDB/) 조건문  
 2023-07-24 [Kafka](./Platform/Kafka/) 카프카 개념  
 2023-07-25 [Kafka](./Platform/Kafka/) 카프카 프로듀서 개념
-2023-07-26 [MongoDB](./DB//NOSQL/MongoDB/) 정규표현식 패턴 및 사용 방법
+2023-07-26 [MongoDB](./DB//NOSQL/MongoDB/) 정규표현식 패턴 및 사용 방법, update 구문 사용 방법

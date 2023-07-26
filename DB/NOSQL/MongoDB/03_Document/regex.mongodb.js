@@ -18,8 +18,6 @@ db.book.find({"name" : {$regex: '^t', $options: 'im'}}) // 대소 문자 구분 
 db.book.find({"name" : {$regex : '12', $options : 'x'}})
 
 
-db.book.find()
 
-db.book.find({
-    $where : "this.name == 'abc'"
-})
+
+
