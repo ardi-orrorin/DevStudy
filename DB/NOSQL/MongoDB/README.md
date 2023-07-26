@@ -52,6 +52,23 @@ db.collection.find(name, option)
 show dbs <- DB목록 조회
 
 
+## DataType
+1. null {'x' : null}
+2. boolean {'x' : true}
+3. 숫자 {'x' : 3},{'x' : 3.14} // 64bit 부동소수점 수를 기본
+4. {'x' : NumberInt('3')}, {'x' : NumberLong('3')} 4byte, 8byte 정수는 NumberInt, NumberLong 클래스를 사용
+5. 문자열 {'x','footer'} 어떤 UTF-8 문자열이든 문자열형으로 표현가능
+6. 날짜 : 1970년 1월 1일부터 시간은 1/1000초 단위로 나타내며 64비트 정수로 날짜를 저장 표준시간대를 저장하지 않는다.
+   1. {'x' : new Date()}
+7. 정규표혆식 : 자바스크립트의 정규 표현식 문법을 사용할 수 있다.
+8. 배열 : 값의 set, list를 배열로 표현할 수 있다.
+   1. 정렬 연산(list, stack, quere)와 비정렬 연산(set)에 호환성 있게 사용가능하다.
+9.  inner Document {'x',{'foo' : 'bar'}}
+10. 객체 ID : {'x' : ObjectId()} document용 객체ID는 12바이트이다.
+11. 함수 : {'x' : funcgion(){/* ... */}} query와 document는 자바스크립츠 코드를 포함할 수 있다.
+12. 이진데이터 : 바이트 코드
+
+
 ## Naming Role
 ### Collection Naming
 1. 카멜케이스 혹은 소문자를 사용하되, 소문자 권장
