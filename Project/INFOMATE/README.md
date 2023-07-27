@@ -59,14 +59,12 @@ OtherSoftware : DA#5
 <br>
 
 ## UX / UI - FIGMA
+
+### 스케쥴 관리(캘린더)
 ![](./presentation/fimga.jpg)
 
-### 판매자 파트
-
-
-
 ### 전체 내용
-
+![](./presentation/figma_full.jpg)
 
 
 <br>
