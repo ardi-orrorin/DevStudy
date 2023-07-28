@@ -72,8 +72,19 @@ db.book.update({
     }
 })
 
+// $inc 증감 연산자
+db.book.updateOne({
+    "name" : {$eq : "책"}
+},{
+    $inc : {"amount" : -1}
+})
+
 db.book.findAndModify({
     query : { name : '책'},  // 찾을 document
     update : {$push : {seller : '홍길이'}}, // 변경할 값
     new : true  // 반환 시점 true : 수정 후, false : 수정 전
 })
+
+
+
+db.book.find()
