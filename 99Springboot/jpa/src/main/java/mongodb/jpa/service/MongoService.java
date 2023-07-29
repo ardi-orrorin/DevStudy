@@ -1,7 +1,7 @@
-package mongodb.service;
+package mongodb.jpa.service;
 
-import mongodb.dto.MongoDTO;
-import mongodb.repository.MongoRepository;
+import mongodb.jpa.dto.MongoDTO;
+import mongodb.jpa.repository.MongodbRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
@@ -10,11 +10,11 @@ import java.util.stream.Collectors;
 
 @Service
 public class MongoService {
-    private final MongoRepository mongoRepository;
+    private final MongodbRepository mongoRepository;
 
     private final ModelMapper modelMapper;
 
-    public MongoService(MongoRepository mongoRepository, ModelMapper modelMapper) {
+    public MongoService(MongodbRepository mongoRepository, ModelMapper modelMapper) {
         this.mongoRepository = mongoRepository;
         this.modelMapper = modelMapper;
     }

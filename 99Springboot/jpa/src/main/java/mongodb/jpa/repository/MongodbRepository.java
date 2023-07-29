@@ -1,10 +1,9 @@
 package mongodb.jpa.repository;
 
 import mongodb.jpa.entity.Mongo;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.mongodb.repository.MongoRepository;
 
 
-
-public interface MongosssRepository extends JpaRepository<Mongo, String> {
+public interface MongodbRepository extends MongoRepository<Mongo, String> {
 
 }

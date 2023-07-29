@@ -5,12 +5,12 @@
 */
 
 
-for(i = 0 ; i< 100000000; i++){
-    db.index.insertOne({
+for(i = 0 ; i< 1000; i++){
+    db.test1.insertOne({
         i : i,
         username : 'user'+ i,
         age : Math.floor(Math.random() * 100),
-        created : new Date() 
+        date : new Date() 
     })
 }
 
@@ -18,8 +18,8 @@ for(i = 0 ; i< 100000000; i++){
 db.index.find().explain()
 db.index.find().explain('executionStats')
 
-// index 생성 함수 username : true 의미
-// createIndex({필드:1 or true})
+// index 생성 함수 username : 오름차순 의미
+// createIndex({필드 : 1}) 1 오름차순, -1 내림차순
 db.index.createIndex({username : 1})
 
 
