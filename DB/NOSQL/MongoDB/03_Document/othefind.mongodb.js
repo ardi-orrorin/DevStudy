@@ -32,3 +32,8 @@ db.book.find().sort({"date":1})
 
 db.book.find({},{"_id":false, "name":true, "date" : true})
 db.book.find({},{"_id":0, "name":1, "date" : 1})
+
+
+db.book.find(function(e){
+    print(e)
+})
