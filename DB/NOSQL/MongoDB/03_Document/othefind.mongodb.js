@@ -4,10 +4,15 @@ db.book.find()
 // $where
 // $where 사용시 해당 collection 이라는 범위를 지정하기 위해 this를 사용한다.
 // find({$where : "this.name == 'abc'"})
+// find({$where : function(){}}) // 자바스크립트 함수형도 사용이 가능하다.
+
 db.book.find({
     $where : "this.name == 'abc'"
 })
 
+db.book.find({$where : function(){
+    if(this.name == '책') return true
+}}) 
 
 // 정렬 (sort)
 // sort({필드 : option })

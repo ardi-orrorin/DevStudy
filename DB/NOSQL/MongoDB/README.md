@@ -96,6 +96,22 @@ show dbs <- DB목록 조회
 7. **y(sticky)** : 문자 내 특정 위치에서 검색을 진행 'sticky' 모드를 활성화
 
 
+## 비교 순서
+데이텨형을 비교하는 위계구조(hierarchy)가 존재,
+1. min 최소값
+2. null
+3. 숫자(int, long, double, decimal)
+4. 문자열
+5. 객체/도큐맨트 (object / document)
+6. 배열
+7. 이진데이터
+8. 객체ID
+9. boolean
+10. date
+11. timestamp
+12. regex
+13. max 최대값
+
 ## Meta Charactor
 ![](./03_Document/regex.jpg)
 
