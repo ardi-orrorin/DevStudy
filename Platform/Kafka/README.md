@@ -1,5 +1,9 @@
 #  KAFKA - 카프카
 
+#### [HomePage](https://kafka.apache.org/)
+#### [Document](https://kafka.apache.org/documentation/)
+#### [Spring-boot](https://docs.spring.io/spring-kafka/docs/current/reference/html/#reference)
+
 ## 목차
 ### [1. BASE](./01Base/) - 카프카 기본 개념
 #### [1-1. 구성요소](./01Base/README.md#카프카를-구성하는-요소)
@@ -16,3 +20,4 @@
 
 
 ### [2. springboot](./99studyProject/02springboot/)
+#### [참고 사이트](https://happy-jjang-a.tistory.com/201)

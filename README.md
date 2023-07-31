@@ -21,5 +21,8 @@ Project 각 폴더에 해당하는 레포지토리로 연결하는 링크가 포
 2023-07-24 [Kafka](./Platform/Kafka/) 카프카 개념  
 2023-07-25 [Kafka](./Platform/Kafka/) 카프카 프로듀서 개념  
 2023-07-26 [MongoDB](./DB//NOSQL/MongoDB/) 정규표현식 패턴 및 사용 방법, update 구문 사용 방법  
-2023-07-28 [MongoDB](./DB//NOSQL/MongoDB/) update $inc 연산자 및 find 배열 스라이드 및 검색
-2023-07-29 [MongoDB](./DB//NOSQL/MongoDB/) cursor, $where function() 함수 사용 체험, limit, count, skip sort 공부ㄴ
+2023-07-28 [MongoDB](./DB//NOSQL/MongoDB/) update $inc 연산자 및 find 배열 스라이드 및 검색  
+2023-07-29 [MongoDB](./DB//NOSQL/MongoDB/) cursor, $where function() 함수 사용 체험, limit, count, skip sort 공부,Spring boot jpa를 이용한 mongoDB 연동  
+2023-07-30 [kafka](./Platform/Kafka/99studyProject/02springboot/) kafka Springboot 연동 기초
+
+
