@@ -22,3 +22,4 @@
 ### [2. springboot](./99studyProject/02springboot/)
 #### [참고 사이트](https://happy-jjang-a.tistory.com/201)
 #### [Json 직렬화 참고 사이트](https://yeon-kr.tistory.com/181)
+#### [springboot websocekt - stomp setting](https://spring.io/guides/gs/messaging-stomp-websocket/) 
