@@ -2,6 +2,8 @@ package com.kafka.init.dto;
 
 import lombok.*;
 
+import java.util.List;
+
 @ToString
 @Setter
 @Getter
@@ -13,4 +15,6 @@ public class UserDTO {
     private String userId;
 
     private String username;
+
+    private List<String> chatRoomList;
 }

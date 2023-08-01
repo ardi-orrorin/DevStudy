@@ -6,11 +6,13 @@ import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import org.apache.kafka.clients.admin.NewTopic;
 import org.springframework.context.event.EventListener;
+import org.springframework.kafka.annotation.KafkaHandler;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.support.SendResult;
 import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
+import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
 import org.springframework.messaging.simp.SimpMessageSendingOperations;
@@ -21,6 +23,7 @@ import org.springframework.web.socket.config.annotation.EnableWebSocketMessageBr
 import org.springframework.web.socket.messaging.SessionConnectEvent;
 import org.springframework.web.socket.messaging.SessionDisconnectEvent;
 
+import java.time.LocalDateTime;
 import java.util.concurrent.CompletableFuture;
 
 
@@ -44,18 +47,19 @@ public class GreetingController {
     }
 
     @MessageMapping("/message/{room}") // setApplicationDestinationPrefixes
-//    @SendTo("/sub/topic/{id}") // enableSimpleBroker
     public void message(@DestinationVariable String room, MessageDTO message){
         message.setRoom(room);
+        message.setSendingDate(LocalDateTime.now());
         System.out.println("message = " + message);
-        CompletableFuture<SendResult<String ,MessageDTO>> future =
-                kafkaTemplate.send(myTopic1.name(), message);
+//        CompletableFuture<SendResult<String ,MessageDTO>> future =
+        kafkaTemplate.send(myTopic1.name(), message);
+//        future.isCompletedExceptionally();
     }
 
+//    @SendTo("/sub/topic/{id}") // enableSimpleBroker
     @KafkaListener(topics = "topic01" ,groupId = "foo")
-    public void subMessage(MessageDTO messageDTO){
+    public void subMessage(@Payload MessageDTO messageDTO){
         System.out.println("messageDTO = " + messageDTO);
-
         simpMessageSendingOperations.convertAndSend("/sub/message/"+messageDTO.getRoom(),messageDTO);
     }
 

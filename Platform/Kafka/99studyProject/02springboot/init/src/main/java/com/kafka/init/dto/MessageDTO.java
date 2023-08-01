@@ -3,6 +3,7 @@ package com.kafka.init.dto;
 
 import lombok.*;
 
+import java.io.PipedReader;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -19,6 +20,8 @@ public class MessageDTO {
     private List<UserDTO> userList;
 
     private UserDTO sender;
+
+    private UserDTO receiver;
 
     private String message;
 

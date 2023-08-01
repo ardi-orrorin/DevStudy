@@ -26,7 +26,13 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 //                .setAllowedOrigins("*")
 //                .setAllowedOriginPatterns("*")
 //                .withSockJS();
-        registry.addEndpoint("/ws").setAllowedOrigins("*");
+        registry.addEndpoint("/ws")
+                .setAllowedOrigins("*");
+//                .withSockJS()
+//                .setStreamBytesLimit(512 * 1024)
+//                .setHttpMessageCacheSize(1000)
+//                .setDisconnectDelay(30 * 1000);
+
     }
 
     @Override
