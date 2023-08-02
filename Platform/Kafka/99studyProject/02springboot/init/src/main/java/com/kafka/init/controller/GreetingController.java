@@ -52,6 +52,12 @@ public class GreetingController {
 
     @MessageMapping("/message/{room}") // setApplicationDestinationPrefixes
     public void message(@DestinationVariable String room, MessageDTO message){
+
+        // 사용자 정보 인증
+        // 채팅방 구성원 인증
+        // 아니면 새로운 채팅방 생성
+        // 보내기
+
         message.setRoom(room);
         message.setSendingDate(LocalDateTime.now());
         System.out.println("message = " + message);

@@ -26,4 +26,5 @@ Project 각 폴더에 해당하는 레포지토리로 연결하는 링크가 포
 2023-07-30 [kafka](./Platform/Kafka/99studyProject/02springboot/init/) kafka Springboot 연동 기초  
 2023-07-31 [kafka](./Platform/Kafka/99studyProject/02springboot/init/) kafka Springboot 객체 전달을위한 Json직렬화(JsonSerializer) 및 역직렬화(JsonDeserializer) 세팅  
 2023-08-01 [kafka](./Platform/Kafka/99studyProject/02springboot/init/) kafka Springboot websocket stomp 방식 연결 성공  
+2023-08-02 [kafka](./Platform/Kafka/99studyProject/02springboot/init/) stomp 코드 안정화  
 

@@ -28,3 +28,13 @@ db.integer.find().count()
 
 // 복합 예시
 db.integer.find().limit(10).sort({x: -1}).count()
+
+
+
+
+let cursor = db.test1.find()
+
+while (cursor.hasNext()){
+    obj = cursor.next();
+    print(obj.receiveList) // 값 출력 함수
+}

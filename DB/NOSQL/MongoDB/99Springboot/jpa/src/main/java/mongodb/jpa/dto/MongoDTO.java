@@ -10,6 +10,7 @@ import java.time.LocalDateTime;
 @Setter
 @ToString
 public class MongoDTO {
+    private int i;
     private String username;
     private int age;
     private LocalDateTime date;

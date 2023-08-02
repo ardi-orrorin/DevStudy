@@ -17,4 +17,4 @@ db.getCollectionNames() // 컬렉션 이름 목록만 조회
 
 db.테스트컬렉션.drop() // 컬렉션 삭제
 
-
+db.test2.find()

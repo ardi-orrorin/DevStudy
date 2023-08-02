@@ -18,13 +18,14 @@ public class Mongo {
 
     @Id
     private String id;
-//    @Field(name = "username")
+
+    @Field(name = "username")
     private String username;
 
 
-//    @Field(name = "age")
+    @Field(name = "age")
     private int age;
 
-//    @Field(name = "date")
+    @Field(name = "date")
     private LocalDateTime date;
 }

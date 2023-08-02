@@ -34,3 +34,8 @@ db.index.find({age : {$gt : 30}})
         print(JSON.stringify(e))
     })
 
+db.test1.find()
+    .forEach(
+        function(e){
+            print(JSON.stringify(e))
+        })
