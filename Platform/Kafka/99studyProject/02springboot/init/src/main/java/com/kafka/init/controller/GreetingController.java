@@ -17,14 +17,18 @@ import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
 import org.springframework.messaging.simp.SimpMessageSendingOperations;
 import org.springframework.messaging.simp.broker.SimpleBrokerMessageHandler;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.concurrent.ListenableFuture;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.socket.config.annotation.EnableWebSocketMessageBroker;
 import org.springframework.web.socket.messaging.SessionConnectEvent;
 import org.springframework.web.socket.messaging.SessionDisconnectEvent;
 
+import javax.lang.model.SourceVersion;
 import java.time.LocalDateTime;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.BiConsumer;
 
 
 @RestController
@@ -51,18 +55,21 @@ public class GreetingController {
         message.setRoom(room);
         message.setSendingDate(LocalDateTime.now());
         System.out.println("message = " + message);
-//        CompletableFuture<SendResult<String ,MessageDTO>> future =
-        kafkaTemplate.send(myTopic1.name(), message);
-//        future.isCompletedExceptionally();
+        CompletableFuture<SendResult<String ,MessageDTO>> future =
+            kafkaTemplate.send(myTopic1.name(), message);
+        future.whenComplete(new BiConsumer<SendResult<String, MessageDTO>, Throwable>() {
+            @Override
+            public void accept(SendResult<String, MessageDTO> stringMessageDTOSendResult, Throwable throwable) {
+                System.out.println("메시지 전송 성공");
+            }
+        });
     }
 
 //    @SendTo("/sub/topic/{id}") // enableSimpleBroker
     @KafkaListener(topics = "topic01" ,groupId = "foo")
     public void subMessage(@Payload MessageDTO messageDTO){
         System.out.println("messageDTO = " + messageDTO);
-        simpMessageSendingOperations.convertAndSend("/sub/message/"+messageDTO.getRoom(),messageDTO);
+        simpMessageSendingOperations.convertAndSend("/sub/message/" + messageDTO.getRoom(), messageDTO);
     }
-
-
 
 }

@@ -23,6 +23,7 @@ Project 각 폴더에 해당하는 레포지토리로 연결하는 링크가 포
 2023-07-26 [MongoDB](./DB//NOSQL/MongoDB/) 정규표현식 패턴 및 사용 방법, update 구문 사용 방법  
 2023-07-28 [MongoDB](./DB//NOSQL/MongoDB/) update $inc 연산자 및 find 배열 스라이드 및 검색  
 2023-07-29 [MongoDB](./DB//NOSQL/MongoDB/) cursor, $where function() 함수 사용 체험, limit, count, skip sort 공부,Spring boot jpa를 이용한 mongoDB 연동  
-2023-07-30 [kafka](./Platform/Kafka/99studyProject/02springboot/) kafka Springboot 연동 기초  
-2023-07-31 [kafka] (./Platform/Kafka/99studyProject/02springboot/) kafka Springboot 객체 전달을위한 Json직렬화(JsonSerializer) 및 역직렬화(JsonDeserializer) 세팅 
+2023-07-30 [kafka](./Platform/Kafka/99studyProject/02springboot/init/) kafka Springboot 연동 기초  
+2023-07-31 [kafka](./Platform/Kafka/99studyProject/02springboot/init/) kafka Springboot 객체 전달을위한 Json직렬화(JsonSerializer) 및 역직렬화(JsonDeserializer) 세팅  
+2023-08-01 [kafka](./Platform/Kafka/99studyProject/02springboot/init/) kafka Springboot websocket stomp 방식 연결 성공  
 
