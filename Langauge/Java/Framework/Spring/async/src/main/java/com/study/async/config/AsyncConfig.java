@@ -17,7 +17,7 @@ public class AsyncConfig {
         taskExecutor.setCorePoolSize(3); // 코어 쓰레드 개수
         taskExecutor.setMaxPoolSize(30); // 쓰레드 풀의 최대 사이즈
         taskExecutor.setQueueCapacity(10); // 쓰레드 풀 큐의 사이즈, CorePoolSize 개수를 넘어서는 task가 들어왔을 대 queue에 해당 하는 task들이 쌓이게 된다.
-        taskExecutor.setThreadNamePrefix("Async-Executor-");
+        taskExecutor.setThreadNamePrefix("Async-Executor-"); // 쓰레드에 사용 할
         taskExecutor.setDaemon(true);
         taskExecutor.initialize();
 
