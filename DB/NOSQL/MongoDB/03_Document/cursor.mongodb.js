@@ -38,3 +38,5 @@ while (cursor.hasNext()){
     obj = cursor.next();
     print(obj.receiveList) // 값 출력 함수
 }
+
+

@@ -20,6 +20,8 @@ db.book.find({$where : function(){
 db.book.find().sort({"date":1})
 
 
+
+
 // Projection (선택 필드)
 // projection이란 find 와 findOne 메소드의 두 번째 인자를 넣어주는 것
 // 결과로 보여줄 것만 필터링

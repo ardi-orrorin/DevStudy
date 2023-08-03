@@ -19,6 +19,8 @@ db.book.find({
     "date" : { $eq : "2023-07-24"}
 })
 
+db.test2.find({receiveList : {$eq : 199}}) // receiveList 배열 내에 값을 기준으로 조회
+
 // 조건1 or 조건2
 {$or : [{조건1}, {조건2}]} 
 
