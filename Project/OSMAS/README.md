@@ -26,6 +26,8 @@ Link : [Reveal-JS](https://yoosc89.github.io/DevStudy/Project/OSMAS/presentation
    <tr>
       <td><img src="/Resource/Logo/intelij.jpg" width=200 height=200></td>
       <td><img src="/Resource/Logo/vscode.jpg" width=200 height=200></td>
+      <td><img src="/Resource/Logo/figma.jpg" width=200 height=200></td>
+      <td><img src="/Resource/Logo/notion.jpg" width=200 height=200></td>
    </tr>
 </table>
 
