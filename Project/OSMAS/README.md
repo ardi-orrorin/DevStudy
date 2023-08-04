@@ -10,6 +10,15 @@ Link : [Reveal-JS](https://yoosc89.github.io/DevStudy/Project/OSMAS/presentation
 <br>
 
 # 기술 스택
+<table border= 2>
+   <tr>
+      <td><img src="/Resource/Logo/oracle.jpg"></td>
+      <td>123</td>
+      <td>123</td>
+      <td>123</td>
+   </tr>
+</table>
+
 DB : Oracle
 Language : JAVA, JavaScript  
 Markup Language : HTML, CSS  
