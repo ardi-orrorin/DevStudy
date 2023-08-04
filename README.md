@@ -34,11 +34,7 @@ Project 각 폴더에 해당하는 레포지토리로 연결하는 링크가 포
    <tr>
       <td><img src="/Resource/Logo/Thyemleaf.jpg" width=200 height=200></td>
       <td><img src="/Resource/Logo/react.jpg" width=200 height=200></td>
-      <td><img src="/Resource/Logo/" width=200 height=200></td>
-      <td><img src="/Resource/Logo/jqeury.jpg" width=200 height=200></td>
-   </tr>
-   <tr>
-      <td><img src="/Resource/Logo/kafka.jpg" width=200 height=200></td>
+            <td><img src="/Resource/Logo/kafka.jpg" width=200 height=200></td>
       <td><img src="/Resource/Logo/docker.jpg" width=200 height=200></td>
    </tr>
    <tr>
