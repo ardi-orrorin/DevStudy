@@ -12,10 +12,22 @@ Link : [Reveal-JS](https://yoosc89.github.io/DevStudy/Project/OSMAS/presentation
 # 기술 스택
 <table border= 2>
    <tr>
-      <td><img src="/Resource/Logo/oracle.jpg"></td>
-      <td>123</td>
-      <td>123</td>
-      <td>123</td>
+      <td><img src="/Resource/Logo/oracle.jpg" width=200 height=200></td>
+      <td><img src="/Resource/Logo/mybatis.jpg" width=200 height=200></td>
+      <td><img src="/Resource/Logo/java.jpg" width=200 height=200></td>
+      <td><img src="/Resource/Logo/springboot.jpg" width=200 height=200></td>
+   </tr>
+   <tr>
+      <td><img src="/Resource/Logo/html.jpg" width=200 height=200></td>
+      <td><img src="/Resource/Logo/css.jpg" width=200 height=200></td>
+      <td><img src="/Resource/Logo/" width=200 height=200></td>
+      <td><img src="/Resource/Logo/oracle.jpg" width=200 height=200></td>
+   </tr>
+   <tr>
+      <td><img src="/Resource/Logo/intelij.jpg" width=200 height=200></td>
+      <td><img src="/Resource/Logo/vscode.jpg" width=200 height=200></td>
+      <td><img src="/Resource/Logo/" width=200 height=200></td>
+      <td><img src="/Resource/Logo/oracle.jpg" width=200 height=200></td>
    </tr>
 </table>
 
