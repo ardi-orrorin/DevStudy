@@ -28,13 +28,13 @@ Project 각 폴더에 해당하는 레포지토리로 연결하는 링크가 포
    <tr>
       <td><img src="/Resource/Logo/html.jpg" width=150 height=150></td>
       <td><img src="/Resource/Logo/css.jpg" width=150 height=150></td>
-      <td><img src="/Resource/Logo/react.jpg" width=150 height=150></td>
+      <td><img src="/Resource/Logo/js.jpg" width=150 height=150></td>
       <td><img src="/Resource/Logo/jqeury.jpg" width=150 height=150></td>
    </tr>
    <tr>
-      <td><img src="/Resource/Logo/Thyemleaf.jpg" width=150 height=150></td>
       <td><img src="/Resource/Logo/react.jpg" width=150 height=150></td>
-            <td><img src="/Resource/Logo/kafka.jpg" width=150 height=150></td>
+      <td><img src="/Resource/Logo/Thyemleaf.jpg" width=150 height=150></td>
+      <td><img src="/Resource/Logo/kafka.jpg" width=150 height=150></td>
       <td><img src="/Resource/Logo/docker.jpg" width=150 height=150></td>
    </tr>
    <tr>
