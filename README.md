@@ -22,9 +22,9 @@ Project 각 폴더에 해당하는 레포지토리로 연결하는 링크가 포
       <td><img src="/Resource/Logo/python.jpg" width=120 height=120></td>
    </tr>
    <tr>
-      <td><img src="/Resource/Logo/mybatis.jpg" width=120 height=120></td>
       <td><img src="/Resource/Logo/springboot.jpg" width=120 height=120></td>
       <td><img src="/Resource/Logo/fastapi.jpg" width=120 height=120></td>
+      <td><img src="/Resource/Logo/mybatis.jpg" width=120 height=120></td>
    </tr>
    <tr>
       <td><img src="/Resource/Logo/html.jpg" width=120 height=120></td>

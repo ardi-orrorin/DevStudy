@@ -15,19 +15,19 @@
 
 <table border=2>
    <tr>
-      <td><img src="/Resource/Logo/mysql.jpg" width=150 height=150></td>
-      <td><img src="/Resource/Logo/python.jpg" width=150 height=150></td>
-      <td><img src="/Resource/Logo/fastapi.jpg" width=150 height=150></td>
+      <td><img src="/Resource/Logo/mysql.jpg" width=120 height=120></td>
+      <td><img src="/Resource/Logo/python.jpg" width=120 height=120></td>
+      <td><img src="/Resource/Logo/fastapi.jpg" width=120 height=120></td>
    </tr>
    <tr>
-      <td><img src="/Resource/Logo/html.jpg" width=150 height=150></td>
-      <td><img src="/Resource/Logo/css.jpg" width=150 height=150></td>
-      <td><img src="/Resource/Logo/svetle.jpg" width=150 height=150></td>
-      <td><img src="/Resource/Logo/nginx.jpg" width=150 height=150></td>
+      <td><img src="/Resource/Logo/html.jpg" width=120 height=120></td>
+      <td><img src="/Resource/Logo/css.jpg" width=120 height=120></td>
+      <td><img src="/Resource/Logo/svetle.jpg" width=120 height=120></td>
+      <td><img src="/Resource/Logo/nginx.jpg" width=120 height=120></td>
    </tr>
    <tr>
-      <td><img src="/Resource/Logo/vscode.jpg" width=150 height=150></td>
-      <td><img src="/Resource/Logo/docker.jpg" width=150 height=150></td>
+      <td><img src="/Resource/Logo/vscode.jpg" width=120 height=120></td>
+      <td><img src="/Resource/Logo/docker.jpg" width=120 height=120></td>
    </tr>
 </table>
 DB : Mysql, MariaDB
