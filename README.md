@@ -5,6 +5,50 @@
 Project 각 폴더에 해당하는 레포지토리로 연결하는 링크가 포함되어 있습니다.
 
 
+
+# Skill Stack
+<table border=2>
+   <tr>
+      <td><img src="/Resource/Logo/oracle.jpg" width=200 height=200></td>
+      <td><img src="/Resource/Logo/mongodb.jpg" width=200 height=200></td>
+      <td><img src="/Resource/Logo/mysql.jpg" width=200 height=200></td>
+      <td><img src="/Resource/Logo/postgresql.jpg" width=200 height=200></td>
+   </tr>
+   <tr>
+      <td><img src="/Resource/Logo/mongodb.jpg" width=200 height=200></td>
+      <td><img src="/Resource/Logo/redis.jpg" width=200 height=200></td>
+      <td><img src="/Resource/Logo/mybatis.jpg" width=200 height=200></td>
+   </tr>
+   <tr>
+      <td><img src="/Resource/Logo/java.jpg" width=200 height=200></td>
+      <td><img src="/Resource/Logo/springboot.jpg" width=200 height=200></td>
+      <td><img src="/Resource/Logo/python.jpg" width=200 height=200></td>
+      <td><img src="/Resource/Logo/fastapi.jpg" width=200 height=200></td>
+   </tr>
+   <tr>
+      <td><img src="/Resource/Logo/html.jpg" width=200 height=200></td>
+      <td><img src="/Resource/Logo/css.jpg" width=200 height=200></td>
+      <td><img src="/Resource/Logo/react.jpg" width=200 height=200></td>
+      <td><img src="/Resource/Logo/jqeury.jpg" width=200 height=200></td>
+   </tr>
+   <tr>
+      <td><img src="/Resource/Logo/Thyemleaf.jpg" width=200 height=200></td>
+      <td><img src="/Resource/Logo/react.jpg" width=200 height=200></td>
+      <td><img src="/Resource/Logo/" width=200 height=200></td>
+      <td><img src="/Resource/Logo/jqeury.jpg" width=200 height=200></td>
+   </tr>
+   <tr>
+      <td><img src="/Resource/Logo/kafka.jpg" width=200 height=200></td>
+      <td><img src="/Resource/Logo/docker.jpg" width=200 height=200></td>
+   </tr>
+   <tr>
+      <td><img src="/Resource/Logo/intelij.jpg" width=200 height=200></td>
+      <td><img src="/Resource/Logo/vscode.jpg" width=200 height=200></td>
+      <td><img src="/Resource/Logo/figma.jpg" width=200 height=200></td>
+      <td><img src="/Resource/Logo/notion.jpg" width=200 height=200></td>
+   </tr>
+</table>
+
 # ProjectList
 1. [팀] OSMAS(Punding Site) 개요 : [Repository-Link](./Project/OSMAS/)
 2. [팀] INFOMATE(OFFICE GROUPWARE) 개요 : [Repository-link](./Project/INFOMATE/)
