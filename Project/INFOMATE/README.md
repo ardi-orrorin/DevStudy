@@ -12,22 +12,22 @@ Link : [Reveal-JS](https://yoosc89.github.io/DevStudy/Project/INFOMATE/presentat
 # 기술 스택
 <table border=2>
    <tr>
-      <td><img src="/Resource/Logo/oracle.jpg" width=200 height=200></td>
-      <td><img src="/Resource/Logo/mongodb.jpg" width=200 height=200></td>
-      <td><img src="/Resource/Logo/java.jpg" width=200 height=200></td>
-      <td><img src="/Resource/Logo/springboot.jpg" width=200 height=200></td>
+      <td><img src="/Resource/Logo/oracle.jpg" width=150 height=150></td>
+      <td><img src="/Resource/Logo/mongodb.jpg" width=150 height=150></td>
+      <td><img src="/Resource/Logo/java.jpg" width=150 height=150></td>
+      <td><img src="/Resource/Logo/springboot.jpg" width=150 height=150></td>
    </tr>
    <tr>
-      <td><img src="/Resource/Logo/html.jpg" width=200 height=200></td>
-      <td><img src="/Resource/Logo/css.jpg" width=200 height=200></td>
-      <td><img src="/Resource/Logo/react.jpg" width=200 height=200></td>
-      <td><img src="/Resource/Logo/kafka.jpg" width=200 height=200></td>
+      <td><img src="/Resource/Logo/html.jpg" width=150 height=150></td>
+      <td><img src="/Resource/Logo/css.jpg" width=150 height=150></td>
+      <td><img src="/Resource/Logo/react.jpg" width=150 height=150></td>
+      <td><img src="/Resource/Logo/kafka.jpg" width=150 height=150></td>
    </tr>
    <tr>
-      <td><img src="/Resource/Logo/intelij.jpg" width=200 height=200></td>
-      <td><img src="/Resource/Logo/vscode.jpg" width=200 height=200></td>
-      <td><img src="/Resource/Logo/figma.jpg" width=200 height=200></td>
-      <td><img src="/Resource/Logo/notion.jpg" width=200 height=200></td>
+      <td><img src="/Resource/Logo/intelij.jpg" width=150 height=150></td>
+      <td><img src="/Resource/Logo/vscode.jpg" width=150 height=150></td>
+      <td><img src="/Resource/Logo/figma.jpg" width=150 height=150></td>
+      <td><img src="/Resource/Logo/notion.jpg" width=150 height=150></td>
    </tr>
 </table>
 
