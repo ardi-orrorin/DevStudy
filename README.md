@@ -14,6 +14,7 @@ Project 각 폴더에 해당하는 레포지토리로 연결하는 링크가 포
 
 
 # Study History
+2023-07-21 notion에서 github로 이전
 2023-07-21 [MongoDB](./DB//NOSQL/MongoDB/) 기본 개념 및 구조, 컬렉력 및 DB 조회 및 insert 명령어 체험  
 2023-07-22 [ShellScript](./Langauge/ShellScript/) 파일생성 스크립트 인식  
 2023-07-23 [MongoDB](./DB//NOSQL/MongoDB/) collection 조회 및 document insert, find   
@@ -27,5 +28,5 @@ Project 각 폴더에 해당하는 레포지토리로 연결하는 링크가 포
 2023-07-31 [kafka](./Platform/Kafka/99studyProject/02springboot/init/) kafka Springboot 객체 전달을위한 Json직렬화(JsonSerializer) 및 역직렬화(JsonDeserializer) 세팅  
 2023-08-01 [kafka](./Platform/Kafka/99studyProject/02springboot/init/) kafka Springboot websocket stomp 방식 연결 성공  
 2023-08-02 [kafka](./Platform/Kafka/99studyProject/02springboot/init/) stomp 코드 안정화  
-2023-08-02 kafka 채팅 서버 레포지토리 분리
+2023-08-02 kafka 채팅 서버 레포지토리 분리  
 2023-08-03 [springboot](./Langauge/Java/Framework/Spring/async/) 비동기 처리
