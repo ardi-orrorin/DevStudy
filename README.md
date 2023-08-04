@@ -10,33 +10,34 @@ Project 각 폴더에 해당하는 레포지토리로 연결하는 링크가 포
 <table border=2>
    <tr>
       <td><img src="/Resource/Logo/oracle.jpg" width=100 height=100></td>
-      <td><img src="/Resource/Logo/mongodb.jpg" width=100 height=100></td>
       <td><img src="/Resource/Logo/mysql.jpg" width=100 height=100></td>
       <td><img src="/Resource/Logo/postgresql.jpg" width=100 height=100></td>
    </tr>
    <tr>
       <td><img src="/Resource/Logo/mongodb.jpg" width=100 height=100></td>
       <td><img src="/Resource/Logo/redis.jpg" width=100 height=100></td>
-      <td><img src="/Resource/Logo/mybatis.jpg" width=100 height=100></td>
    </tr>
    <tr>
-      <td><img src="/Resource/Logo/java.jpg" width=100 height=100></td>
       <td><img src="/Resource/Logo/springboot.jpg" width=100 height=100></td>
-      <td><img src="/Resource/Logo/python.jpg" width=100 height=100></td>
+      <td><img src="/Resource/Logo/fastapi.jpg" width=100 height=100></td>
+   </tr>
+   <tr>
+      <td><img src="/Resource/Logo/mybatis.jpg" width=100 height=100></td>
+      <td><img src="/Resource/Logo/springboot.jpg" width=100 height=100></td>
       <td><img src="/Resource/Logo/fastapi.jpg" width=100 height=100></td>
    </tr>
    <tr>
       <td><img src="/Resource/Logo/html.jpg" width=100 height=100></td>
       <td><img src="/Resource/Logo/css.jpg" width=100 height=100></td>
       <td><img src="/Resource/Logo/js.jpg" width=100 height=100></td>
-      <td><img src="/Resource/Logo/jqeury.jpg" width=100 height=100></td>
    </tr>
    <tr>
+      <td><img src="/Resource/Logo/jqeury.jpg" width=100 height=100></td>
       <td><img src="/Resource/Logo/react.jpg" width=100 height=100></td>
       <td><img src="/Resource/Logo/Thyemleaf.jpg" width=100 height=100></td>
-      <td><img src="/Resource/Logo/nginx.jpg" width=100 height=100></td>
    </tr>
    <tr>
+   <td><img src="/Resource/Logo/nginx.jpg" width=100 height=100></td>
       <td><img src="/Resource/Logo/kafka.jpg" width=100 height=100></td>
       <td><img src="/Resource/Logo/docker.jpg" width=100 height=100></td>
    </tr>
