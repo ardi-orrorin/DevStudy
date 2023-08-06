@@ -74,4 +74,5 @@ Project 각 폴더에 해당하는 레포지토리로 연결하는 링크가 포
 2023-08-02 kafka 채팅 서버 레포지토리 분리  
 2023-08-03 [springboot](./Langauge/Java/Framework/Spring/async/) 비동기 처리  
 2023-08-05 [ReactivePrograming](./Langauge/Java/Reactive/) 개념, 규칙 공부
+2023-08-06 [ReactivePrograming](./Langauge/Java/Reactive/) sequnce, Backpressure, Sink 공부
 

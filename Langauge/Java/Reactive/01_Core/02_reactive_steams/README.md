@@ -2,21 +2,21 @@
 
 API 컴포넌트에는 Publisher, Subscriber, Subscription, Processor가 있다.
 
-1. Publisher : 데이터를 생성하고 통지하는 역할
-2. Subscriber : 구동한 Publisher로부터 데이터를 전달 받아서 데이터를 처리하는 역할
-3. Subscription : Publisher에 요청할 데이터의 개수를 지정, 데이터의 구독을 취소하느 역할
-4. Processer : Publisher, Subscriber의 기능을 모두 가지고 있다.
+1. **Publisher** : 데이터를 생성하고 통지하는 역할
+2. **Subscriber** : 구동한 Publisher로부터 데이터를 전달 받아서 데이터를 처리하는 역할
+3. **Subscription** : Publisher에 요청할 데이터의 개수를 지정, 데이터의 구독을 취소하느 역할
+4. **Processer** : Publisher, Subscriber의 기능을 모두 가지고 있다.
 
 <br>
 
 # 리액티브 스트림즈 관련 용어 정의
-1. Signal : Publisher와 Subscriber간에 주고받은 상효작용, onComplte, onError, request, cancel 메서드가 대표적
-2. Demand : Subscriber가 Publisher 에게 요청하는 데이터를 의미로 정확하게는 Publisher가 아직 Subscriber에게 전달하지 않은 데이터를 요청하는 것을 말한다.
-3. Emit : Publisher가 Subscriber에게 데이터를 전달하는 행위를 '통지'한다라고 한다.
-4. Upstream/ DownStream : 메서드 체인에서 상대적인 위치의 말할 때 사용하며 나중에 쓰여진 메서드를 DownStream,  이전에 쓰여진 메서드를 Upstream이라고 한다.
-5. Sequence : 메서드 체인에 의해 Operator의 흐름을 Sequence라고 한다.
-6. Operator : 연사자라는 의미로 메서드 체인에서 just,fiter,map같은 메스드들을 말한다.
-7. Source : Data Source, Source Publisher, Source Flux등 들 수 있는데, 대부분 최초라른 의미로 사용된다. Original이라고 말하기도 한다.
+1. **Signal** : Publisher와 Subscriber간에 주고받은 상효작용, onComplte, onError, request, cancel 메서드가 대표적
+2. **Demand** : Subscriber가 Publisher 에게 요청하는 데이터를 의미로 정확하게는 Publisher가 아직 Subscriber에게 전달하지 않은 데이터를 요청하는 것을 말한다.
+3. **Emit** : Publisher가 Subscriber에게 데이터를 전달하는 행위를 '통지'한다라고 한다.
+4. **Upstream/ DownStream** : 메서드 체인에서 상대적인 위치의 말할 때 사용하며 나중에 쓰여진 메서드를 DownStream,  이전에 쓰여진 메서드를 Upstream이라고 한다.
+5. **Sequence** : 메서드 체인에 의해 Operator의 흐름을 Sequence라고 한다.
+6. **Operator** : 연사자라는 의미로 메서드 체인에서 just,fiter,map같은 메스드들을 말한다.
+7. **Source** : Data Source, Source Publisher, Source Flux등 들 수 있는데, 대부분 최초라른 의미로 사용된다. Original이라고 말하기도 한다.
 
 <br>
 
