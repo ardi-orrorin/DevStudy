@@ -1,0 +1,30 @@
+server:
+  port: 9090
+  http2:
+    enabled: true
+
+spring:
+  webflux:
+    base-path:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      username: test1
+      password: test1
+      database: test
+      authentication-database: test
+      #uri: mongodb://test:test@localhost:270
+
+#logging:
+#  pattern:
+#    console: "%d{HH:mm:ss.SSS} [%thread] %-5level- %msg%n"
+#  level:
+#    org:
+#      springframework:
+#        data:
+#          ## mongodb query logging
+#          mongodb:
+#            core:
+#              MongoTemplate: DEBUG
+#              ReactiveMongoTemplate: DEBUG
