@@ -77,4 +77,6 @@ Project 각 폴더에 해당하는 레포지토리로 연결하는 링크가 포
 2023-08-06 [ReactivePrograming](./Langauge/Java/Reactive/) sequnce, Backpressure, Sink 공부  
 2023-08-08 [Codetest](./Other/DataStructure/Algolithm/01_list/) 코드테스트 공부 시작  
 2023-08-09 [Codetest](./Other/DataStructure/Algolithm/01_list/) 코드테스트 배열 누적 합계 계산  
+2023-08-09 [Codetest](./Other/DataStructure/Algolithm/01_list/) 코드테스트 나머지가 3이 되는 경우의 수 계산  
+
 
