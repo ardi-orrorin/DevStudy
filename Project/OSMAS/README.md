@@ -31,7 +31,7 @@ Link : [Reveal-JS](https://yoosc89.github.io/DevStudy/Project/OSMAS/presentation
    </tr>
 </table>
 
-DB : Oracle
+DB : Oracle  
 Language : JAVA, JavaScript  
 Markup Language : HTML, CSS  
 Backend FrameWork : Spring Boot, MyBatis  
