@@ -12,22 +12,22 @@ Link : [Reveal-JS](https://yoosc89.github.io/DevStudy/Project/OSMAS/presentation
 # 기술 스택
 <table border=2>
    <tr>
-      <td><img src="../Resource/Logo/oracle.jpg" width=120 height=120></td>
-      <td><img src="../Resource/Logo/java.jpg" width=120 height=120></td>
-      <td><img src="../Resource/Logo/mybatis.jpg" width=120 height=120></td>
-      <td><img src="../Resource/Logo/springboot.jpg" width=120 height=120></td>
+      <td><img src="../../Resource/Logo/oracle.jpg" width=120 height=120></td>
+      <td><img src="../../Resource/Logo/java.jpg" width=120 height=120></td>
+      <td><img src="../../Resource/Logo/mybatis.jpg" width=120 height=120></td>
+      <td><img src="../../Resource/Logo/springboot.jpg" width=120 height=120></td>
    </tr>
    <tr>
-      <td><img src="../Resource/Logo/html.jpg" width=120 height=120></td>
-      <td><img src="../Resource/Logo/css.jpg" width=120 height=120></td>
-      <td><img src="../Resource/Logo/jqeury.jpg" width=120 height=120></td>
-      <td><img src="../Resource/Logo/Thyemleaf.jpg" width=120 height=120></td>
+      <td><img src="../../Resource/Logo/html.jpg" width=120 height=120></td>
+      <td><img src="../../Resource/Logo/css.jpg" width=120 height=120></td>
+      <td><img src="../../Resource/Logo/jqeury.jpg" width=120 height=120></td>
+      <td><img src="../../Resource/Logo/Thyemleaf.jpg" width=120 height=120></td>
    </tr>
    <tr>
-      <td><img src="../Resource/Logo/intelij.jpg" width=120 height=120></td>
-      <td><img src="../Resource/Logo/vscode.jpg" width=120 height=120></td>
-      <td><img src="../Resource/Logo/figma.jpg" width=120 height=120></td>
-      <td><img src="../Resource/Logo/notion.jpg" width=120 height=120></td>
+      <td><img src="../../Resource/Logo/intelij.jpg" width=120 height=120></td>
+      <td><img src="../../Resource/Logo/vscode.jpg" width=120 height=120></td>
+      <td><img src="../../Resource/Logo/figma.jpg" width=120 height=120></td>
+      <td><img src="../../Resource/Logo/notion.jpg" width=120 height=120></td>
    </tr>
 </table>
 
