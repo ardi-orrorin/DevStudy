@@ -7,7 +7,7 @@ Project 각 폴더에 해당하는 레포지토리로 연결하는 링크가 포
 
 
 # Skills Stack
-<table border=2>
+<table>
    <tr>
       <td><img src="./Resource/Logo/oracle.jpg" width=120 height=120></td>
       <td><img src="./Resource/Logo/mysql.jpg" width=120 height=120></td>

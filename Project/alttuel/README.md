@@ -4,7 +4,7 @@
 
 # 기술 스텍
 
-<table border=2>
+<table>
    <tr>
       <td><img src="../../Resource/Logo/postgresql.jpg" width=120 height=120></td>
       <td><img src="../../Resource/Logo/python.jpg" width=120 height=120></td>

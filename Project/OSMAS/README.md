@@ -10,7 +10,7 @@ Link : [Reveal-JS](https://yoosc89.github.io/DevStudy/Project/OSMAS/presentation
 <br>
 
 # 기술 스택
-<table border=2>
+<table>
    <tr>
       <td><img src="../../Resource/Logo/oracle.jpg" width=120 height=120></td>
       <td><img src="../../Resource/Logo/java.jpg" width=120 height=120></td>
