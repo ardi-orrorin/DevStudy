@@ -27,6 +27,44 @@ db.index.createIndex({username : 1})
 // createIndex({필드1 : 1, 필드2 : 1})
 db.index.createIndex({username : 1, age : 1})
 
+// Text Index 생성
+db.index.createIndex({username: 'text'});
+// 모든 필드에 대한 Index 생성
+db.index.createIndex({'$**': 'text'});
+
+
+// Text 단일 Index시 검색
+db.index.find({$text: {$search: 'user1'}}).sort({age:1});
+
+// Text 단일 Index시  OR 검색
+
+db.index.find({$text: {$search: '\'user1 \'user2 \'user3'}});
+
+// Text 단일 Index시 And 검색
+db.index.find({$text: {$search: '\'user1\' \'user2\' \'user3\' \'user03\''}});
+
+// 점누 검색 최적화
+// 복합 인덱스
+// 출력할 필드와 복합 인덱스 생성
+db.index.createIndex({age: 1, username: 'text'})
+
+
+db.index.find({username: 'user1'}).sort({age: 1});
+
+
+// 텍스트 전문 언어 설정
+db.index.createIndex({age: 1, username: 'text'},{default_language: 'english'})
+
+// 인덱스 삭제 {키:1}
+db.index.dropIndex({usernae: 1});
+db.index.dropIndexes();
+
+// 인덱스 재 인덱싱 실행
+db.index.reIndex();
+
+
+
+
 db.index.find({age : {$gt : 30}})
 .limit(1000)
 .forEach(
@@ -39,3 +77,5 @@ db.test1.find()
         function(e){
             print(JSON.stringify(e))
         })
+
+

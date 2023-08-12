@@ -39,3 +39,12 @@ db.book.find({},{"_id":0, "name":1, "date" : 1})
 db.book.find(function(e){
     print(e)
 })
+
+// null은 null값을 갖는 값을 찾는 것이 아닌
+// null 존재하지 않음을 뜻으로 
+// 해당 조건의 키값이 존재 하지 않은 document를 모두 찾는다.
+db.book.find({'author': null})
+
+// null값을 조회 하고 싶다면 $eq값을 null, $exists true 를 하면 된다
+db.book.find({'z' : {$eq : null, $exists : true}})
+

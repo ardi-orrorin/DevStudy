@@ -72,6 +72,30 @@ db.book.find({
     'seller.$' : 1 
 })
 
-db.book.find()
 
+
+// 배열의 값이 포함된 document 찾기
+// 조건이 하나인 경우
+db.book.find({'seller' : {$eq: '홍길이'}});
+db.book.find({'seller' : '홍길이'});
+
+// 조건이 여러개 일 경우(배열로 입력) 후  $all 연산자 사용
+// 배열이 조건값이 포함된 document만 출력한다(and의미)
+db.book.find({seller: {$all: ['홍길이','홍길동','심사임당']}})
+
+
+
+
+// db.book.find().sort({date:-1});
+// db.book.insert({
+//     name: '챍1',
+//     author : {
+//         name: 'kin'
+//     },
+//     date: new Date().toLocaleDateString(),
+//     amount: 100,
+//     seller: [
+//         '홍길동', '홍길이'
+//     ]
+// });
 
