@@ -4,12 +4,17 @@
 
 <br>
 
+### Link
+[BackEnd-SpringBoot](https://github.com/IMFOMATE/infomate_back) <-Link Github Repository
+[FrontEnd-React]() <-Link Github Repository
+[BackEnd-Kafka&MongoDB](https://github.com/yoosc89/INFOMATE_Kafka_MongoDB) <-Link Github Repository
+
 # 프레젠테이션
 Link : [Reveal-JS](https://yoosc89.github.io/DevStudy/Project/INFOMATE/presentation/)
 
 <br>
 
-# 기술 스택
+# TECH STACK
 <table>
    <tr>
       <td><img src="../../Resource/Logo/oracle.jpg" width=120 height=120></td>
@@ -31,14 +36,14 @@ Link : [Reveal-JS](https://yoosc89.github.io/DevStudy/Project/INFOMATE/presentat
    </tr>
 </table>
 
-DB : Oracle
-Language : JAVA, JavaScript  
-Markup Language : HTML, CSS  
-Backend FrameWork : Spring Boot  
-FrontFramework : React  
-Frontend Library : Sunediter, fullCalendar, jsTree
-IDE : IntelliJ  
-OtherSoftware : DA#5
+DB : Oracle, MongoDB <br>
+Language : JAVA, JavaScript <br>
+Markup Language : HTML, CSS <br>
+Backend FrameWork : Spring Boot, Kafka <br>
+FrontFramework : React <br>
+Frontend Library : Sunediter, fullCalendar, jsTree <br>
+IDE : IntelliJ <br>
+OtherSoftware : DA#5, Figma <br>
 
 
 <br>
@@ -91,9 +96,6 @@ OtherSoftware : DA#5
 <br>
 
 # DB 모델링
-
-
-# DB 작명
 
 
 # 실제 구현 화면

@@ -2,7 +2,7 @@
 
 <br>
 
-# 기술 스텍
+# TECH STACK
 
 <table>
    <tr>

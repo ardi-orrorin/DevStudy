@@ -1,6 +1,6 @@
 # INFORMATE PROJECT CHATTING SERVER
 
-### 1. STACK
+### TECH STACK
 
 <table>
     <tr>

@@ -6,7 +6,7 @@ Project 각 폴더에 해당하는 레포지토리로 연결하는 링크가 포
 
 
 
-# Skills Stack
+# Skill Stack
 <table>
    <tr>
       <td><img src="./Resource/Logo/oracle.jpg" width=120 height=120></td>
@@ -57,7 +57,7 @@ Project 각 폴더에 해당하는 레포지토리로 연결하는 링크가 포
 4. [개인] CRM(CRM) 개요 : [Repository-Link](./Project/CRM/)
 
 # Study History
-2023-07-21 [Notion](https://certain-allspice-c69.notion.site/Dev-Study-58e7068499db4c8d8e0dc4250d5d44de?pvs=4) notion에서 github로 이전
+2023-07-21 [Notion](https://certain-allspice-c69.notion.site/Dev-Study-58e7068499db4c8d8e0dc4250d5d44de?pvs=4) notion에서 github로 이전  
 2023-07-21 [MongoDB](./DB//NOSQL/MongoDB/) 기본 개념 및 구조, 컬렉력 및 DB 조회 및 insert 명령어 체험  
 2023-07-22 [ShellScript](./Langauge/ShellScript/) 파일생성 스크립트 인식  
 2023-07-23 [MongoDB](./DB//NOSQL/MongoDB/) collection 조회 및 document insert, find   
@@ -73,10 +73,10 @@ Project 각 폴더에 해당하는 레포지토리로 연결하는 링크가 포
 2023-08-02 [kafka](./Platform/Kafka/99studyProject/02springboot/init/) stomp 코드 안정화  
 2023-08-02 kafka 채팅 서버 레포지토리 분리  
 2023-08-03 [springboot](./Langauge/Java/Framework/Spring/async/) 비동기 처리  
-2023-08-05 [ReactivePrograming](./Langauge/Java/Reactive/) 개념, 규칙 공부 
+2023-08-05 [ReactivePrograming](./Langauge/Java/Reactive/) 개념, 규칙 공부  
 2023-08-06 [ReactivePrograming](./Langauge/Java/Reactive/) sequnce, Backpressure, Sink 공부  
 2023-08-08 [Codetest](./Other/DataStructure/Algolithm/01_list/) 코드테스트 공부 시작  
 2023-08-09 [Codetest](./Other/DataStructure/Algolithm/01_list/) 코드테스트 배열 누적 합계 계산  
-2023-08-09 [Codetest](./Other/DataStructure/Algolithm/01_list/) 코드테스트 나머지가 3이 되는 경우의 수 계산  
+2023-08-09 [Codetest](./Other/DataStructure/Algolithm/01_list/) 코드테스트 나머지가 0이 되는 경우의 수 계산  
 
 

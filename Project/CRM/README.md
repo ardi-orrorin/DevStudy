@@ -11,7 +11,7 @@
    
 <br>
 
-# 개발 스텍
+# TECH STACK
 
 <table>
    <tr>
