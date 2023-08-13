@@ -116,6 +116,10 @@ show dbs <- DB목록 조회
 ![](./03_Document/regex.jpg)
 
 
+
+# 몽고DB 설계
+
+
 # 참고자료 및 링크
 ### [1. MongoDB Homepage Manual Reference](https://www.mongodb.com/docs/manual/reference/)
 ### [2. Inpa-Dev](https://inpa.tistory.com/entry/MONGO-%F0%9F%93%9A-%EB%AA%BD%EA%B3%A0%EB%94%94%EB%B9%84-%EC%BF%BC%EB%A6%AC-%EC%A0%95%EB%A6%AC#%EC%BB%AC%EB%A0%89%EC%85%98_%EC%A1%B0%ED%9A%8C)
