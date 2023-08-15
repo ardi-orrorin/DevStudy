@@ -1,9 +1,12 @@
 # 디자인 패턴(Disign Pattern)
 
+[Reference Link](https://refactoring.guru/ko/design-patterns/)
+
 ## 1. 생성패턴(Creational Pattern)
 ### 1-1. 추상팩토리(AbstractFactory)
 ### 1-2. 빌더(Builder)
 ### 1-3. 팩토리메소드(FactoryMethod)
+한 종류의 객체를 만들기 위해서 해당 객체를 생성하는 팩토리 interface를 구현해서 만드는 것
 ### 1-4. 프로토타입(Prototype)
 ### 1-5. 실글톤(Singleton)
 
@@ -28,3 +31,5 @@
 ### 3-9. 스트레티지(Strategy)
 ### 3-10. 템플릿메서드(TemplateMethod)
 ### 3-11. 비지터(Visitor)
+
+

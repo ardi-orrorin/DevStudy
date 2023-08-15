@@ -81,4 +81,5 @@ Project 각 폴더에 해당하는 레포지토리로 연결하는 링크가 포
 2023-08-12 [MongoDB](./DB/NOSQL/MongoDB/03_Document/index.mongodb.js) indexing공부<br>
 2023-08-13 [Codetest](./Other/DataStructure/Algolithm/01_list/) 배열에서 조건에 맞는 두수의 합, 좋은수 찾기<br>
 2023-08-13 [MongoDB](./DB/NOSQL/MongoDB/90_Schema/) DB 설계시 주의 사항 및 스키마 패턴 공부<br>
+2023-08-15 [Codetest](./Other/DataStructure/Algolithm/01_list/) 스택, 큐를 이용한 수열의 오름차순<br>
  

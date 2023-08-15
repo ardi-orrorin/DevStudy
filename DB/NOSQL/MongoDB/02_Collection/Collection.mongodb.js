@@ -23,3 +23,11 @@ db.createCollection("CalendarAlert")
 
 db.CalendarAlert.find()
 db.CalendarAlert.find().sort({"endDate":-1})
+
+
+db.test2.find({'_id' : {$eq : '64da0b4be2894b7f9cb2fe9e'}})
+db.test2.find().sort({createDate:  -1})
+
+db.test2.find();
+
+db.test2.drop()
