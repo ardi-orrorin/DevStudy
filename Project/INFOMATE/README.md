@@ -1,13 +1,13 @@
-# [INFOMATE PROJECT](https://github.com/i-DLE1/OSMASbySpringBoot) <-Link Github Repository
+# INFOMATE PROJECT
 
-### INFOMATE 프로젝트 설명
+INFOMATE 프로젝트 설명
 
 <br>
 
 ### Link
-[BackEnd-SpringBoot](https://github.com/IMFOMATE/infomate_back) <-Link Github Repository
-[FrontEnd-React]() <-Link Github Repository
-[BackEnd-Kafka&MongoDB](https://github.com/yoosc89/INFOMATE_Kafka_MongoDB) <-Link Github Repository
+[BackEnd-SpringBoot](https://github.com/IMFOMATE/infomate_back) <-Link Github Repository<br/>
+[FrontEnd-React]() <-Link Github Repository<br/>
+[BackEnd-Kafka&MongoDB](https://github.com/yoosc89/INFOMATE_Kafka_MongoDB) <-Link Github Repository<br/>
 
 # 프레젠테이션
 Link : [Reveal-JS](https://yoosc89.github.io/DevStudy/Project/INFOMATE/presentation/)
@@ -96,14 +96,12 @@ OtherSoftware : DA#5, Figma <br>
 <br>
 
 # DB 모델링
-
+![](./presentation/DBModel.png)
 
 # 실제 구현 화면
 
 
 # 인상깊은 혹은 주요 코드들
-
-## [SQL 프로젝트 조회 쿼리문]() <- Link
 
 
 ## [Controller]() <- Link
