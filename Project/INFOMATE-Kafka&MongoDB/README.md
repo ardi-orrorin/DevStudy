@@ -4,14 +4,14 @@
 
 <table>
     <tr>
-        <td><img src="/src/main/resources/static/logo/springboot.jpg" width="120" height="120"></td>
-        <td><img src="/src/main/resources/static/logo/kafka.jpg" width="120" height="120"></td>
-        <td><img src="/src/main/resources/static/logo/java.jpg" width="120" height="120"></td>
+        <td><img src="../../Resource/Logo/springboot.jpg" width="120" height="120"></td>
+        <td><img src="../../Resource/Logo/kafka.jpg" width="120" height="120"></td>
+        <td><img src="../../Resource/Logo/java.jpg" width="120" height="120"></td>
     </tr>
     <tr>
-        <td><img src="/src/main/resources/static/logo/mongodb.jpg" width="120" height="120"></td>
-        <td><img src="/src/main/resources/static/logo/oracle.jpg" width="120" height="120"></td>
-        <td><img src="/src/main/resources/static/logo/intelij.jpg" width="120" height="120"></td>
+        <td><img src="../../Resource/Logo/mongodb.jpg" width="120" height="120"></td>
+        <td><img src="../../Resource/Logo/oracle.jpg" width="120" height="120"></td>
+        <td><img src="../../Resource/Logo/intelij.jpg" width="120" height="120"></td>
     </tr>
 </table>
 
