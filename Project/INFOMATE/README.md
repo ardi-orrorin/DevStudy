@@ -1,16 +1,9 @@
-# INFOMATE PROJECT
-
-INFOMATE 프로젝트 설명
-
-<br>
+# INFOMATE PROJECT(진행중)
 
 ### Link
 [BackEnd-SpringBoot](https://github.com/IMFOMATE/infomate_back) <-Link Github Repository<br/>
 [FrontEnd-React]() <-Link Github Repository<br/>
 [BackEnd-Kafka&MongoDB](https://github.com/yoosc89/INFOMATE_Kafka_MongoDB) <-Link Github Repository<br/>
-
-# 프레젠테이션
-Link : [Reveal-JS](https://yoosc89.github.io/DevStudy/Project/INFOMATE/presentation/)
 
 <br>
 
