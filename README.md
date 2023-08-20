@@ -83,8 +83,9 @@ Project 각 폴더에 해당하는 레포지토리로 연결하는 링크가 포
 2023-08-13 [MongoDB](./DB/NOSQL/MongoDB/90_Schema/) DB 설계시 주의 사항 및 스키마 패턴 공부<br>
 2023-08-15 [Codetest](./Other/DataStructure/Algolithm/01_list/) 스택, 큐를 이용한 수열의 오름차순<br>
 2023-08-16 [ReactivePrograming](./Langauge/Java/Reactive/02_Reactor/Core/) Flux 속도 차이 분석<br>
-2023-08-17~19 []() 파이널 프로젝트 중<br>
-2023-08-20 [React](./Langauge/JavaScript/Library/StompJS/) StompJS를 이용한 웹소켓 연결<br>
+2023-08-17~18 []() 파이널 프로젝트 중<br>
+2023-08-19 [React](./Langauge/JavaScript/Library/StompJS/) StompJS를 이용한 웹소켓 연결<br>
+2023-08-20 [Codetest](./Other/DataStructure/Algolithm/02_sort/) 버블, 선택 삽입 정렬 코테 공부<br>
 2023-08-21 []() 내용<br>
 2023-08-22 []() 내용<br>
 2023-08-23 []() 내용<br>
