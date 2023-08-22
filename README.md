@@ -87,7 +87,7 @@ Project 각 폴더에 해당하는 레포지토리로 연결하는 링크가 포
 2023-08-19 [React](./Langauge/JavaScript/Library/StompJS/) StompJS를 이용한 웹소켓 연결<br>
 2023-08-20 [Codetest](./Other/DataStructure/Algolithm/02_sort/) 버블, 선택 삽입 정렬 코테 공부<br>
 2023-08-21 []() 내용<br>
-2023-08-22 []() 내용<br>
+2023-08-22 [java](./Langauge/Java/Core/lamda/) 함수형 인터페이스 사용 공부<br>
 2023-08-23 []() 내용<br>
 2023-08-24 []() 내용<br>
 2023-08-25 []() 내용<br>
