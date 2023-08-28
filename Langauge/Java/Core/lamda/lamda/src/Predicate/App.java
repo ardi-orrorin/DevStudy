@@ -13,14 +13,18 @@ public class App {
          */
 
         Predicate<String> nonEmptyStringPredicate = s -> s.isEmpty();
-        List<String> nonEmpty1 = filter(Arrays.asList("12", "12"), nonEmptyStringPredicate);
+        // List<String> nonEmpty1 = filter(Arrays.asList("12", "12"),
+        // nonEmptyStringPredicate);
 
         // 축약
-        List<String> nonEmpty2 = filter(Arrays.asList("1", "2"), s -> s.isEmpty());
+        App app = new App();
+        List<String> nonEmpty2 = app.<String>filter(Arrays.asList("1", "2"), s -> !s.isEmpty());
+        System.out.println(nonEmpty2);
+
     }
 
     // predicate를 활용한 람다 함수
-    public static <T> List<T> filter(List<T> list, Predicate<T> p) {
+    public <T> List<T> filter(List<T> list, Predicate<T> p) {
         List<T> results = new ArrayList<>();
         for (T t : list) {
             if (p.test(t)) {
@@ -30,5 +34,4 @@ public class App {
         return results;
     }
 
-    
 }
