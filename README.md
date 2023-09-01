@@ -85,17 +85,17 @@ Project 각 폴더에 해당하는 레포지토리로 연결하는 링크가 포
 2023-08-13 [MongoDB](./DB/NOSQL/MongoDB/90_Schema/) DB 설계시 주의 사항 및 스키마 패턴 공부<br>
 2023-08-15 [Codetest](./Other/DataStructure/Algolithm/01_list/) 스택, 큐를 이용한 수열의 오름차순<br>
 2023-08-16 [ReactivePrograming](./Langauge/Java/Reactive/02_Reactor/Core/) Flux 속도 차이 분석<br>
-2023-08-17~18 []() 파이널 프로젝트 중<br>
+2023-08-17-18 []() 파이널 프로젝트 중<br>
 2023-08-19 [React](./Langauge/JavaScript/Library/StompJS/) StompJS를 이용한 웹소켓 연결<br>
 2023-08-20 [Codetest](./Other/DataStructure/Algolithm/02_sort/) 버블, 선택 삽입 정렬 코테 공부<br>
 2023-08-21 []() 내용<br>
 2023-08-22 [java](./Langauge/Java/Core/lamda/) 함수형 인터페이스 사용 공부<br>
-2023-08-23~27 []() 파이널 프로젝트 집중<br>
+2023-08-23-27 []() 파이널 프로젝트 집중<br>
 2023-08-28 [java](./Langauge/Java/Core/lamda/) 스트림 문법 재 학습<br>
-2023-08-29 []() 내용<br>
-2023-08-30 []() 내용<br>
-2023-08-31 []() 내용<br>
-2023-09-01 []() 내용<br>
+2023-08-29 []() 파이널 프로젝트 집중<br>
+2023-08-30 []() 파이널 프로젝트 집중<br>
+2023-08-31 []() 파이널 프로젝트 집중<br>
+2023-09-01 []() 파이널 프로젝트 집중<br>
 2023-09-02 []() 내용<br>
 2023-09-03 []() 내용<br>
 2023-09-04 []() 내용<br>
