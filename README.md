@@ -106,3 +106,5 @@ Project 각 폴더에 해당하는 레포지토리로 연결하는 링크가 포
 
 
 [![License: 테스트](./DB/)](./DB/)
+![Static Badge](https://img.shields.io/badge/test-00bb00?style=for-the-badge&logo=python)
+![Static Badge](https://img.shields.io/badge/test-00bb00?style=for-the-badge&logo=python&link=https%3A%2F%2Fnaver.com)
