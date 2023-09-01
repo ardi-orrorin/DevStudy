@@ -56,7 +56,8 @@ Project 각 폴더에 해당하는 레포지토리로 연결하는 링크가 포
 3. [개인] Alttuel(Crawlling Site) 개요 : [Repository-Link](./Project/alttuel/)
 4. [개인] CRM(CRM) 개요 : [Repository-Link](./Project/CRM/)
 
-# Study History
+<details>
+<summary>Study History</summary><br>
 2023-07-21 [Notion](https://certain-allspice-c69.notion.site/Dev-Study-58e7068499db4c8d8e0dc4250d5d44de?pvs=4) notion에서 github로 이전<br>
 2023-07-21 [MongoDB](./DB//NOSQL/MongoDB/) 기본 개념 및 구조, 컬렉력 및 DB 조회 및 insert 명령어 체험<br>
 2023-07-22 [ShellScript](./Langauge/ShellScript/) 파일생성 스크립트 인식<br>
@@ -101,3 +102,7 @@ Project 각 폴더에 해당하는 레포지토리로 연결하는 링크가 포
 2023-09-06 []() 내용<br>
 2023-09-07 []() 내용<br>
 2023-09-08 []() 내용<br>
+</details>
+
+
+[![License: 테스트](./DB/)](./DB/)

@@ -7,7 +7,6 @@
 
 <br>
 
-# TECH STACK
 <table>
    <tr>
       <td><img src="../../Resource/Logo/oracle.jpg" width=120 height=120></td>
@@ -37,7 +36,6 @@ FrontFramework : React <br>
 Frontend Library : Sunediter, fullCalendar, jsTree <br>
 IDE : IntelliJ <br>
 OtherSoftware : DA#5, Figma <br>
-
 
 <br>
 
@@ -87,6 +85,7 @@ OtherSoftware : DA#5, Figma <br>
 # DB 모델링
 ![](./presentation/DBModel.png)
 
+<br/>
 
 # 캘린더 주요 기능
 1. 캘린더 표시 여부에 따른 필터링
@@ -107,6 +106,10 @@ OtherSoftware : DA#5, Figma <br>
       1. 내가 구독하고 있는 캘린더 표시 및 삭제
       2. 내가 공개한 캘린더를 구독하는 캘린더와 유저, 구독 승인 및 취소 기능
       3. 공개된 캘린더 리스트 통한 구독 승인 요청
+
+<br/>
+<br/>
+
 # 실제 구현 화면
 ![](./presentation/cal1.jpg)
 ![](./presentation/cal2.jpg)
@@ -124,4 +127,4 @@ OtherSoftware : DA#5, Figma <br>
 ## [Controller]() <- Link
 
 
-## [Front - Javascript]() <- Link
+## [Front - React]() <- Link
