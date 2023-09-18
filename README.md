@@ -110,7 +110,7 @@ Project 각 폴더에 해당하는 레포지토리로 연결하는 링크가 포
 2023-09-15 [Codetest](./Other/DataStructure/Algolithm/03_search/) BFS을 이용한 2차원 배열 최소 경로 찾기<br>
 2023-09-16 [infomate]() 프로젝트 후기 stompjs 방식의 웹 소켓 연결<br>
 2023-09-17 [codetest](./Other/DataStructure/Algolithm/03_search/) 이진 탐색<br>
-2023-09-18 []() 내용<br>
+2023-09-18 [codetest](./Other/DataStructure/Algolithm/03_search/) 이진 탐색 활용<br>
 2023-09-19 []() 내용<br>
 2023-09-20 []() 내용<br>
 2023-09-21 []() 내용<br>

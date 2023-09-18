@@ -22,6 +22,7 @@ db.test2.find()
 db.createCollection("CalendarAlert")
 
 db.CalendarAlert.find()
+db.CalendarAler.find()
 db.CalendarAlert.find().sort({"endDate":-1})
 
 
@@ -30,4 +31,4 @@ db.test2.find().sort({createDate:  -1})
 
 db.test2.find();
 
-db.test2.drop()
+db.CalendarAler.drop()
