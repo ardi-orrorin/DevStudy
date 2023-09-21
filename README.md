@@ -112,7 +112,7 @@ Project 각 폴더에 해당하는 레포지토리로 연결하는 링크가 포
 2023-09-17 [codetest](./Other/DataStructure/Algolithm/03_search/) 이진 탐색<br>
 2023-09-18 [codetest](./Other/DataStructure/Algolithm/03_search/) 이진 탐색 활용<br>
 2023-09-19 [codetest](./Other/DataStructure/Algolithm/03_search/) 이진 탐색 활용 2차원 배열 원하는 위치의 값 구하기<br>
-2023-09-20 []() 내용<br>
+2023-09-20 [codetest](./Other/DataStructure/Algolithm//03_search/) 그리디 알고리즘 이용 목표값에 대한 최적의 수 찾기<br>
 2023-09-21 []() 내용<br>
 2023-09-22 []() 내용<br>
 2023-09-23 []() 내용<br>
