@@ -6,7 +6,7 @@ class AlertSite extends Sequelize.Model{
             id: {
                 type: Sequelize.INTEGER,
                 primaryKey: true,
-                autoIncrement: true,
+                autoIncrement: tue,
                 // defaultValue: 20000
             },
             siteName: {
