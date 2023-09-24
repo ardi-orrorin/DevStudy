@@ -4,7 +4,7 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const dotenv = require('dotenv');
 const path = require('path');
-const { error } = require('console');
+
 
 dotenv.config();
 const app = express();
@@ -45,6 +45,41 @@ app.use(session({
     },
     name: 'session-cookie'
 }));
+
+
+const multer = require('multer'); // multipart 데이터 사용시 미들웨어
+const fs = require('fs');
+
+const upload = multer({
+    storage: multer.diskStorage({
+        destination(req, file, done){ // 어디에 저장할 지
+            try{
+                fs.readdirSync('uploads')
+            }catch (err) {
+                console.log('uploads 폴더가 없어 uploads 폴더를 생성합니다.');
+                fs.mkdirSync('uploads')
+            }
+            done(null, 'uploads/');
+        },
+        filename(req, file, done){ // 파일 이름
+            const ext = path.extname(file.originalname);
+            done(null, path.basename(file.originalname, ext) + Date.now() + ext);
+        },
+    }),
+    limits: { fileSize : 100 * 1024 * 1024}, // 업로드 사이즈 byte 단위
+})
+
+// app.post('/upload', upload.single('image'), (req, res) => {  // name='image' input에 한 개의 파일 한개를 의미 
+// app.post('/upload', upload.array('image'), (req, res) => { // name='image' input multiple 일 경우
+//     console.log(req.file, req.body);
+//     res.send('ok');
+// });
+
+// app.post('/upload', upload.fields([{name: 'image1'}, {name: 'image2'}]), (req, res) => { // input 여러개인 경우 multiple attr 지원
+app.post('/upload', upload.none(), (req, res) => { // 모든 내용이  req.body()로 이동
+    console.log(req.files, req.body);
+    res.send('ok');
+});
 
 app.use((req, res, next) => { // 모든 요청에  대한 미들웨어
     console.log('middleware1 start');
