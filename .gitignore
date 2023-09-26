@@ -108,3 +108,5 @@ out/
 .vscode/
 *.class
 node_modules
+config.json
+.env

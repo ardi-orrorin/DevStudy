@@ -118,8 +118,9 @@ Project 각 폴더에 해당하는 레포지토리로 연결하는 링크가 포
 2023-09-22 [nodejs](./Langauge/JavaScript/Framework/NodeJs/) nodejs 공부<br>
 2023-09-23 [nodejs](./Langauge/JavaScript/Framework/NodeJs/) nodejs 공부<br>
 2023-09-24 [nodejs](./Langauge/JavaScript/Framework/NodeJs/) nodejs DB연결<br>
-2023-09-25 []() 내용<br>
-2023-09-26 []() 내용<br>
+2023-09-24 [nodejs](./Langauge/JavaScript/Framework/NodeJs/) nodejs DB연결<br>
+2023-09-25 [nodejs](./Langauge/JavaScript/Framework/NodeJs/) passport를 통해 로그인 기능 구현<br>
+2023-09-26 [nodejs](./Langauge/JavaScript/Framework/NodeJs/) api server cors jwt 기능 구현<br>
 2023-09-27 []() 내용<br>
 2023-09-28 []() 내용<br>
 2023-09-29 []() 내용<br>
