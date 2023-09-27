@@ -37,6 +37,7 @@ app.use((err, req, res, next) => {
     res.send('error');
 })
 
-app.listen(app.get('port'), () => {
-    console.log(`${app.get('port')} 포트 사용 중`);
-})
+
+module.exports = app;
+
+
