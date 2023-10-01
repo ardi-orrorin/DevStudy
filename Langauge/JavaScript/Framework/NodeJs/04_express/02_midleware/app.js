@@ -67,6 +67,7 @@ const upload = multer({
         },
     }),
     limits: { fileSize : 100 * 1024 * 1024}, // 업로드 사이즈 byte 단위
+    
 })
 
 // app.post('/upload', upload.single('image'), (req, res) => {  // name='image' input에 한 개의 파일 한개를 의미 

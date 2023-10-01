@@ -1,9 +1,11 @@
-import {NextRequest, NextResponse} from "next/server";
+import type {NextApiRequest, NextApiResponse} from "next";
 
-export async function GET(req: NextRequest, res: NextResponse) {
-    const { searchParams } = new URL(req.nextUrl);
-    const id = searchParams.get('id');
-    console.log(id);
-    return res.json();
+type ResponseData = {
+    message: string | undefined
+}
 
+export async function GET(req: NextApiRequest, res: NextApiResponse<ResponseData>) {
+    const url = req.url;
+    console.log(url)
+    res.status(200).json({message: url});
 }

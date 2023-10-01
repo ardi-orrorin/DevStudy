@@ -68,19 +68,44 @@ npm i
     </thead>
     <tbody>
         <tr>
-            <td>db</td>
+            <td>orm</td>
             <td>sequelize</td>
-            <td></td>
+            <td><a href='https://sequelize.org/'>https://sequelize.org/</a></td>
         </tr>
         <tr>
-            <td>db</td>
+            <td>orm</td>
             <td>sequelize</td>
-            <td></td>
+            <td><a href='https://sequelize.org/'>https://sequelize.org/</a></td>
+        </tr>
+        <tr>
+            <td>orm</td>
+            <td>prisma</td>
+            <td><a href='https://www.prisma.io/'>https://www.prisma.io/</a></td>
+        </tr>
+        <tr>
+            <td>orm</td>
+            <td>typeORM</td>
+            <td><a href='https://typeorm.io/'>https://typeorm.io/</a></td>
         </tr>
         <tr>
             <td>db</td>
             <td>mysql2</td>
-            <td></td>
+            <td><a href='https://www.npmjs.com/package/mysql2'>https://www.npmjs.com/package/mysql2</a></td>
+        </tr>
+        <tr>
+            <td>db</td>
+            <td>sqlite3</td>
+            <td><a href='https://www.npmjs.com/package/sqlite3'>https://www.npmjs.com/package/sqlite3</a></td>
+        </tr>
+        <tr>
+            <td>db</td>
+            <td>oracledb</td>
+            <td><a href='https://www.npmjs.com/package/oracledb'>https://www.npmjs.com/package/oracledb</a></td>
+        </tr>
+        <tr>
+            <td>db</td>
+            <td>postgres</td>
+            <td><a href='https://www.npmjs.com/package/postgres'>https://www.npmjs.com/package/postgres</a></td>
         </tr>
     </tbody>
 </table>
@@ -110,22 +135,22 @@ npm i
         <tr>
             <td>security</td>
             <td>csurf</td>
-            <td></td>
+            <td><a href=''></a></td>
         </tr>
         <tr>
             <td>security</td>
             <td>sanitize-html</td>
-            <td></td>
+            <td><a href=''></a></td>
         </tr>
         <tr>
             <td>security</td>
             <td>helmet</td>
-            <td></td>
+            <td><a href=''></a></td>
         </tr>
         <tr>
             <td>security</td>
             <td>hpp</td>
-            <td></td>
+            <td><a href=''></a></td>
         </tr>
     </tbody>
 </table>
@@ -145,27 +170,27 @@ npm i
         <tr>
             <td>cipher</td>
             <td>bcrypt</td>
-            <td></td>
+            <td><a href=''></a></td>
         </tr>
         <tr>
             <td>cipher</td>
             <td>passport</td>
-            <td></td>
+            <td><a href=''></a></td>
         </tr>
         <tr>
             <td>security</td>
             <td>passport-local</td>
-            <td></td>
+            <td><a href=''></a></td>
         </tr>
         <tr>
             <td>cipher</td>
             <td>uuid</td>
-            <td></td>
+            <td><a href=''></a></td>
         </tr>
         <tr>
             <td>cipher</td>
             <td>jsonwebtoken</td>
-            <td></td>
+            <td><a href=''></a></td>
         </tr>
     </tbody>
 </table>
@@ -185,27 +210,27 @@ npm i
         <tr>
             <td>setting</td>
             <td>dotenv</td>
-            <td></td>
+            <td><a href=''></a></td>
         </tr>
         <tr>
             <td>setting</td>
             <td>cross-env</td>
-            <td></td>
+            <td><a href=''></a></td>
         </tr>
         <tr>
             <td>build</td>
             <td>pm2</td>
-            <td></td>
+            <td><a href=''></a></td>
         </tr>
         <tr>
             <td>logger</td>
             <td>morgan</td>
-            <td></td>
+            <td><a href=''></a></td>
         </tr>
         <tr>
             <td>logger</td>
             <td>winston</td>
-            <td></td>
+            <td><a href=''></a></td>
         </tr>
     </tbody>
 </table>
@@ -226,7 +251,7 @@ npm i
         <tr>
             <td>template</td>
             <td>nunjucks</td>
-            <td></td>
+            <td><a href=''></a></td>
         </tr>
     </tbody>
 </table>
