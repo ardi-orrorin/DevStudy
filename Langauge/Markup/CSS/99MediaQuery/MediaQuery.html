@@ -5,21 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .el1,.el2{
-            min-width: 1200px;
-            min-height: 400px;
-            border: 1px solid red;
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            transition: 1s;
         }
-        /* @media (조건) {실행문} 조건에 따라 CSS를 추가로 적용할 수 있다.  */
-        @media (max-width : 500px) {
-            .el1{
-                background: red;
+        [class*='el']{
+            border: 1px solid red;
+            display: flexbox;
+            width: 10%;
+            flex-direction: column;
+            transition: 1s;
+        }
+        @media (max-width: 700px) {
+            .container {
+                flex-direction: column;
+                flex-wrap: nowrap;    
+                transition: 1s;
+            }
+            [class*=el]{
+                border: 1px blue solid;
+                width: 100%;
+                transition: 1s;
             }
         }
     </style>
 </head>
 <body>
-    <div class="el1"></div>
-    <div class="el2"></div>
+    <div class="container">
+        <div class="el1">1</div>
+        <div class="el2">2</div>
+        <div class="el3">3</div>
+        <div class="el4">4</div>
+        <div class="el5">5</div>
+        <div class="el6">6</div>
+        <div class="el7">7</div>
+        <div class="el8">8</div>
+        <div class="el9">9</div>
+    </div>
 </body>
 </html>

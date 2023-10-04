@@ -121,4 +121,5 @@ Project 각 폴더에 해당하는 레포지토리로 연결하는 링크가 포
 2023-09-26 [nodejs](./Langauge/JavaScript/Framework/NodeJs/) api server cors jwt 기능 구현<br>
 2023-09-27 [nodejs](./Langauge/JavaScript/Framework/NodeJs/) nodejs 배포 공부<br>
 2023-09-27 [typescript](./Langauge/JavaScript/Framework/Typescript/) typescript 학습<br>
-2023-09-27 ~ 10-02 [nodeJs](https://github.com/yoosc89/informate_back_nodeJs) Springboot RestAPI 서버를 nodeJS 서버로 마이그레이션 진행 <br>
+2023-09-27 ~ 10-03 [nodeJs](https://github.com/yoosc89/informate_back_nodeJs) Springboot RestAPI 서버를 nodeJS 서버로 마이그레이션 진행 <br>
+2023-10-04 [disignPattern](./Other/DesignPattern/03_Behavioral/07_Observer/) observer pattern 학습<br>
