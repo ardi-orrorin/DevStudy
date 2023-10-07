@@ -17,6 +17,7 @@ let obj:object = {name:'name', count:12}
 let arrStr:Array<string> = ['홍길동', '심사임당','유관순'];
 let arrStr2:string[] = ['홍길동', '심사임당','유관순'];
 
+
 let arrNum1:Array<number> = [1,2,3,4];
 let arrNum2:number[] = [1,2,3,4];
  

@@ -1,3 +1,4 @@
+package example;
 public class NoteBookAccssory extends AccessoryImpl {
 
     @Override

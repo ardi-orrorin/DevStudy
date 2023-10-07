@@ -1,3 +1,4 @@
+package example;
 public interface Accessory {
     
     public boolean keyboard();

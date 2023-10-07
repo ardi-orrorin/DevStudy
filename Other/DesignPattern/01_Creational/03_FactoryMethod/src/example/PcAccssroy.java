@@ -1,3 +1,4 @@
+package example;
 public class PcAccssroy extends AccessoryImpl {
 
     @Override
