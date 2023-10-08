@@ -124,3 +124,4 @@ Project 각 폴더에 해당하는 레포지토리로 연결하는 링크가 포
 2023-09-27 ~ 10-03 [nodeJs](https://github.com/yoosc89/informate_back_nodeJs) Springboot RestAPI 서버를 nodeJS 서버로 마이그레이션 진행 <br>
 2023-10-04 [disignPattern](./Other/DesignPattern/03_Behavioral/07_Observer/) observer, decorator 패턴 학습<br>
 2023-10-07 [disignPattern](./Other/DesignPattern/01_Creational/03_FactoryMethod/) 팩토리 메서드 패턴 학습<br>
+2023-10-08 [java](./Langauge/Java/Core/keyword/) 싱글톤 패턴 or synchronized 및 volatile 개념 공부<br>
