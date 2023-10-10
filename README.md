@@ -18,6 +18,8 @@ Project 각 폴더에 해당하는 레포지토리로 연결하는 링크가 포
    <tr>
       <td><img src="./Resource/Logo/java.jpg" width=120 height=120></td>
       <td><img src="./Resource/Logo/python.jpg" width=120 height=120></td>
+      <td><img src="./Resource/Logo/js.jpg" width=120 height=120></td>
+      <td><img src="./Resource/Logo/typescript.jpg" width=120 height=120></td>
    </tr>
    <tr>
       <td><img src="./Resource/Logo/springboot.jpg" width=120 height=120></td>
@@ -28,13 +30,17 @@ Project 각 폴더에 해당하는 레포지토리로 연결하는 링크가 포
    <tr>
       <td><img src="./Resource/Logo/html.jpg" width=120 height=120></td>
       <td><img src="./Resource/Logo/css.jpg" width=120 height=120></td>
-      <td><img src="./Resource/Logo/js.jpg" width=120 height=120></td>
+      <td><img src="./Resource/Logo/jqeury.jpg" width=120 height=120></td>
+      <td><img src="./Resource/Logo/Thyemleaf.jpg" width=120 height=120></td>
    </tr>
    <tr>
-      <td><img src="./Resource/Logo/jqeury.jpg" width=120 height=120></td>
+      <td><img src="./Resource/Logo/sequalize.jpg" width=120 height=120></td>
+   </tr>
+   <tr>
+      <td><img src="./Resource/Logo/nextJs.jpg" width=120 height=120></td>
       <td><img src="./Resource/Logo/react.jpg" width=120 height=120></td>
-      <td><img src="./Resource/Logo/Thyemleaf.jpg" width=120 height=120></td>
       <td><img src="./Resource/Logo/svetle.jpg" width=120 height=120></td>
+      <td><img src="./Resource/Logo/express.jpg" width=120 height=120></td>
    </tr>
    <tr>
       <td><img src="./Resource/Logo/nginx.jpg" width=120 height=120></td>
@@ -58,7 +64,7 @@ Project 각 폴더에 해당하는 레포지토리로 연결하는 링크가 포
 <br>
 
 # Study History
-2023-10-09 [kotlin](./Langauge/Kotlin/src/main/kotlin/) 코틀린 기본 문법 공부<br>
+2023-10-10 [kotlin](./Langauge/Kotlin/src/main/kotlin/) 코틀린 기본 문법 공부<br>
 2023-10-09 [java](./Other/DesignPattern/02_Structual/01_Adapter/) adapter, facade pattern 개념 공부<br>
 2023-10-08 [java](./Langauge/Java/Core/keyword/) 싱글톤 패턴 or synchronized 및 volatile 개념 공부<br>
 2023-10-07 [disignPattern](./Other/DesignPattern/01_Creational/03_FactoryMethod/) 팩토리 메서드 패턴 학습<br>
