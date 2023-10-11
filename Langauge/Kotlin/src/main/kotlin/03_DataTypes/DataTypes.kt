@@ -1,6 +1,7 @@
 package `03_DataTypes`
 
 import java.io.PipedReader
+import kotlin.reflect.typeOf
 
 fun main() {
     // 묵시적 타입 선언
@@ -52,6 +53,17 @@ fun main() {
 
     println(name[1]) // e
     println(name.length) // 길이
+
+    // Other Types
+    // Any 무엇이든 가능한 타입
+    val other1: Any = 12;
+
+    // Unit 리턴값이 없다는 의미
+    // Unit 싱글톤 인스턴스이다. 타입이면서 객체를 의미하며 Any의 자식 즉 서브클래스이다.
+    // 보통 함수에서 사용
+//    val other2: Unit = 12; // error
+    val other2: Unit;
+
 
 
 }
