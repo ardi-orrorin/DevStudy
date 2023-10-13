@@ -64,8 +64,8 @@ Project 각 폴더에 해당하는 레포지토리로 연결하는 링크가 포
 <br>
 
 # Study History
-2023-10-11 [kotlin](./Langauge/Kotlin/src/main/kotlin/) 코틀린 기본 문법 공부 확자함수, optional 처리<br>
-2023-10-10 [kotlin](./Langauge/Kotlin/src/main/kotlin/) 코틀린 기본 문법 공부 funtion, class, scopeFunction<br>
+2023-10-12 [kotlin](./Langauge/Kotlin/src/main/kotlin/) 코틀린 기본 문법 공부 확자함수, optional 처리<br>
+2023-10-11 [kotlin](./Langauge/Kotlin/src/main/kotlin/) 코틀린 기본 문법 공부 funtion, class, scopeFunction<br>
 2023-10-10 [kotlin](./Langauge/Kotlin/src/main/kotlin/) 코틀린 기본 문법 공부<br>
 2023-10-09 [java](./Other/DesignPattern/02_Structual/01_Adapter/) adapter, facade pattern 개념 공부<br>
 2023-10-08 [java](./Langauge/Java/Core/keyword/) 싱글톤 패턴 or synchronized 및 volatile 개념 공부<br>
