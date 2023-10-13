@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            gap: 10px;
+        }
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            cursor: move;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div draggable="true" class="box">A</div>
+        <div draggable="true" class="box">B</div>
+        <div draggable="true" class="box">D</div>
+    </div>
+    <script>
+
+        // drag event wait 마우스 커서 기준
+        // 1. dragstart 드래그 시작시
+        // 2. drag // 드래그 시작점 엘리먼트
+        // 3. dragenter // 다른 ele 위를 겹칠때 한 번 실행
+        // 4. dragover // 다른 ele 겹칠 때 계속 실행
+        // 5. dragleave // 다른 ele 위를 떠날 때 한 번 실행
+        // 6. drop // 드롭 완료시
+        // 7. dragend // 드래그 종료시
+
+        const drag = {start: null, end: null}
+        
+        function dragStartHandler(e) {
+            drag.start = e.target
+            console.log(e.target);
+            this.style.opacity = '0.4'
+        }
+        function dragEndHandler(e) {
+            this.style.opacity = '1'
+            this.style.backgroundColor = 'blue'
+            
+        }
+        function dragHandler(e) {
+            console.log("drag", drag);
+            console.log("obejct", e.target);
+            this.style.backgroundColor = 'red' // 
+        }
+
+        let items = document.querySelectorAll('.box')
+        items.forEach((item) => {
+            item.addEventListener('dragstart', dragStartHandler)
+            item.addEventListener('dragend', dragEndHandler)
+            item.addEventListener('dragenter', dragHandler)
+        })
+    </script>
+</body>
+</html>
