@@ -1,0 +1,9 @@
+.success, .message {
+  border: 1px solid red;
+  padding: 10px;
+  color: red;
+}
+
+.success {
+  color: blue;
+}/*# sourceMappingURL=style.css.map */

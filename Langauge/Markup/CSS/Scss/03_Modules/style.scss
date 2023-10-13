@@ -1,0 +1,14 @@
+@use 'base';
+$listFontColor: blue;
+
+.nav {
+    margin: 1vh 1vw;
+    ul {
+        padding: 0;
+        li {
+            font-size: 0.8rem;
+            color: $listFontColor;
+        }
+    }
+
+}

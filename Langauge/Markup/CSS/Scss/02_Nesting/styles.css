@@ -1,0 +1,14 @@
+.nav {
+  color: red;
+}
+.nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nav ul li:nth-child(2) {
+  color: blue;
+}
+.nav ul li:nth-child(2n-1) {
+  color: greenyellow;
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,21 @@
+%message-shared {
+    border: 1px solid red;
+    padding: 10px;
+    color: red;
+}
+
+//사용되지 않았기 때문에 css로 변환되지 않는다.
+%equal-heights {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.message {
+    @extend %message-shared;
+}
+
+.success {
+    @extend %message-shared;
+    color: blue; // Mixin과 다른 점
+}
+

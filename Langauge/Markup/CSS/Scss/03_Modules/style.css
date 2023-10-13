@@ -1,0 +1,15 @@
+.container {
+  font-size: 2rem;
+  color: red;
+}
+
+.nav {
+  margin: 1vh 1vw;
+}
+.nav ul {
+  padding: 0;
+}
+.nav ul li {
+  font-size: 0.8rem;
+  color: blue;
+}/*# sourceMappingURL=style.css.map */

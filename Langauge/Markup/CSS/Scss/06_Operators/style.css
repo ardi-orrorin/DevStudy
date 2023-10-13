@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+}
+
+article[role=main] {
+  width: 62.5%;
+  background-color: blue;
+}
+
+aside[role=complementary] {
+  width: 31.25%;
+  background-color: red;
+}/*# sourceMappingURL=style.css.map */
