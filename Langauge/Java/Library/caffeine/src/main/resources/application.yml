@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@192.168.0.4:41521:xe
+    username: C##INFOMATE
+    password: INFOMATE
+    hikari:
+      auto-commit: false
+
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    database: oracle
+
+  cache:
+    cache-names: schedule
+    caffeine:
+      spec: maximumSize=100, expireAfterAccess=60s
+
