@@ -1,7 +1,7 @@
-# INFORMATE PROJECT CHATTING SERVER
+# INFORMATE Springboot to ExpressJs Migration
 
 ### TECH STACK
-[BackEnd-Kafka&MongoDB](https://github.com/yoosc89/INFOMATE_Kafka_MongoDB) <-Link Github Repository<br/>
+[Migration ExpressJs](https://github.com/yoosc89/informate_back_nodeJs) <-Link Github Repository<br/>
 
 ### INTRODUCTION
 INFOMATE 프로젝트에서 채팅와 알림 서비스를 추가로 제작한 사이드 프로젝트
