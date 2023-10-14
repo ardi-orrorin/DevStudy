@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <button @click="toggleHandle">toggle</button>
+        <h1 v-if="toggle">난다요 고래</h1>
+        <h1 v-else="toggle">대체</h1>
+        
+        <br/>
+        <br/>
+        
+        <div v-if="type === 'A'">A</div>
+        <div v-else-if="type === 'B'">B</div>
+        <div v-else-if="type === 'C'">C</div>
+        <div v-else-if="type === 'D'">D</div>
+        <div v-else="type === 'D'">다 아님</div>
+
+        <br/>
+        <br/>
+
+        <template v-if="toggle">
+            <h1>제목</h1>
+            <p>단락 1</p>
+            <p>단락 2</p>
+        </template>
+
+        <h1 v-show="toggle">제목 show</h1>
+        <h1 v-show="!toggle">!제목 show</h1>
+
+    </div>
+    <script>
+        const {createApp, ref} = Vue;
+
+        const toggle = ref(true);
+        const type = ref('e')
+
+        function toggleHandle() {
+            toggle.value = !toggle.value
+        }
+
+        const app = createApp({
+            setup() {
+                return {
+                    toggle, toggleHandle, type
+                }
+            }
+        })
+
+        app.mount('#app')
+    </script>
+</body>
+</html>

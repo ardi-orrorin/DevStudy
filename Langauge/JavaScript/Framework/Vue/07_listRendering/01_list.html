@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="item in items">
+                {{item.message}}
+            </li>
+        </ul>
+
+        <ol>
+            <li v-for="(item, index) in items">
+                {{index}} - {{item.message}} - {{parentMessage}}
+            </li>
+        </ol>
+    </div>
+    <script>
+        const {createApp, ref} = Vue;
+
+        const parentMessage = ref('Parent');
+        const items = ref([
+            {message: 'Foo'},
+            {message: 'Bar'},
+        ]);
+
+        const app = createApp({
+            setup() {
+                return {
+                    items, parentMessage
+
+                }
+            }
+        })
+
+        app.mount('#app')
+    </script>
+</body>
+</html>

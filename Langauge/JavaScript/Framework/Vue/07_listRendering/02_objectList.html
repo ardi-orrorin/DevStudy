@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="value in myObject">
+                {{ value }}
+            </li>
+        </ul>
+
+        <ol>
+            <!-- value key 순서 중요 -->
+            <li v-for="(value, key, index) in myObject">
+                {{key}}: {{value}} - {{index}}
+            </li>
+        </ol>
+    </div>
+    <script>
+        const {createApp, reactive} = Vue;
+
+        const myObject = reactive({
+            title: '목록 작성하는 방법',
+            author: '홍길동',
+            publishedAt: '2023-10-14',
+        })
+
+        const app = createApp({
+            setup() {
+                return {
+                    myObject
+                }
+            }
+        })
+
+        app.mount('#app')
+    </script>
+</body>
+</html>

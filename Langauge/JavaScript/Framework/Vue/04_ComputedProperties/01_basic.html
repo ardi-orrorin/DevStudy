@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p>출판 된 책</p>
+        <!-- <div>{{ author.books.length > 0 ? 'Yes': 'No' }}</div> -->
+        <div>{{ publishedBooks }}</div>
+        <div>{{ test() }}</div>
+
+        <div v-html="publishedBooks"></div>
+        <div v-html="test()"></div>
+
+        <br/>
+        <br/>
+        <div>{{ publishedBooks }}</div>
+        <div>{{ test() }}</div>
+        <button @click="toggleHandle()">refToggle</button>
+        <button @click="testHandle()">funToggle</button>
+
+    </div>
+
+    <script>
+        const {createApp, reactive, computed} = Vue;
+
+        const app = createApp({
+            setup() {
+                const author = reactive({
+                    name: '홍길동',
+                    books: [
+                        '홀길동전',
+                        '약탈전',
+                        '영웅전',
+                    ]
+                })
+                
+                // computed ref
+                // ref객체로 반환된다.
+                // funtion과 차이점은 의존된 반응형 기반으로 캐시된다는 뜻이다.
+                // computed ref 의존된 반응형 일부가 변경될 경우 재렌더링이 일어지만
+                // funtion은 재 랜더링이 일어나지 않는다.
+                // readOnly 객체이다.
+                const publishedBooks = computed(()=>{
+                    return author.books.length > 0 ? 'Yes': 'No'
+                })
+
+                const test = () => {
+                    return author.books.length > 0 ? 'Yes': 'No'
+                }
+
+                const toggleHandle = () => {
+                    publishedBooks.value = !publishedBooks.value
+                }
+                const testHandle = () => {
+                    test() = !test()
+                }
+
+                return {
+                    author,
+                    publishedBooks,
+                    test,
+                    toggleHandle,
+                    testHandle,
+                }
+            }
+        })
+
+        app.mount('#app')
+    </script>
+</body>
+</html>

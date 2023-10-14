@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <button @click="seen = !seen">toggle</button>
+        <!-- 
+            v- 접두사가 있는 특수한 속성을 디렉티브라고 한다.
+            v 빌트인
+         -->
+        <p v-if="seen">Now ypu see me</p>
+
+        
+        <a v-bind:href="url">빌트인 포함</a><br/>
+        <a :href="url">단축 문법</a><br/>
+
+        <button v-on:click="seen = !seen">build in</button><br/>
+        <button @click="seen = !seen">toggle</button><br/>
+
+        <!-- Dynamic Arguments -->
+        <a :[attribute]="url">google</a><br/>
+
+        <button v-on:[eventName]="doSomething">toggle</button><br/>
+        <button @[eventName]="doSomething">toggle</button><br/>
+
+        <!-- Modifiers -->
+        <form @submit.prevent="onSubmit"></form>
+    </div>
+    <script>
+        const {createApp} = Vue;
+
+        const app = createApp({
+            data() {
+                return {
+                    seen: true,
+                    url: 'https://google.com',
+                    attribute: 'href',
+                    eventName: 'click',
+                    doSomething: function () {
+                        console.log('test');
+                    }
+                }
+            }
+        })
+
+        app.mount('#app')
+    </script>
+</body>
+</html><br/>

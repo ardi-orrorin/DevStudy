@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- 특수한 키워드 $event -> event=>event와 같읕 의미 -->
+        <button @click="say(message, $event)">테스트</button>
+
+        <button @click="(e)=> say(message,e)">테스트</button>
+        
+    </div>
+    <script>
+        // v-on 디렉티브는 단축 문법으로 @기호를 사용한다.
+        const {createApp, ref} = Vue;
+        const message = ref('test')
+
+        const app = createApp({
+            setup() {
+
+                function say(message, event) {
+                    console.log(event);
+                    alert(message)
+                }
+
+                return {
+                    say, message
+                }
+            }
+        })
+
+        app.mount('#app')
+    </script>
+</body>
+</html>
