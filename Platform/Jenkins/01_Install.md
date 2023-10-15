@@ -3,8 +3,13 @@
 
 ## 1-1. Docker Version
 <pre>
-// CLI
-docker run -d --name jenkins --restart=on-failure -p 8080:8080 -v /var/jinks_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock -e TZ=Asia/Seoul -u root jenkins/jenkins
+## CLI
+docker run -d --name jenkins --restart=on-failure \
+-p 8080:8080 \
+-v /var/jinks_home:/var/jenkins_home \
+-v /var/run/docker.sock:/var/run/docker.sock \
+-e TZ=Asia/Seoul \
+-u root jenkins/jenkins
 </pre>
 
 
