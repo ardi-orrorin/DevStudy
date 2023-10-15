@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{state.name}}</h1>
+        <h3>{{state.text}}</h3>
+        <br/>
+
+        <!-- text -->
+        <!-- 기존의 방법 -->
+        <input
+            :value="state.name"
+            @input="e => state.name = e.target.value"
+        />
+        <!-- 
+            v-model은 모든 폼 엘리먼트에서 감지되는 초기 
+            value, checked 또는 selected 속성 값을 무시한다.
+         -->
+        <br/>
+        <br/>
+        <input v-model="state.name" />
+        <br/>
+        <br/>
+        <input v-model="state.text" />
+        
+        <br/>
+        <br/>
+        <span>lazy : </span>
+        <!--  이벤트 이후에 값 동기화 -->
+        <input v-model.lazy="state.text" /> 
+        <br/><br/>
+
+        
+        <span>여러줄 메시지 : </span>
+        <p style="white-space: pre-line;">{{ message }}</p>
+        <textarea v-model="message" placeholder="입력하세요"></textarea>
+        <br/><br/>
+        
+
+        <!-- checkBox -->
+        <div>{{checkedList}}</div>
+        <input type="checkbox" id="hong" value="홍길동" v-model="checkedList" />
+        <label for="hong">홍길동</label>
+        <input type="checkbox" id="shim" value="심사임당" v-model="checkedList" />
+        <label for="shim">심사임당</label>
+        <input type="checkbox" id="se" value="세종대왕" v-model="checkedList" />
+        <label for="se">세종대왕</label>
+
+        <br/><br/>
+
+        <!-- checkBox value binding -->
+        <div>{{picked}}</div>
+        <input type="checkbox" id="hong1" true-value="홍길동on" false-value="홍길동off" v-model="picked" />
+        <label for="hong1">홍길동</label>
+        <br/><br/>
+
+        <!-- radio -->
+        <div>{{picked}}</div>
+        <input type="radio" id="one" value="하나" v-model="picked" />
+        <label for="one">하나</label>
+        <input type="radio" id="two" value="둘" v-model="picked" />
+        <label for="two">둘</label>
+        <br/><br/>
+
+        <!-- radio binding -->
+        <div>{{picked}}</div>
+        <input type="radio" id="one1" :value="하나" v-model="picked" />
+        <label for="one1">하나</label>
+        <input type="radio" id="two1" :value="둘" v-model="picked" />
+        <label for="two1">둘</label>
+        <br/><br/>
+
+        <!-- select -->
+        <div>{{selected}}</div>
+        <select v-model="selected">
+            <option value="" disabled>다음 중 하나를 선택하세요</option>
+            <option value="ga">가</option>
+            <option >나</option>
+            <option value="ra">라</option>
+        </select>
+
+        <br/><br/>
+        
+        <select v-model="selected" multiple>
+            <option value="" disabled>다음 중 하나를 선택하세요</option>
+            <option value="ga">가</option>
+            <option >나</option>
+            <option value="ra">라</option>
+        </select>
+        
+
+
+    </div>
+    <script>
+        const {createApp, reactive, ref} = Vue;
+
+        const app = createApp({
+            setup() {
+                const state = reactive({
+                    name: '',
+                    text: '',
+                });
+
+                const message = ref('');
+                
+                const checkedList= ref([])
+
+                const picked = ref('');
+
+                const selected = ref('');
+
+                return {
+                    state,
+                    message,
+                    checkedList,
+                    picked,
+                    selected,
+                }
+            }
+        })
+
+        app.mount('#app')
+    </script>
+</body>
+</html>

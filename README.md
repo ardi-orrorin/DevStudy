@@ -64,7 +64,8 @@ Project 각 폴더에 해당하는 레포지토리로 연결하는 링크가 포
 <br>
 
 # Study History
-2023-10-14 [vue](./Langauge/JavaScript/Framework/Vue/) vueJs 학습<br>
+2023-10-15 [vue](./Langauge/JavaScript/Framework/Vue/) vueJs 컴포넌트, router 학습<br>
+2023-10-14 [vue](./Langauge/JavaScript/Framework/Vue/) vueJs 기본 학습<br>
 2023-10-13 [scss](./Langauge/Markup/CSS/Scss/) scss 학습, springbooCache 학습<br>
 2023-10-12 [kotlin](./Langauge/Kotlin/src/main/kotlin/) 코틀린 기본 문법 공부 확자함수, optional 처리<br>
 2023-10-11 [kotlin](./Langauge/Kotlin/src/main/kotlin/) 코틀린 기본 문법 공부 funtion, class, scopeFunction<br>

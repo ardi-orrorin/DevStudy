@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <button @click="data++">{{data}}</button>
+
+    </div>
+    <script>
+        const {createApp, watchEffect, watchPostEffect, ref} = Vue;
+
+        const app = createApp({
+            setup() {
+
+                const data = ref(0);
+
+                // 
+                watchEffect(()=> {
+                    data.value = 100;
+                })
+
+                /*
+                    watch와 'watchEffect' 둘 다 사이드 이펙트를 반응적으로 실행할 수 있게 해줍니다.
+                    주요 차이점은 반응형 의존성을 추적하는 방식입니다:
+
+                    watch는 명시적으로 감시된 소스만 추적합니다.
+                    콜백 내에서 조회하는 항목은 추적하지 않습니다.
+                    또한 콜백은 소스가 실제로 변경된 경우에만 트리거됩니다.
+                    watch는 의존성 추적을 사이드 이펙트와 분리하여, 
+                    콜백이 실행되어야 하는 시기를 보다 정확하게 제어할 수 있습니다.
+
+                    반면 watchEffect는 의존성 추적과 사이드 이펙트를 하나의 단계로 결합합니다. 
+                    동기적(sync) 실행 중에 조회되는 모든 반응형 속성을 자동으로 추적합니다. 
+                    이것은 더 편리하고 일반적으로 더 간결한 코드를 생성하지만, 
+                    콜백이 실행되어야 하는 시기가 덜 명시적입니다.
+                */
+
+                // 감시자를 수동으로 중지 하려고 할 경우
+                const unwatchEffect = watchEffect(()=>{})
+                unwatchEffect() // 감시자 중지
+
+
+                watchPostEffect(()=>{
+                    data.value = 200
+                    console.log('upate 이후 실횅');
+                })
+                
+
+                return {
+                    data,
+
+                }
+            }
+        })
+
+        app.mount('#app')
+    </script>
+</body>
+</html>

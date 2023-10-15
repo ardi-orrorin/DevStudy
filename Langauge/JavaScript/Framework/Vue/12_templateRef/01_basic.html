@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input ref="input">
+        <br/><br/>
+        <ul>
+            <li v-for="item in 10" ref="itemRefs">
+                {{item}}
+            </li>
+        </ul>
+    </div>
+    <script>
+        const {createApp, ref, onMounted, watchEffect} = Vue;
+
+        // template Ref는 컴포넌트가 마운트된 후에 ref접근할 수 있다.
+        const app = createApp({
+            setup() {
+                const input = ref(null)
+                // 1. 마운트 된 후 ref 접근
+                // onMounted(()=>{
+                //     input.value.value=123;
+                //     input.value.focus();
+                // })
+
+                // 2. 감시자
+                watchEffect(()=>{
+                    if(input.value) { // 마운트 전에는 null값이므로, 이를 고려해서 작성해야 한다.
+                        input.value.focus();
+                    } else{
+                        // v-if에 의해 아직 마운트 되지 않았거나 마운트가 해제되 경우
+                    }
+                })
+
+                // 3. v-for 내부에서  ref 사용하기
+                const itemRefs = ref([])
+
+                onMounted(()=> console.log(itemRefs.value));
+
+
+                return {
+                    input,
+                    itemRefs,
+                }
+            }
+        })
+
+        app.mount('#app')
+    </script>
+</body>
+</html>

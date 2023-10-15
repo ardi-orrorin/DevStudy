@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div>{{count}}</div>
+        <button @click="count++">count</button>
+        
+        <br/><br/>
+        <!-- 라이프 사이클 참고 -->
+        <img src="https://ko.vuejs.org/assets/lifecycle.d3fe54ca.png" width="700"/>
+    </div>
+    <script>
+        const {createApp, ref, onMounted, onUpdated, onUnmounted} = Vue;
+
+        const count = ref(0)
+
+        const app = createApp({
+            setup() {
+                onMounted(()=>{
+                    console.log('mounted!');
+                })
+
+                onUpdated(()=>{
+                    console.log('update!');
+                })
+                onUnmounted(()=>{
+                    console.log('unMounted!!');
+                })
+                return {
+                    count,
+                }
+            }
+        })
+
+        app.mount('#app')
+    </script>
+</body>
+</html>

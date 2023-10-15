@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p>
+            예/아니도 질문:
+            <input v-model="text" />
+        </p>
+        <p>
+            {{answer}}
+        </p>
+
+        <button @click="obj.count++">{{obj.count}}</button>
+        <br/><br/>
+
+        <button @click="x++">x: {{x}}</button>
+        <button @click="y++">y: {{y}}</button>
+        <br/><br/>
+        <button @click="state.someObj.count++">{{state.someObj.count}}</button>
+    </div>
+    <script>
+        const {createApp, ref, watch, reactive} = Vue;
+
+        const app = createApp({
+            setup() {
+                const text = ref('')
+                const answer = ref('질문에는 일반적으로 물음표가 포함됩니다.')
+                const obj = reactive({count: 0})
+                const x = ref(0);
+                const y = ref(0);
+
+
+                // 감시자
+                // ref을 직접 변화를 감시한다.
+                watch(text, async(newText, oldText) => {
+                    if(newText.indexOf('?') > -1){
+                        answer.value = '생각중....'
+                    }else{
+                        answer.value = '입력중....'
+                    }
+                })
+
+
+                watch(
+                    () => x.value + y.value, // getter의 역할, 리턴값을 다음 함수의 인자로 전달
+                    (sum) => {
+                        console.log('x + y :', sum);
+                    }
+                )
+
+                // 개체의 속성은 감시 할 수 없다.
+                watch(obj.count, async (newC, oldC) => {
+                    console.log('count', newC, oldC);
+                })
+
+                watch(
+                    () => obj.count,
+                    (count) => {
+                        console.log('count', count);
+                    }
+                )
+
+
+                // 깊은 감시자
+                // 개체를 전달할 경우 깊은 감시가 가능하다.
+                // 
+                watch(obj, (newC, oldC) => {
+
+                    // newC, oldC의 값은 같다.
+                    // 둘다 같은 obj를 감시하고 있기 때문에 new old의 개념이 없다.
+                    console.log('deepCount', newC.count, oldC.count);
+                })
+
+                const state = reactive({
+                    someObj: {count: 0}
+                })
+
+                watch(
+                    ()=> state.someObj,
+                    (newC, oldC) => {
+                        console.log('state', newC.count, oldC.count);
+                    },
+                    {deep: true} // 명시적 깊은 감시자 선언
+                ) 
+            
+                return {
+                    text,
+                    answer,
+                    obj,
+                    state,
+                    x,y 
+                }
+            }
+        })
+
+        app.mount('#app')
+    </script>
+</body>
+</html>
