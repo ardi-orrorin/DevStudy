@@ -1,4 +1,4 @@
-# INFOMATE PROJECT(진행중)
+# INFOMATE PROJECT
 
 ### Link
 [BackEnd-SpringBoot](https://github.com/IMFOMATE/infomate_back) <-Link Github Repository<br/>
