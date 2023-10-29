@@ -22,10 +22,23 @@
 # $TZ 시간대가 설정되어 있는 환경 변수 TimeZone 약어
 # $PWD 현재 디렉토리의 경로가 설정되어 있는 환경 변수
 # $IFS 구분자로 구분 기호로 사용되는 값이 설정되어 있는 환경 변수, "Internal Field Separator" 약어. 탭, 공백, 줄 바꿈이 설정되어있다. 주로 for문 read 명령으로 값을 구분할 때 사용한다.
+# $HOME 사용자 홈 디렉토리
+# $LANG 실행중인 파일의 언어 정보
+# $UID 사용자의 UID
+# $SHELL 로그인시 실행되는 쉘
+# $USER 사용자 계정 이름
+# $FUNCNAME 현재 실행되는 함수의 이름
+# $TERM 로그인 터미널
 
 echo $PS1
 echo $PS2
 echo $PATH
 echo $PWD
 echo $IFS
-
+echo $HOME
+echo $LANG
+echo $UID
+echo $SHELL
+echo $USER
+echo $FUNCNAME
+echo $TERM

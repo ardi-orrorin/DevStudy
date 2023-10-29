@@ -13,6 +13,7 @@ var2=hello
 var3=world
 var4='world' #'' 글자만 인식
 
+
 # var라는 글자를 인식
 echo var1 var2 var3 var  # var1 var2 var3 var 
 
@@ -25,6 +26,19 @@ echo var : $var1 $var2 $var3 $var4 # var : 123 hello world world
 var5="${var1}${var2}${var3}${var4}"
 
 echo var5 : ${var5} # var5 : 123helloworldworld
+
+# 변수 배열
+varArr=("hello" "world" "!!!!" 1 2 3 4)
+
+# 사용시 ${변수} 으로 사용해야 한다.
+echo varArr:  ${varArr} # hello
+echo varArr[0]: ${varArr[0]} # hello
+echo varArr[*]: ${varArr[*]} # hello world !!!! 1 2 3 4
+echo varArr[@]: ${varArr[@]} # hello world !!!! 1 2 3 4
+
+varArr[3]="WOW!" # 타입 상관없이 변경 가능
+echo varArr[*]: ${varArr[*]} # hello world !!!! WOWl! 2 3 4
+
 
 #변수의값과 text을 같이 표시할 경우˜
 echo $var11  # var11 변수의 값을 호출
