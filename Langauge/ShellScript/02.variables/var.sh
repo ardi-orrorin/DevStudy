@@ -81,7 +81,7 @@ echo
 # ${var-text} var 사용하지 않은 경우만 text라는 문자열을 반환한다.
 # =와 차이점은 -는 대입하지 않고 대체 값을 반환한다는 것이다.
 echo var8text : ${var8-text} # text
-echo var8 : ${var8} # 
+echo var8 : ${var8} # ㄷ
 var8=""
 echo var8reText : ${var8-text1} #
 echo var8re : ${var8} #
