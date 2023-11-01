@@ -56,4 +56,15 @@ class UserService(private val database: Database) {
             Users.deleteWhere { Users.id.eq(id) }
         }
     }
+
+    suspend fun test(id: Int): List<ExposedUser> {
+        return dbQuery {
+            Users.select{
+                Users.id.eq(id)
+                Users.age greater 123
+            }.orderBy(Users.id, SortOrder.DESC)
+                .map { ExposedUser(it[Users.name], it[Users.age])
+                }
+        }
+    }
 }

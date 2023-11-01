@@ -9,7 +9,6 @@ fun Route.customerRouting() {
         get("/1") {
             var test: MutableMap<String, String> = mutableMapOf();
             test.put("test", "test123")
-
             call.respond(test)
         }
 
