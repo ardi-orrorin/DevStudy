@@ -7,5 +7,8 @@ import kotlinx.serialization.Serializable
 data class DiarySchema(
     val subject: String,
     val content: String,
-//    val member: MemberSchema
+    val createAt: String,
+    val updateAt: String? = null,
+    val deleteAt: String? = null,
+    val member: MemberSchema? = null,
 )

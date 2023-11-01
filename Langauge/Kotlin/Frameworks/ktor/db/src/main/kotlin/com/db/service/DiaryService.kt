@@ -1,6 +1,7 @@
 package com.db.service
 
 import com.db.dao.Diary
+import com.db.dao.Diary.nullable
 import com.db.dao.Member
 import com.db.schema.DiarySchema
 import com.db.schema.MemberSchema
@@ -28,10 +29,19 @@ class DiaryService(
             Diary.join(Member, JoinType.INNER).select {
                 Diary.id eq id
             }.map {
-                println(it)
+                val member = MemberSchema(
+                    userId = it[Member.userId],
+                    email = it[Member.email],
+                    createAt = it[Member.createAt].toString()
+                )
+
                 DiarySchema(
                     subject = it[Diary.subject],
-                    content = it[Diary.content]
+                    content = it[Diary.content],
+                    member = member,
+                    createAt = it[Diary.createAt].toString(),
+                    updateAt = it[Diary.updateAt.nullable()].toString(),
+                    deleteAt = it[Diary.deleteAt.nullable()].toString()
                 )
             }.single()
         }
