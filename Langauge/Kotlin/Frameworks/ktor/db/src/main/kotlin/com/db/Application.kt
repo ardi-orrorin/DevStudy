@@ -1,6 +1,8 @@
 package com.db
 
-import com.db.plugins.*
+import com.db.plugins.configureDatabases
+import com.db.plugins.configureRouting
+import com.db.plugins.configureSerialization
 import io.ktor.server.application.*
 
 fun main(args: Array<String>) {

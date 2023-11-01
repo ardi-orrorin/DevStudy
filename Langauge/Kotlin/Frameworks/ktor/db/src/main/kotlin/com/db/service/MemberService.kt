@@ -20,9 +20,8 @@ class MemberService(
     suspend fun <T> dbQuery(block: suspend () -> T): T =
         newSuspendedTransaction(Dispatchers.IO) { block() }
 
-    suspend fun loadMemberId(userId: String): MemberSchema {
-        println(userId)
-        return dbQuery {
+    suspend fun loadMemberId(userId: String): MemberSchema =
+         dbQuery {
             Member.select {
                 Member.userId eq userId
             }.map {
@@ -34,5 +33,5 @@ class MemberService(
                 )
             }.single()
         }
-    }
+
 }
