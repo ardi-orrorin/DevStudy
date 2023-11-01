@@ -1,5 +1,6 @@
 package com.db
 
+import com.db.plugins.authenticationConfig
 import com.db.plugins.configureDatabases
 import com.db.plugins.configureRouting
 import com.db.plugins.configureSerialization
@@ -10,6 +11,7 @@ fun main(args: Array<String>) {
 }
 
 fun Application.module() {
+    authenticationConfig()
     configureSerialization()
     configureRouting(configureDatabases())
 }
