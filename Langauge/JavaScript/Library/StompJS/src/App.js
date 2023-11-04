@@ -8,7 +8,7 @@ import CM from "./CM";
 function  App() {
   const client = useRef();
   
-  let data;
+  let data;  
 
   useEffect(()=>{
     client.current = new StompJS.Client({

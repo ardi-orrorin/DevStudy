@@ -30,6 +30,8 @@ fun main() {
                 .repeatForever()
         )
         .build()
+
+
     // http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html
     val cronTrigger: CronTrigger = TriggerBuilder.newTrigger()
         .withIdentity("cronTrigger")
@@ -37,6 +39,7 @@ fun main() {
             CronScheduleBuilder.cronSchedule("0,1,3,6 * * * * ?")
         )
         .build()
+
 
     val scheduler:Scheduler = StdSchedulerFactory().getScheduler()
     scheduler.start()
