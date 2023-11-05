@@ -1,0 +1,19 @@
+<!-- input file select preview -->
+
+<html lang="en">
+<body>
+    <input type="file" name="file" id="file" multiple>
+    <div id="img"></div>
+    <script>
+        const file = document.querySelector('#file');
+        const img = document.querySelector('#img');
+
+        file.addEventListener('change', function(){
+            for(const file of this.files){
+                const urlImg = URL.createObjectURL(file);
+                img.innerHTML += `<img src="${urlImg}" />`;
+            }            
+        });
+    </script>
+</body>
+</html>
