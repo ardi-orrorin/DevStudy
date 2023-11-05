@@ -104,7 +104,7 @@ class ResizeImage {
 
         val graphic: Graphics2D = bufImage.createGraphics()
 
-        val image: Image = bImage!!.getScaledInstance(oWidth, oHeight, Image.SCALE_FAST)
+        val image: Image = bImage!!.getScaledInstance(oWidth, oHeight, Image.SCALE_SMOOTH)
 
         graphic.drawImage(image, 0, 0, oWidth, oHeight, null)
         graphic.dispose()
