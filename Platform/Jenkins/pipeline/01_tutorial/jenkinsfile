@@ -1,0 +1,27 @@
+pipeline { // pipline block
+    agent any // pipline block이 실행될 장소
+    stages { // 실행되야할 stage
+        stage('Build') {
+            steps {
+                echo '빌딩 코드'
+            }
+            post {
+                // steps 실행 후 실행해야할 코드
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
+    post {
+        // 모든 stage가 끝난 후 실행해야할 코드
+    }
+}
+

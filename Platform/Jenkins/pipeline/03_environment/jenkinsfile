@@ -1,0 +1,13 @@
+// enviroment {}
+// 파이프라인 코드가 접근 할 수 있는 환경 변수를 설정
+// 파이프라인 코드에서는 env.변수명 으로 접근 가능
+// 파이프라인 블록 내에 있지 않아도 된다.
+
+environment { 
+    TIMEZONE = "asia/seoul"
+}
+
+
+environment {
+    ADMIN_USER = credentials('admin_user')
+}

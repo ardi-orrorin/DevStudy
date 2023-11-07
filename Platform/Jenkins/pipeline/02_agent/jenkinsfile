@@ -1,0 +1,46 @@
+pipeline {
+    agent any // agent any는 모든 노드에서 실행될 수 있음을 의미
+}
+
+pipeline {
+    agent none // agent none은 어떤 노드에서도 실행되지 않음을 의미
+}
+
+pipeline {
+    agent {
+        label {
+            label '<labelName>' // 파이프라인이나 스테이지에서 <label>이라는 레이블을 가진 에이전트에서 모두 실행됨을 의미
+            customWorkspace '/tmp/my-defined-label' // agent가 사용될 workspace 지정
+        }
+    }
+}
+
+pipeline {
+    agent {
+        docker {
+            image 'node:7-alpine' // docker image를 사용해 agent를 실행
+            label '<labelName>' // docker image를 사용해 agent를 실행할 노드의 label
+            args '-p 3000:3000' // docker run에 전달할 추가적인 인자
+        }
+    }
+}
+
+pipeline {
+    agent {
+        dockerfile {
+            filename 'dir/dockerfile name' // dockerfile이 위치한 경로
+            label '<labelName>' // dockerfile을 사용해 agent를 실행할 노드의 label
+            args '-p 3000:3000' // docker run에 전달할 추가적인 인자
+        }
+    }
+}
+
+pipeline {
+    stage 'abc' {
+        agent {
+            node {
+                label '<labelName>' // stage abc에서만 사용될 agent
+            }
+        }
+    }
+}
