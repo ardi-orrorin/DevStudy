@@ -1,0 +1,86 @@
+// parameters
+// 파이프라인에서 프로젝트 매개 변수를 지정하게 해준다.
+// 웹 폼에서 This build is parameterized 옵션과 같다.
+// input 스텝을 선택해서 원하는 매개 변수를 입력 받을 수도 있다.
+
+// booleanParam
+// true/false 값을 입력 받는다.
+// 하위 매개 변수로 name description defaultValue가 있다.
+
+parameters {
+    booleanParam(name: 'DEBUG', defaultValue: false, description: 'Enable debug mode?')
+}
+
+// choice
+// 목록에서 값을 선택할 수 있다.
+// 하위 매개 변수로 name description choices defaultValue가 있다.
+
+parameters {
+    choice(name: 'CHOICE', choices: ['A', 'B', 'C'], description: 'Choose a letter')
+}
+
+// file
+// 파이프라인에서 파일을 선택할 수 있다.
+// 하위 매개 변수로 fileLocation description이 있다.
+// 저장할 위치의 디렉토리 root는 workspace이다.
+parameters {
+    file(fileLocation: '/uploadDir', description: 'Choose a file') // {workspace}/uploadDir 의미
+}
+
+// string
+// 문자열을 입력받는다.
+// 하위 매개 변수로 name description defaultValue가 있다.
+parameters {
+    string(name: 'STRING', defaultValue: 'Hello, world!', description: 'Enter some text')
+}
+
+// text
+// 다중 라인의 문자열을 입력 받는다.
+// 하위 매개 변수로 name description defaultValue가 있다.
+parameters {
+    text(name: 'inputText', defaultValue: 'Hello, world!', description: 'Enter some text')
+}
+
+// password
+// 텍스트를 입력 받는데, 입력한 값이 보이지 않는다.
+// 하위 매개 변수로 name description defaultValue가 있다.
+parameters {
+    password(name: 'PASSWORD', defaultValue: 'secret', description: 'Enter a password')
+}
+
+
+// run
+// 사용자가 job에서 특정한 선을 선택할 수 있게 한다.
+// 하위 매개 변수로 name description filter project가 있다.
+// Filter의 종류
+// All Builds: 진행중인 빌드 포함
+// Completed Builds
+// Successful Builds : 안정, 불안정 빌드를 포함
+// Stable Builds Only
+
+parameters {
+    run(
+        name: 'RUN',
+        description: 'Choose a build', 
+        filter: 'Successful Builds', 
+        project: 'my-project'
+    )
+}
+
+// 파이프라인에서 매개 변수 사용하기
+// params 객체를 사용해서 매개 변수를 사용할 수 있다.
+// params.NAME 형태로 사용한다.
+
+pipeline {
+    agent any
+    parameters {
+        string(name: 'NAME', defaultValue: 'World', description: 'Who should I say hello to?')
+    }
+    stages {
+        stage('Example') {
+            steps {
+                echo "Hello, ${params.NAME}!"
+            }
+        }
+    }
+}

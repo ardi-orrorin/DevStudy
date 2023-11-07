@@ -1,0 +1,109 @@
+// stages
+// 필수 섹션으로 최소한 하나의 stage가 있어야 한다.
+pipeline {
+    agent any
+    stages {
+        stage('Example') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}
+
+
+// stage
+// 파이프라인의 단계를 정의한다.
+// 로컬레벨의 environment, options, parameters, stages, tools, when 디렉티브를 갖을 수 있다.
+
+// steps
+// 스테이지의 필수 섹션이다.
+// 스테이지 내에서 실행할 명령어를 정의한다.
+// echo, archiveArtifacts, git, mail과 같은 DSL 문장을 사용할 수 있다.
+
+// stage 조건부 실행
+pipeline {
+    agent any
+    stages {
+        stage('Example') {
+            when {
+                branch 'main' // main 브랜치에서만 실행
+                environment name: 'BuildConfig', value: 'TEST' // buildConfig 환경 변수 값의 TEST일 때만 실행
+                expression { return params.BUILD_CONFIG == 'TEST' } // 매개 변수의 BUILD_CONFIG 값이 TEST일 때만 실행  groovy 표현식
+            }
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}
+
+// stage 조건부 종류
+// allOf
+// 키워드는 and와 같이 동작한다.
+// 모든 조건이 true일 때 실행한다.
+pipeline {
+    agent any
+    stages {
+        stage('Example') {
+            when {
+                allOf {
+                    branch 'main'
+                    environment name: 'BuildConfig', value: 'TEST'
+                    expression { return params.BUILD_CONFIG == 'TEST' }
+                    // branch 'main' && environment name: 'BuildConfig', value: 'TEST' && expression { return params.BUILD_CONFIG == 'TEST' }
+                    // 위와 같은 의미이다.
+                }
+            }
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}
+
+// anyOf
+// 키워드는 or와 같이 동작한다.
+// 조건 중 하나라도 true일 때 실행한다.
+pipeline {
+    agent any
+    stages {
+        stage('Example') {
+            when {
+                anyOf {
+                    branch 'main'
+                    environment name: 'BuildConfig', value: 'TEST'
+                    expression { return params.BUILD_CONFIG == 'TEST' }
+                    // branch 'main' || environment name: 'BuildConfig', value: 'TEST' || expression { return params.BUILD_CONFIG == 'TEST' }
+                    // 위와 같은 의미이다.
+                }
+            }
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}
+
+// not
+// 키워드는 !와 같이 동작한다.
+// 조건이 false일 때 실행한다.
+pipeline {
+    agent any
+    stages {
+        stage('Example') {
+            when {
+                not {
+                    branch 'main'
+                    // branch main이 아닐 때 실행한다.
+                }
+            }
+            steps {
+                echo 'This is not Main Branch Code'
+            }
+        }
+    }
+}
+
+
+

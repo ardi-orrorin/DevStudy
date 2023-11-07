@@ -1,0 +1,17 @@
+// libraries
+// 공유 라이브러리를 불러온다.
+
+pipeline {
+    agent any
+    libraries {
+        lib('my-shared-library@master')
+    }
+    stages {
+        stage('Example') {
+            steps {
+                echo 'Hello World'
+                echo "The answer is ${library.example}"
+            }
+        }
+    }
+}
