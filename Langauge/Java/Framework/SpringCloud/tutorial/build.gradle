@@ -2,6 +2,8 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '3.1.5'
     id 'io.spring.dependency-management' version '1.1.3'
+    id 'com.palantir.docker' version '0.35.0'
+
 }
 
 group = 'com.example'
@@ -23,8 +25,23 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.26'
     annotationProcessor 'org.projectlombok:lombok:1.18.26'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    docker 'othergroup:otherservice:0.1.2'
+    docker 'foogroup:barmodule:0.1.2'
 }
 
 tasks.named('test') {
     useJUnitPlatform()
 }
+
+docker {
+    name "sctemp89/tutorial"
+    tag "tutorial", "hub.docker.com/sctemp89/tutorial:latest"
+    dockerfile file('Dockerfile')
+    files "build/libs/${project.name}-${project.version}.jar"
+    buildArgs(["JAR_FILE": "build/lib/${project.name}-${project.version}.jar"])
+    labels(['test':'vae'])
+    pull true
+    noCache true
+    push true
+}
+
