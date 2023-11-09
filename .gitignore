@@ -570,7 +570,7 @@ dist
 node_modules
 
 *.sublime*
-
+*.yml
 psd
 thumb
 sketch
