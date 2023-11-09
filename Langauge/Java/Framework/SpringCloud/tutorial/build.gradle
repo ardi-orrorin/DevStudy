@@ -34,14 +34,15 @@ tasks.named('test') {
 }
 
 docker {
+    platform "linux/amd64"
     name "sctemp89/tutorial"
-    tag "tutorial", "hub.docker.com/sctemp89/tutorial:latest"
-    dockerfile file('Dockerfile')
-    files "build/libs/${project.name}-${project.version}.jar"
+    tag "tutorial${project.version}", "sctemp89/tutorial:${project.version}"
+    tag "latest", "sctemp89/tutorial:latest"
+//    dockerfile file('Dockerfile')
+//    files "build/libs/${project.name}-${project.version}.jar"
     buildArgs(["JAR_FILE": "build/lib/${project.name}-${project.version}.jar"])
     labels(['test':'vae'])
     pull true
     noCache true
     push true
 }
-

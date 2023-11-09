@@ -1,5 +1,6 @@
 ## build 후 dockerfile로 변환하는 레이엉
 FROM openjdk:17-slim as build
+#FROM eclipse-temurin:17-jdk-alpine as build
 
 COPY ${JAR_FILE} app.jar
 
