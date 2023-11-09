@@ -26,6 +26,9 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.26'
     compileOnly 'org.projectlombok:lombok:1.18.26'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    runtimeOnly ("org.mariadb.jdbc:mariadb-java-client")
+
 }
 
 dependencyManagement {
