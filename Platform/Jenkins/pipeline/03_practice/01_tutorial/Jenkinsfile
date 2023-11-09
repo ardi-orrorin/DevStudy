@@ -1,0 +1,41 @@
+pipeline {
+    agent any
+    stages {
+        stage('checkout') {
+            steps {
+                echo 'checkout start'
+                git branch: 'main',
+                 credentialsId: 'github',
+                 url: 'https://github.com/yoosc89/jenkinstest.git'
+                echo 'checkout end'
+            }
+            post{
+                success {
+                    echo 'completed checkout'
+                }
+                failure {
+                    echo 'failured chkecout'
+                }
+            }
+        }    
+        stage('main') {
+            when {
+                branch 'main'
+            }
+            steps {
+                echo "Hello World main branch"
+            }
+        }
+        stage('master') {
+            when {
+                branch 'master'
+            }
+            steps {
+                echo "Hello World master branch"
+            }
+        }
+    }
+    triggers {
+        githubPush()
+    }
+}

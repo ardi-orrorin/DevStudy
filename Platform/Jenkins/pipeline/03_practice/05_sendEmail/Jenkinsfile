@@ -1,0 +1,60 @@
+def filelist = ''
+
+pipeline {
+    agent any
+    
+    triggers {
+        githubPush()
+    }
+
+    tools {
+        nodejs 'nodeJS 20.9.0'
+    }
+    
+    stages {
+        stage('checkout') {
+            steps {
+                echo 'checkout start'
+                git branch: 'main',
+                url: 'https://github.com/yoosc89/hamony.git',
+                credentialsId: 'github'
+                echo 'checkout end'
+            }
+        }
+    }
+
+    post {
+        always {
+            cleanWs(
+                cleanWhenNotBuilt: true,
+                disableDeferredWipeout: true,
+                patterns: [
+                    [pattern: 'boot/build/libs/*.jar', type: 'EXCLUDE'],
+                    [pattern: 'vuejs/dist/**', type: 'EXCLUDE'],
+                    [pattern: 'vuejs/node_modules', type: 'EXCLUDE'],
+                    [pattern: 'boot/src/resources/application.yml', type: 'EXCLUDE']
+                ],
+            )
+        }
+
+        success {
+            emailext( 
+                from: '$DEFAULT_USERID',
+                to: '$DEFAULT_RECIPIENTS',
+                subject: '$DEFAULT_SUBJECT',
+                body: '$DEFAULT_CONTENT \n',
+                attachLog: true,
+            )
+        }
+
+        failure {
+            emailext( 
+                from: '$DEFAULT_USERID',
+                to: '$DEFAULT_RECIPIENTS',
+                subject: '$DEFAULT_SUBJECT',
+                body: '$DEFAULT_CONTENT \n',
+                attachLog: true,
+            )
+        }
+    }
+}

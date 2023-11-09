@@ -1,0 +1,61 @@
+pipeline {
+    agent any
+    
+    triggers {
+        githubPush()
+    }
+
+    tools {
+        nodejs 'nodeJS 20.9.0'
+    }
+    
+    stages {
+        stage('checkout') {
+            steps {
+                echo 'checkout start'
+                git branch: 'main',
+                url: 'https://github.com/yoosc89/hamony.git',
+                credentialsId: 'github'    
+                echo 'checkout end'
+            }
+        }
+
+        stage('workspace') {
+            steps {
+                echo 'print workspace'
+                sh 'ls -al'
+                echo 'print workspace end'
+            }
+        }
+        
+        stage('configfile') {
+            steps {
+                echo 'configfile start'
+                configFileProvider(
+                    [configFile(
+                        fileId: '1c9ba48a-4c37-4713-b3c3-fb56f6db3da2',
+                        targetLocation: 'boot/src/resources/application.yml'
+                    )]) { 
+                        echo 'completed configfile copy'
+                    }
+                echo 'configfile end'
+            }
+        }
+
+        stage('build-boot') {
+            steps {
+                echo 'build-boot start'
+                sh 'cd boot && ./gradlew clean build'
+                echo 'build-boot end'
+            }
+        }
+
+        stage('build-vuejs') {   
+            steps {
+                echo 'build-vuejs start'
+                sh 'cd vuejs && npm install && npm run build'
+                echo 'build-vuejs end'
+            }
+        }
+    }
+}

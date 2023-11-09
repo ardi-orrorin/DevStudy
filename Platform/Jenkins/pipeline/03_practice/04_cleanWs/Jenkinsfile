@@ -1,0 +1,83 @@
+pipeline {
+    agent any
+    
+    triggers {
+        githubPush()
+    }
+
+    tools {
+        nodejs 'nodeJS 20.9.0'
+    }
+    
+    stages {
+        stage('checkout') {
+            steps {
+                echo 'checkout start'
+                git branch: 'main',
+                url: 'https://github.com/yoosc89/hamony.git',
+                credentialsId: 'github'    
+                echo 'checkout end'
+            }
+        }
+
+        stage('workspace') {
+            steps {
+                echo 'print workspace'
+                sh 'ls -al'
+                echo 'print workspace end'
+            }
+        }
+        
+        stage('configfile') {
+            steps {
+                echo 'configfile start'
+                configFileProvider(
+                    [
+                        configFile(
+                            fileId: '1c9ba48a-4c37-4713-b3c3-fb56f6db3da2',
+                            targetLocation: 'boot/src/resources/application.yml'
+                        ),
+                        configFile(
+                            fileId: 'bd8f5cb4-62dd-4a79-976b-491b86fdfc86',
+                            targetLocation: 'vuejs/.env'
+                        )
+                    ]) { 
+                        echo 'completed configfile copy'
+                    }
+                echo 'configfile end'
+            }
+        }
+
+        stage('build-boot') {
+            steps {
+                echo 'build-boot start'
+                sh 'cd boot && ./gradlew clean build'
+                echo 'build-boot end'
+            }
+        }
+
+        stage('build-vuejs') {   
+            steps {
+                echo 'build-vuejs start'
+                sh 'cd vuejs && npm install && npm run build'
+                echo 'build-vuejs end'
+            }
+        }
+    }
+
+    post {
+        always {
+            cleanWs(
+                cleanWhenNotBuilt: true, // 빌드 실패시에도 클린
+                // deleteDirs: true, // 디렉토리 삭제 patterns 내용 무시
+                disableDeferredWipeout: true, // 클린 후 디렉토리 삭제
+                patterns: [
+                    [pattern: 'boot/build/libs/*.jar', type: 'EXCLUDE'], // 대문자로
+                    [pattern: 'vuejs/dist/**', type: 'EXCLUDE'],
+                    [pattern: 'vuejs/node_modules', type: 'EXCLUDE'],
+                    [pattern: 'boot/src/resources/application.yml', type: 'EXCLUDE']
+                ],
+            )
+        }
+    }
+}

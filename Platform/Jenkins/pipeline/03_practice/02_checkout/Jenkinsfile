@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+    stages {
+        stage('checkout') {
+            steps {
+                echo 'checkout start'
+                git branch: 'main',
+                url: 'https://github.com/yoosc89/hamony.git',
+                credentialsId: 'github'    
+                echo 'checkout end'
+            }
+        }
+
+        stage('workspace') {
+            steps {
+                echo 'print workspace'
+                sh 'ls -al'
+                echo 'print workspace end'
+            }
+        }
+    }
+
+    triggers {
+        githubPush()
+    }
+}
