@@ -18,12 +18,8 @@ public class DiaryController {
 
     private final DiaryService diaryService;
 
-    @Value("${example.test}")
-    private String test;
-
     @GetMapping("/list")
     public ResponseEntity<List<Diary>> list() {
-        System.out.println(test);
         return ResponseEntity.ok(diaryService.findAll());
     }
 
