@@ -26,6 +26,12 @@ OpenFeign
 2. [serviceServer](./springConfig/cloudHamony/)  
    1. 서비스 서버
    2. 서비스의 로직을 담당하는 서버
+   3. Resilience4j를 통한 서비스 회복
+      1. **CircuitBreaker** : 회로 차단, 서비스가 실채할 때 요청 중단
+      2. **bulkedhaed** : 과부하 방지. 동시 호출 서비스 요청 수 제한
+      3. **rateLimiter** : 한 번에 수신하는 호출 수 제한
+      4. **retry** : 서비스가 일시적으로 실패할 때 재시도
+      5. **fallback** : 실패하는 요청에 대해 대체 경로 설정
 3. [eurekaServer](./serviceDiscovery/eurekaClient/)
    1.  디스커버리 서버
    2.  서비스 검색이 가능하게 해준다.
