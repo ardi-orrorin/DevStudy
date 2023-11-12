@@ -71,7 +71,7 @@ Sass는 기본적으로 상황에 맞게 파일들을 나눈다.
 모든 scss의 연결하는 파일
 
 ```scss
-
+// 파일별 import
 @import 'abstracts/variables'
 @import 'abstracts/mixins'
 @import 'abstracts/functions'
@@ -103,36 +103,60 @@ Sass는 기본적으로 상황에 맞게 파일들을 나눈다.
 
 @import 'themes/dark'
 @import 'themes/white'
-
-
-// 한번에 @import
-@import 
-    'abstracts/variables',
-    'abstracts/mixins',
-    'abstracts/functions',
-    'abstracts/placeholers,',
-    'venders/bootstrap',
-    'venders/jquery-ui,',
-    'bases/base',
-    'bases/reset',
-    'bases/typography',
-    'bases/animation,',
-    'layouts/grid',
-    'layouts/header',
-    'layouts/footer',
-    'layouts/sidebar',
-    'layouts/forms,',
-    'components/buttons',
-    'components/media',
-    'components/carousel',
-    'components/thumnails,',
-    'pages/home',
-    'pages/contact',
-    'pages/about',
-    'pages/singin,',
-    'themes/dark',
-    'themes/white'
-
-
 ```
 
+```scss
+// 폴더 별 import 묶음
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins',
+  'abstracts/placeholders';
+
+@import
+  'vendors/bootstrap',
+  'vendors/jquery-ui';
+
+@import
+  'base/reset',
+  'base/typography';
+
+@import
+  'layout/navigation',
+  'layout/grid',
+  'layout/header',
+  'layout/footer',
+  'layout/sidebar',
+  'layout/forms';
+
+@import
+  'components/buttons',
+  'components/carousel',
+  'components/cover',
+  'components/dropdown';
+
+@import
+  'pages/home',
+  'pages/contact';
+
+@import
+  'themes/theme',
+  'themes/admin';
+```
+
+```scss
+// 폴더별 import
+@import 'abstracts/*';
+@import 'vendors/*';
+@import 'base/*';
+@import 'layout/*';
+@import 'components/*';
+@import 'pages/*';
+@import 'themes/*';
+```
+
+
+```scss
+// 한번에 @import
+@import 'scss'
+```
