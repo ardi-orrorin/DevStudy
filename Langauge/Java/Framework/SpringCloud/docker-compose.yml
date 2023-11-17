@@ -1,0 +1,24 @@
+version: '3.7'
+
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:latest
+    command: 
+      # - "start"
+      - "start-dev"
+      # - "show-config" 
+      # - "--optimized"
+    environment:
+      KC_DB: mariadb
+      KC_HOSTNAME: localhost
+      KC_DB_URL: 'jdbc:mariadb://'
+      KC_DB_USERNAME: 
+      KC_DB_PASSWORD: ''
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+      # KC_FEATURES: token-exchange
+      # KC_HOSTNAME_STRICT_BACKCHANNEL: true
+
+    ports:
+      - 9998:8080
+    

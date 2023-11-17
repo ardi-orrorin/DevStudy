@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.mybatis.dao.MemberMapper">
+    <resultMap id="Member" type="com.example.mybatis.dto.MemberDTO" autoMapping="true">
+<!--        <result property="id" column="id"/>-->
+        <result property="userId" column="USER_ID"/>
+        <result property="password" column="PWD"/>
+<!--        <result property="createAt" column="CREATE_AT"/>-->
+<!--        <result property="updateAt" column="UPDATE_AT"/>-->
+<!--        <result property="deleteAt" column="DELETE_AT"/>-->
+    </resultMap>
+
+    <select id="selectAllMember" resultMap="Member">
+        SELECT *
+          FROM TBL_MEMBER
+    </select>
+
+    <insert id="insertMember" parameterType="com.example.mybatis.dto.MemberDTO" >
+        INSERT INTO TBL_MEMBER
+        (USER_ID, PWD)
+        VALUES (#{userId}, #{password})
+    </insert>
+
+    <update id="updateMember" parameterType="com.example.mybatis.dto.MemberDTO" >
+        UPDATE TBL_MEMBER
+        <if test="password != null">
+            SET PWD = #{password}
+        </if>
+         WHERE USER_ID = #{userId}
+    </update>
+
+    <delete id="deleteMember" parameterType="com.example.mybatis.dto.MemberDTO" >
+        DELETE
+          FROM TBL_MEMBER
+         WHERE USER_ID = #{userId}
+    </delete>
+</mapper>
+
+

@@ -570,10 +570,12 @@ dist
 node_modules
 
 *.sublime*
-*.yml
 psd
 thumb
 sketch
 
 # End of https://www.toptal.com/developers/gitignore/api/node,java,react,nextjs
-application.yaml
+application.yml
+configServer-dev.yml
+configServer.yml
+bootstrap.yml
