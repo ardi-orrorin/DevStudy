@@ -4,18 +4,10 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.example.mybatis.dao.MemberMapper">
-    <resultMap id="Member" type="com.example.mybatis.dto.MemberDTO" autoMapping="true">
-<!--        <result property="id" column="id"/>-->
-        <result property="userId" column="USER_ID"/>
-        <result property="password" column="PWD"/>
-<!--        <result property="createAt" column="CREATE_AT"/>-->
-<!--        <result property="updateAt" column="UPDATE_AT"/>-->
-<!--        <result property="deleteAt" column="DELETE_AT"/>-->
-    </resultMap>
-
-    <select id="selectAllMember" resultMap="Member">
+    <select id="selectAllMember" resultMap="resultMapping.memberResultMap">
         SELECT *
-          FROM TBL_MEMBER
+          FROM TBL_MEMBER AS TM
+          JOIN TBL_TEST TT on TM.ID = TT.REF_MEMBER_ID
     </select>
 
     <insert id="insertMember" parameterType="com.example.mybatis.dto.MemberDTO" >

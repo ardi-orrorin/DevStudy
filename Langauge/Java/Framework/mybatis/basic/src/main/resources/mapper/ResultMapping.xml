@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="resultMapping">
+    <resultMap id="memberResultMap" type="com.example.mybatis.dto.MemberDTO" autoMapping="true">
+        <result property="userId" column="USER_ID"/>
+        <result property="password" column="PWD"/>
+        <result property="createAt" column="CREATE_AT"/>
+        <result property="updateAt" column="UPDATE_AT"/>
+        <result property="deleteAt" column="DELETE_AT"/>
+        <collection property="testList" resultMap="testResultMap" autoMapping="true"/>
+    </resultMap>
+    <resultMap id="testResultMap" type="com.example.mybatis.dto.TestDTO" autoMapping="true">
+        <result property="createAt" column="CREATE_AT"/>
+        <result property="updateAt" column="UPDATE_AT"/>
+        <result property="deleteAt" column="DELETE_AT"/>
+    </resultMap>
+</mapper>

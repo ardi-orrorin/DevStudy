@@ -16,5 +16,5 @@ data class MemberDTO(
 
     val deleteAt: LocalDateTime? = null,
 
-    val testList: List<TestDTO> = listOf()
+    val testList: MutableList<TestDTO> = mutableListOf()
 )

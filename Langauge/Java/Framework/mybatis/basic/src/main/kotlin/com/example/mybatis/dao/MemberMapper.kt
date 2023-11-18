@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Mapper
 @Mapper
 interface MemberMapper {
 
-    fun selectMember(): MemberDTO?
+//    fun selectMember(): MemberDTO?
 
     fun selectAllMember(): List<MemberDTO>
 

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.mybatis.dao.TestMapper">
+    <select id="countTest" parameterType="com.example.mybatis.dto.TestDTO">
+        SELECT COUNT(TT.ID)
+          FROM TBL_TEST TT
+        <trim prefix="where" prefixOverrides="AND | OR">
+            <if test="name != null and name != ''">
+                 TT.NAME = #{name}
+            </if>
+            <if test="age != null and age != ''">
+                AND TT.AGE = #{age}
+            </if>
+            <if test="email != null and email != ''">
+                AND TT.EMAIL = #{email}
+            </if>
+            <if test="refMember.id != null and refMember.id != ''">
+                AND TT.REF_MEMBER_ID = #{refMember.id}
+            </if>
+        </trim>
+         WHERE TT.ID = #{id}
+    </select>
+
+    <select id="selectByIdTest" parameterType="Long" resultMap="resultMapping.testResultMap">
+        SELECT TT.ID
+             , TT.NAME
+             , TT.AGE
+             , TT.EMAIL
+             , TT.CREATE_AT
+             , TT.UPDATE_AT
+          FROM TBL_TEST TT
+         WHERE TT.ID = #{id}
+    </select>
+    <select id="selectByUserIdTest" parameterType="String" resultMap="resultMapping.testResultMap">
+        SELECT TT.ID
+             , TT.NAME
+             , TT.AGE
+             , TT.EMAIL
+             , TT.CREATE_AT
+             , TT.UPDATE_AT
+          FROM TBL_TEST TT
+          JOIN TBL_MEMBER TM on TM.ID = TT.REF_MEMBER_ID
+         WHERE TM.USER_ID = #{userId}
+    </select>
+    <select id="selectAllTest" resultMap="resultMapping.testResultMap">
+        SELECT TT.ID
+             , TT.NAME
+             , TT.AGE
+             , TT.EMAIL
+             , TT.CREATE_AT
+             , TT.UPDATE_AT
+          FROM TBL_TEST AS TT
+          JOIN TBL_MEMBER TM on TM.ID = TT.REF_MEMBER_ID
+    </select>
+    <insert id="insertTest" parameterType="com.example.mybatis.dto.TestDTO">
+        INSERT INTO TBL_TEST
+        (NAME, AGE, EMAIL, REF_MEMBER_ID)
+        VALUES
+        (#{name}, #{age}, #{email}, #{refMember.id})
+    </insert>
+    <update id="updateTest" parameterType="com.example.mybatis.dto.TestDTO">
+        UPDATE TBL_TEST
+        <set>
+            <if test="name != null and name != ''">
+                  NAME = #{name}
+            </if>
+            <if test="age != null and age != ''">
+                , AGE = #{age}
+            </if>
+            <if test="email != null and email != ''">
+                , EMAIL = #{email}
+            </if>
+            <if test="refMember.id != null and refMember.id != ''">
+                , REF_MEMBER_ID = #{refMember.id}
+            </if>
+        </set>
+         WHERE ID = #{id}
+    </update>
+
+    <delete id="deleteTest" parameterType="com.example.mybatis.dto.TestDTO">
+        DELETE
+          FROM TBL_TEST
+         WHERE ID = #{id}
+    </delete>
+</mapper>

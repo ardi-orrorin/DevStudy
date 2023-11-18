@@ -18,5 +18,4 @@ data class TestDTO(
     var updateAt: LocalDateTime? = null,
 
     var deleteAt: LocalDateTime? = null,
-
 )
