@@ -15,4 +15,6 @@ interface MemberMapper {
     fun updateMember(member: MemberDTO): Int
 
     fun deleteMember(member: MemberDTO): Int
+
+    fun selectByUserId(userId: String): MemberDTO?
 }

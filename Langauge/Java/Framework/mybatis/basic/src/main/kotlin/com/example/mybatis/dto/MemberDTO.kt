@@ -1,20 +1,21 @@
 package com.example.mybatis.dto
 
+import org.springframework.security.core.userdetails.UserDetails
 import java.time.LocalDateTime
 
 data class MemberDTO(
 
-    val id: Long? = null,
+    var id: Long? = null,
 
-    val userId: String? = null,
+    var userId: String? = null,
 
-    val password: String? = null,
+    var password: String? = null,
 
-    val createAt: LocalDateTime = LocalDateTime.now(),
+    var createAt: LocalDateTime = LocalDateTime.now(),
 
-    val updateAt: LocalDateTime? = null,
+    var updateAt: LocalDateTime? = null,
 
-    val deleteAt: LocalDateTime? = null,
+    var deleteAt: LocalDateTime? = null,
 
-    val testList: MutableList<TestDTO> = mutableListOf()
+    var testList: MutableList<TestDTO> = mutableListOf()
 )
