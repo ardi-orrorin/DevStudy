@@ -2,6 +2,7 @@ package com.example.mybatis.config
 
 import com.example.mybatis.service.UserService
 import org.springframework.context.annotation.Bean
+import org.springframework.context.annotation.Configuration
 import org.springframework.security.authentication.AuthenticationManager
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder
 import org.springframework.security.config.annotation.web.builders.HttpSecurity
@@ -12,6 +13,7 @@ import org.springframework.security.web.SecurityFilterChain
 import org.springframework.web.cors.CorsConfiguration
 
 
+@Configuration
 @EnableWebSecurity
 class SecurityConfig(
     private val userService: UserService,
@@ -26,10 +28,13 @@ class SecurityConfig(
     }
 
     @Bean
-    fun securityFilterChain(http: HttpSecurity): SecurityFilterChain {
-        return http.authorizeHttpRequests{
-            it.requestMatchers("/member/**").permitAll()
-            it.anyRequest().authenticated()
+    fun securityFilterChain(http: HttpSecurity) : SecurityFilterChain {
+        return http
+        .headers {
+            it.frameOptions { it.disable() }
+        }
+        .csrf {
+            it.disable()
         }
         .cors {
             it.configurationSource {
@@ -39,7 +44,18 @@ class SecurityConfig(
                 config.addAllowedMethod("*")
                 config
             }
-        }.build()
+        }
+        .authorizeHttpRequests{
+    //            it.requestMatchers("/member/**").permitAll()
+            it.anyRequest().permitAll()
+        }
+        .httpBasic {
+            it.disable()
+        }
+        .formLogin {
+            it.disable()
+        }
+        .build()
     }
 
     @Bean
