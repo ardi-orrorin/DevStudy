@@ -1,0 +1,12 @@
+@import "src/scss/absctracts/variables.scss";
+
+.headText {
+    font-size: $fontSize-head;
+    color: $color-head;
+    padding: 1rem 0;
+}
+
+.container {
+    width: 100vw;
+    padding: 1%;
+}

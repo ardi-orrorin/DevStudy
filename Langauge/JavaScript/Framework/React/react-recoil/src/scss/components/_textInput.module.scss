@@ -1,0 +1,7 @@
+@import "src/scss/absctracts/variables.scss";
+
+.input {
+    width: 100%;
+    height: ($fontSize-body + 0.3rem);
+    padding: 0.3rem;
+}
