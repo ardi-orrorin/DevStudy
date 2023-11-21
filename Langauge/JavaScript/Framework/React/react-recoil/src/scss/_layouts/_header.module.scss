@@ -1,0 +1,12 @@
+@import "src/scss/absctracts/_variables.scss";
+
+.container {
+    display: flex;
+    flex-flow: wrap;
+    flex: fit-content;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 100%;
+    min-height: 7vh;
+}
+

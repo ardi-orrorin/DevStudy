@@ -1,0 +1,12 @@
+@import "../_main.module.scss";
+
+.container {
+    min-height: 100vh;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $fontSize-title;
+    color: $color-error;
+    letter-spacing: ($fontSize-title / 10);
+}
