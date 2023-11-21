@@ -1,0 +1,11 @@
+@import "../main.module";
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    font-size: $fontSize-title;
+    color: $color-dark;
+}

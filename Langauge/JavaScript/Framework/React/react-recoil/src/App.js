@@ -8,21 +8,29 @@ import Atom from "./routes/Atom";
 import SelectorRecoil from "./routes/SelectorRecoil";
 import SelectorRecoil2 from "./routes/SelectorRecoil2";
 import NotFound from "./routes/NotFound";
+import AsyncRecoil from "./routes/AsyncRecoil";
+import Loading from "./routes/Loading";
+import ErrorBoundary from "./routes/Errorboundary";
 
 function App() {
   return (
       <RecoilRoot>
-          <BrowserRouter>
-              <Routes>
-                  <Route path="/" element={<Layout/>}>
-                      <Route index element={<Main />} />
-                      <Route path="atom" element={<Atom />} />
-                      <Route path="selector" element={<SelectorRecoil />} />
-                      <Route path="selector2" element={<SelectorRecoil2 />} />
-                  </Route>
-                  <Route path="*" element={<NotFound />} />
-              </Routes>
-          </BrowserRouter>
+          <ErrorBoundary fallback={<NotFound />} >
+          <React.Suspense fallback={<Loading />}>
+              <BrowserRouter>
+                  <Routes>
+                      <Route path="/" element={<Layout/>}>
+                          <Route index element={<Main />} />
+                          <Route path="atom" element={<Atom />} />
+                          <Route path="selector" element={<SelectorRecoil />} />
+                          <Route path="selector2" element={<SelectorRecoil2 />} />
+                          <Route path="async" element={<AsyncRecoil />} />
+                      </Route>
+                      <Route path="*" element={<NotFound />} />
+                  </Routes>
+              </BrowserRouter>
+          </React.Suspense>
+          </ErrorBoundary>
       </RecoilRoot>
   );
 }

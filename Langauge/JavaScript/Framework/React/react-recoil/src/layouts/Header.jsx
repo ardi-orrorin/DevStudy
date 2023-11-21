@@ -7,6 +7,7 @@ export default function Header() {
         { name: 'Atom', path: '/atom' },
         { name: 'Selector', path: '/selector' },
         { name: 'Selector2', path: '/selector2' },
+        { name: 'async', path: '/async' },
     ]
     return (
         <header className={styles.container}>
