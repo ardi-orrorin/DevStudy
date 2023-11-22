@@ -1,15 +1,14 @@
 import axios from "axios";
-import {useEffect} from "react";
-import {atom, selector, useRecoilState, useRecoilValue, useSetRecoilState} from "recoil";
+import {atom, selector, useRecoilValue, useSetRecoilState} from "recoil";
 
 
 async function api()  {
-    const url = 'https://jsonplaceholder.typicode.com/posts'
+    const url = 'https://jsonplaceholder.typicode.co/posts'
 
     const data = await axios.get(url)
         .then(res => res.data)
         .catch(err => {
-            throw new Error(err);
+            throw {code:1000, message: err}
         })
 
     return data;
@@ -25,7 +24,6 @@ const sampleData = atom({
 const asyncData = selector({
     key: 'asyncdata',
     get: async ({get}) => {
-
         const data = await api();
         return data;
     }
@@ -37,14 +35,14 @@ export default function AsyncRecoil() {
     // const [data, setData] = useRecoilState(sampleData)
     const data = useRecoilValue(asyncData)
 
-    useEffect( () => {
+    // useEffect( () => {
         // api().then(data => {
         //     setData(data)
         //     console.log(data)
         // })
-    },[])
+    // },[])
 
-    if(data.length < 1) return <div>loading...</div>
+    // if(data.length < 1) return <div>loading...</div>
 
     return (
         <div>

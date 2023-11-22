@@ -11,11 +11,12 @@ import NotFound from "./routes/NotFound";
 import AsyncRecoil from "./routes/AsyncRecoil";
 import Loading from "./routes/Loading";
 import ErrorBoundary from "./routes/Errorboundary";
+import ErrorPage from "./routes/Error";
 
 function App() {
   return (
       <RecoilRoot>
-          <ErrorBoundary fallback={<NotFound />} >
+          <ErrorBoundary fallback={<ErrorPage />} >
           <React.Suspense fallback={<Loading />}>
               <BrowserRouter>
                   <Routes>
