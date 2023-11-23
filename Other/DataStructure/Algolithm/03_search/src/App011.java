@@ -1,5 +1,3 @@
-import java.util.Collection;
-import java.util.Collections;
 import java.util.PriorityQueue;
 import java.util.Scanner;
 
@@ -15,13 +13,6 @@ public class App011 {
 
         // 작은 값이 우선순위가 높은 우선순위 큐
         PriorityQueue<Integer> pq = new PriorityQueue<>();
-
-        // 큰 값이 우선순위가 높은 우선순위 큐
-        PriorityQueue<Integer> pq2 = new PriorityQueue<>(Collections.reverseOrder());
-
-        for (int i = 0; i < N; i++) {
-            pq.add(sc.nextInt());
-        }
 
         int data1 = 0;
         int data2 = 0;
