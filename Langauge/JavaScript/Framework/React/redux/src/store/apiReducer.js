@@ -3,6 +3,7 @@ import { handleActions, createActions } from "redux-actions";
 
 export const CALL_API = 'api/CALL_API';
 export const MODIFY = 'api/MODIFY';
+export const INIT = 'api/INIT';
 
 const initialState = [{
     'userId': 0,
@@ -24,11 +25,15 @@ export const getApi = () => {
     }
 }
 
-export const {api : {modify}} = createActions({
+export const {api : {modify, init}} = createActions({
     [MODIFY]: ({index, key, value}) => ({[key]: value, index: index}),
+    [INIT]: () => ({}),
 });
 
 const apiReducer =  handleActions({
+    [INIT]: () => {
+        return initialState;
+    },
     [CALL_API]: (state, {payload}) =>  ({
         [CALL_API]: payload
     }),
