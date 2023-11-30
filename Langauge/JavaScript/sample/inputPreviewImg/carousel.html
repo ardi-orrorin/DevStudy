@@ -8,7 +8,8 @@
         .container {
             text-align: center;
             border: 1px solid black;
-            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
         }
 
         .wrapperCarousel {
@@ -17,18 +18,20 @@
             height: 200px;
             display: inline-flex;
             align-items: center;
-            justify-content: center;
-            border: none
+            border: none;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;            
         }
 
         .carousel {
             width: 400px;
             height: 200px;
-            display: inline-flex;
-            /* gap: 20px; */
-            overflow-x: hidden;
+            display: flex;
+            transition: 0.35s;
+            justify-content: left;
         }
-        
+
         .box {
             min-width: 400px;
             min-height: 200px;
@@ -38,6 +41,8 @@
             font-size: 50px;
             font-weight: bold;
             color: white;
+            margin: 0;
+            padding: 0;
         }
 
         .btn {
@@ -94,18 +99,27 @@
         const boxTotalWidth = boxWidth * boxLength;
         let carouselInterval = setInterval(scrollRightMove, 2000);
         let isCarouselInteval = true;
+        let position = 0
 
-        
         function scrollLeftMove() {
-            carousel.scrollLeft -= boxWidth;
+            if(position >= 0) {
+                position = -(boxTotalWidth - boxWidth);
+                carousel.style.translate = `${position}px`;
+            } else {
+                position += boxWidth;
+                carousel.style.translate = `${position}px`;
+            }
         }
 
         function scrollRightMove() {
-            if(carousel.scrollLeft >= boxTotalWidth - boxWidth) {
-                carousel.scrollLeft = 0;
+            if(position <= -(boxTotalWidth - boxWidth)) {
+                position = 0;
+                carousel.style.translate = `${position}px`;
             } else {
-                carousel.scrollLeft += boxWidth;
+                position -= boxWidth;
+                carousel.style.translate = `${position}px`;
             }
+            console.log(position);
         }
 
         function stopCarousel() {
@@ -119,9 +133,6 @@
                 carouselInterval = setInterval(scrollRightMove, 2000);
             }
         }
-
-        
-        
     </script>
 </body>
 </html>
