@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../output.css">
+</head>
+<body>
+    <!-- 
+        list-none : list 스타일을 제거한다.
+        list-disc : 원형 스타일을 적용한다.
+        list-decimal : 숫자 스타일을 적용한다.
+     -->
+
+    <ul class="list-none ms-10">
+        <li>list-none</li>
+        <li>list-none</li>
+        <li>list-none</li>
+        <li>list-none</li>
+    </ul>
+    
+    <ul class="list-disc ms-10">
+        <li>list-disc</li>
+        <li>list-disc</li>
+        <li>list-disc</li>
+        <li>list-disc</li>
+    </ul>   
+
+    <ul class="list-decimal ms-10">
+        <li>list-decimal</li>
+        <li>list-decimal</li>
+        <li>list-decimal</li>
+        <li>list-decimal</li>
+    </ul>
+    
+    <br/>
+    
+    <ul class="list-disc ms-10">
+        <li>list-disc</li>
+        <li>list-disc</li>
+        <ul class="list-decimal ms-10">
+            <li>list-decimal</li>
+            <li>list-decimal</li>
+            <li>list-decimal</li>
+            <li>list-decimal</li>
+            <ol class="list-none ms-10">
+                <li>list-decimal</li>
+                <li>list-decimal</li>
+                <li>list-decimal</li>
+                <li>list-decimal</li>
+            </ol>
+        </ul>
+    </ul>
+    
+</body>
+</html>

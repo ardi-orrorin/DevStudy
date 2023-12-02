@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../output.css">
+</head>
+<body>
+    <!-- line-height : 줄 높이를 조절한다. -->
+    
+    <!-- rem 기준 고정 높이-->
+    <p class="leading-3">leading-3</p>
+    <p class="leading-4">leading-4</p>
+    <p class="leading-5">leading-5</p>
+    <p class="leading-6">leading-6</p>
+    <p class="leading-7">leading-7</p>
+    <p class="leading-8">leading-8</p>
+    <p class="leading-9">leading-9</p>
+    <p class="leading-10">leading-10</p>
+
+    <!-- fontsize 기준 비율 가변 높이  -->
+    <p class="leading-none">leading-none</p>
+    <p class="leading-tight">leading-tight</p>
+    <p class="leading-snug">leading-snug</p>
+    <p class="leading-normal">leading-normal</p>
+    <p class="leading-relaxed">leading-relaxed</p>
+    <p class="leading-loose">leading-loose</p>
+    <p>end</p>
+
+
+    <!-- Custom Theme -->
+    <!-- 
+        module.exports = {
+            theme: {
+                extend: {
+                    lineHeight: {
+                        'extra-loose': '2.5',
+                        '12': '3rem',
+                    }
+                }
+            }
+        }
+     -->
+    <p class="leading-extra-loose">leading-extra-loose</p>
+    <p>end</p>
+
+    
+    <!-- Arbitrary value -->
+    <p class="leading-[12rem]">leaing-[12rem]</p>
+    <p>end</p>
+    
+</body>
+</html>

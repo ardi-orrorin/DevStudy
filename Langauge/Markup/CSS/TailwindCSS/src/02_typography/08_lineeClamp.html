@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../output.css">
+</head>
+<body>
+    
+    <!-- line-clamp : 텍스트를 지정한 줄 수로 자른다. -->
+    <div class="line-clamp-1">
+        <p>line-clamp-1</p>
+        <p>line-clamp-2</p>
+        <p>line-clamp-3</p>
+    </div>
+    
+    <br/>
+    
+    <div class="line-clamp-2">
+        <p>line-clamp-1</p>
+        <p>line-clamp-2</p>
+        <p>line-clamp-3</p>
+    </div>
+    
+    <br/>
+
+    <div class="line-clamp-3">
+        <p>line-clamp-1</p>
+        <p>line-clamp-2</p>
+        <p>line-clamp-3</p>
+        <p>line-clamp-4</p>
+    </div>
+    
+    <br/>
+
+    <div class="line-clamp-1 md:line-clamp-none">
+        <p>line-clamp-1</p>
+        <p>line-clamp-2</p>
+        <p>line-clamp-3</p>
+    </div>
+
+    <br/>
+
+    <div class="line-clamp-3 hover:line-clamp-none">
+        <p>line-clamp-1</p>
+        <p>line-clamp-2</p>
+        <p>line-clamp-3</p>
+        <p>line-clamp-4</p>
+        <p>line-clamp-5</p>
+        <p>line-clamp-6</p>
+    </div>
+    <br />
+    <!-- Custom Theme -->
+    <!-- 
+        module.exports = {
+            theme: {
+                extend: {
+                    lineClamp: {
+                        7: '7',
+                    },
+                }
+            }
+        }
+     -->
+
+    <div class="line-clamp-7">
+        <p>line-clamp-1</p>
+        <p>line-clamp-2</p>
+        <p>line-clamp-3</p>
+        <p>line-clamp-4</p>
+        <p>line-clamp-5</p>
+        <p>line-clamp-6</p>
+        <p>line-clamp-7</p>
+        <p>line-clamp-8</p>
+    </div>
+    <br />
+    
+    <!-- Arbitrary value  -->
+    <div class="line-clamp-[10]">
+        <p>line-clamp-1</p>
+        <p>line-clamp-2</p>
+        <p>line-clamp-3</p>
+        <p>line-clamp-4</p>
+        <p>line-clamp-5</p>
+        <p>line-clamp-6</p>
+        <p>line-clamp-7</p>
+        <p>line-clamp-8</p>
+        <p>line-clamp-9</p>
+        <p>line-clamp-10</p>
+        <p>line-clamp-11</p>
+        <p>line-clamp-12</p>
+    </div>
+
+        
+</body>
+</html>

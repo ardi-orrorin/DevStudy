@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet" href="../output.css">
+</head>
+<body>
+    <p class="text-sm">text-sm</p>
+    <p class="text-base">text-base</p>
+    <p class="text-lg">text-lg</p>
+    <p class="text-xl">text-xl</p>
+    
+    <!--text-base/line-height  -->
+    <p class="text-base/10 ">
+        line-height: 10 <br />
+        text-base <br />
+    </p>
+
+
+    <!-- text-size/loose -->
+    <p class="text-base/loose ">
+        line-height: loose <br />
+        text-base <br />
+    </p>
+    
+    <p class="text-sm/loose ">
+        line-height: loose <br />
+        text-sm <br />
+    </p>
+    <!-- text-size/[fixed] -->
+    <p class="text-sm/[40px] ">
+        line-height: 40px <br />
+        text-sm <br />
+    </p>
+
+    <!-- text hover -->
+    <p class="text-sm hover:text-2xl">hover text-2xl</p>
+
+    <!-- text focus -->
+    <input class="text-sm focus:text-2xl" placeholder="focus:text-2xl" />
+
+    <!-- media queries -->
+    <p class="text-sm md:text-2xl">text-sm md:text-2xl</p>
+
+    <!-- fontSize config -->
+    <!-- 
+        module.exports = {
+            theme: {
+                fontSize: {
+                sm: '0.8rem',
+                base: '1rem',
+                xl: '1.25rem',
+                '2xl': '1.563rem',
+                '3xl': '1.953rem',
+                '4xl': '2.441rem',
+                '5xl': '3.052rem',
+                }
+            }
+        };
+    -->
+
+    <!-- Customizing Theme -->
+    <p class="text-customXL ">text-customXL</p>
+    <p class="text-custom2XL ">text-custom2XL</p>
+
+    <!-- fontSize providing default line-height -->
+    <!-- 
+        module.exports = {
+            theme: {
+                fontSize: {
+                    'customSmD': ['1.2rem', '2rem'],
+                    'customBaseD': ['1.4rem', '2.5rem'],
+                    'customXLD': ['1.6rem', '3rem'],
+                    'custom2XLD': ['2rem', '3.5rem'],
+                }
+            }
+        };
+    -->
+
+    <p class="text-customXLD ">text-customXLD</p>
+    <p class="text-custom2XLD ">text-custom2XLD</p>
+
+    <!-- 
+        module.exports = {
+            theme: {
+                fontSize: {
+                    'customXl-LLF': ['1.5rem', {
+                    lineHeight: '2rem',
+                    letterSpacing: '-0.01em',
+                    fontWeight: '500',
+                    }],
+                    'custom2Xl-LLF': ['1.875rem', {
+                    lineHeight: '2.25rem',
+                    letterSpacing: '1em',
+                    fontWeight: '800',
+                    }],
+                }
+            }
+        };
+    -->
+
+    <p class="text-customXl-LLF ">text-customXl-LLF</p>
+    <p class="text-custom2Xl-LLF ">text-custom2Xl-LLF</p>
+
+    <!-- fontsize fiexd -->
+    <p class="text-[100px]">text-[100px]</p>
+
+
+</body>
+</html>

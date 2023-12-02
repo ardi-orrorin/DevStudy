@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../output.css">
+</head>
+<body>
+    <!-- word break :  -->
+    <!-- 
+        break-normal : 단어가 길어 질 경우 최대 크기를 벗어남
+        break-words : 단어별로 구분하고, 길어질 경우 개행 되며, 개행된 위치에서도 범위를 벗어나면 또 개행된다.
+        break-all : 단어가 길어질 경우 개행되지만, 단어어별로 구분하지 않고 길어질 경우 개행된다.
+        break-keep : 단어별로 구분하며, 범위를 벗어난 단어는 한번만 개행되고, 이후로는 벗위를 벗어난다.
+
+     -->
+    <div class="w-3/5 border border-red-600">
+        <p class="break-normal">
+            break-normal <br/>
+            Lorem ipsum dolor sit amet consectetfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfg dur adipisicing elit. 
+        </p>
+        <br/>
+        <p class="break-words">
+            break-words <br/>
+            Lorem ipsum dolor sit amet consectetfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfg dur adipisicing elit. 
+        </p>
+        <br/>
+        <p class="break-all">
+            break-all <br/>
+            Lorem ipsum dolor sit amet consectetfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfg dur adipisicing elit. 
+        </p>
+        <br/>
+        <p class="break-keep">
+            break-keep <br/>
+            Lorem ipsum dolor sit amet consectetfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfg dur adipisicing elit. 
+        </p>
+        
+
+    </div>
+    
+</body>
+</html>

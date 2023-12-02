@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../output.css">
+</head>
+<body>
+    <!-- text Overflow -->
+    <!-- 
+        truncate : 넓이를 초과한 텍스트를 자르고 ... 표시
+        text-ellipsis : 넓이가 초과하면 단어별로 개행하고, 단어가 길면 ...표시
+        text-clip : 넓이가 초과하면 단어별로 개행하고, 단어가 길면 표시 하지 않는다.
+     -->
+
+    <p class="w-40 truncate">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius repellat quaerat earum atque tempora voluptas porro eligendi, impedit possimus? Ipsa, enim! Incidunt beatae, nobis error dignissimos minus id possimus nemo!
+    </p>
+
+    <br/>
+
+    <p class="w-40 text-ellipsis overflow-hidden">
+        Lorem ipsum dolor sit amet consedfdfdfdfdfdfdfdfdfddfdfddfctetur adipisicing elit. Eius repellat quaerat earum atque tempora voluptas porro eligendi, impedit possimus? Ipsa, enim! Incidunt beatae, nobis error dignissimos minus id possimus nemo!
+    </p>
+    <br/>
+
+    <p class="w-40 text-clip overflow-hidden">
+        Lorem ipsum dolor sit amet consectetdfdfdfdfdfdfdfdfdfdfdfdfdfdfsfsdfsdfsdfsdfsdfsdfsdflksdifjlsijflsidjflsijljdslifjsdlifjur adipisicing elit. Eius repellat quaerat earum atque tempora voluptas porro eligendi, impedit possimus? Ipsa, enim! Incidunt beatae, nobis error dignissimos minus id possimus nemo!
+    </p>
+
+
+</body>
+</html>

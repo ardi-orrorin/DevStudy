@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../output.css">
+    
+</head>
+<body>
+    <h2 class="font-sans text-xl ">font-sans 기본 폰트 import</h2>
+    <h2 class="font-serif text-xl ">font-serif 기본 폰트 import </h2>
+
+    <!-- Customizing Theme -->
+    <!-- 1. tailwind.config.js -->
+    <!-- 
+        module.exports = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'styleName': ['"font-name"', 'Cursive'],
+                    },
+                },
+            },
+        };
+     -->
+    <!-- 
+        // 예제
+        module.exports = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'notoSansKr': ['"Noto Sans KR"', 'sans-serif'],
+                        'nanumGothic': ['"Nanum Gothic"', 'sans-serif'],
+                    },
+                },
+            },
+        };
+     -->
+
+    <!-- 2. html -->
+    <h2 class="font-notoSansKr text-xl ">noto-sans-kr 외부 폰트 import</h2>
+    <h2 class="font-nanumGothic text-xl ">nanum-gothic 외부 폰트 import</h2>
+    
+
+</body>
+</html>
