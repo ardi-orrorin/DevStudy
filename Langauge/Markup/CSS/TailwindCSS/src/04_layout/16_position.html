@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../output.css">
+</head>
+<body>
+    <!-- postion -->
+    <!-- 
+        static: 기본값. 요소를 일반적인 문서 흐름에 따라 배치한다.
+        fixed: 뷰포트(viewport)를 기준으로 배치한다.
+        absolute: 가장 가까운 위치 지정 조상 요소에 대해 배치한다.
+        relative: 자기 자신을 기준으로 배치한다.
+        sticky: 스크롤 영역을 기준으로 배치한다.
+     -->
+    <div class="static w-60 h-40 bg-slate-400">
+        <p>Static parent</p>
+        <div class="absolute bottom-0 left-0 w-20 h-20 bg-blue-300">
+            <p>Static Absolute child</p>
+        </div>
+    </div>
+
+    <br/>
+
+    <div class="static w-60 h-40 bg-slate-400">
+        <p>Static parent</p>
+        <div class="static bottom-0 left-0 w-20 h-20 bg-blue-300">
+            <p>Static static child</p>
+        </div>
+    </div>
+
+    <br/>
+
+    <div class="relative w-60 h-40 bg-slate-400">
+        <p>Relative parent</p>
+        <div class="absolute bottom-0 left-0 w-20 h-20 bg-blue-300">
+            <p>Relative Absolute child</p>
+        </div>
+    </div>
+
+    <br/>
+
+    <div class="w-60 h-60 overflow-scroll bg-blue-400">
+        <div class="sticky top-10 bg-red-300">
+            sticky top-10
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, recusandae voluptatem modi possimus repudiandae minus error cum, aut quos, quaerat dolores molestias quo vero! Vero voluptas earum aspernatur modi consequatur.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, eius architecto natus perferendis magnam veritatis ducimus maiores cupiditate earum deserunt mollitia dolorum sit eum culpa deleniti beatae. Expedita, minus provident.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis dolore est iusto totam laboriosam veniam similique, dignissimos natus minima iste, fugit odit, excepturi delectus vel quis soluta consequuntur nisi praesentium!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo tempore natus exercitationem ullam nesciunt veniam reprehenderit esse? Itaque culpa fuga recusandae magnam veritatis perspiciatis, facilis dolorum, quia, voluptates iure numquam?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias beatae, voluptatum rem libero rerum nam, repellat corrupti quis autem, odit cum recusandae accusantium sequi magni deserunt quam quod reiciendis impedit.
+        </div>
+    </div>
+</body>
+</html>

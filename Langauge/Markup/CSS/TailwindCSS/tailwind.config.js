@@ -50,7 +50,28 @@ module.exports = {
       },
       textIndent: {
         'cusIndent-128': '32rem',
-      }
+      },
+      aspectRatio: {
+        '5/2': '5/2',
+      },
+      container: {
+        center: true,
+        
+        // padding: {
+        //   default: '2rem',
+        //   sm: '3rem',
+        //   lg: '4rem',
+        //   xl: '5rem'
+        // },
+
+        // screens: {
+        //   default: '100%',
+        //     sm: '100%', 
+        //     md: '100%',
+        //     lg: '1024px',
+        //     xl: '1024px'
+        // }
+      },
     },
   },
   plugins: [],

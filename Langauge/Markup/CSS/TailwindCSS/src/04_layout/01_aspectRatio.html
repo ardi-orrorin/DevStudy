@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../output.css">
+</head>
+<body>
+    <!-- aspect ratio -->
+    <!-- 
+        종횡비를 조절
+        aspect-auto : 기본값
+        aspect-square : 1/1
+        aspect-video : 16/9
+        aspect-[width/height] : 비율을 지정
+    -->
+
+    <div class="aspect-auto w-52 border border-red-600">aspect-auto</div>
+    <div class="aspect-square w-52 border border-red-600">aspect-square</div>
+    <div class="aspect-video w-52 border border-red-600">aspect-video</div>
+    <div class="aspect-[3/1] w-52 border border-red-600">aspect-[3/1]</div>
+
+    <!-- Custom Theme -->
+    <!-- 
+        module.exports = {
+            theme: {
+                extend: {
+                    aspectRatio: {
+                        '5/2': '5/2',
+                    }
+                }
+            }
+        }
+     -->
+
+    <div class="aspect-5/2 w-52 border border-red-600">aspect-5/2</div>
+    <div class="aspect-[5/2] w-52 border border-red-600">aspect-[5/2]</div>
+    <div class="aspect-[5/3] w-52 border border-red-600">aspect-[5/3]</div>
+    
+</body>
+</html>
