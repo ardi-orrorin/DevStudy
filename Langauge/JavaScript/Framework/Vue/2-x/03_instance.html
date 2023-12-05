@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ol>
+            <c-message v-bind="{message}"></c-message>
+            <c-toggle :toggle="toggle" @settoggle="funToggle"></c-toggle>
+            <c-todo 
+                v-if="toggle"
+                v-for="item in todoList"
+                :todo="item"
+                :key="item.id"
+            ></c-todo>
+            
+        </ol>
+    </div>
+
+    <div id="app1"></div>
+    <script>
+        const cTodo = {
+            props: ['todo'],
+            template: '<li>{{todo.id}}:  {{todo.text}}</li>'
+        };
+        const message = {
+            props: ['message'],
+            template: '<h1>{{message}}</h1>'
+        }
+        const toggle = {
+            props: ['toggle'],
+            methods: {
+                reverseMessage: function () {
+                    this.$emit('settoggle', !this.toggle);
+                }
+            },
+
+            template: '<button @click="reverseMessage">toggle : {{toggle}}</button>'
+        }
+
+        const objData = {
+            message: 'Hello Vue!',
+            toggle: true,
+            todoList: [
+                {id: 0, text: 'text1'},
+                {id: 1, text: 'text2'},
+                {id: 2, text: 'text3'},
+                {id: 3, text: 'text4'},
+                {id: 4, text: 'text5'},
+            ],
+        };
+
+        const components = {
+            'c-todo': cTodo,
+            'c-message': message,
+            'c-toggle': toggle,
+        }
+        
+
+        const app = new Vue({
+            el: '#app',
+            data : objData,
+            components: components,
+            methods: {
+                funToggle: function (e) {
+                    this.toggle = e;
+                }
+            },
+        });
+
+        const app1 = new Vue({
+            el: '#app1',
+            data: {
+                message: 'Hello Vue!'
+            },
+    
+            components: components,
+            created : function () {
+                console.log('created');
+            },
+            mounted : function () {
+                console.log('mounted');
+            },
+        });
+    </script>
+</body>
+
+
+</html>

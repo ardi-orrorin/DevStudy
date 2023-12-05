@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">{{message}}</div>
+    <div id="app-1">
+        <span v-bind:title="message">
+            테스트
+        </span>
+    </div>
+    <div id="app-2">
+        <button @click="reverseMessage">toggle : {{toggle}}</button>
+        <div v-if="toggle">toggle true view</div>
+    </div>
+
+    <div id="app-3">
+        <ol>
+            <li v-for="item in todo">
+                id: {{item.id }} text: {{item.text}}
+            </li>
+        </ol>
+    </div>
+
+    <div id="app-4">
+        <input v-model="message">
+        <p>Message is : {{message}}</p>
+    </div>
+
+
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue!'
+            }
+        });
+
+        const app1 = new Vue({
+            el: '#app-1',
+            data: {
+                message: 'You loaded this page on ' + new Date().toLocaleString()
+            }
+        })
+
+        const app2 = new Vue({
+            el: '#app-2',
+            data: {
+                message: 'Hello Vue!',
+                toggle: true
+            },
+            methods: {
+                reverseMessage: function() {
+                    this.toggle = !this.toggle;
+                }
+            }
+        })
+
+        const app3 = new Vue({
+            el: '#app-3',
+            data: {
+                todo: [
+                    {text: 'test1', id: 1},
+                    {text: 'test2', id: 2},
+                    {text: 'test3', id: 3},
+                    {text: 'test4', id: 4},
+                    {text: 'test5', id: 5},
+                    {text: 'test6', id: 6},
+                    {text: 'test7', id: 7},
+                    {text: 'test8', id: 8},
+                ]
+            }
+        })
+
+        const app4 = new Vue({
+            el: '#app-4',
+            data: {
+                message: 'please input texgt'
+            }
+        })        
+
+    </script>
+</body>
+</html>
