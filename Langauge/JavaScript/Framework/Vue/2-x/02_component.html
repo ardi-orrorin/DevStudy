@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ol>
+            <c-todo></c-todo>
+            <c-todo2 v-bind:todo="'text'"></c-todo2>
+            <c-todo3 
+                v-for="item in todoList"
+                v-bind:todo="item"
+                v-bind:key="item.id"
+            ></c-todo3>
+
+        </ol>   
+    </div>
+    <script>
+        Vue.component('c-todo', {
+            template: '<li>할일 항목 하나입니다.</li>'
+        });
+
+        Vue.component('c-todo2', {
+            props: ['todo'],
+            template: '<li>{{todo}}</li>'
+        });
+
+        Vue.component('c-todo3', {
+            props: ['todo'],
+            template: '<li>{{todo.id}} : {{todo.text}}</li>'
+        });
+
+        const app = new Vue({
+            el: '#app', 
+            data: {
+                todoList: [
+                    {id: 0, text: 'text1'},
+                    {id: 1, text: 'text2'},
+                    {id: 2, text: 'text3'},
+                    {id: 3, text: 'text4'},
+                    {id: 4, text: 'text5'},
+                ],
+            }
+        });
+    </script>
+</body>
+</html>
