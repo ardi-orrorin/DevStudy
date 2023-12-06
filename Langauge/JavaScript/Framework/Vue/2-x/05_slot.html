@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <script src="https://unpkg.com/vue-router@3.6.5/dist/vue-router.js"></script>
+</head>
+<body>
+    <div id="app">
+        <layout>
+            <div>content 1</div>
+            <div>content</div>
+            <c-select></c-select>
+        </layout>
+
+    </div>
+    <script>
+        // mixins
+        /*
+            여러 컴포넌트에서 공통으로 사용될 수 있는 기능을 모아두는 객체
+            컴포넌트에 재사용되는 옵션을 주입할 수 있음
+        */
+        const mixins = {
+            methods: {
+                change(e) {
+                    this.value = e.target.value;
+                    console.log(e);
+                }
+            }
+        }
+
+
+        const cHeader = {
+            template: `
+                <div>
+                    <h1>Header</h1>
+                </div>
+            `
+        }
+
+        // slot
+        /*
+            컴포넌트 태그 사이에 html내용을 삽입할 수 있다.
+            <slot></slot> 태그로 삽입할 위치를 지정한다.
+
+            example)
+
+            // Component.vue
+            <div>
+                <div>content</div>
+                <slot></slot>
+            </div>
+
+            // App.vue
+            <Component>
+                <div>content 1</div>
+                <div>content 2</div>
+            </Component>
+
+            // result
+            <div>
+                <div>content</div>
+                <div>content 1</div>
+                <div>content 2</div>
+            </div>
+
+        */
+        const cLayout = {
+            components: {
+                'layout-header': cHeader
+            },
+            template: `
+                <div>
+                    <layout-header></layout-header>
+                    <slot></slot>
+                </div>
+            `
+        }
+
+        const select2 = {
+            mixins: [mixins],
+            data: function() {
+                return {
+                    value: ''
+                }
+            },
+            
+            template: `
+                <select @change="change">
+                    <slot :value="value"></slot>
+                </select>
+            `
+        }
+
+        const cSelect = {
+            props: ['value'],
+            mixins: [mixins],
+            components: {
+                'select2': select2
+            },
+            template: `
+                <div>
+                    <select2 v-slot="propsSlot">
+                        <option disabled>{{propsSlot.value}}</option>
+                        <option>1 off</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>3 off</option>
+                        <option>5</option>
+                        <option>7 off</option>
+                        <option>9</option>
+                    </select2>
+                    <button @click="change">change</button>
+                </div>
+            `
+        }
+
+
+        const components = {
+            'layout': cLayout,
+            'c-select': cSelect
+        }
+
+        const vue = new Vue({
+            el: '#app',
+            components: components,
+        })
+    </script>
+</body>
+
+</html>
