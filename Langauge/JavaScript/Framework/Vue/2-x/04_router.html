@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router@3.6.5/dist/vue-router.js"></script>
+</head>
+<body>
+    <div id="app">
+        <nav-menu></nav-menu>
+        <router-view></router-view>
+    </div>
+    <script>
+
+        const data = function() {
+            return {
+                message: 'Hello Vue!',
+                toggle: true,
+                todoList: [
+                    {id: 0, text: 'text1'},
+                    {id: 1, text: 'text2'},
+                    {id: 2, text: 'text3'},
+                    {id: 3, text: 'text4'},
+                    {id: 4, text: 'text5'},
+                ],
+            };
+        };
+
+        const cList = {
+            props: ['todo'],
+            template: '<li>{{todo.id}}:  {{todo.text}}</li>'
+        };
+
+        const cTodo = {
+            data: data,
+            components: {
+                'c-list': cList,
+            },
+            template: `
+                <ol>
+                    <c-list 
+                        v-for="item in todoList"
+                        :todo="item"
+                        :key="item.id"
+                    ></c-list>
+                </ol>
+            `
+        }
+        
+        const cAbout = {
+            template: `
+                <div>
+                    <h1>About</h1>
+                    <div>about</div>    
+                </div>    
+            `
+        };
+
+        const cMain = {
+            template: `
+                <div>
+                    <h1>Main</h1>
+                    <div>main</div>    
+                </div>    
+              `
+        };
+
+        const navMenu = {
+            template: `
+                <div>
+                    <router-link to="/">Main</router-link>
+                    <router-link to="/about">About</router-link>
+                    <router-link to="/list">List</router-link>
+                </div>    
+            `
+        }
+
+        const NotFound = {
+            template: `
+                <div>
+                    <h1>Not Found</h1>
+                    <div>Not Found</div>    
+                </div>
+            `
+        }
+
+
+        const routes = [
+            { 
+                path: '/',
+                name:'main', 
+                component: cMain,
+            },
+            { 
+                path: '/about', 
+                name:'about', 
+                component: cAbout ,
+            },
+            { 
+                path: '/list', 
+                name:'list', 
+                component: cTodo,
+                props: true,
+            },
+            {
+                path: '*',
+                name: 'NotFound',
+                component: NotFound,    
+            }
+        ]
+
+        const router = new VueRouter({
+            routes: routes
+        })
+
+        const vue = new Vue({
+            el: '#app',
+            components: {
+                'nav-menu': ()=> import(navMenu),
+            },
+            router: router,
+        })
+      </script>
+</body>
+</html>
