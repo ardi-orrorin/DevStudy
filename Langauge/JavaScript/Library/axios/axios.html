@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <button id="btn">Get</button>
+    <script>
+        const CancelToken = axios.CancelToken;
+        let source = new CancelToken.source();
+        const btn = document.getElementById('btn');
+        btn.addEventListener('click', get);
+
+        function get(){
+            source.cancel('Operation canceled by the user.');
+            source = new CancelToken.source();
+            axios.get('https://jsonplaceholder.typicode.com/posts', {
+                cancelToken: source.token
+            })
+            .then(function(response){
+                console.log(response);
+            })
+            .catch(function(error){
+                console.log(error);
+            })
+        }
+    </script>
+    
+</body>
+</html>
