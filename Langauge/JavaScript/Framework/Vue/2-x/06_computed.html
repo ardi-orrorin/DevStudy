@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <div>
+            message : {{ message }}
+        </div>
+        <br/>
+        <div>
+            computed : {{ rereversedMessage }}
+        </div>
+        <br/>
+        <div>
+            now : {{ now }}
+        </div>
+        <button @click="now()">click</button>
+        <br/>
+        <div>firstName : {{ firstName }}, lastName : {{ lastName }}</div>
+        <div>
+            fullname : {{ fullname }}
+        </div>
+        <div>
+            <div>
+                count : {{ count }}
+            </div>
+            <div>
+                <button @click="double()">double</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const vue = new Vue({
+            el: '#app',
+            data : {
+                message : 'Hello Vue.js',
+                count : 0,
+                firstName: 'Foo',
+                lastName: 'Bar',
+            },
+            methods : {
+                double: function() {
+                    this.calc = 5
+                }
+            },
+            // computed
+            /*
+                computed는 종속 대상에 따라 저장(캐싱)된다.
+                즉, computed는 종속 대상에 변화가 있을 때만 함수를 함수를 실행한다.
+                같은 computed를 여러 번 호출해도 data의 변경이 없다면 함수가 호출되지 않고, 계산되어 있던 결과값을 즉시 반환한다.
+                반면 메소드는 변화와 상관없이 호출될 때마다 함수를 실횅한다.
+            */
+            computed : { 
+                rereversedMessage: function(){
+                    return this.message.split('').reverse().join('')
+                },
+                now : function(){
+                    const now = Date.now()
+                    console.log(now);
+                    return now
+                },
+                fullname: function() {
+                    return this.firstName + ' ' + this.lastName
+                },
+                calc: {
+                    get: function() {
+                        return this.count * 2
+                    },
+                    set: function(newValue) {
+                        this.count += newValue
+                    }
+                }
+            }
+
+        })
+      </script>
+</body>
+</html>

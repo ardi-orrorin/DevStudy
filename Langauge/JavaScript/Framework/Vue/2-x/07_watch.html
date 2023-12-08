@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/lodash@4.13.1/lodash.min.js"></script>
+    <script src="https://unpkg.com/axios@0.12.0/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="input"/>
+        <div>{{ answer }}</div>
+    </div>
+    <script>
+        // watch
+        /*
+            watch는 데이터 변경에 따라 특정 작업을 수행하려는 경우에 사용한다.
+            주로 비동기식 또는 시간이 많이 소요되는 조작을 수행하려는 경우에 유용하다.
+
+        */
+        const vue = new Vue({
+            el: '#app',
+            data : {
+                input : '',
+                answer : '질문을 입력하세요.'
+            },
+            watch : {
+                input : function(value) {
+                    this.answer = '입력을 기다리는 중...'
+                    this.debounceGetAnswer()
+                }
+            },
+            created: function() {
+                this.debounceGetAnswer = _.debounce(this.getAnswer, 1000)
+            },
+            methods : {
+                getAnswer: function () {
+                    if(this.input.indexOf('?') === -1) {
+                        this.answer = '질문에는 일반적으로 물음표가 포함 됩니다. ;-)'
+                        return
+                    }
+                    this.answer = '생각중...'
+                    axios.get('https://yesno.wtf/api')
+                        .then(res => {
+                            this.answer = _.capitalize(res.data.answer)
+                        })
+                        .catch(error => {
+                            this.answer = '에러! API 요청에 오류가 있습니다. ' + error
+                        })  
+
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
