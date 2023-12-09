@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 기본의 javascript import -->
+    <!-- <script src="./bar.js"></script> -->
+    <!-- <script src="./foo.js"></script> -->
+</head>
+<body>
+    <script type='module'>
+        // 모듈의 import
+        import './bar.js';
+        import './foo.js';
+    </script>
+
+    <!-- module js -->
+    <!-- 
+        module js을 직접 import 하는 방법은
+        type='module'을 사용하면 된다.
+        module javascript 파일 이라는 것을 알려주기 위해 js파일ㅇ르 mjs로 저장한다.
+        <script type='module' src="mjs file"></script>
+     -->
+    <script type='module' src="./bar.mjs"></script>
+    <script type='module' src="./foo.mjs"></script>
+
+    <script type='module'>
+        // 모듈의 import
+        
+        import { foo, bar } from './exports1.mjs';
+        import * as export1 from './exports1.mjs';
+
+        console.log('foo function()', foo());
+        console.log('bar function()',bar());
+        console.log('export1.foo function()', export1.foo());
+        console.log('export1.bar function()', export1.bar());
+        
+    </script>
+
+</body>
+</html>
