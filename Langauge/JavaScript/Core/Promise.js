@@ -6,7 +6,7 @@
 const requestData1 = () => 
     new Promise(resolve => setTimeout(() => resolve(1), 3000));
 const requestData2 = () => 
-    new Promise(resolve => setTimeout(() => resolve(2), 1000));
+    new Promise(resolve => setTimeout(() => resolve(2), 2000));
 const requestData3 = () => 
     new Promise(resolve => setTimeout(() => resolve(3), 1000));
 const requestData4 = () => 
@@ -68,12 +68,12 @@ let end = null;
 
 // Promise.allSettled
 // 여러 개의 비동기 처리 중 하나라도 실패하더라도 모든 처리가 끝날 때까지 기다렸다가 처리 결과를 반환
-Promise.allSettled([
-    requestData1(),
-    requestData2(),
-    requestData3(),
-    requestData4()
-]).then(res=> console.log(res))
+// Promise.allSettled([
+//     requestData1(),
+//     requestData2(),
+//     requestData3(),
+//     requestData4()
+// ]).then(res=> console.log(res))
 /*
 [
   { status: 'fulfilled', value: 1 },
@@ -82,3 +82,38 @@ Promise.allSettled([
   { status: 'rejected', reason: 4 }
 ]
 */
+
+let res1 = null;
+let res2 = null;
+
+// Promise.allSettled([
+//     requestData1(),
+//     requestData2()
+// ]).then(res => {
+//     [res1, res2] = res;
+//     console.log(res1, res2);
+// });
+
+async function asyncFunc() {
+    start = Date.now();
+    const [res1, res2] = await Promise.all([
+        requestData1(),
+        requestData2()
+    ]);
+    end = Date.now();
+    console.log(res1, res2);
+    console.log(`time: ${end - start}ms`);
+}
+
+async function asyncFunc2() {
+    start = Date.now();
+    const res1 = await requestData1();
+    const res2 = await requestData2();
+
+    end = Date.now();
+    console.log(res1, res2);
+    console.log(`time: ${end - start}ms`);
+}
+
+asyncFunc(); // tiem: 3000ms 
+asyncFunc2(); // time: 5000ms
