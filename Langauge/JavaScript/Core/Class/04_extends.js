@@ -57,4 +57,3 @@ const subBaseOverInstance = new subBaseOver('Lee');
 const baseOverInstance = new BaseOver('Lee');
 console.log(baseOverInstance.sayHi()); // Hi! Lee
 console.log(subBaseOverInstance.sayHi()); // Hi! Lee. how are you doing?
-
