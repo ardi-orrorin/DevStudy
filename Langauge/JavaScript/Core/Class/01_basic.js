@@ -27,3 +27,27 @@ const Es5Person = (function(){
 
 const es5Person = new Es5Person('es5 function class'); 
 console.log(es5Person.myName()); // es5 function class
+
+class Es6Class {
+    constructor(name){
+        this.name = name;
+    }
+
+    myName(){
+        console.log(this.name);
+    }
+
+    static Hello(){
+        console.log('Hello') 
+    }
+}
+
+
+const es6Class = new Es6Class('es6 class');
+es6Class.myName(); // es6 class
+es6Class.Hello(); // Hello
+Es6Class.Hello(); // Hello
+
+
+
+
