@@ -18,5 +18,4 @@ function introduceIntersection(somone: Avenger & Hero & Extra){
     console.log(somone.skill);
     
 }
-
 introduceIntersection({name:'name', skill:'123', body:'1223'});

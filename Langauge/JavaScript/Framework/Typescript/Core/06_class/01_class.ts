@@ -21,7 +21,7 @@ class Person {
         this.skill= skill;
     }
 
-    sum(a: number, b: number){
+    sum(a: number, b: number): number{
         return a + b;
     }
 }
