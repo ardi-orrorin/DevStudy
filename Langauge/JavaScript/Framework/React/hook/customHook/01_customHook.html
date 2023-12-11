@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script crossorigin src='https://unpkg.com/react@18/umd/react.development.js'></script>
+    <script crossorigin src='https://unpkg.com/react-dom@18/umd/react-dom.development.js'></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel"> 
+        const { useState, useEffect, useCallback } = React;
+
+        const useBoolean = (val) => {
+            const [value, setValue] = useState(val);
+
+            useEffect(()=> {
+                console.log('useBoolean', value );
+            },[value])
+
+            return !value;
+        }
+
+        const App = () => {
+
+            const [number, setNumber] = useState(0);
+            const [toggle, setToggle] = useState(false);
+
+            setToggle(useBoolean(toggle));
+
+
+            // if(!toggle) return <h1>loading...</h1>
+            return (
+                <>
+                    <h1>App</h1>
+                    <button>toggle</button>
+                </>
+            )
+        }
+
+        ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+    </script>
+</body>
+</html>
