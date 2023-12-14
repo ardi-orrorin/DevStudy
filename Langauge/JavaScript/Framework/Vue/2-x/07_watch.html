@@ -13,6 +13,7 @@
     <div id="app">
         <input type="text" v-model="input"/>
         <div>{{ answer }}</div>
+        <v-checkbox v-model="checked"></v-checkbox>
     </div>
     <script>
         // watch
@@ -37,6 +38,11 @@
                 this.debounceGetAnswer = _.debounce(this.getAnswer, 1000)
             },
             methods : {
+                checked: function() {
+                    console.log('checked');
+                    console.log(this.checked)
+                    return 1
+                },
                 getAnswer: function () {
                     if(this.input.indexOf('?') === -1) {
                         this.answer = '질문에는 일반적으로 물음표가 포함 됩니다. ;-)'
