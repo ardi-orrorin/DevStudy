@@ -81,7 +81,7 @@ sequenceDiagram
 |--)|	Dotted line with a open arrow at the end (async)|
 
 
-6. Activations
+1. Activations
 ```mermaid
 sequenceDiagram
     A1->>B1: test!
@@ -113,3 +113,68 @@ sequenceDiagram
     note over A,B: Test Over Note
     note over A,B: Test Over Note<br/>New Line Text
 ```
+ 
+
+8. Loops
+```mermaid
+sequenceDiagram
+    A1->B1: Hello?
+    loop Every minute
+        B1-->A1: Loop!
+    end
+
+```
+
+
+9. Criticl Region
+```mermaid
+sequenceDiagram
+    critical Establish a connection to the DB
+        A1-->B1: connect
+    option Network timeout
+        A1-->A1: Log error
+    option Credentials rejected
+        A1-->A1: Log different error
+    end
+```
+
+```mermaid
+sequenceDiagram
+    A1->>B1: test
+    A1-->>A1: reject
+    B1->>A1: send
+```
+
+10. Comments
+    
+```mermaid
+sequenceDiagram
+    A1->>B1: comments?
+    %% this is a comment
+    B1->>A1: Yes?
+
+```
+
+11. Escape characters
+
+```mermaid
+sequenceDiagram
+    A->>B: I #9829; you!
+    B->>A: #9829; you #infin; imes more!
+```
+
+
+12. sequenceNumbers
+    
+```mermaid
+sequenceDiagram
+    autonumber
+    A->>B: hello?
+    loop healthcheck
+        B->>B: loop
+    end
+    B->>A: Test
+    B->>A: Check!
+    A->>B: test
+```
+
