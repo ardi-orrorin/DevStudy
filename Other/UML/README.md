@@ -34,18 +34,18 @@ classDiagram
     A*-- "1..*" B
 ```
 
-```java
-class A {
-    public void method() {
-        B b1 = new B();
-        B b2 = new B();
+### 집합 관계
+클래스 B는 클래스 A의 부분이다.
+```mermaid
+classDiagram
+    direction LR
+    class A {
     }
-}
-class B {
-    public void method() {
+    class B {
     }
-}
+    A o--  B
 ```
+
 
 ### 일반화 관계
 클래스 B는 클래스 A의 하위 클래스이다.
