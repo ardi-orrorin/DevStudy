@@ -2,8 +2,9 @@
 
 ## 관계
 
-### 연관 관계
-클래스 A와 B는 연결되어 있다.
+### 연관 관계(Association)
+- 클래스 A와 B는 연결되어 있다.
+
 ```mermaid
 classDiagram
     direction LR
@@ -22,8 +23,9 @@ class B {
 }
 ```
 
-### 합성 관계
-클래스 A는 클래스 B를 한 개 이상 포함하고 있다.
+### 합성 관계(Composition)
+- 클래스 A는 클래스 B를 한 개 이상 포함하고 있다.
+
 ```mermaid
 classDiagram
     direction LR
@@ -31,11 +33,24 @@ classDiagram
     }
     class B {
     }
-    A*-- "1..*" B
+    A *-- B
 ```
 
-### 집합 관계
-클래스 B는 클래스 A의 부분이다.
+```java
+class A {
+    private B b;
+
+    A() {
+        this.b = new B();
+    }
+}
+class B {}
+```
+
+### 집합 관계(Aggregation)
+- 클래스 B는 클래스 A의 부분이다.
+- 집약 관계와 달리 부분 객체를 다른 객체와 공유할 수 없다.
+
 ```mermaid
 classDiagram
     direction LR
@@ -46,9 +61,20 @@ classDiagram
     A o--  B
 ```
 
+```java
+class A {
+    private B b;
+
+    A(B b) {
+        this.b = b;
+    }
+}
+class B {}
+```
+
 
 ### 일반화 관계
-클래스 B는 클래스 A의 하위 클래스이다.
+- 클래스 B는 클래스 A의 하위 클래스이다.
 ```mermaid
 classDiagram
     direction LR
@@ -71,8 +97,8 @@ class B Extends A {
 }
 ```
 
-### 실체화 관계
-클래스 B는 인터페이스A를 구현한다.
+### 실체화 관계(Generalization)
+- 클래스 B는 인터페이스A를 구현한다.
 ```mermaid
 classDiagram
     direction LR
@@ -94,8 +120,8 @@ class B implements A {
 }
 ```
 
-### 의존 관계
-클래스 A는 클래스 B에 의존한다.
+### 의존 관계(Dependency)
+- 클래스 A는 클래스 B에 의존한다.
 ```mermaid
 classDiagram
     direction LR
@@ -117,9 +143,6 @@ class B {
 }
 ```
 
-
-### 의존 관계
-클래스 A는 인터페이스 B에 의존한다.
 ```mermaid
 classDiagram
     direction LR
