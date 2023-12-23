@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input" />
+    <div id="result"></div>
+    <script>
+        const input = document.getElementById('input');
+        const result = document.getElementById('result');
+        let count = 1;
+        let inDebounce;
+        const debounce = (func, delay) => {
+            console.log('debounce12 this', this); // this는 window를 가리킨다.
+            return function() {
+                clearTimeout(inDebounce);
+                console.log('debounce this', this); // this는 document.getElementById('input')를 가리킨다.
+                console.log('debounce arguments', arguments); // arguments는 debounceAxios의 e를 받는다.
+                inDebounce = setTimeout(() => 
+                    func.apply(this, arguments), delay // arguments는 debounceAxios의 event를 받는다.
+                );
+            }
+        }
+        const debounceAxios = debounce((e) => {
+            axios.get('https://jsonplaceholder.typicode.com/todos/' + count++)
+            .then((response) => {
+                result.innerHTML = response.data.title;
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+        }, 200);
+        input.addEventListener('keyup', debounceAxios);
+    </script>
+</body>
+</html>
