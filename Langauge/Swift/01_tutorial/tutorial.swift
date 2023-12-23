@@ -332,3 +332,157 @@ class TriangleAndSquare {
 
 var triangleAndSquare = TriangleAndSquare(size: 10, name: "another test shape")
 print(triangleAndSquare.square.sideLength) // 10.0
+
+// 열거형과 구조체
+// 열거형은 enum 으로 정의한다.
+
+enum Rank: Int {
+    case ace = 1 // 값을 지정하지 않으면 0부터 시작한다.
+    case two, three, four, five, six, seven, eight, nine, ten
+    case jack, queen, king
+
+    func simpleDescription() -> String {
+        switch self { // self 는 열거형의 값을 가리킨다.
+        case .ace:
+            return "ace"
+        case .jack:
+            return "jack"
+        case .queen:
+            return "queen"
+        case .king:
+            return "king"            
+        default:
+            return String(self.rawValue) // rawValue 는 열거형의 값을 가리킨다.
+        }
+    }
+}
+
+print(Rank.self) // Rank
+print(Rank.ace) // ace
+print(Rank.ace.rawValue) // 1
+print(Rank.ace.simpleDescription()) // ace
+print(Rank.jack.simpleDescription()) // jack
+print(Rank.queen.simpleDescription()) // queen
+print(Rank.king.simpleDescription()) // king
+print(Rank.two.simpleDescription()) // 2
+
+if let convertedRank = Rank(rawValue: 3) {
+    let threeDescription = convertedRank.simpleDescription()
+    print(threeDescription) // 3
+}
+
+// 열거형의 값은 Int 뿐만 아니라 다른 타입도 사용할 수 있다.
+enum Suit {
+    case spades, hearts, diamonds, clubs
+
+    func simpleDescription() -> String {
+        switch self {
+        case .spades:
+            return "spades"
+        case .hearts:
+            return "hearts"            
+        case .diamonds:
+            return "diamonds"            
+        case .clubs:
+            return "clubs"            
+        }
+    }
+}
+
+let hearts = Suit.hearts
+let heartsDescription = hearts.simpleDescription()
+print(heartsDescription) // hearts
+
+enum ServerResponse {
+    case result(String, String)
+    case failure(String)
+}
+
+let success = ServerResponse.result("6:00 am", "8:09 pm")
+let failure = ServerResponse.failure("Out of cheese.")
+
+switch success {
+case let .result(sunrise, sunset): // let 을 사용하여 값을 바인딩할 수 있다.
+    print("Sunrise is at \(sunrise) and sunset is at \(sunset).")
+case let .failure(message):
+    print("Failure... \(message)")
+}
+
+struct Card {
+    var rank: Rank
+    var suit: Suit
+
+    func simpleDescription() -> String {
+        return "The \(rank.simpleDescription()) of \(suit.simpleDescription())"
+    }
+}
+
+let threeOfSpades = Card(rank: .eight, suit: .spades)
+print(threeOfSpades.simpleDescription()) // The 3 of spades
+
+
+// Concurrency
+// 비동기 처리
+
+func fetchUserId(from server: String) async -> Int {
+    if server == "primary" {
+        return 97
+    } 
+    return 501
+}
+
+func fetchUserName(from server: String) async -> String {
+    let userId = await fetchUserId(from: server)
+    if userId == 501 {
+        return "Anonymous"
+    }
+    return "John Appleseed"
+}
+
+func connectUser(to server: String) async {
+    async let userName = fetchUserName(from: server)
+    async let userId = fetchUserId(from: server)
+    let greeting = await "Hello, \(userName)! Your user ID is \(userId)."
+    print(greeting)
+}
+
+await connectUser(to: "test")
+
+let userIds = await withTaskGroup(of: Int.self) { group in
+    for server in ["primary", "secondary", "tertiary"] {
+        group.addTask {
+            await fetchUserId(from: server)
+        }
+    }
+    var ids: [Int] = []
+    for await id in group {
+        ids.append(id)
+    }
+    return ids
+}
+
+print(userIds) // [97, 501, 501]
+
+
+// actor는 다양한 비동기 함수가 동시에 동일한 액터의 인스턴스와 안전하게 상호작용 할 수 있다는 것을 보장한다.
+// 그 외는 클래스와 유사하다.
+
+actor ServerConnection {
+    var server: String;
+    init(server: String) {
+        self.server = server
+    }
+    private var activeUsers: [Int] = []
+    func connect() async -> Int {
+        let userId = await fetchUserId(from: server)
+        activeUsers.append(userId)
+        print("activeUsers = \(activeUsers)")
+        return userId
+    }
+}
+
+
+var serverOne = ServerConnection("primary")
+serverOne.connect()
+
+
