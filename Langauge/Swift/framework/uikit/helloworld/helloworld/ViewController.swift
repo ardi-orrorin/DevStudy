@@ -20,6 +20,10 @@ class ViewController: UIViewController {
 
     @IBAction func btnSend(_ sender: UIButton) {
         blbLabel.text = "this is \(txtNameField.text!)"
+        blbLabel.textColor = UIColor.red
+        blbLabel.textAlignment = .right
+        blbLabel.font = UIFont(name: "Arial", size: 30)
+        
     }
     
 }
