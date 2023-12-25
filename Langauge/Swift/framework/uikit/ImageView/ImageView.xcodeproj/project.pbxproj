@@ -13,6 +13,8 @@
 		203EB1EE2B394C9D00FAE2A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 203EB1EC2B394C9D00FAE2A1 /* Main.storyboard */; };
 		203EB1F02B394C9E00FAE2A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 203EB1EF2B394C9E00FAE2A1 /* Assets.xcassets */; };
 		203EB1F32B394C9E00FAE2A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 203EB1F12B394C9E00FAE2A1 /* LaunchScreen.storyboard */; };
+		203EB1FD2B394DFF00FAE2A1 /* picachu-color.png in Resources */ = {isa = PBXBuildFile; fileRef = 203EB1FB2B394DFF00FAE2A1 /* picachu-color.png */; };
+		203EB1FE2B394DFF00FAE2A1 /* picachu-black.png in Resources */ = {isa = PBXBuildFile; fileRef = 203EB1FC2B394DFF00FAE2A1 /* picachu-black.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		203EB1EF2B394C9E00FAE2A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		203EB1F22B394C9E00FAE2A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		203EB1F42B394C9E00FAE2A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		203EB1FB2B394DFF00FAE2A1 /* picachu-color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "picachu-color.png"; sourceTree = "<group>"; };
+		203EB1FC2B394DFF00FAE2A1 /* picachu-black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "picachu-black.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		203EB1E52B394C9D00FAE2A1 /* ImageView */ = {
 			isa = PBXGroup;
 			children = (
+				203EB1FA2B394DED00FAE2A1 /* image */,
 				203EB1E62B394C9D00FAE2A1 /* AppDelegate.swift */,
 				203EB1E82B394C9D00FAE2A1 /* SceneDelegate.swift */,
 				203EB1EA2B394C9D00FAE2A1 /* ViewController.swift */,
@@ -65,6 +70,15 @@
 				203EB1F42B394C9E00FAE2A1 /* Info.plist */,
 			);
 			path = ImageView;
+			sourceTree = "<group>";
+		};
+		203EB1FA2B394DED00FAE2A1 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				203EB1FC2B394DFF00FAE2A1 /* picachu-black.png */,
+				203EB1FB2B394DFF00FAE2A1 /* picachu-color.png */,
+			);
+			path = image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +139,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				203EB1FE2B394DFF00FAE2A1 /* picachu-black.png in Resources */,
 				203EB1F32B394C9E00FAE2A1 /* LaunchScreen.storyboard in Resources */,
+				203EB1FD2B394DFF00FAE2A1 /* picachu-color.png in Resources */,
 				203EB1F02B394C9E00FAE2A1 /* Assets.xcassets in Resources */,
 				203EB1EE2B394C9D00FAE2A1 /* Main.storyboard in Resources */,
 			);
