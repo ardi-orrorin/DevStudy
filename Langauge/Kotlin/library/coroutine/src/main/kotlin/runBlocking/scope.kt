@@ -3,6 +3,7 @@ import kotlinx.coroutines.*
 fun main() = runBlocking {
     doWorldscope()
     println("done")
+    subMain()
 }
 
 suspend fun doWorldscope() = coroutineScope {
@@ -15,3 +16,16 @@ suspend fun doWorldscope() = coroutineScope {
         println("World 1")
     }
 }
+
+
+fun subMain() = runBlocking {
+    val job = launch {
+        delay(2000L)
+        println("World!")
+    }
+
+    println("Hello,")
+    job.join()
+    println("done")
+}
+// explicit job
