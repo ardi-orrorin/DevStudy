@@ -11,6 +11,12 @@
 		20C12A082B3BEEFB0024909B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C12A072B3BEEFB0024909B /* ContentView.swift */; };
 		20C12A0A2B3BEEFC0024909B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C12A092B3BEEFC0024909B /* Assets.xcassets */; };
 		20C12A0D2B3BEEFC0024909B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C12A0C2B3BEEFC0024909B /* Preview Assets.xcassets */; };
+		20C12A142B3BF0810024909B /* ContentView2w.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C12A132B3BF0810024909B /* ContentView2w.swift */; };
+		20C12A162B3BF2D00024909B /* ContentView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C12A152B3BF2D00024909B /* ContentView3.swift */; };
+		20C12A182B3BF3D80024909B /* SampleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C12A172B3BF3D80024909B /* SampleTextView.swift */; };
+		20C12A1B2B3BF4AF0024909B /* StandardTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C12A1A2B3BF4AF0024909B /* StandardTitle.swift */; };
+		20C12A1D2B3BF9E80024909B /* ContentView4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C12A1C2B3BF9E80024909B /* ContentView4.swift */; };
+		20C12A1F2B3BFA930024909B /* MyVStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C12A1E2B3BFA930024909B /* MyVStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,12 @@
 		20C12A072B3BEEFB0024909B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		20C12A092B3BEEFC0024909B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20C12A0C2B3BEEFC0024909B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		20C12A132B3BF0810024909B /* ContentView2w.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView2w.swift; sourceTree = "<group>"; };
+		20C12A152B3BF2D00024909B /* ContentView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView3.swift; sourceTree = "<group>"; };
+		20C12A172B3BF3D80024909B /* SampleTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTextView.swift; sourceTree = "<group>"; };
+		20C12A1A2B3BF4AF0024909B /* StandardTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardTitle.swift; sourceTree = "<group>"; };
+		20C12A1C2B3BF9E80024909B /* ContentView4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView4.swift; sourceTree = "<group>"; };
+		20C12A1E2B3BFA930024909B /* MyVStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyVStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +65,14 @@
 			children = (
 				20C12A052B3BEEFB0024909B /* tutorialApp.swift */,
 				20C12A072B3BEEFB0024909B /* ContentView.swift */,
+				20C12A132B3BF0810024909B /* ContentView2w.swift */,
 				20C12A092B3BEEFC0024909B /* Assets.xcassets */,
 				20C12A0B2B3BEEFC0024909B /* Preview Content */,
+				20C12A152B3BF2D00024909B /* ContentView3.swift */,
+				20C12A1A2B3BF4AF0024909B /* StandardTitle.swift */,
+				20C12A172B3BF3D80024909B /* SampleTextView.swift */,
+				20C12A1C2B3BF9E80024909B /* ContentView4.swift */,
+				20C12A1E2B3BFA930024909B /* MyVStack.swift */,
 			);
 			path = tutorial;
 			sourceTree = "<group>";
@@ -137,7 +155,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20C12A1D2B3BF9E80024909B /* ContentView4.swift in Sources */,
+				20C12A182B3BF3D80024909B /* SampleTextView.swift in Sources */,
 				20C12A082B3BEEFB0024909B /* ContentView.swift in Sources */,
+				20C12A1F2B3BFA930024909B /* MyVStack.swift in Sources */,
+				20C12A142B3BF0810024909B /* ContentView2w.swift in Sources */,
+				20C12A1B2B3BF4AF0024909B /* StandardTitle.swift in Sources */,
+				20C12A162B3BF2D00024909B /* ContentView3.swift in Sources */,
 				20C12A062B3BEEFB0024909B /* tutorialApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
