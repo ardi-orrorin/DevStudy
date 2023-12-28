@@ -9,7 +9,14 @@ import SwiftUI
 
 struct TextLine: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Image(systemName: "airplane")
+            Text("Flight times: ")
+            Text("London")
+        }
+        .font(.largeTitle)
+        .lineLimit(1...4) // 줄 제한
+        
     }
 }
 

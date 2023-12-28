@@ -11,6 +11,11 @@
 		20F045A22B3D3C8C00FF0A4D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F045A12B3D3C8C00FF0A4D /* ContentView.swift */; };
 		20F045A42B3D3C8D00FF0A4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20F045A32B3D3C8D00FF0A4D /* Assets.xcassets */; };
 		20F045A72B3D3C8D00FF0A4D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20F045A62B3D3C8D00FF0A4D /* Preview Assets.xcassets */; };
+		20F045AE2B3D3EC600FF0A4D /* AlignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F045AD2B3D3EC600FF0A4D /* AlignView.swift */; };
+		20F045B02B3D41EC00FF0A4D /* DynamicLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F045AF2B3D41EC00FF0A4D /* DynamicLayout.swift */; };
+		20F045B22B3D440D00FF0A4D /* TextLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F045B12B3D440D00FF0A4D /* TextLine.swift */; };
+		20F045B42B3D461B00FF0A4D /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F045B32B3D461B00FF0A4D /* FrameView.swift */; };
+		20F045B62B3D4A0A00FF0A4D /* GeometryReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F045B52B3D4A0A00FF0A4D /* GeometryReaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		20F045A12B3D3C8C00FF0A4D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		20F045A32B3D3C8D00FF0A4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20F045A62B3D3C8D00FF0A4D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		20F045AD2B3D3EC600FF0A4D /* AlignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignView.swift; sourceTree = "<group>"; };
+		20F045AF2B3D41EC00FF0A4D /* DynamicLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicLayout.swift; sourceTree = "<group>"; };
+		20F045B12B3D440D00FF0A4D /* TextLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLine.swift; sourceTree = "<group>"; };
+		20F045B32B3D461B00FF0A4D /* FrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameView.swift; sourceTree = "<group>"; };
+		20F045B52B3D4A0A00FF0A4D /* GeometryReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +63,11 @@
 			children = (
 				20F0459F2B3D3C8C00FF0A4D /* SwiftUiStackApp.swift */,
 				20F045A12B3D3C8C00FF0A4D /* ContentView.swift */,
+				20F045AD2B3D3EC600FF0A4D /* AlignView.swift */,
+				20F045AF2B3D41EC00FF0A4D /* DynamicLayout.swift */,
+				20F045B12B3D440D00FF0A4D /* TextLine.swift */,
+				20F045B32B3D461B00FF0A4D /* FrameView.swift */,
+				20F045B52B3D4A0A00FF0A4D /* GeometryReaderView.swift */,
 				20F045A32B3D3C8D00FF0A4D /* Assets.xcassets */,
 				20F045A52B3D3C8D00FF0A4D /* Preview Content */,
 			);
@@ -137,6 +152,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20F045AE2B3D3EC600FF0A4D /* AlignView.swift in Sources */,
+				20F045B02B3D41EC00FF0A4D /* DynamicLayout.swift in Sources */,
+				20F045B62B3D4A0A00FF0A4D /* GeometryReaderView.swift in Sources */,
+				20F045B22B3D440D00FF0A4D /* TextLine.swift in Sources */,
+				20F045B42B3D461B00FF0A4D /* FrameView.swift in Sources */,
 				20F045A22B3D3C8C00FF0A4D /* ContentView.swift in Sources */,
 				20F045A02B3D3C8C00FF0A4D /* SwiftUiStackApp.swift in Sources */,
 			);
