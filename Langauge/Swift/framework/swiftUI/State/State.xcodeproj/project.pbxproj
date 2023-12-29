@@ -11,6 +11,11 @@
 		2071F7CA2B3EAED10060BCE5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2071F7C92B3EAED10060BCE5 /* ContentView.swift */; };
 		2071F7CC2B3EAED20060BCE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2071F7CB2B3EAED20060BCE5 /* Assets.xcassets */; };
 		2071F7CF2B3EAED20060BCE5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2071F7CE2B3EAED20060BCE5 /* Preview Assets.xcassets */; };
+		2071F7D62B3EB5090060BCE5 /* ObservableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2071F7D52B3EB5090060BCE5 /* ObservableView.swift */; };
+		2071F7D82B3EB6380060BCE5 /* ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2071F7D72B3EB6380060BCE5 /* ObservableObject.swift */; };
+		2071F7DA2B3EB8C50060BCE5 /* StateObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2071F7D92B3EB8C50060BCE5 /* StateObjectView.swift */; };
+		2071F7DC2B3EBAB40060BCE5 /* EnvironmentObjectStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2071F7DB2B3EBAB40060BCE5 /* EnvironmentObjectStore.swift */; };
+		2071F7DE2B3EBAFD0060BCE5 /* EnvironmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2071F7DD2B3EBAFD0060BCE5 /* EnvironmentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		2071F7C92B3EAED10060BCE5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2071F7CB2B3EAED20060BCE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2071F7CE2B3EAED20060BCE5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2071F7D52B3EB5090060BCE5 /* ObservableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableView.swift; sourceTree = "<group>"; };
+		2071F7D72B3EB6380060BCE5 /* ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObject.swift; sourceTree = "<group>"; };
+		2071F7D92B3EB8C50060BCE5 /* StateObjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateObjectView.swift; sourceTree = "<group>"; };
+		2071F7DB2B3EBAB40060BCE5 /* EnvironmentObjectStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObjectStore.swift; sourceTree = "<group>"; };
+		2071F7DD2B3EBAFD0060BCE5 /* EnvironmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +63,11 @@
 			children = (
 				2071F7C72B3EAED10060BCE5 /* StateApp.swift */,
 				2071F7C92B3EAED10060BCE5 /* ContentView.swift */,
+				2071F7D52B3EB5090060BCE5 /* ObservableView.swift */,
+				2071F7D72B3EB6380060BCE5 /* ObservableObject.swift */,
+				2071F7D92B3EB8C50060BCE5 /* StateObjectView.swift */,
+				2071F7DB2B3EBAB40060BCE5 /* EnvironmentObjectStore.swift */,
+				2071F7DD2B3EBAFD0060BCE5 /* EnvironmentView.swift */,
 				2071F7CB2B3EAED20060BCE5 /* Assets.xcassets */,
 				2071F7CD2B3EAED20060BCE5 /* Preview Content */,
 			);
@@ -138,6 +153,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2071F7CA2B3EAED10060BCE5 /* ContentView.swift in Sources */,
+				2071F7D82B3EB6380060BCE5 /* ObservableObject.swift in Sources */,
+				2071F7DE2B3EBAFD0060BCE5 /* EnvironmentView.swift in Sources */,
+				2071F7DC2B3EBAB40060BCE5 /* EnvironmentObjectStore.swift in Sources */,
+				2071F7D62B3EB5090060BCE5 /* ObservableView.swift in Sources */,
+				2071F7DA2B3EB8C50060BCE5 /* StateObjectView.swift in Sources */,
 				2071F7C82B3EAED10060BCE5 /* StateApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

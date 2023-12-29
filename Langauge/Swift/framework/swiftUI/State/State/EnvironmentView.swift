@@ -8,11 +8,33 @@
 import SwiftUI
 
 struct EnvironmentView: View {
+    @EnvironmentObject var speedSetting: SpeedSetting
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Slider(value: $speedSetting.speed, in: 0...100)
     }
 }
 
+struct DisplayView: View {
+    @EnvironmentObject var speedSetting: SpeedSetting
+    
+    var body: some View {
+        Text("\(speedSetting.speed)")
+    }
+}
+
+struct EnvContentView: View {
+    let speedSetting = SpeedSetting()
+    
+    var body: some View {
+        VStack {
+            EnvironmentView()
+            DisplayView()
+        }.environmentObject(speedSetting)
+    }
+}
+
+
 #Preview {
-    EnvironmentView()
+    EnvContentView()
 }
