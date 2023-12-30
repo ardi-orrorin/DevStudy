@@ -17,15 +17,23 @@ struct SliderView: View {
     @State private var text: String = "Welcome to SwiftUI"
     
     var body: some View {
+        Spacer()
         Text(text)
             .font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/)
             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
             .rotationEffect(.degrees(rotation))
             .animation(.easeInOut(duration: 5), value: rotation)
+            .foregroundColor(colors[colorIndex])
+        Spacer()
+//        Divider() // 스택 컨테이너 안의 두 뷰 사이가 분리음ㅇ르 나타내느 라인을 그린다.
+            
+        
         Slider(value: $rotation, in: 0 ... 360, step: 0.1)
+            .padding()
         
         TextField("Enter text here", text: $text)
             .textFieldStyle(.roundedBorder)
+            .padding()
         
         Picker(selection: $colorIndex, label: Text("Color")) {
             ForEach(0 ..< colorNames.count, id: \.self) {
@@ -34,6 +42,7 @@ struct SliderView: View {
             }
         }
         .pickerStyle(.wheel)
+        .padding()
     }
 }
 
