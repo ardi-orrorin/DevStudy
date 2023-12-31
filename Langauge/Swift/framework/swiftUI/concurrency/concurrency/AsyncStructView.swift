@@ -9,8 +9,37 @@ import SwiftUI
 
 struct AsyncStructView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            Button(action: {
+                Task {
+                    await doSomething()
+                }
+            }) {
+                Text("Do Something")
+            }
+        }
+    
+    struct MyStruct {
+        var result: Date {
+            get async {
+                return await self.getTime()
+            }
+        }
+        
+        func getTime() async -> Date {
+            sleep(2)
+            return Date()
+        }
     }
+    
+        
+        func doSomething() async {
+            let myStruct = MyStruct()
+            Task {
+                let date = await myStruct.result
+                print("Date = \(date)")
+            }
+        }
+        
 }
 
 #Preview {
