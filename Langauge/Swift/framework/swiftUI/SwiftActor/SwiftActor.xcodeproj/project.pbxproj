@@ -11,6 +11,12 @@
 		2080F1972B4299E100DF0742 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2080F1962B4299E100DF0742 /* ContentView.swift */; };
 		2080F1992B4299E200DF0742 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2080F1982B4299E200DF0742 /* Assets.xcassets */; };
 		2080F19C2B4299E200DF0742 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2080F19B2B4299E200DF0742 /* Preview Assets.xcassets */; };
+		2080F1A32B429ADC00DF0742 /* ActorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2080F1A22B429ADC00DF0742 /* ActorMessage.swift */; };
+		2080F1A52B429F2800DF0742 /* IsolationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2080F1A42B429F2800DF0742 /* IsolationView.swift */; };
+		2080F1A72B42A11A00DF0742 /* ExampleActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2080F1A62B42A11A00DF0742 /* ExampleActor.swift */; };
+		2080F1A92B42A1D400DF0742 /* TimeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2080F1A82B42A1D400DF0742 /* TimeStore.swift */; };
+		2080F1AB2B42A39E00DF0742 /* MainActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2080F1AA2B42A39E00DF0742 /* MainActor.swift */; };
+		2080F1AD2B42ABF800DF0742 /* TimeStoreMainaActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2080F1AC2B42ABF800DF0742 /* TimeStoreMainaActor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,12 @@
 		2080F1962B4299E100DF0742 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2080F1982B4299E200DF0742 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2080F19B2B4299E200DF0742 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2080F1A22B429ADC00DF0742 /* ActorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorMessage.swift; sourceTree = "<group>"; };
+		2080F1A42B429F2800DF0742 /* IsolationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsolationView.swift; sourceTree = "<group>"; };
+		2080F1A62B42A11A00DF0742 /* ExampleActor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleActor.swift; sourceTree = "<group>"; };
+		2080F1A82B42A1D400DF0742 /* TimeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeStore.swift; sourceTree = "<group>"; };
+		2080F1AA2B42A39E00DF0742 /* MainActor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainActor.swift; sourceTree = "<group>"; };
+		2080F1AC2B42ABF800DF0742 /* TimeStoreMainaActor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeStoreMainaActor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +65,12 @@
 			children = (
 				2080F1942B4299E100DF0742 /* SwiftActorApp.swift */,
 				2080F1962B4299E100DF0742 /* ContentView.swift */,
+				2080F1A62B42A11A00DF0742 /* ExampleActor.swift */,
+				2080F1A82B42A1D400DF0742 /* TimeStore.swift */,
+				2080F1AA2B42A39E00DF0742 /* MainActor.swift */,
+				2080F1A42B429F2800DF0742 /* IsolationView.swift */,
+				2080F1A22B429ADC00DF0742 /* ActorMessage.swift */,
+				2080F1AC2B42ABF800DF0742 /* TimeStoreMainaActor.swift */,
 				2080F1982B4299E200DF0742 /* Assets.xcassets */,
 				2080F19A2B4299E200DF0742 /* Preview Content */,
 			);
@@ -137,8 +155,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2080F1AB2B42A39E00DF0742 /* MainActor.swift in Sources */,
+				2080F1A92B42A1D400DF0742 /* TimeStore.swift in Sources */,
+				2080F1A32B429ADC00DF0742 /* ActorMessage.swift in Sources */,
 				2080F1972B4299E100DF0742 /* ContentView.swift in Sources */,
 				2080F1952B4299E100DF0742 /* SwiftActorApp.swift in Sources */,
+				2080F1A72B42A11A00DF0742 /* ExampleActor.swift in Sources */,
+				2080F1A52B429F2800DF0742 /* IsolationView.swift in Sources */,
+				2080F1AD2B42ABF800DF0742 /* TimeStoreMainaActor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

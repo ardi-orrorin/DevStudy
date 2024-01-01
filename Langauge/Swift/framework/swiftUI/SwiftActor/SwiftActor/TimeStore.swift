@@ -1,8 +1,10 @@
-//
-//  TimeStore.swift
-//  SwiftActor
-//
-//  Created by 유승철 on 1/1/24.
-//
+import SwiftUI
 
-import Foundation
+actor TimeStore {
+    var timeStamps: [Int: Date] = [:]
+    
+    func addStamp(task: Int, date: Date) {
+        timeStamps[task] = date
+    }
+    
+}

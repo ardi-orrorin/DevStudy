@@ -7,12 +7,35 @@
 
 import SwiftUI
 
-struct isolationView: View {
+struct IsolationView: View {
+    var builder = BuildMessage()
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Button(action: {
+                Task {
+                    await asyncFunction()
+                    syncFunction()
+                }
+            }){
+                Text("Button")
+            }
+        }
+        .padding()
     }
+    
+    func asyncFunction() async {
+        let greeting = builder.getGreeting()
+        print(greeting)
+    }
+    
+    func syncFunction() {
+        let greeting = builder.getGreeting()
+        print(greeting)
+    }
+    
+    
 }
 
 #Preview {
-    isolationView()
+    IsolationView()
 }
