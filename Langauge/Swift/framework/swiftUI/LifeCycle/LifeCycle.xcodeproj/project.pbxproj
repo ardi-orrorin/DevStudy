@@ -11,6 +11,8 @@
 		209A1CA72B457C690092EE4D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209A1CA62B457C690092EE4D /* ContentView.swift */; };
 		209A1CA92B457C690092EE4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 209A1CA82B457C690092EE4D /* Assets.xcassets */; };
 		209A1CAC2B457C690092EE4D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 209A1CAB2B457C690092EE4D /* Preview Assets.xcassets */; };
+		209A1CB32B457E4D0092EE4D /* FirstTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209A1CB22B457E4D0092EE4D /* FirstTabView.swift */; };
+		209A1CB52B457E570092EE4D /* SecondTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209A1CB42B457E570092EE4D /* SecondTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		209A1CA62B457C690092EE4D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		209A1CA82B457C690092EE4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		209A1CAB2B457C690092EE4D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		209A1CB22B457E4D0092EE4D /* FirstTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTabView.swift; sourceTree = "<group>"; };
+		209A1CB42B457E570092EE4D /* SecondTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				209A1CA42B457C690092EE4D /* LifeCycleApp.swift */,
 				209A1CA62B457C690092EE4D /* ContentView.swift */,
+				209A1CB22B457E4D0092EE4D /* FirstTabView.swift */,
+				209A1CB42B457E570092EE4D /* SecondTabView.swift */,
 				209A1CA82B457C690092EE4D /* Assets.xcassets */,
 				209A1CAA2B457C690092EE4D /* Preview Content */,
 			);
@@ -137,7 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				209A1CB52B457E570092EE4D /* SecondTabView.swift in Sources */,
 				209A1CA72B457C690092EE4D /* ContentView.swift in Sources */,
+				209A1CB32B457E4D0092EE4D /* FirstTabView.swift in Sources */,
 				209A1CA52B457C690092EE4D /* LifeCycleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +280,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LifeCycle/Preview Content\"";
+				DEVELOPMENT_TEAM = 44HS6M6H95;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -300,6 +309,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LifeCycle/Preview Content\"";
+				DEVELOPMENT_TEAM = 44HS6M6H95;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
