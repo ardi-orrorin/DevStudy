@@ -7,12 +7,21 @@
 
 import SwiftUI
 
-struct ScondView: View {
+struct SecondView: View {
+    
+    @EnvironmentObject var timerData: TimerData
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Second View")
+                .font(.largeTitle)
+            Text("Timer Count = \(timerData.timeCount)")
+                .font(.headline)
+        }
+        .padding()
     }
 }
 
 #Preview {
-    ScondView()
+    SecondView().environmentObject(TimerData())
 }

@@ -8,14 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var timeData: TimerData = TimerData()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            VStack {
+                Text("Timer count = \(timeData.timeCount)")
+                    .font(.largeTitle)
+                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    .padding()
+                Button(action: timeData.resetCount) {
+                    Text("Reset Counter")
+                }
+                
+                NavigationLink(destination: SecondView()){
+                    Text("Next Screen")
+                }
+                .padding()
+            }
         }
-        .padding()
+        .environmentObject(timeData)
     }
 }
 
