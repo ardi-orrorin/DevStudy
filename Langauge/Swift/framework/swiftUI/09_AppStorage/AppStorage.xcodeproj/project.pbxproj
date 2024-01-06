@@ -11,6 +11,8 @@
 		201656DD2B49438B001A3C4B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201656DC2B49438B001A3C4B /* ContentView.swift */; };
 		201656DF2B49438C001A3C4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201656DE2B49438C001A3C4B /* Assets.xcassets */; };
 		201656E22B49438C001A3C4B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201656E12B49438C001A3C4B /* Preview Assets.xcassets */; };
+		201656EA2B494628001A3C4B /* SceneStorageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201656E92B494628001A3C4B /* SceneStorageView.swift */; };
+		201656EC2B49475A001A3C4B /* AppStorageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201656EB2B49475A001A3C4B /* AppStorageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,9 @@
 		201656DC2B49438B001A3C4B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		201656DE2B49438C001A3C4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		201656E12B49438C001A3C4B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		201656E82B494568001A3C4B /* AppStorage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppStorage.entitlements; sourceTree = "<group>"; };
+		201656E92B494628001A3C4B /* SceneStorageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneStorageView.swift; sourceTree = "<group>"; };
+		201656EB2B49475A001A3C4B /* AppStorageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +56,11 @@
 		201656D92B49438B001A3C4B /* AppStorage */ = {
 			isa = PBXGroup;
 			children = (
+				201656E82B494568001A3C4B /* AppStorage.entitlements */,
 				201656DA2B49438B001A3C4B /* AppStorageApp.swift */,
 				201656DC2B49438B001A3C4B /* ContentView.swift */,
+				201656E92B494628001A3C4B /* SceneStorageView.swift */,
+				201656EB2B49475A001A3C4B /* AppStorageView.swift */,
 				201656DE2B49438C001A3C4B /* Assets.xcassets */,
 				201656E02B49438C001A3C4B /* Preview Content */,
 			);
@@ -137,6 +145,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				201656EC2B49475A001A3C4B /* AppStorageView.swift in Sources */,
+				201656EA2B494628001A3C4B /* SceneStorageView.swift in Sources */,
 				201656DD2B49438B001A3C4B /* ContentView.swift in Sources */,
 				201656DB2B49438B001A3C4B /* AppStorageApp.swift in Sources */,
 			);
@@ -269,9 +279,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AppStorage/AppStorage.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AppStorage/Preview Content\"";
+				DEVELOPMENT_TEAM = 44HS6M6H95;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -286,6 +298,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = SceneStorage.AppStorage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -297,9 +311,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AppStorage/AppStorage.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AppStorage/Preview Content\"";
+				DEVELOPMENT_TEAM = 44HS6M6H95;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -314,6 +330,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = SceneStorage.AppStorage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
