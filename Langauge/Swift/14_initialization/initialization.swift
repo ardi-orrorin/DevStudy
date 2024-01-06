@@ -197,3 +197,140 @@ class RecipeIngredient: Food {
 
 let oneMysteryItem = RecipeIngredient()
 print("oneMysteryItem: \(oneMysteryItem.name), \(oneMysteryItem.quantity)")
+
+// 실패 가능한 초기화 구문
+struct Animal {
+    let species: String
+    init?(species: String){
+        if species.isEmpty { return nil }
+        self.species = species
+    }
+}
+
+let someCreature = Animal(species: "Giraffe")
+print("someCreature: \(someCreature)")
+
+if let giraffe = someCreature {
+    print("An animal was initialized with a species of \(giraffe.species)")
+}
+
+let anonymousCreature = Animal(species: "")
+print("anonymousCreature: \(anonymousCreature)")
+
+if anonymousCreature == nil {
+    print("The anonymous creature could not be initialized")
+}
+
+// 실패 가능한 초기화 구문을 이용한 열거형 초기화
+enum temperatureUnit {
+    case kelvin, celsius, fahrenheit
+    init?(symbol: Character){
+        switch symbol {
+        case "K":
+            self = .kelvin
+        case "C":
+            self = .celsius
+        case "F":
+            self = .fahrenheit
+        default:
+            return nil
+        }
+    }
+}
+
+let fahrenheitUnit = temperatureUnit(symbol: "F")
+if fahrenheitUnit != nil {
+    print("This is a defined temperature unit, so initialization succeeded.")
+}
+
+let unknownUnit = temperatureUnit(symbol: "X")
+if unknownUnit == nil {
+    print("This is not a defined temperature unit, so initialization failed.")
+}
+
+// 원시값을 가진 열겨형에 대한 실패 가능한 초기화 구문
+enum temperatureUnit2: Character {
+    case kelvin = "K", celsius = "C", fahrenheit = "F"
+}
+
+let fahrenheitUnit2 = temperatureUnit2(rawValue: "F")
+if fahrenheitUnit2 != nil {
+    print("This is a defined temperature unit, so initialization succeeded.")
+}
+let unknownUnit2 = temperatureUnit2(rawValue: "X")
+if unknownUnit2 == nil {
+    print("This is not a defined temperature unit, so initialization failed.")
+}
+
+// 초기화 실패 전파
+class Product {
+    let name: String
+    init?(name: String){
+        if name.isEmpty { return nil }
+        self.name = name
+    }
+}
+
+class CarItem: Product {
+    let quantity: Int
+    init?(name: String, quantity: Int){
+        if quantity < 1 { return nil }
+        self.quantity = quantity
+        super.init(name: name)
+    }
+}
+
+if let twoSocks = CarItem(name: "sock", quantity: 2){
+    print("Item: \(twoSocks.name), \(twoSocks.quantity)")
+}
+
+if let zeroShirts = CarItem(name: "shirt", quantity: 0){
+    print("Item: \(zeroShirts.name), \(zeroShirts.quantity)")
+} else {
+    print("Unable to initialize zero shirts")
+}
+
+if let oneUnnamed = CarItem(name: "", quantity: 1){
+    print("Item: \(oneUnnamed.name), \(oneUnnamed.quantity)")
+} else {
+    print("Unable to initialize one unnamed product")
+}
+
+// 실패 가능한 초기화 구문 재정의
+
+class Document {
+    var name: String?
+    init(){}
+    init?(name: String){
+        self.name = name
+        if name.isEmpty { return nil }
+    }
+}
+
+class AutomaticallyNamedDocument: Document {
+    override init(){
+        super.init()
+        self.name = "[Untitled]"
+    }
+    override init(name: String){
+        super.init()
+        if name.isEmpty {
+            self.name = "[Untitled]"
+        } else {
+            self.name = name
+        }
+    }
+}
+
+class UntitledDocument: Document {
+    override init(){
+        super.init(name: "[Untitled]")!
+    }
+}
+
+// 필수 초기화 구문
+class SomeClass {
+    required init(){
+        // 필수 초기화 구문의 구현 내용
+    }
+}
