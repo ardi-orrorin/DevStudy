@@ -30,7 +30,7 @@ struct PersistenceController {
 
     let container: NSPersistentContainer
 
-    init(inMemory: Bool = false) {
+    init() {
         container = NSPersistentContainer(name: "Product")
 //        if inMemory {
 //            container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
@@ -40,6 +40,6 @@ struct PersistenceController {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         })
-        container.viewContext.automaticallyMergesChangesFromParent = true
+//        container.viewContext.automaticallyMergesChangesFromParent = true
     }
 }
