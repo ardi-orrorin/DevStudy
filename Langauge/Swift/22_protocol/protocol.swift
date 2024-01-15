@@ -211,3 +211,140 @@ extension Dice23: TextRepresentable {
 let d12 = Dice23(sides: 12, generator: LinearCongruentialGenerator())
 print(d12.textualDescription)
 
+
+
+// 프로토콜 준수 확인
+extension Array: TextRepresentable where Element: TextRepresentable {
+    var textualDescription: String {
+        let itemsAsText = self.map { $0.textualDescription }
+        return "[" + itemsAsText.joined(separator: ", ") + "]"
+    }
+}
+let myDice = [d12, d12]
+print(myDice.textualDescription)
+
+
+// 합성된 구현을 사용하여 프로토콜 채택
+
+struct Vector3D: Equatable {
+    var x = 0.0, y = 0.0, z = 0.0   
+}
+
+let twoThreeFour = Vector3D(x: 2.0, y: 3.0, z: 4.0)
+let anotherTwoThreeFour = Vector3D(x: 2.0, y: 3.0, z: 4.0)
+
+if twoThreeFour == anotherTwoThreeFour {
+    print("These two vectors are also equivalent.")
+}
+
+enum SkillLevel: Comparable {
+    case beginener
+    case inttermediate
+    case expert(stars: Int)
+}
+
+var levels = [SkillLevel.inttermediate, SkillLevel.beginener, SkillLevel.expert(stars: 5), SkillLevel.expert(stars: 3)]
+for level in levels.sorted() {
+    print(level)
+}
+
+// 클래스 전용 프로토콜
+// AnyObject 프로토콜을 상속 받아서 클래스 타입으로 제한 할 수 있다.
+protocol SomeClassOnlyProtocol: AnyObject {
+    // class-only protocol definition goes here
+}
+
+// 프로토콜 혼합
+// &을 써서 여러 프로토콜을 혼합하여 사용할 수 있다.
+protocol Named {
+    var name: String { get }
+}
+
+protocol Aged {
+    var age: Int { get }
+}
+
+struct Person2: Named, Aged {
+    var name: String
+    var age: Int
+}
+
+func wishHappyBirthday(to celebrator: Named & Aged) {
+    print("Happy birthday, \(celebrator.name), you're \(celebrator.age)!")
+}
+
+let birthdayPerson = Person2(name: "Malcolm", age: 21)  
+wishHappyBirthday(to: birthdayPerson)
+
+// 클래스와 혼합
+class Location {
+    var latitude: Double
+    var longitude: Double
+
+    init(latitude: Double, longitude: Double) {
+        self.latitude = latitude
+        self.longitude = longitude
+    }
+}
+
+class City: Location, Named {
+    var name: String
+
+    init(name: String, latitude: Double, longitude: Double) {
+        self.name = name
+        super.init(latitude: latitude, longitude: longitude)
+    }
+}
+
+func beginConcert(in location: Location & Named) {
+    print("Hello, \(location.name)")
+}
+
+let seoul = City(name: "Seoul", latitude: 37.123, longitude: 127.123)
+beginConcert(in: seoul)
+
+// 프로토콜 준수에 대한 검사
+
+protocol HasArea {
+    var area: Double { get }
+}
+
+class Circle: HasArea {
+    let pi = 3.141592
+    var radius: Double
+    var area: Double { return pi * radius * radius }
+
+    init(radius: Double) { self.radius = radius }
+}  
+
+class Country: HasArea {
+    var area: Double
+
+    init(area: Double) { self.area = area }
+}
+
+class Animal {
+    var legs: Int
+
+    init(legs: Int) { self.legs = legs }
+}
+
+let objects: [AnyObject] = [
+    Circle(radius: 2.0),
+    Country(area: 243_610),
+    Animal(legs: 4)
+]
+
+for object in objects {
+    if let objectWithArea = object as? HasArea {
+        print("Area is \(objectWithArea.area)")
+    } else {
+        print("Something that doesn't have an area")
+    }
+}
+
+// 옵셔널 프로토콜 요구사항
+@objc protocol CounterDataSource {
+    @objc optional func increment(forCount count: Int) -> Int
+    @objc optional var fixedIncrement: Int { get }
+}
