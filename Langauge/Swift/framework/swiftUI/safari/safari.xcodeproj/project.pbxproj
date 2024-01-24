@@ -46,6 +46,7 @@
 		2051AE952B5E91260085B76D /* giraffe.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2051AE8B2B5E91250085B76D /* giraffe.mp4 */; };
 		2051AE962B5E91260085B76D /* gorilla.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2051AE8C2B5E91260085B76D /* gorilla.mp4 */; };
 		2051AE992B5E916E0085B76D /* VideoPlayerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2051AE982B5E916E0085B76D /* VideoPlayerHelper.swift */; };
+		20586E4A2B61251400AE7126 /* MotionAnimationVeiw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20586E492B61251400AE7126 /* MotionAnimationVeiw.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +91,7 @@
 		2051AE8B2B5E91250085B76D /* giraffe.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = giraffe.mp4; sourceTree = "<group>"; };
 		2051AE8C2B5E91260085B76D /* gorilla.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gorilla.mp4; sourceTree = "<group>"; };
 		2051AE982B5E916E0085B76D /* VideoPlayerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerHelper.swift; sourceTree = "<group>"; };
+		20586E492B61251400AE7126 /* MotionAnimationVeiw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionAnimationVeiw.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 				200ED7882B5D14810035266C /* HeadingView.swift */,
 				2051AE7F2B5E85E40085B76D /* VideoListItemView.swift */,
 				204F41662B5FDD710023F2AA /* MapAnnotaionView.swift */,
+				20586E492B61251400AE7126 /* MotionAnimationVeiw.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				200ED7832B5D0DE40035266C /* AnimalListItemView.swift in Sources */,
 				200ED76F2B5CFF4E0035266C /* MainView.swift in Sources */,
 				200ED78D2B5D18F30035266C /* InsetFactView.swift in Sources */,
+				20586E4A2B61251400AE7126 /* MotionAnimationVeiw.swift in Sources */,
 				200ED7722B5D06A10035266C /* CoverImageView.swift in Sources */,
 				200ED7752B5D078F0035266C /* CoverImageModel.swift in Sources */,
 				200ED7872B5D12910035266C /* AnimalDetailView.swift in Sources */,
