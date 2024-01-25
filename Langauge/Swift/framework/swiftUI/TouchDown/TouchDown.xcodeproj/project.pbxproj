@@ -16,6 +16,7 @@
 		209474B22B628F3E007CC278 /* category.json in Resources */ = {isa = PBXBuildFile; fileRef = 209474AE2B628F3E007CC278 /* category.json */; };
 		209474B32B628F3E007CC278 /* product.json in Resources */ = {isa = PBXBuildFile; fileRef = 209474AF2B628F3E007CC278 /* product.json */; };
 		209474BE2B6290B6007CC278 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209474BD2B6290B6007CC278 /* Constant.swift */; };
+		209474C02B6291E0007CC278 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209474BF2B6291E0007CC278 /* FooterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		209474AF2B628F3E007CC278 /* product.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = product.json; sourceTree = "<group>"; };
 		209474B42B628F6C007CC278 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		209474BD2B6290B6007CC278 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		209474BF2B6291E0007CC278 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +70,6 @@
 				209474AB2B628F3E007CC278 /* Data */,
 				209474B82B62903F007CC278 /* Extension */,
 				209474B92B62904B007CC278 /* Model */,
-				209474BA2B629051007CC278 /* New Group */,
 				209474A32B628EE7007CC278 /* Preview Content */,
 				209474B72B629037007CC278 /* Utility */,
 				209474B62B629032007CC278 /* View */,
@@ -135,13 +136,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		209474BA2B629051007CC278 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		209474BB2B629058007CC278 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +146,7 @@
 		209474BC2B62905D007CC278 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				209474BF2B6291E0007CC278 /* FooterView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -231,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				209474A02B628EE6007CC278 /* ContentView.swift in Sources */,
+				209474C02B6291E0007CC278 /* FooterView.swift in Sources */,
 				2094749E2B628EE6007CC278 /* TouchDownApp.swift in Sources */,
 				209474BE2B6290B6007CC278 /* Constant.swift in Sources */,
 			);
