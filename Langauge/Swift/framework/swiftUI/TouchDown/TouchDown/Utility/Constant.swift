@@ -10,6 +10,7 @@ import SwiftUI
 // data
 let players: [Player] = Bundle.main.decode("player.json")
 let categories: [Categroy] = Bundle.main.decode("category.json")
+let products: [Product] = Bundle.main.decode("product.json")
 
 // color
 let COLOR_BACKGROUND: Color = Color("ColorBackgrounnd")
@@ -18,7 +19,7 @@ let COLOR_GRAY: Color = Color(UIColor.systemGray4)
 // layout
 let columnSpacing: CGFloat = 10
 let rowSpacing: CGFloat = 10
-var girdLayout: [GridItem] {
+var gridLayout: [GridItem] {
     return Array(repeating: GridItem(.flexible(), spacing: rowSpacing), count: 2)
 }
 
