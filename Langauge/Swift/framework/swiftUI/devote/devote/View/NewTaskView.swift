@@ -61,7 +61,7 @@ struct NewTaskView: View {
             .frame(maxWidth: 640)
         }//: Vstask
         .padding()
-    } 
+    }
     
     
     private func addItem() {

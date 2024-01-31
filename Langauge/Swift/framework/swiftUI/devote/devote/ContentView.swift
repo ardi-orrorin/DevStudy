@@ -78,15 +78,7 @@ struct ContentView: View {
                                         
                     List {
                         ForEach(items) { item in
-                            VStack(alignment: .leading) {
-                                Text(item.task ?? "")
-                                    .font(.headline)
-                                    .fontWeight(.bold)
-                                
-                                Text(item.timestamp!, formatter: itemFormatter)
-                                    .font(.footnote)
-                                    .foregroundColor(.gray)
-                            }//: Vstack
+                            ListRowItemView(item: item)
                         } //: loop
                         .onDelete(perform: deleteItems)
                     }//: List
@@ -95,14 +87,20 @@ struct ContentView: View {
                     .padding(.vertical, 0)
                     .frame(maxWidth: 640)
                 }//: Vstack
+                .blur(radius: showNewTaskItem ? 8.0 : 0, opaque: false)
+                .transition(.move(edge: .bottom))
+                .animation(.easeOut(duration: 0.5))
                 
                 if showNewTaskItem {
-                    BlankView()
-                        .onTapGesture {
-                            withAnimation() {
-                                showNewTaskItem = false
-                            }
+                    BlankView(
+                        backgroundColor: isDarkMode ? .black : .gray,
+                        backgroundOpacity: isDarkMode ?  0.3 : 0.5
+                    )
+                    .onTapGesture {
+                        withAnimation() {
+                            showNewTaskItem = false
                         }
+                    }
                     
                     NewTaskView(isShowing: $showNewTaskItem)
                 }
@@ -124,6 +122,7 @@ struct ContentView: View {
             }//: toolbar
             .background(
                 BackgroundImageView()
+                    .blur(radius: showNewTaskItem ? 8.0 : 0, opaque: false)
             )
             .background(
                 backgroundGradient.ignoresSafeArea(.all)
