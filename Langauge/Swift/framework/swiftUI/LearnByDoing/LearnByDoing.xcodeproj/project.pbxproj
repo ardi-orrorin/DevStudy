@@ -15,6 +15,8 @@
 		2025CF952B6BB5F500EE60EC /* sound-chime.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2025CF932B6BB5F500EE60EC /* sound-chime.mp3 */; };
 		2025CF972B6BBCE900EE60EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2025CF962B6BBCE900EE60EC /* LaunchScreen.storyboard */; };
 		204689202B6D0E6B001D4103 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2046891F2B6D0E6B001D4103 /* CardView.swift */; };
+		204689242B6D1521001D4103 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204689232B6D1521001D4103 /* Card.swift */; };
+		204689262B6D15C0001D4103 /* CardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204689252B6D15C0001D4103 /* CardData.swift */; };
 		20A058332B6BC0E800887FD9 /* LaunchScreen.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 20A058312B6BC0E800887FD9 /* LaunchScreen.pdf */; };
 		20A058342B6BC0E800887FD9 /* logo-swift-outlined.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 20A058322B6BC0E800887FD9 /* logo-swift-outlined.pdf */; };
 /* End PBXBuildFile section */
@@ -31,6 +33,8 @@
 		2025CF962B6BBCE900EE60EC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2025CF982B6BC08800EE60EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2046891F2B6D0E6B001D4103 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		204689232B6D1521001D4103 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		204689252B6D15C0001D4103 /* CardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardData.swift; sourceTree = "<group>"; };
 		20A058312B6BC0E800887FD9 /* LaunchScreen.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = LaunchScreen.pdf; sourceTree = "<group>"; };
 		20A058322B6BC0E800887FD9 /* logo-swift-outlined.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "logo-swift-outlined.pdf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +76,7 @@
 				204689212B6D0F93001D4103 /* View */,
 				2046891E2B6D0E55001D4103 /* Components */,
 				2025CF962B6BBCE900EE60EC /* LaunchScreen.storyboard */,
+				204689222B6D1516001D4103 /* Model */,
 				2025CF852B6BB5A800EE60EC /* Assets.xcassets */,
 				2025CF872B6BB5A800EE60EC /* LearnByDoing.entitlements */,
 				2025CF882B6BB5A800EE60EC /* Preview Content */,
@@ -91,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				2025CF912B6BB5F500EE60EC /* card-data.txt */,
+				204689252B6D15C0001D4103 /* CardData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -118,6 +124,14 @@
 				2025CF832B6BB5A700EE60EC /* ContentView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		204689222B6D1516001D4103 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				204689232B6D1521001D4103 /* Card.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		20A058302B6BC0E800887FD9 /* Launch-Screen */ = {
@@ -204,9 +218,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				204689262B6D15C0001D4103 /* CardData.swift in Sources */,
 				2025CF842B6BB5A700EE60EC /* ContentView.swift in Sources */,
 				204689202B6D0E6B001D4103 /* CardView.swift in Sources */,
 				2025CF822B6BB5A700EE60EC /* LearnByDoingApp.swift in Sources */,
+				204689242B6D1521001D4103 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

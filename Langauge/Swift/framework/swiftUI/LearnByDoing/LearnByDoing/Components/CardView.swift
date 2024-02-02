@@ -10,25 +10,22 @@ import SwiftUI
 struct CardView: View {
     
     // MARK: - properties
-    var gradient: [Color] = [
-        Color("Color01"),
-        Color("Color02"),
-    ]
+    var card: Card
     
     // MARK: - body
     
     var body: some View {
         ZStack {
-            Image("developer-no1")
+            Image(card.imageName)
             
             VStack {
-                Text("SwiftUI")
+                Text(card.title)
                     .font(.largeTitle)
                     .fontWeight(.heavy)
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
                 
-                Text("Better apps, Less code.")
+                Text(card.headline)
                     .fontWeight(.light)
                     .foregroundColor(.white)
                     .italic()
@@ -51,7 +48,7 @@ struct CardView: View {
                     .padding(.horizontal, 25)
                     .background(
                         LinearGradient(
-                            colors: gradient,
+                            colors: card.gradientColors,
                             startPoint: .leading,
                             endPoint: .trailing
                         )
@@ -59,7 +56,7 @@ struct CardView: View {
                     .clipShape(Capsule())
                     .shadow(
                         color: Color("ColorShadow"),
-                        radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/, 
+                        radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/,
                         x: 0, y: 3
                     )
                     
@@ -71,7 +68,7 @@ struct CardView: View {
         }
         .frame(width: 335, height: 545)
         .background(
-            Gradient(colors: gradient)
+            Gradient(colors: card.gradientColors)
         )
         .cornerRadius(16)
         .shadow(radius: 8)
@@ -79,5 +76,5 @@ struct CardView: View {
 }
 
 #Preview {
-    CardView()
+    CardView(card: cardData[1])
 }
