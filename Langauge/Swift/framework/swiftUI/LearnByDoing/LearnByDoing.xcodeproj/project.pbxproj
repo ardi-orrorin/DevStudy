@@ -17,6 +17,7 @@
 		204689202B6D0E6B001D4103 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2046891F2B6D0E6B001D4103 /* CardView.swift */; };
 		204689242B6D1521001D4103 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204689232B6D1521001D4103 /* Card.swift */; };
 		204689262B6D15C0001D4103 /* CardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204689252B6D15C0001D4103 /* CardData.swift */; };
+		204689292B6E5A48001D4103 /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204689282B6E5A48001D4103 /* PlaySound.swift */; };
 		20A058332B6BC0E800887FD9 /* LaunchScreen.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 20A058312B6BC0E800887FD9 /* LaunchScreen.pdf */; };
 		20A058342B6BC0E800887FD9 /* logo-swift-outlined.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 20A058322B6BC0E800887FD9 /* logo-swift-outlined.pdf */; };
 /* End PBXBuildFile section */
@@ -35,6 +36,7 @@
 		2046891F2B6D0E6B001D4103 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		204689232B6D1521001D4103 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		204689252B6D15C0001D4103 /* CardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardData.swift; sourceTree = "<group>"; };
+		204689282B6E5A48001D4103 /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
 		20A058312B6BC0E800887FD9 /* LaunchScreen.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = LaunchScreen.pdf; sourceTree = "<group>"; };
 		20A058322B6BC0E800887FD9 /* logo-swift-outlined.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "logo-swift-outlined.pdf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +73,7 @@
 			children = (
 				20A058302B6BC0E800887FD9 /* Launch-Screen */,
 				2025CF982B6BC08800EE60EC /* Info.plist */,
+				204689272B6E5A38001D4103 /* Utility */,
 				2025CF902B6BB5F500EE60EC /* Data */,
 				2025CF922B6BB5F500EE60EC /* Sounds */,
 				204689212B6D0F93001D4103 /* View */,
@@ -132,6 +135,14 @@
 				204689232B6D1521001D4103 /* Card.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		204689272B6E5A38001D4103 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				204689282B6E5A48001D4103 /* PlaySound.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		20A058302B6BC0E800887FD9 /* Launch-Screen */ = {
@@ -219,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				204689262B6D15C0001D4103 /* CardData.swift in Sources */,
+				204689292B6E5A48001D4103 /* PlaySound.swift in Sources */,
 				2025CF842B6BB5A700EE60EC /* ContentView.swift in Sources */,
 				204689202B6D0E6B001D4103 /* CardView.swift in Sources */,
 				2025CF822B6BB5A700EE60EC /* LearnByDoingApp.swift in Sources */,

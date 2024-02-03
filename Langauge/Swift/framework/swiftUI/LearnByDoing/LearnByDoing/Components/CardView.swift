@@ -12,27 +12,35 @@ struct CardView: View {
     // MARK: - properties
     var card: Card
     
+    @State private var fadeIn: Bool = false
+    @State private var moveDownard: Bool = false
+    @State private var moveUpward: Bool = false
+    
     // MARK: - body
     
     var body: some View {
         ZStack {
             Image(card.imageName)
+                .opacity(fadeIn ? 1.0 : 0.0)
             
             VStack {
-                Text(card.title)
-                    .font(.largeTitle)
-                    .fontWeight(.heavy)
-                    .foregroundColor(.white)
-                    .multilineTextAlignment(.center)
-                
-                Text(card.headline)
-                    .fontWeight(.light)
-                    .foregroundColor(.white)
-                    .italic()
+                VStack {
+                    Text(card.title)
+                        .font(.largeTitle)
+                        .fontWeight(.heavy)
+                        .foregroundColor(.white)
+                        .multilineTextAlignment(.center)
+                    
+                    Text(card.headline)
+                        .fontWeight(.light)
+                        .foregroundColor(.white)
+                        .italic()
+                }
+                .offset(y: moveDownard ? 0 : -80)
                 Spacer()
                 
                 Button {
-                    
+                    playSound(sound: "sound-chime", type: "mp3")
                 } label: {
                     HStack {
                         Text("Learn".uppercased())
@@ -59,9 +67,9 @@ struct CardView: View {
                         radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/,
                         x: 0, y: 3
                     )
-                    
-                }
-            }
+                    .offset(y: moveUpward ?  0 : 80)
+                }//: Button
+            }//: vstack
             .padding(.top, 20)
             .padding(.bottom, 25)
             
@@ -72,6 +80,16 @@ struct CardView: View {
         )
         .cornerRadius(16)
         .shadow(radius: 8)
+        .onAppear() {
+            withAnimation(.linear(duration: 1.2)) {
+                fadeIn.toggle()
+            }
+            
+            withAnimation(.linear(duration: 0.8)) {
+                moveDownard.toggle()
+                moveUpward.toggle()
+            }
+        }
     }
 }
 
