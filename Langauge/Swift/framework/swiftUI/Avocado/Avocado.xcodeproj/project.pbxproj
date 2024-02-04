@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2011B1792B6F6B8500ACDCB3 /* AvocadosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2011B1782B6F6B8500ACDCB3 /* AvocadosView.swift */; };
+		2011B17B2B6F6B9E00ACDCB3 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2011B17A2B6F6B9E00ACDCB3 /* Launch Screen.storyboard */; };
+		2011B17D2B6F6ECB00ACDCB3 /* RipeningStagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2011B17C2B6F6ECB00ACDCB3 /* RipeningStagesView.swift */; };
+		2011B17F2B6F6EE000ACDCB3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2011B17E2B6F6EE000ACDCB3 /* SettingsView.swift */; };
+		2011B1812B6F6EF300ACDCB3 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2011B1802B6F6EF300ACDCB3 /* AppView.swift */; };
+		2011B1832B6F775000ACDCB3 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2011B1822B6F775000ACDCB3 /* HeaderView.swift */; };
 		204689372B6E8001001D4103 /* AvocadoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204689362B6E8001001D4103 /* AvocadoApp.swift */; };
 		204689392B6E8001001D4103 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204689382B6E8001001D4103 /* ContentView.swift */; };
 		2046893B2B6E8002001D4103 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2046893A2B6E8002001D4103 /* Assets.xcassets */; };
@@ -19,6 +25,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2011B1782B6F6B8500ACDCB3 /* AvocadosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvocadosView.swift; sourceTree = "<group>"; };
+		2011B17A2B6F6B9E00ACDCB3 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		2011B17C2B6F6ECB00ACDCB3 /* RipeningStagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RipeningStagesView.swift; sourceTree = "<group>"; };
+		2011B17E2B6F6EE000ACDCB3 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		2011B1802B6F6EF300ACDCB3 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		2011B1822B6F775000ACDCB3 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		204689332B6E8001001D4103 /* Avocado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avocado.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		204689362B6E8001001D4103 /* AvocadoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvocadoApp.swift; sourceTree = "<group>"; };
 		204689382B6E8001001D4103 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -43,6 +55,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2011B1762B6F6B1000ACDCB3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2011B1772B6F6B2A00ACDCB3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				204689382B6E8001001D4103 /* ContentView.swift */,
+				2011B1782B6F6B8500ACDCB3 /* AvocadosView.swift */,
+				2011B17C2B6F6ECB00ACDCB3 /* RipeningStagesView.swift */,
+				2011B17E2B6F6EE000ACDCB3 /* SettingsView.swift */,
+				2011B1802B6F6EF300ACDCB3 /* AppView.swift */,
+				2011B1822B6F775000ACDCB3 /* HeaderView.swift */,
+				2011B17A2B6F6B9E00ACDCB3 /* Launch Screen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		2046892A2B6E8001001D4103 = {
 			isa = PBXGroup;
 			children = (
@@ -62,10 +95,11 @@
 		204689352B6E8001001D4103 /* Avocado */ = {
 			isa = PBXGroup;
 			children = (
+				2011B1762B6F6B1000ACDCB3 /* Model */,
 				204689452B6E8063001D4103 /* Data */,
-				204689362B6E8001001D4103 /* AvocadoApp.swift */,
-				204689382B6E8001001D4103 /* ContentView.swift */,
+				2011B1772B6F6B2A00ACDCB3 /* View */,
 				2046893A2B6E8002001D4103 /* Assets.xcassets */,
+				204689362B6E8001001D4103 /* AvocadoApp.swift */,
 				2046893C2B6E8002001D4103 /* Avocado.entitlements */,
 				2046893D2B6E8002001D4103 /* Preview Content */,
 			);
@@ -152,6 +186,7 @@
 			files = (
 				2046893F2B6E8002001D4103 /* Preview Assets.xcassets in Resources */,
 				2046894D2B6E8063001D4103 /* Avocados.txt in Resources */,
+				2011B17B2B6F6B9E00ACDCB3 /* Launch Screen.storyboard in Resources */,
 				2046894F2B6E8063001D4103 /* RecipeData.txt in Resources */,
 				2046894B2B6E8063001D4103 /* RipeningData.txt in Resources */,
 				2046893B2B6E8002001D4103 /* Assets.xcassets in Resources */,
@@ -167,8 +202,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2011B17F2B6F6EE000ACDCB3 /* SettingsView.swift in Sources */,
 				204689392B6E8001001D4103 /* ContentView.swift in Sources */,
+				2011B17D2B6F6ECB00ACDCB3 /* RipeningStagesView.swift in Sources */,
+				2011B1812B6F6EF300ACDCB3 /* AppView.swift in Sources */,
 				204689372B6E8001001D4103 /* AvocadoApp.swift in Sources */,
+				2011B1792B6F6B8500ACDCB3 /* AvocadosView.swift in Sources */,
+				2011B1832B6F775000ACDCB3 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +348,7 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -346,6 +387,7 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
