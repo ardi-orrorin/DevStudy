@@ -70,7 +70,6 @@ Creamy, green, and full of nutrients! Avocado is a powerhouse ingredient at any 
             ) {
                 pulsateAnimation.toggle()
             }
-            
         }
     }
 }

@@ -11,6 +11,8 @@ struct HeaderView: View {
     
     // MARK: - properties
     
+    var header: Header
+    
     @State private var showHeadline: Bool = false
     
     var slideInAnimation: Animation {
@@ -28,7 +30,7 @@ struct HeaderView: View {
     // MARK: - body
     var body: some View {
         ZStack(alignment: .bottomLeading) {
-            Image("avocado-slice-1")
+            Image(header.image)
                 .resizable()
                 .scaledToFit()
             
@@ -38,13 +40,13 @@ struct HeaderView: View {
                     .frame(width: 4)
                 
                 VStack(alignment: .leading, spacing: 4) {
-                    Text("Avocado")
+                    Text(header.headline)
                         .font(.system(.title, design: .serif))
                         .fontWeight(.bold)
                         .foregroundColor(.white)
                         .shadow(radius: 3)
                     
-                    Text("Avocados are a pwerhouse ingredient at any meal for anyone. ")
+                    Text(header.subheadline)
                         .font(.footnote)
                         .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
                         .multilineTextAlignment(.leading)
@@ -74,5 +76,5 @@ struct HeaderView: View {
 }
 
 #Preview {
-    HeaderView()
+    HeaderView(header: headerDatas[0])
 }
