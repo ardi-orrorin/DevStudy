@@ -31,6 +31,9 @@
 		20F934E62B710A3D00614EA4 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F934E52B710A3D00614EA4 /* RecipeModel.swift */; };
 		20F934E82B710B0100614EA4 /* RecipesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F934E72B710B0100614EA4 /* RecipesData.swift */; };
 		20F934EA2B710B3C00614EA4 /* RecipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F934E92B710B3C00614EA4 /* RecipeCardView.swift */; };
+		20F934EC2B7112A600614EA4 /* RecipeRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F934EB2B7112A600614EA4 /* RecipeRatingView.swift */; };
+		20F934EE2B7112F200614EA4 /* RecipeCookingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F934ED2B7112F200614EA4 /* RecipeCookingView.swift */; };
+		20F934F02B7113F000614EA4 /* RecipeDetailview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F934EF2B7113F000614EA4 /* RecipeDetailview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +63,9 @@
 		20F934E52B710A3D00614EA4 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		20F934E72B710B0100614EA4 /* RecipesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesData.swift; sourceTree = "<group>"; };
 		20F934E92B710B3C00614EA4 /* RecipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCardView.swift; sourceTree = "<group>"; };
+		20F934EB2B7112A600614EA4 /* RecipeRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRatingView.swift; sourceTree = "<group>"; };
+		20F934ED2B7112F200614EA4 /* RecipeCookingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCookingView.swift; sourceTree = "<group>"; };
+		20F934EF2B7113F000614EA4 /* RecipeDetailview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,14 +93,17 @@
 			isa = PBXGroup;
 			children = (
 				204689382B6E8001001D4103 /* ContentView.swift */,
+				20F934ED2B7112F200614EA4 /* RecipeCookingView.swift */,
 				2084C4872B6FA5B700C66A8E /* FactsView.swift */,
 				2084C4852B6F9B4500C66A8E /* DishesView.swift */,
+				20F934EB2B7112A600614EA4 /* RecipeRatingView.swift */,
 				2011B1782B6F6B8500ACDCB3 /* AvocadosView.swift */,
 				2011B17C2B6F6ECB00ACDCB3 /* RipeningStagesView.swift */,
 				2011B17E2B6F6EE000ACDCB3 /* SettingsView.swift */,
 				2011B1802B6F6EF300ACDCB3 /* AppView.swift */,
 				2011B1822B6F775000ACDCB3 /* HeaderView.swift */,
 				2011B17A2B6F6B9E00ACDCB3 /* Launch Screen.storyboard */,
+				20F934EF2B7113F000614EA4 /* RecipeDetailview.swift */,
 				20F934E92B710B3C00614EA4 /* RecipeCardView.swift */,
 			);
 			path = View;
@@ -230,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2011B17F2B6F6EE000ACDCB3 /* SettingsView.swift in Sources */,
+				20F934EC2B7112A600614EA4 /* RecipeRatingView.swift in Sources */,
 				204689392B6E8001001D4103 /* ContentView.swift in Sources */,
 				20F934E82B710B0100614EA4 /* RecipesData.swift in Sources */,
 				2011B17D2B6F6ECB00ACDCB3 /* RipeningStagesView.swift in Sources */,
@@ -239,11 +249,13 @@
 				2011B1852B6F7F6000ACDCB3 /* HeaderModel.swift in Sources */,
 				20F934E62B710A3D00614EA4 /* RecipeModel.swift in Sources */,
 				2011B1872B6F7FB700ACDCB3 /* HeaderData.swift in Sources */,
+				20F934EE2B7112F200614EA4 /* RecipeCookingView.swift in Sources */,
 				2084C4862B6F9B4500C66A8E /* DishesView.swift in Sources */,
 				2084C48A2B6FA86D00C66A8E /* FactModel.swift in Sources */,
 				20F934EA2B710B3C00614EA4 /* RecipeCardView.swift in Sources */,
 				2084C4882B6FA5B700C66A8E /* FactsView.swift in Sources */,
 				2011B1832B6F775000ACDCB3 /* HeaderView.swift in Sources */,
+				20F934F02B7113F000614EA4 /* RecipeDetailview.swift in Sources */,
 				2084C48C2B6FA8B000C66A8E /* FactData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
