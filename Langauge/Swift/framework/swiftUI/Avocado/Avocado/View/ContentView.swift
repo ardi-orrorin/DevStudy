@@ -9,8 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     
-    
-    
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(alignment: .center, spacing: 20) {
@@ -48,6 +46,20 @@ struct ContentView: View {
                     .padding(.leading, 60)
                     .padding(.trailing, 20)
                 }
+                
+                // MARK: - fecipe cards
+                Text("Avocado Recipes")
+                    .fontWeight(.bold)
+                    .modifier(TitleModifier())
+                
+                VStack(alignment: .center, spacing: 25) {
+                    ForEach(recipesData) { recipe in
+                        RecipeCardView(recipe: recipe)
+                    }
+                }//: vstack
+                .frame(maxWidth: 640)
+                .padding(.horizontal)
+                
                 
                 // MARK: - footer
                 VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 20) {

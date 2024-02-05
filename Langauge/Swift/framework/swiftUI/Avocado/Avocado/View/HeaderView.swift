@@ -50,7 +50,7 @@ struct HeaderView: View {
                         .font(.footnote)
                         .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
                         .multilineTextAlignment(.leading)
-                        .foregroundColor(.white)
+                        .foregroundColor( .white)
                         .shadow(radius: 3)
                         
                 }
@@ -66,7 +66,12 @@ struct HeaderView: View {
             .padding(30)
             .onAppear() {
                 withAnimation(slideInAnimation) {
-                    showHeadline.toggle()
+                    showHeadline = true
+                }
+            }
+            .onDisappear() {
+                withAnimation(slideInAnimation) {
+                    showHeadline = false
                 }
             }
             .offset(y: showHeadline ? 0 : 200 )
