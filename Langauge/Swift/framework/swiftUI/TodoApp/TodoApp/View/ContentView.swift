@@ -9,12 +9,8 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-//    @Environment(\.managedObjectContext) private var viewContext
-//
-//    @FetchRequest(
-//        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-//        animation: .default)
-//    private var items: FetchedResults<Item>
+    
+    @Environment(\.managedObjectContext) var managedObjectContext
 
     @State private var showingAddTodoView: Bool = false
     
@@ -32,6 +28,7 @@ struct ContentView: View {
                 } //: button
                     .sheet(isPresented: $showingAddTodoView) {
                         AddTodoView()
+                            .environment(\.managedObjectContext, managedObjectContext)
                     }
             ) //: navigation bar items
         } //: navigation view

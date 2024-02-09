@@ -14,8 +14,15 @@ struct AddTodoView: View {
     @State private var priority: String = "Normal"
     
     @Environment(\.presentationMode) var presentationMode
+    @Environment(\.managedObjectContext) var managedObjectContext
     
     let priorities = ["High", "Normal", "Low"]
+    
+    
+    @State private var errorShowing: Bool = false
+    @State private var errorTitle: String = ""
+    @State private var errorMessage: String = ""
+    
     
     // MARK: - body
     
@@ -39,7 +46,25 @@ struct AddTodoView: View {
                     HStack {
                         Spacer()
                         Button {
-                            print("Save a new todo item.")
+                            if name != "" {
+                                let todo = Todo(context: managedObjectContext)
+                                todo.name = name
+                                todo.priority = priority
+                                
+                                do {
+                                    try managedObjectContext.save()
+                                } catch {
+                                    print(error)
+                                }
+                                
+                                print("New todo item: \(todo.name ?? ""), Priority: \(todo.priority ?? "")")
+                            } else {
+                                errorShowing = true
+                                errorTitle = "Invalid Name"
+                                errorMessage = "Make sure to enter something for\nthe new todo item."
+                                return
+                            }
+                            presentationMode.wrappedValue.dismiss()
                         } label: {
                             Text("Save")
                         }//: save button
@@ -56,6 +81,9 @@ struct AddTodoView: View {
                 } label: {
                     Image(systemName: "xmark")
                 })
+            .alert(isPresented: $errorShowing){
+                Alert(title: Text(errorTitle), message: Text(errorMessage), dismissButton: .default(Text("OK")))
+            }
         } //: navigation
         
     }
