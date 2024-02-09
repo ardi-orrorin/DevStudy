@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct FooterView: View {
+    
+    // MARK: - properties
+    
+    @Binding var showBookingAlert: Bool
+    
     var body: some View {
         HStack {
             Image(systemName: "xmark.circle")
@@ -16,7 +21,7 @@ struct FooterView: View {
             Spacer()
             
             Button {
-                
+                showBookingAlert.toggle()
             } label: {
                 textBtnLabel(text: "Book Destination", color: .pink)
             }
@@ -26,6 +31,7 @@ struct FooterView: View {
             Image(systemName: "heart.circle")
                 .font(.system(size: 42, weight: .light))
         } //: hstack
+        .padding()
     }
     
     private func textBtnLabel(text: String, color: Color) -> some View {
@@ -41,6 +47,4 @@ struct FooterView: View {
     }
 }
 
-#Preview {
-    FooterView()
-}
+

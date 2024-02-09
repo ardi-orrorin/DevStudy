@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct GuideView: View {
+    
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(alignment: .center, spacing: 20) {
@@ -24,6 +27,13 @@ struct GuideView: View {
                 
                 Spacer(minLength: 10)
                 
+                Button {
+                    presentationMode.wrappedValue.dismiss()
+                } label: {
+                    Text("Countinue".uppercased())
+                        .modifier(ButtonModifier())
+                }
+                
             } //: vstack
             .frame(minWidth: 0, maxWidth: .infinity)
             .padding(.top, 15)
@@ -36,8 +46,7 @@ struct GuideView: View {
         Group {
             Text("Get Started!")
                 .fontWeight(.black)
-                .font(.largeTitle)
-                .foregroundColor(.pink)
+                .modifier(TitleModifier())
             
             Text("Discover and pick the perfect destination for your roimantic Honeymoon!")
                 .lineLimit(nil)
