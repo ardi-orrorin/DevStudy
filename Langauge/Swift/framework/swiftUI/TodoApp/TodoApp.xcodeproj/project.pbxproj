@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		20C838122B751580000AE822 /* TodoAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C838112B751580000AE822 /* TodoAppApp.swift */; };
 		20C838142B751580000AE822 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C838132B751580000AE822 /* Persistence.swift */; };
-		20C838172B751580000AE822 /* TodoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 20C838152B751580000AE822 /* TodoApp.xcdatamodeld */; };
+		20C838172B751580000AE822 /* Todo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 20C838152B751580000AE822 /* Todo.xcdatamodeld */; };
 		20C838192B751580000AE822 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C838182B751580000AE822 /* ContentView.swift */; };
 		20C8381B2B751581000AE822 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C8381A2B751581000AE822 /* Assets.xcassets */; };
 		20C8381F2B751581000AE822 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C8381E2B751581000AE822 /* Preview Assets.xcassets */; };
@@ -63,7 +63,7 @@
 				20C838252B7515B3000AE822 /* View */,
 				20C8381A2B751581000AE822 /* Assets.xcassets */,
 				20C8381C2B751581000AE822 /* TodoApp.entitlements */,
-				20C838152B751580000AE822 /* TodoApp.xcdatamodeld */,
+				20C838152B751580000AE822 /* Todo.xcdatamodeld */,
 				20C8381D2B751581000AE822 /* Preview Content */,
 			);
 			path = TodoApp;
@@ -157,7 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20C838122B751580000AE822 /* TodoAppApp.swift in Sources */,
-				20C838172B751580000AE822 /* TodoApp.xcdatamodeld in Sources */,
+				20C838172B751580000AE822 /* Todo.xcdatamodeld in Sources */,
 				20C838192B751580000AE822 /* ContentView.swift in Sources */,
 				20C838142B751580000AE822 /* Persistence.swift in Sources */,
 				20C838272B7515C7000AE822 /* AddTodoView.swift in Sources */,
@@ -381,13 +381,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		20C838152B751580000AE822 /* TodoApp.xcdatamodeld */ = {
+		20C838152B751580000AE822 /* Todo.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				20C838162B751580000AE822 /* TodoApp.xcdatamodel */,
 			);
 			currentVersion = 20C838162B751580000AE822 /* TodoApp.xcdatamodel */;
-			path = TodoApp.xcdatamodeld;
+			path = Todo.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
