@@ -7,11 +7,10 @@
 
 import SwiftUI
 
-struct CardView: View {
+struct CardView: View, Identifiable {
     
     // MARK: - properties
     let id = UUID()
-    
     var honeymoon: Destination
     
     
