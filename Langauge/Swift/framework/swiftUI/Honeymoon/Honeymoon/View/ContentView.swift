@@ -15,6 +15,7 @@ struct ContentView: View {
     @GestureState private var dragState = DragState.inactive
     private var dragAreaThreshold: CGFloat = 65
     @State private var lastCardIndex: Int = 1
+    @State private var cardRemovalTransition = AnyTransition.tailingBottom
     
     @State var cardViews: [CardView] = {
         var views = [CardView]()
@@ -138,35 +139,49 @@ struct ContentView: View {
                                 : 0
                             )
                         )
-                        .animation(.interpolatingSpring(stiffness: 120, damping: 120))
+                        
                         .gesture(
-                                LongPressGesture(minimumDuration: 0.01)
-                                    .sequenced(before: DragGesture())
-                                    .updating(
-                                        $dragState,
-                                        body: { value, state, transaction in
-                                            switch value {
-                                            case .first(true):
-                                                state = .pressing
-                                            case .second(true, let drag):
-                                                state = .dragging(translation: drag?.translation ?? .zero)
-                                            default:
-                                                break
-                                        }
-                                    }) //: updating
-                                    .onEnded() { value in
-                                        guard case .second(true, let drag?) = value else {
-                                            return
-                                        }
-                                        
-                                        if drag.translation.width < -dragAreaThreshold
-                                            || drag.translation.width > dragAreaThreshold {
-                                            moveCards()
-                                        }
-                                        
+                            LongPressGesture(minimumDuration: 0.01)
+                                .sequenced(before: DragGesture())
+                                .updating(
+                                    $dragState,
+                                    body: { value, state, transaction in
+                                        switch value {
+                                        case .first(true):
+                                            state = .pressing
+                                        case .second(true, let drag):
+                                            state = .dragging(translation: drag?.translation ?? .zero)
+                                        default:
+                                            break
                                     }
+                                }) //: updating
+                                .onChanged() { value in
+                                    guard case .second(true, let drag?) = value else {
+                                        return
+                                    }
+                                    
+                                    if drag.translation.width < -dragAreaThreshold {
+                                        cardRemovalTransition = .leadingBottom
+                                    }
+                                    
+                                    if drag.translation.width > dragAreaThreshold {
+                                        cardRemovalTransition = .tailingBottom
+                                    }
+                                }
+                                .onEnded() { value in
+                                    guard case .second(true, let drag?) = value else {
+                                        return
+                                    }
+                                    
+                                    if drag.translation.width < -dragAreaThreshold
+                                        || drag.translation.width > dragAreaThreshold {
+                                        moveCards()
+                                    }
+                                    
+                                }
                             )//: gesutre
-                            
+                        .transition(cardRemovalTransition)
+                        .animation(.interpolatingSpring(stiffness: 120, damping: 120))
                 }
             }
             .padding(.horizontal)
