@@ -9,10 +9,22 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
+        TabView {
             CalendarView()
+                .tabItem {
+                    Image(systemName: "1.circle")
+                    Text("First")
+                }
+            
+            CustomCalendarView()
+                .tabItem {
+                    Image(systemName: "2.circle")
+                    Text("Second")
+                }
         }
+        .tabViewStyle(.page)
         .padding()
+        .edgesIgnoringSafeArea(.all)
     }
 }
 

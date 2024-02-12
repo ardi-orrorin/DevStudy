@@ -6,21 +6,46 @@
 //
 
 import SwiftUI
+import TipKit
 
 struct CustomCalendarView: View {
     
     @State var date:Date = Calendar.current.date(byAdding: .day, value: 0, to: Date())!
     
+    @State var memo: String = ""
+    
+    @State var modalOffset: CGPoint = .zero
+    @State var modalToggle: Bool = false
+    
     var body: some View {
-        VStack(spacing: 10) {
-            HeaderView(date: date)
+        ZStack(alignment: .topLeading) {
+            VStack {
+                VStack(spacing: 40) {
+                    HeaderView(date: date)
+                    
+                    CalendarDayView(modalToggle: $modalToggle, modalOffset: $modalOffset)
+                }
                 .padding()
+                
+                Spacer()
+                
+                FooterBtn(date: date, memo: memo)
+            }
             
-            CalendarDayView()
+            
+            if modalToggle {
+                VStack(alignment: .leading) {
+                    Text("ModalText")
+                }
+                .frame(width: 200, height: 200)
                 .padding()
-            
-            Spacer()
+                .background(Color("AccentColor"))
+                .cornerRadius(10)
+                .shadow(radius: 5, x: 0, y: 5)
+                .offset(x: modalOffset.x, y: modalOffset.y)
+            }
         }
+        
     }
 }
 
@@ -56,22 +81,7 @@ struct HeaderView: View {
                                 .bold()
                                 .frame(width: 100)
                         }
-                        .sheet(isPresented: $showMonthPicker){
-                            Picker(selection: $date, label: Text("")){
-                                ForEach(1..<13) { month in
-                                    Text("\(month)월")
-                                        .tag(month)
-                                }
-                            }
-                            .labelsHidden()
-                            .datePickerStyle(.wheel)
-                            
-                            Button {
-                                showMonthPicker.toggle()
-                            } label: {
-                                Text("확인")
-                            }
-                        }
+
                         Spacer()
                     }
                 }
@@ -89,19 +99,35 @@ struct HeaderView: View {
                 HStack {
                     Spacer()
                     Button {
-                        
+                        showMonthPicker.toggle()
                     } label: {
-                        Image(systemName: "chevron.left")
+                        Image(systemName: "plus")
                             .foregroundColor(.gray)
                             .font(.title)
                     }
-                    
-                    Button {
-                        
-                    } label: {
-                        Image(systemName: "chevron.right")
-                            .foregroundColor(.gray)
-                            .font(.title)
+                    .sheet(isPresented: $showMonthPicker) {
+                        VStack {
+                            DatePicker("Please enter a date", selection: $date, displayedComponents: .date)
+                            .labelsHidden()
+                            .datePickerStyle(.wheel)
+                            
+                            MemoItemView()
+                                .padding()
+                            
+                            Button {
+                                showMonthPicker.toggle()
+                            } label: {
+                                Text("Save")
+                                    .frame(minWidth: 200)
+                                    .foregroundColor(.white)
+                                    .padding()
+                                    .background(Color.blue)
+                                    .cornerRadius(10)
+                                    
+                            }
+                            
+                            Spacer()
+                        }
                     }
                 }
             }
@@ -111,15 +137,21 @@ struct HeaderView: View {
 
 struct CalendarDayView: View {
     
+    
+    @Binding var modalToggle: Bool
+    
+    @Binding var modalOffset: CGPoint
+    
+    
     var body: some View {
         VStack {
             LazyVGrid(columns: Array(repeating: GridItem(), count: 7), spacing: 3) {
-                ForEach(0..<31) { item in
-                    DayItemView(day: item)
+                ForEach(1..<32) { item in
+                    DayItemView(day: item, modalToggle: $modalToggle, modalOffset: $modalOffset)
+                        
                 }
             }
             
-            Spacer()
         }
         
     }
@@ -130,19 +162,93 @@ struct DayItemView: View {
     var day: Int
     @State var clicked: Bool = false
     
+    @Binding var modalToggle: Bool
+    
+    @Binding var modalOffset: CGPoint
+    
     var body: some View {
-        RoundedRectangle(cornerRadius: 5)
-            .frame(width: 50, height: 50)
-            .overlay(
-                Text("\(day)")
-                    .foregroundColor(.black)
-            )
-            .foregroundColor(clicked ? .red : .gray)
-            .onTapGesture {
-                clicked.toggle()
-            }
+        ZStack {
+            Circle()
+                .frame(width: 50, height: 50)
+                .overlay(
+                    Text("\(day)")
+                        .foregroundColor(clicked ? .white : .black)
+                )
+                .foregroundColor(clicked ? .blue : Color("AccentColor"))
+                .onTapGesture(coordinateSpace: .local) { point in
+                    
+                    modalOffset = point
+                    
+                    print("point: \(point)")
+                    
+                    withAnimation(.easeIn(duration: 0.3)) {
+                        clicked.toggle()
+                        modalToggle.toggle()
+                    }
+                }
+        }
     }
 }
+
+struct MemoItemView: View {
+    @State var memo = ""
+    
+    var body: some View {
+        ZStack {
+            TextEditor(text: $memo)
+                .font(.footnote)
+                .padding(9)
+                .background(
+                    RoundedRectangle(cornerRadius: 5)
+                        .stroke(Color.gray, lineWidth: 1)
+                )
+                
+            
+            if memo.count == 0 {
+                HStack {
+                    VStack {
+                        Text("Enter to memo...")
+                            .foregroundColor(.gray)
+                            .font(.footnote)
+                        Spacer()
+                    }
+                    .padding(.vertical)
+                    Spacer()
+                }
+                .padding(.horizontal)
+            }
+        }
+        .frame(maxHeight: 150)
+    }
+}
+
+struct FooterBtn: View {
+    var date: Date
+    var memo: String
+    
+    var body: some View {
+        HStack {
+            Button {
+                print("date: \(date), memo: \(memo)")
+            } label :{
+                Text("Save")
+                    .foregroundStyle(.gray)
+            }
+            .frame(minWidth: 0, maxWidth: .infinity)
+            
+            
+            Button {
+                
+            } label :{
+                Text("Cancel")
+                    .foregroundStyle(.gray)
+            }
+            .frame(minWidth: 0, maxWidth: .infinity)
+        }
+        .frame(maxHeight: 30)
+    }
+}
+
 
 
 #Preview {
