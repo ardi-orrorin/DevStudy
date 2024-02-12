@@ -11,7 +11,7 @@ import CoreData
 class PhotoModel: ObservableObject {
     
     
-    @Published(initialValue: [Photo]) var photos = [Photo]()
+    @Published var photos = [Photo]()
     
     let container: NSPersistentContainer
     

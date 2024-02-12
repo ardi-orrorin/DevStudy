@@ -10,7 +10,8 @@ import CoreData
 
 func requestPhoto(photoModel: PhotoModel) {
     
-    let urlStr = "https://jsonplaceholder.typicode.com/albums/1/photos"
+//    let urlStr = "https://jsonplaceholder.typicode.com/albums/1/photos"
+    let urlStr = "https://jsonplaceholder.typicode.com/photos"
     
     let url = URL(string: urlStr)!
     
