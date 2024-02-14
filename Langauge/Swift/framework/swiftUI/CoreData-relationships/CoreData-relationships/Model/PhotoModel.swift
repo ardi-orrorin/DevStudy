@@ -1,4 +1,3 @@
-container.viewContext.delete(result)//
 //  PhotoModel.swift
 //  Coredata-Relationships
 //
