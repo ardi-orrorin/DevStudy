@@ -18,6 +18,8 @@
 		2063F0CD2B7B95B300A9E1C6 /* Album+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2063F0C92B7B95B300A9E1C6 /* Album+CoreDataProperties.swift */; };
 		2063F0D02B7B961100A9E1C6 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2063F0CF2B7B961100A9E1C6 /* PhotoModel.swift */; };
 		2063F0D22B7CF5B100A9E1C6 /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2063F0D12B7CF5B100A9E1C6 /* AlbumModel.swift */; };
+		209A3ED92B7E3A6900CFBF14 /* CodableAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209A3ED82B7E3A6900CFBF14 /* CodableAlbum.swift */; };
+		209A3EDD2B7E3E4B00CFBF14 /* CodablePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209A3EDC2B7E3E4B00CFBF14 /* CodablePhoto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		2063F0C92B7B95B300A9E1C6 /* Album+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Album+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2063F0CF2B7B961100A9E1C6 /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
 		2063F0D12B7CF5B100A9E1C6 /* AlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
+		209A3ED82B7E3A6900CFBF14 /* CodableAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableAlbum.swift; sourceTree = "<group>"; };
+		209A3EDC2B7E3E4B00CFBF14 /* CodablePhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodablePhoto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,8 @@
 				2063F0CE2B7B95EF00A9E1C6 /* CoreData */,
 				2063F0CF2B7B961100A9E1C6 /* PhotoModel.swift */,
 				2063F0D12B7CF5B100A9E1C6 /* AlbumModel.swift */,
+				209A3ED82B7E3A6900CFBF14 /* CodableAlbum.swift */,
+				209A3EDC2B7E3E4B00CFBF14 /* CodablePhoto.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -181,9 +187,11 @@
 				2063F0CA2B7B95B300A9E1C6 /* Photo+CoreDataClass.swift in Sources */,
 				2063F0CB2B7B95B300A9E1C6 /* Photo+CoreDataProperties.swift in Sources */,
 				2063F0D22B7CF5B100A9E1C6 /* AlbumModel.swift in Sources */,
+				209A3ED92B7E3A6900CFBF14 /* CodableAlbum.swift in Sources */,
 				2063F09C2B7B92DC00A9E1C6 /* Coredata_RelationshipsApp.swift in Sources */,
 				2063F0CD2B7B95B300A9E1C6 /* Album+CoreDataProperties.swift in Sources */,
 				2063F0D02B7B961100A9E1C6 /* PhotoModel.swift in Sources */,
+				209A3EDD2B7E3E4B00CFBF14 /* CodablePhoto.swift in Sources */,
 				2063F0CC2B7B95B300A9E1C6 /* Album+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

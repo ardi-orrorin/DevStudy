@@ -42,6 +42,7 @@ class AlbumModel: ObservableObject, Identifiable {
         fetchRequest.predicate = NSPredicate(format: "albumId == %d", albumId)
         do {
             self.album = try container.viewContext.fetch(fetchRequest).first
+            
         } catch {
             print(error)
         }
@@ -55,8 +56,18 @@ class AlbumModel: ObservableObject, Identifiable {
             self.album = try? container.viewContext.fetch(fetchRequest).first
             
             container.viewContext.delete(album!)
+            
+            self.saveContext()
         } catch {
             print(error)
+        }
+    }
+    
+    func saveContext(){
+        do {
+            try container.viewContext.save()
+        } catch {
+            print("Not saved. \(error)")
         }
     }
     
