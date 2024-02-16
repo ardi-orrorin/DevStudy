@@ -7,8 +7,7 @@
 
 import Foundation
 
-class DecodeAlbum: Codable {
-    
+class CodableAlbum: Codable {
     var id: Int64
     var thumbnailUrl: String?
     var title: String?
