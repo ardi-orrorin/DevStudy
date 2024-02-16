@@ -10,8 +10,8 @@ import CoreData
 
 class AlbumModel: ObservableObject, Identifiable {
     
-    @Published var album: Album?
-    @Published var albums: [Album]?
+    @Published var album: Photo?
+    @Published var albums: [Photo]?
     
     let container: NSPersistentContainer
     
@@ -25,7 +25,7 @@ class AlbumModel: ObservableObject, Identifiable {
     }
     
     func getAlbums(){
-        let fetchRequest = Album.fetchRequest()
+        let fetchRequest = Photo.fetchRequest()
         
         do {
             self.albums = try container.viewContext.fetch(fetchRequest)
@@ -38,7 +38,7 @@ class AlbumModel: ObservableObject, Identifiable {
     
     
     func getAlbum(albumId: Int64) {
-        let fetchRequest = Album.fetchRequest()
+        let fetchRequest = Photo.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "albumId == %d", albumId)
         do {
             self.album = try container.viewContext.fetch(fetchRequest).first
@@ -49,8 +49,37 @@ class AlbumModel: ObservableObject, Identifiable {
         
     }
     
+    func setAlbum(album: CodableAlbum) {
+        
+        let album = Album(context: container.viewContext)
+        album.id = album.id
+        album.thumbnailUrl = album.thumbnailUrl
+        album.title = album.title
+        album.url = album.url
+        
+        container.viewContext.insert(album)
+        self.saveContext()
+    }
+    
+    func setAlbums(albums: [CodablePhoto]) {
+        DispatchQueue.main.async {
+            for item in albums {
+                let album = Photo(context: self.container.viewContext)
+                album.id = item.id
+                album.title = item.title
+                album.userId = item.userId
+                
+                self.container.viewContext.insert(album)
+                
+                self.saveContext()
+            }
+        }
+        self.saveContext()
+    }
+    
+    
     func removeAlbum(albumId: Int64) {
-        let fetchRequest = Album.fetchRequest()
+        let fetchRequest = Photo.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "albumId == %d", albumId)
         do {
             self.album = try? container.viewContext.fetch(fetchRequest).first

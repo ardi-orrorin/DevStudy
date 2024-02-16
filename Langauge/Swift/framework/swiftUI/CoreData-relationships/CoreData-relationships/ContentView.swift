@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var photo: AlbumModel = AlbumModel()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        List {
+            ForEach(photo.albums ?? []) { item in
+                Text(item.title ?? "")
+            }
         }
-        .padding()
+        .onAppear(){
+            requestAlbum(albumModel: photo)
+            photo.getAlbums()
+        }
     }
 }
 

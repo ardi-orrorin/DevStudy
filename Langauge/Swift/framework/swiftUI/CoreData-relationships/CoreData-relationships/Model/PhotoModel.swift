@@ -8,6 +8,7 @@ import Foundation
 import CoreData
 
 class PhotoModel: ObservableObject, Identifiable {
+    
     @Published var photos = [Photo]()
     @Published var photo:Photo?
     

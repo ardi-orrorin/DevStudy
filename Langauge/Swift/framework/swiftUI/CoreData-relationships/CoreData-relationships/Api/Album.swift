@@ -7,20 +7,14 @@
 
 import Foundation
 
-func RequestAlbum() -> [CodableAlbum] {
-    var albums: [CodableAlbum] = []
-    
+func requestAlbum(albumModel: AlbumModel) {
+        
     let url = URL(string: "https://jsonplaceholder.typicode.com/albums")!
     let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-        guard let data = data else { return }
-        do {
-            let decoder = JSONDecoder()
-            albums = try decoder.decode([CodableAlbum].self, from: data)
-        } catch {
-            print(error)
-        }
+        let decoder = JSONDecoder()
+        let reulst = try! decoder.decode([CodablePhoto].self, from: data!)
+        albumModel.setAlbums(albums: reulst)
     }
     task.resume()
     
-    return albums
 }

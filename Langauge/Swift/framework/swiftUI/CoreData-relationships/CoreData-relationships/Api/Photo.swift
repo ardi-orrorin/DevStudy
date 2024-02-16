@@ -7,15 +7,15 @@
 
 import Foundation
 
-func requestPhoto() -> [CodablePhoto] {
-    var photo = [CodablePhoto]()
+func requestPhoto() -> [CodableAlbum] {
+    var photo = [CodableAlbum]()
     
     let url = URL(string: "https://jsonplaceholder.typicode.com/photos")!
     let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
         guard let data = data else { return }
         do {
             let decoder = JSONDecoder()
-            photo = try decoder.decode([CodablePhoto].self, from: data)
+            photo = try decoder.decode([CodableAlbum].self, from: data)
         } catch {
             print(error)
         }
