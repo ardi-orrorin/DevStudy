@@ -14,19 +14,20 @@ struct ContentView: View {
     
     var body: some View {
         List {
-//            ForEach(photo.albums ?? []) { item in
-//                Text(item.title ?? "")
-//            }
-            ForEach(album.photos) { item in
+            ForEach(photo.albums) { item in
                 Text(item.title ?? "")
             }
+//            ForEach(album.photos) { item in
+//                Text(item.title ?? "")
+//            }
         }
         .onAppear(){
-//            requestAlbum(albumModel: photo)
+            requestAlbum(albumModel: photo)
 //            photo.getAlbums()
+            photo.getAlbumsContains()
             
-            requestPhoto(photoModel: album)
-            album.getPhotos()
+//            requestPhoto(photoModel: album)
+//            album.getPhotos()
         }
     }
 }

@@ -10,8 +10,8 @@ import CoreData
 
 class AlbumModel: ObservableObject, Identifiable {
     
-    @Published var album: Photo?
-    @Published var albums: [Photo]?
+    @Published var album: Photo = Photo()
+    @Published var albums: [Photo] = [Photo]()
     
     let container: NSPersistentContainer
     
@@ -32,8 +32,17 @@ class AlbumModel: ObservableObject, Identifiable {
         } catch {
             print(error)
         }
+    }
+    
+    func getAlbumsContains(){
+        let fetchRequest = Photo.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "title CONTAINS[c] %@", "sunt")
         
-        
+        do {
+            self.albums = try container.viewContext.fetch(fetchRequest)
+        } catch {
+            print(error)
+        }
     }
     
     
@@ -41,7 +50,7 @@ class AlbumModel: ObservableObject, Identifiable {
         let fetchRequest = Photo.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "albumId == %d", albumId)
         do {
-            self.album = try container.viewContext.fetch(fetchRequest).first
+            self.album = try container.viewContext.fetch(fetchRequest).first ?? Photo()
             
         } catch {
             print(error)
@@ -80,9 +89,12 @@ class AlbumModel: ObservableObject, Identifiable {
         let fetchRequest = Photo.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "albumId == %d", albumId)
         do {
-            self.album = try? container.viewContext.fetch(fetchRequest).first
             
-            container.viewContext.delete(album!)
+            self.album = try container.viewContext.fetch(fetchRequest).first ?? Photo()
+            
+            if(self.album.id != 0) {
+                container.viewContext.delete(album)
+            }
             
             self.saveContext()
         } catch {
