@@ -10,16 +10,23 @@ import SwiftUI
 struct ContentView: View {
     
     @ObservedObject var photo: AlbumModel = AlbumModel()
+    @ObservedObject var album: PhotoModel = PhotoModel()
     
     var body: some View {
         List {
-            ForEach(photo.albums ?? []) { item in
+//            ForEach(photo.albums ?? []) { item in
+//                Text(item.title ?? "")
+//            }
+            ForEach(album.photos) { item in
                 Text(item.title ?? "")
             }
         }
         .onAppear(){
-            requestAlbum(albumModel: photo)
-            photo.getAlbums()
+//            requestAlbum(albumModel: photo)
+//            photo.getAlbums()
+            
+            requestPhoto(photoModel: album)
+            album.getPhotos()
         }
     }
 }

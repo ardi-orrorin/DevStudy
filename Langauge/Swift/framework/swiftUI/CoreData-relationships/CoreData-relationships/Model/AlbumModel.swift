@@ -49,7 +49,7 @@ class AlbumModel: ObservableObject, Identifiable {
         
     }
     
-    func setAlbum(album: CodableAlbum) {
+    func setAlbum(album: CodablePhoto) {
         
         let album = Album(context: container.viewContext)
         album.id = album.id
@@ -70,8 +70,6 @@ class AlbumModel: ObservableObject, Identifiable {
                 album.userId = item.userId
                 
                 self.container.viewContext.insert(album)
-                
-                self.saveContext()
             }
         }
         self.saveContext()
