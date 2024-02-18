@@ -25,45 +25,33 @@ struct ContentView: View {
         let albumService = AlbumService(context: context)
         let albumAPI = AlbumAPI(service: albumService)
         
-        VStack {
-            HStack {
-                VStack{
-                    Button("Add") {
-//                        photoAPI.requestPhoto()
-                        albumAPI.requestAlbum()
+        NavigationStack {
+            List {
+                ForEach(photos) { photo in
+                    NavigationLink(destination: SubView(photo: photo)) {
+                        Text(photo.title)
                     }
                 }
-                Spacer()
-                VStack {
-                    
-                }
-                
-                Spacer()
-                VStack {
+            }
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitle(Text("Albums"))
+            .navigationBarItems(
+                leading: HStack {
+                    Button("Add") {
+                        photoAPI.requestPhoto()
+                        albumAPI.requestAlbum()
+                    }
+                },
+                trailing: HStack {
                     Button("Delete All") {
                         photoService.deletePhotos(photos: photos)
                         albumService.deleteAlbums(albums: albums)
                     }
                 }
-            }
-            
-            List {
-                ForEach(albums) { album in
-                    Text(album.title)
-                }
-                .onDelete(perform: { indexSet in
-                    for index in indexSet {
-                        do {
-                            context.delete(albums[index])
-                            try context.save()
-                        } catch {
-                            print(error)
-                        }
-                         
-                    }
-                })
-                
-                
+            )
+        }
+       
+    }
 //                ForEach(photos) { item in
 //                    Text(item.title)
 //                }
@@ -77,9 +65,8 @@ struct ContentView: View {
 //                        }
 //                    }
 //                })
-            }
-        }
-    }
+//        }
+//    }
 }
 
 
