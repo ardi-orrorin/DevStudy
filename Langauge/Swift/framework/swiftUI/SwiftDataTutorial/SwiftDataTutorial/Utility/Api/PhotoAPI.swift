@@ -9,7 +9,6 @@ import Foundation
 import SwiftData
 
 class PhotoAPI {
-    var photos = [PhotoCodable]()
     var service: PhotoService
     
     init(service: PhotoService) {

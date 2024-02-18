@@ -15,6 +15,10 @@
 		207F50AB2B808CA200059BB0 /* PhotoCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207F50AA2B808CA200059BB0 /* PhotoCodable.swift */; };
 		207F50AE2B808DC100059BB0 /* PhotoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207F50AD2B808DC100059BB0 /* PhotoAPI.swift */; };
 		207F50B12B8091C700059BB0 /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207F50B02B8091C700059BB0 /* PhotoService.swift */; };
+		20CCCE1F2B81CC1800AE1210 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CCCE1E2B81CC1800AE1210 /* Album.swift */; };
+		20CCCE212B81CD7A00AE1210 /* AlbumService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CCCE202B81CD7A00AE1210 /* AlbumService.swift */; };
+		20CCCE232B81D11D00AE1210 /* AlbumCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CCCE222B81D11D00AE1210 /* AlbumCodable.swift */; };
+		20CCCE252B81D19600AE1210 /* AlbumAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CCCE242B81D19600AE1210 /* AlbumAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		207F50AA2B808CA200059BB0 /* PhotoCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCodable.swift; sourceTree = "<group>"; };
 		207F50AD2B808DC100059BB0 /* PhotoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAPI.swift; sourceTree = "<group>"; };
 		207F50B02B8091C700059BB0 /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
+		20CCCE1E2B81CC1800AE1210 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		20CCCE202B81CD7A00AE1210 /* AlbumService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumService.swift; sourceTree = "<group>"; };
+		20CCCE222B81D11D00AE1210 /* AlbumCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCodable.swift; sourceTree = "<group>"; };
+		20CCCE242B81D19600AE1210 /* AlbumAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				207F50A62B808C6100059BB0 /* Photo.swift */,
+				20CCCE1E2B81CC1800AE1210 /* Album.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -101,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				207F50AA2B808CA200059BB0 /* PhotoCodable.swift */,
+				20CCCE222B81D11D00AE1210 /* AlbumCodable.swift */,
 			);
 			path = Codable;
 			sourceTree = "<group>";
@@ -109,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				207F50AD2B808DC100059BB0 /* PhotoAPI.swift */,
+				20CCCE242B81D19600AE1210 /* AlbumAPI.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -117,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				207F50B02B8091C700059BB0 /* PhotoService.swift */,
+				20CCCE202B81CD7A00AE1210 /* AlbumService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -191,12 +203,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20CCCE252B81D19600AE1210 /* AlbumAPI.swift in Sources */,
 				207F50A72B808C6100059BB0 /* Photo.swift in Sources */,
 				207F50AB2B808CA200059BB0 /* PhotoCodable.swift in Sources */,
 				207F50B12B8091C700059BB0 /* PhotoService.swift in Sources */,
 				207F50992B808C3300059BB0 /* ContentView.swift in Sources */,
 				207F50972B808C3300059BB0 /* SwiftDataTutorialApp.swift in Sources */,
+				20CCCE232B81D11D00AE1210 /* AlbumCodable.swift in Sources */,
+				20CCCE1F2B81CC1800AE1210 /* Album.swift in Sources */,
 				207F50AE2B808DC100059BB0 /* PhotoAPI.swift in Sources */,
+				20CCCE212B81CD7A00AE1210 /* AlbumService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
