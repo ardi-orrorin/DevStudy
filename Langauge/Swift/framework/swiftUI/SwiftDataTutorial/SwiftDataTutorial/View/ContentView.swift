@@ -52,21 +52,6 @@ struct ContentView: View {
         }
        
     }
-//                ForEach(photos) { item in
-//                    Text(item.title)
-//                }
-//                .onDelete(perform: { indexSet in
-//                    for index in indexSet {
-//                        context.delete(photos[index])
-//                        do {
-//                          try context.save()
-//                        } catch {
-//                            print(error)
-//                        }
-//                    }
-//                })
-//        }
-//    }
 }
 
 

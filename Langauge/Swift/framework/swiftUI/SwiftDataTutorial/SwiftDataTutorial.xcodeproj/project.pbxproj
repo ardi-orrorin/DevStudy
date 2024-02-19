@@ -15,6 +15,10 @@
 		207F50AB2B808CA200059BB0 /* PhotoCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207F50AA2B808CA200059BB0 /* PhotoCodable.swift */; };
 		207F50AE2B808DC100059BB0 /* PhotoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207F50AD2B808DC100059BB0 /* PhotoAPI.swift */; };
 		207F50B12B8091C700059BB0 /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207F50B02B8091C700059BB0 /* PhotoService.swift */; };
+		20B984342B8379980028FB0F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B984332B8379980028FB0F /* User.swift */; };
+		20B984362B837D4A0028FB0F /* UserCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B984352B837D4A0028FB0F /* UserCodable.swift */; };
+		20B984382B837DF80028FB0F /* AdressCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B984372B837DF80028FB0F /* AdressCodable.swift */; };
+		20B9843A2B837E2D0028FB0F /* CompanyCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B984392B837E2D0028FB0F /* CompanyCodable.swift */; };
 		20CCCE1F2B81CC1800AE1210 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CCCE1E2B81CC1800AE1210 /* Album.swift */; };
 		20CCCE212B81CD7A00AE1210 /* AlbumService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CCCE202B81CD7A00AE1210 /* AlbumService.swift */; };
 		20CCCE232B81D11D00AE1210 /* AlbumCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CCCE222B81D11D00AE1210 /* AlbumCodable.swift */; };
@@ -35,6 +39,10 @@
 		207F50AA2B808CA200059BB0 /* PhotoCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCodable.swift; sourceTree = "<group>"; };
 		207F50AD2B808DC100059BB0 /* PhotoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAPI.swift; sourceTree = "<group>"; };
 		207F50B02B8091C700059BB0 /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
+		20B984332B8379980028FB0F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		20B984352B837D4A0028FB0F /* UserCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCodable.swift; sourceTree = "<group>"; };
+		20B984372B837DF80028FB0F /* AdressCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdressCodable.swift; sourceTree = "<group>"; };
+		20B984392B837E2D0028FB0F /* CompanyCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyCodable.swift; sourceTree = "<group>"; };
 		20CCCE1E2B81CC1800AE1210 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		20CCCE202B81CD7A00AE1210 /* AlbumService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumService.swift; sourceTree = "<group>"; };
 		20CCCE222B81D11D00AE1210 /* AlbumCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCodable.swift; sourceTree = "<group>"; };
@@ -99,6 +107,7 @@
 			children = (
 				207F50A62B808C6100059BB0 /* Photo.swift */,
 				20CCCE1E2B81CC1800AE1210 /* Album.swift */,
+				20B984332B8379980028FB0F /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -117,6 +126,9 @@
 			children = (
 				207F50AA2B808CA200059BB0 /* PhotoCodable.swift */,
 				20CCCE222B81D11D00AE1210 /* AlbumCodable.swift */,
+				20B984352B837D4A0028FB0F /* UserCodable.swift */,
+				20B984372B837DF80028FB0F /* AdressCodable.swift */,
+				20B984392B837E2D0028FB0F /* CompanyCodable.swift */,
 			);
 			path = Codable;
 			sourceTree = "<group>";
@@ -225,11 +237,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20B9843A2B837E2D0028FB0F /* CompanyCodable.swift in Sources */,
+				20B984342B8379980028FB0F /* User.swift in Sources */,
 				20CCCE2F2B81F6FF00AE1210 /* ImageView.swift in Sources */,
 				20CCCE252B81D19600AE1210 /* AlbumAPI.swift in Sources */,
+				20B984382B837DF80028FB0F /* AdressCodable.swift in Sources */,
 				207F50A72B808C6100059BB0 /* Photo.swift in Sources */,
 				207F50AB2B808CA200059BB0 /* PhotoCodable.swift in Sources */,
 				207F50B12B8091C700059BB0 /* PhotoService.swift in Sources */,
+				20B984362B837D4A0028FB0F /* UserCodable.swift in Sources */,
 				207F50992B808C3300059BB0 /* ContentView.swift in Sources */,
 				207F50972B808C3300059BB0 /* SwiftDataTutorialApp.swift in Sources */,
 				20CCCE232B81D11D00AE1210 /* AlbumCodable.swift in Sources */,
