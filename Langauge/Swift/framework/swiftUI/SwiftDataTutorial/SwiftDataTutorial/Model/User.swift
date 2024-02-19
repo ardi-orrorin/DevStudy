@@ -9,7 +9,7 @@
 import SwiftData
 
 @Model
-class User {
+class UserModel {
     var id: Int
     var name: String
     var email: String
@@ -44,7 +44,16 @@ class User {
         self.website = website
         self.company = company
     }
-
+    
+    init(id: Int, name: String, email: String, phone: String, website: String, address: Address, company: Company) {
+        self.id = id
+        self.name = name
+        self.email = email
+        self.phone = phone
+        self.website = website
+        self.address = address
+        self.company = company
+    }
 }
 
 @Model
