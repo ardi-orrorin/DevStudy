@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20773AE82B84CB8B00716D42 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20773AE72B84CB8B00716D42 /* UserInfoView.swift */; };
 		207F50972B808C3300059BB0 /* SwiftDataTutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207F50962B808C3300059BB0 /* SwiftDataTutorialApp.swift */; };
 		207F50992B808C3300059BB0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207F50982B808C3300059BB0 /* ContentView.swift */; };
 		207F509B2B808C3400059BB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 207F509A2B808C3400059BB0 /* Assets.xcassets */; };
@@ -20,7 +21,7 @@
 		20B984382B837DF80028FB0F /* AdressCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B984372B837DF80028FB0F /* AdressCodable.swift */; };
 		20B9843A2B837E2D0028FB0F /* CompanyCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B984392B837E2D0028FB0F /* CompanyCodable.swift */; };
 		20B9843C2B8381560028FB0F /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B9843B2B8381560028FB0F /* UserAPI.swift */; };
-		20B9843E2B8381890028FB0F /* UserSerivce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B9843D2B8381890028FB0F /* UserSerivce.swift */; };
+		20B9843E2B8381890028FB0F /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B9843D2B8381890028FB0F /* UserService.swift */; };
 		20CCCE1F2B81CC1800AE1210 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CCCE1E2B81CC1800AE1210 /* Album.swift */; };
 		20CCCE212B81CD7A00AE1210 /* AlbumService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CCCE202B81CD7A00AE1210 /* AlbumService.swift */; };
 		20CCCE232B81D11D00AE1210 /* AlbumCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CCCE222B81D11D00AE1210 /* AlbumCodable.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		20773AE72B84CB8B00716D42 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 		207F50932B808C3300059BB0 /* SwiftDataTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDataTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		207F50962B808C3300059BB0 /* SwiftDataTutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataTutorialApp.swift; sourceTree = "<group>"; };
 		207F50982B808C3300059BB0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,7 +48,7 @@
 		20B984372B837DF80028FB0F /* AdressCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdressCodable.swift; sourceTree = "<group>"; };
 		20B984392B837E2D0028FB0F /* CompanyCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyCodable.swift; sourceTree = "<group>"; };
 		20B9843B2B8381560028FB0F /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
-		20B9843D2B8381890028FB0F /* UserSerivce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSerivce.swift; sourceTree = "<group>"; };
+		20B9843D2B8381890028FB0F /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		20CCCE1E2B81CC1800AE1210 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		20CCCE202B81CD7A00AE1210 /* AlbumService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumService.swift; sourceTree = "<group>"; };
 		20CCCE222B81D11D00AE1210 /* AlbumCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCodable.swift; sourceTree = "<group>"; };
@@ -152,7 +154,7 @@
 			children = (
 				207F50B02B8091C700059BB0 /* PhotoService.swift */,
 				20CCCE202B81CD7A00AE1210 /* AlbumService.swift */,
-				20B9843D2B8381890028FB0F /* UserSerivce.swift */,
+				20B9843D2B8381890028FB0F /* UserService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -163,6 +165,7 @@
 				207F50982B808C3300059BB0 /* ContentView.swift */,
 				20CCCE292B81ED9900AE1210 /* SubView.swift */,
 				20CCCE2E2B81F6FF00AE1210 /* ImageView.swift */,
+				20773AE72B84CB8B00716D42 /* UserInfoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -249,7 +252,7 @@
 				20CCCE252B81D19600AE1210 /* AlbumAPI.swift in Sources */,
 				20B9843C2B8381560028FB0F /* UserAPI.swift in Sources */,
 				20B984382B837DF80028FB0F /* AdressCodable.swift in Sources */,
-				20B9843E2B8381890028FB0F /* UserSerivce.swift in Sources */,
+				20B9843E2B8381890028FB0F /* UserService.swift in Sources */,
 				207F50A72B808C6100059BB0 /* Photo.swift in Sources */,
 				207F50AB2B808CA200059BB0 /* PhotoCodable.swift in Sources */,
 				207F50B12B8091C700059BB0 /* PhotoService.swift in Sources */,
@@ -260,6 +263,7 @@
 				20CCCE1F2B81CC1800AE1210 /* Album.swift in Sources */,
 				207F50AE2B808DC100059BB0 /* PhotoAPI.swift in Sources */,
 				20CCCE2A2B81ED9900AE1210 /* SubView.swift in Sources */,
+				20773AE82B84CB8B00716D42 /* UserInfoView.swift in Sources */,
 				20CCCE212B81CD7A00AE1210 /* AlbumService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

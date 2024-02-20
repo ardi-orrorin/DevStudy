@@ -9,9 +9,9 @@ import Foundation
 
 class UserAPI {
     
-    var service: UserSerivce
+    var service: UserService
     
-    init(service: UserSerivce) {
+    init(service: UserService) {
         self.service = service
     }
     

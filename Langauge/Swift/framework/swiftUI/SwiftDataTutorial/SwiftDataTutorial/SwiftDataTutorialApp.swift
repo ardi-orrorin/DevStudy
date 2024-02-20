@@ -14,6 +14,6 @@ struct SwiftDataTutorialApp: App {
         WindowGroup {
             ContentView()
         }
-        .modelContainer(for: [PhotoModel.self, AlbumModel.self])
+        .modelContainer(for: [PhotoModel.self, AlbumModel.self, UserModel.self])
     }
 }

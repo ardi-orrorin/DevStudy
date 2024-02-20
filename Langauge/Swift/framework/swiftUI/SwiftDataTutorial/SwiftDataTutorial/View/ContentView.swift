@@ -19,17 +19,26 @@ struct ContentView: View {
     )
     var albums: [AlbumModel]
     
+    @Query(sort: \UserModel.id) var users: [UserModel]
+    
     var body: some View {
         let photoService = PhotoService(context: context)
         let photoAPI = PhotoAPI(service: photoService)
         let albumService = AlbumService(context: context)
         let albumAPI = AlbumAPI(service: albumService)
+        let userService = UserService(context: context)
+        let userAPI = UserAPI(service: userService)
         
         NavigationStack {
             List {
-                ForEach(photos) { photo in
-                    NavigationLink(destination: SubView(photo: photo)) {
-                        Text(photo.title)
+//                ForEach(photos) { photo in
+//                    NavigationLink(destination: SubView(photo: photo)) {
+//                        Text(photo.title)
+//                    }
+//                }
+                ForEach(users) { user in
+                    NavigationLink(destination: UserInfoView(user: user)) {
+                        Text(user.name)
                     }
                 }
             }
@@ -38,14 +47,16 @@ struct ContentView: View {
             .navigationBarItems(
                 leading: HStack {
                     Button("Add") {
-                        photoAPI.requestPhoto()
-                        albumAPI.requestAlbum()
+//                        photoAPI.requestPhoto()
+//                        albumAPI.requestAlbum()
+                        userAPI.requestUser()
                     }
                 },
                 trailing: HStack {
                     Button("Delete All") {
-                        photoService.deletePhotos(photos: photos)
-                        albumService.deleteAlbums(albums: albums)
+//                        photoService.deletePhotos(photos: photos)
+//                        albumService.deleteAlbums(albums: albums)
+//                        userService
                     }
                 }
             )
@@ -56,6 +67,6 @@ struct ContentView: View {
 
 
 
-#Preview {
-    ContentView()
-}
+//#Preview {
+//    ContentView()
+//}

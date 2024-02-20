@@ -8,7 +8,7 @@
 import Foundation
 import SwiftData
 
-class UserSerivce {
+class UserService {
     var context: ModelContext
     
     init(context: ModelContext) {
