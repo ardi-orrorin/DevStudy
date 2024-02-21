@@ -65,4 +65,13 @@ class UserService {
     func saveContext(){
         try! self.context.save()
     }
+    
+    func deleteAllUsers() {
+        do {
+            
+//            try self.context.deleteAll(UserModel.self)
+        } catch {
+            print("Error deleting all users")
+        }
+    }
 }
