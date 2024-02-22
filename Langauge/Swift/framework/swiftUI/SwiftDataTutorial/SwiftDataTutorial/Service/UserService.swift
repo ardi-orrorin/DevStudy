@@ -66,10 +66,11 @@ class UserService {
         try! self.context.save()
     }
     
-    func deleteAllUsers() {
+    func deleteAllUsers(users: [UserModel]) {
         do {
-            
-//            try self.context.deleteAll(UserModel.self)
+            for user in users {
+                try self.context.delete(user)
+            }
         } catch {
             print("Error deleting all users")
         }

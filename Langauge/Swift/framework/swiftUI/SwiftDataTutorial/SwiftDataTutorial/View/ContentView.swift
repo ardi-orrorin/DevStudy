@@ -56,7 +56,7 @@ struct ContentView: View {
                     Button("Delete All") {
 //                        photoService.deletePhotos(photos: photos)
 //                        albumService.deleteAlbums(albums: albums)
-//                        userService
+                        userService.deleteAllUsers(users: users)
                     }
                 }
             )
