@@ -1,8 +1,9 @@
 package com.example.demo.service
 
 import com.example.demo.entity.Member
+import com.example.demo.mapper.Common
 import com.example.demo.mapper.MMember
-import com.example.demo.repository.MemberRepository
+//import com.example.demo.repository.MemberRepository
 import org.junit.jupiter.api.Test
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
@@ -16,17 +17,25 @@ class MemberService {
     @Autowired
     lateinit var mMember: MMember;
 
+    @Autowired
+    lateinit var common: Common
+
 
     val log:Logger = LoggerFactory.getLogger(MemberService::class.java)
 
     @Test
     fun selectAll() {
-        val members = mMember.selectAll()
-        log.info("members: $members")
-        log.info("members.size")
+//        val members = mMember.selectAll()
+//        log.info("members: $members")
+//        log.info("members.size {}", members.size)
+//        members.forEach { println(it) }
 
-        members.forEach { println(it) }
+        var members = common.selectAll()
+        log.info("member.size {}", members.size)
+
     }
+
+
 
 
 
