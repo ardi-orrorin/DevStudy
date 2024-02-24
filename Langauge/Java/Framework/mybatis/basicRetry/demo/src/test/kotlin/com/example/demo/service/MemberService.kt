@@ -2,6 +2,7 @@ package com.example.demo.service
 
 import com.example.demo.entity.Member
 import com.example.demo.mapper.MMember
+import com.example.demo.repository.MemberRepository
 import org.junit.jupiter.api.Test
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
@@ -13,7 +14,8 @@ import org.springframework.transaction.annotation.Transactional
 class MemberService {
 
     @Autowired
-    lateinit var mMember: MMember
+    lateinit var mMember: MMember;
+
 
     val log:Logger = LoggerFactory.getLogger(MemberService::class.java)
 
@@ -22,10 +24,13 @@ class MemberService {
         val members = mMember.selectAll()
         log.info("members: $members")
         log.info("members.size")
+
         members.forEach { println(it) }
     }
 
-//    @Test
+
+
+//    @Testa
     fun selectById(id: Long = 1): Member {
         val member = mMember.selectById(id)
         member?.id == null && throw RuntimeException("member is null !!!!!")
@@ -54,6 +59,7 @@ class MemberService {
         log.info("result: $result")
     }
 
+
     @Test
 //    @Transactional
     fun updateById() {
@@ -73,6 +79,18 @@ class MemberService {
         val member = selectById(1)
         mMember.deleteById(member.id as Long)
         log.info("member: $member");
+    }
+
+    @Test
+    fun fullInsert() {
+        for(i in 1..10000) {
+            val member = Member(
+                name = "test$i", birthday = "20200811",
+                email = ""
+            )
+
+            mMember.insert(member)
+        }
     }
 
 }

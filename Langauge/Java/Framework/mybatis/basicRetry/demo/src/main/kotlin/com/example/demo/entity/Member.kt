@@ -1,10 +1,10 @@
 package com.example.demo.entity
 
-import org.apache.ibatis.type.Alias
+import org.springframework.data.relational.core.mapping.Table
 import java.time.LocalDateTime
 
 
-//@Alias(value = "Member")
+@Table(value = "MEMBER")
 data class Member(
     val id: Long? = 0,
     var name: String,
