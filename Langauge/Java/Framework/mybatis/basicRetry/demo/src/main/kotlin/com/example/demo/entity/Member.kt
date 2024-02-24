@@ -7,7 +7,7 @@ import java.time.LocalDateTime
 //@Alias(value = "Member")
 data class Member(
     val id: Long? = 0,
-    val name: String,
+    var name: String,
     val birthday: String,
     var email: String? = "",
     var address: String? = "",

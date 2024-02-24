@@ -9,9 +9,30 @@
           FROM MEMBER
     </select>
 
+    <select id="selectById" resultType="Member">
+        SELECT *
+          FROM MEMBER m
+         WHERE m.ID = #{id}
+    </select>
+
     <insert id="insert" parameterType="Member">
-        INSERT
-          INTO MEMBER (NAME, BIRTHDAY, EMAIL, ADDRESS)
+        INSERT INTO MEMBER
+               (NAME, BIRTHDAY, EMAIL, ADDRESS)
         VALUES (#{name}, #{birthday}, #{email}, #{address})
     </insert>
+
+    <update id="updateById" parameterType="Member">
+        UPDATE MEMBER
+           SET NAME = #{name},
+               BIRTHDAY = #{birthday},
+               EMAIL = #{email},
+               ADDRESS = #{address}
+         WHERE ID = #{id}
+    </update>
+
+    <delete id="deleteById" parameterType="long">
+        DELETE
+          FROM MEMBER
+         WHERE ID = #{id}
+    </delete>
 </mapper>

@@ -8,6 +8,6 @@ interface MMember {
     fun selectAll(): List<Member>
     fun selectById(id: Long): Member
     fun insert(member: Member)
-    fun update(member: Member)
-    fun delete(id: Long)
+    fun updateById(member: Member)
+    fun deleteById(id: Long)
 }
