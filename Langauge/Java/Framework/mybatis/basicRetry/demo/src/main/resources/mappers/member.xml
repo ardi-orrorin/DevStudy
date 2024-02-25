@@ -27,6 +27,25 @@
          WHERE m.ID = #{id}
     </select>
 
+    <select id="selectByType" resultType="Member">
+        SELECT *
+          FROM MEMBER m
+          <where>
+            <if test="id != null and id != 0">
+              AND m.ID = #{id}
+            </if>
+            <if test="name != null and name != ''">
+              AND m.NAME = #{name}
+            </if>
+            <if test="birthday != null and birthday != ''">
+              AND m.BIRTHDAY = #{birthday}
+            </if>
+            <if test="email != null and email != ''">
+              AND m.EMAIL = #{email}
+            </if>
+        </where>
+    </select>
+
     <insert id="insert" parameterType="Member">
         INSERT INTO MEMBER
                (NAME, BIRTHDAY, EMAIL, ADDRESS)

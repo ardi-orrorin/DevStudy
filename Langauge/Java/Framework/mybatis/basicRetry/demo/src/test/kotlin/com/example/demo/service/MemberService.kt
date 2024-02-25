@@ -35,16 +35,19 @@ class MemberService {
 
     }
 
-
-
-
-
 //    @Testa
     fun selectById(id: Long = 1): Member {
         val member = mMember.selectById(id)
         member?.id == null && throw RuntimeException("member is null !!!!!")
         log.info("member: $member")
         return member
+    }
+
+    @Test
+    fun selectByType() {
+        val search = Member(id = null, name = "test", birthday = "", email = "test@test.com", address = "")
+        val result = mMember.selectByType(search)
+        log.info("result: $result")
     }
 
     @Test
