@@ -1,23 +1,30 @@
 package com.example.demo.service
 
+import com.example.demo.controller.MemberController
 import com.example.demo.entity.Member
 import com.example.demo.mapper.Common
 import com.example.demo.mapper.MMember
+import org.junit.jupiter.api.DisplayName
 //import com.example.demo.repository.MemberRepository
 import org.junit.jupiter.api.Test
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest
 import org.springframework.boot.test.context.SpringBootTest
+import org.springframework.boot.test.mock.mockito.MockBean
+import org.springframework.boot.test.mock.mockito.SpyBean
 import org.springframework.transaction.annotation.Transactional
 
 @SpringBootTest
+
 class MemberService {
 
-    @Autowired
+//    @MockBean
+    @SpyBean
     lateinit var mMember: MMember;
 
-    @Autowired
+    @SpyBean
     lateinit var common: Common
 
 
@@ -35,7 +42,7 @@ class MemberService {
 
     }
 
-//    @Testa
+    @Test
     fun selectById(id: Long = 1): Member {
         val member = mMember.selectById(id)
         member?.id == null && throw RuntimeException("member is null !!!!!")
@@ -44,8 +51,9 @@ class MemberService {
     }
 
     @Test
+    @DisplayName("selectByType")
     fun selectByType() {
-        val search = Member(id = null, name = "test", birthday = "", email = "test@test.com", address = "")
+        val search = Member(id = null, name = "test", birthday = "", email = "", address = "")
         val result = mMember.selectByType(search)
         log.info("result: $result")
     }
