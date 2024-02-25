@@ -9,7 +9,7 @@ interface MMember {
 //    fun selectAll(): List<Member>
     fun selectAll(): List<Member>
     fun selectById(id: Long): Member
-
+    fun selectByList(list: List<Long>): List<Member>
     fun selectByType(member: Member): List<Member>
     fun insert(member: Member)
     fun updateById(member: Member)

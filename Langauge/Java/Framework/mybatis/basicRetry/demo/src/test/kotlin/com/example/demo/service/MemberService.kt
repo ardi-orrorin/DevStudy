@@ -51,6 +51,13 @@ class MemberService {
     }
 
     @Test
+    fun selectByList() {
+        val list: List<Long> = listOf(1, 2, 3, 4, 5, 6, 7)
+        val result = mMember.selectByList(list)
+        log.info("result: $result")
+    }
+
+    @Test
 //    @Transactional
     fun insert() {
         var member = Member(

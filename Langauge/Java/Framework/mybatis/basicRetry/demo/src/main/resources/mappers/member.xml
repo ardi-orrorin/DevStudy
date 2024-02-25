@@ -46,6 +46,18 @@
         </where>
     </select>
 
+    <select id="selectByList" resultType="Member">
+        SELECT *
+          FROM MEMBER m
+         WHERE m.ID IN
+               <foreach collection="list" item="item"
+                        open="(" close=")"
+                        separator="," nullable="false"
+               >#{item}
+               </foreach>
+
+    </select>
+
     <insert id="insert" parameterType="Member">
         INSERT INTO MEMBER
                (NAME, BIRTHDAY, EMAIL, ADDRESS)
