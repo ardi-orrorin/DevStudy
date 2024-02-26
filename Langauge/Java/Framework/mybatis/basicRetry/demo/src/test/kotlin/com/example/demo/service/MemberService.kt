@@ -90,14 +90,20 @@ class MemberService {
     @Test
 //    @Transactional
     fun updateById() {
-        val member = selectById(1)
-        member.name = "updateTest"
+//        val member = selectById(2)
+//        member.name = "updateTest"
+//
+//        mMember.updateById(member)
+//        log.info("member: $member")
+//
+//        val result = mMember.selectAll()
+//        log.info("result: $result")
 
-        mMember.updateById(member)
-        log.info("member: $member")
+        val member = Member(
+            id = 2, name = "updateTest", birthday = "20200811",
+            email = "");
+        mMember.updateById(member);
 
-        val result = mMember.selectAll()
-        log.info("result: $result")
     }
 
     @Test

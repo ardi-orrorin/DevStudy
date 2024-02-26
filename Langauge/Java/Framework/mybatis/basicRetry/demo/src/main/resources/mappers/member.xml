@@ -55,7 +55,6 @@
                         separator="," nullable="false"
                >#{item}
                </foreach>
-
     </select>
 
     <insert id="insert" parameterType="Member">
@@ -66,10 +65,20 @@
 
     <update id="updateById" parameterType="Member">
         UPDATE MEMBER
-           SET NAME = #{name},
-               BIRTHDAY = #{birthday},
-               EMAIL = #{email},
-               ADDRESS = #{address}
+        <set>
+            <if test="name != null and name != ''">
+              NAME = #{name},
+            </if>
+            <if test="birthday != null and birthday != ''">
+              BIRTHDAY = #{birthday},
+            </if>
+            <if test="email != null and email != ''">
+              EMAIL = #{email},
+            </if>
+            <if test="address != null and address != ''">
+              ADDRESS = #{address}
+            </if>
+        </set>
          WHERE ID = #{id}
     </update>
 
