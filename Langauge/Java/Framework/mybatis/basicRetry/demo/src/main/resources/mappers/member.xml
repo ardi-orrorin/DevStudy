@@ -45,6 +45,28 @@
             </if>
         </where>
     </select>
+    <!--
+        choose when otherwise
+        switch 문과 비슷한 기능으로 when은 case에 해당하며, otherwise는 default에 해당한다.
+     -->
+    <select id="selectByChoose" resultType="Member">
+        SELECT *
+          FROM MEMBER m WHERE
+          <choose>
+              <when test="name != null and name != ''">
+                m.NAME = #{name}
+              </when>
+              <when test="birthday != null and birthday != ''">
+                m.BIRTHDAY = #{birthday}
+              </when>
+              <when test="email != null and email != ''">
+                m.EMAIL = #{email}
+              </when>
+              <otherwise>
+                m.ID = #{id}
+              </otherwise>
+          </choose>
+    </select>
 
     <select id="selectByList" resultType="Member">
         SELECT *

@@ -59,6 +59,13 @@ class MemberService {
     }
 
     @Test
+    fun selectByChoose() {
+        val search = Member(id = null, name = "", birthday = "", email = "", address = "")
+        val result = mMember.selectByChoose(search)
+        log.info("result: $result")
+    }
+
+    @Test
     fun selectByList() {
         val list: List<Long> = listOf(1, 2, 3, 4, 5, 6, 7)
         val result = mMember.selectByList(list)
