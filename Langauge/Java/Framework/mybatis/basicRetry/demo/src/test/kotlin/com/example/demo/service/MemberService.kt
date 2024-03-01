@@ -93,6 +93,31 @@ class MemberService {
         log.info("result: $result")
     }
 
+    @Test
+    fun listInsertTest(){
+        for(i in 1..1000) {
+            val member = Member(
+                name = "test-insert-$i", birthday = "20200811",
+                email = ""
+            )
+            mMember.insert(member);
+        }
+    }
+
+    @Test
+    fun insertByList(){
+        val members = mutableListOf<Member>()
+        for(i in 1..10000) {
+            val member = Member(
+                name = "test-insert-$i", birthday = "20200811",
+                email = ""
+            )
+            members.add(member)
+        }
+
+        mMember.insertByList(members);
+    }
+
 
     @Test
 //    @Transactional

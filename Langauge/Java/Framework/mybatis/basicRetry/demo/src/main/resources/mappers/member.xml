@@ -85,6 +85,16 @@
         VALUES (#{name}, #{birthday}, #{email}, #{address})
     </insert>
 
+    <insert id="insertByList" parameterType="List">
+        INSERT INTO MEMBER
+               (NAME, BIRTHDAY, EMAIL, ADDRESS)
+
+        VALUES
+        <foreach collection="list" item="item" index="index" separator=",">
+            (#{item.name}, #{item.birthday}, #{item.email}, #{item.address})
+        </foreach>
+    </insert>
+
     <update id="updateById" parameterType="Member">
         UPDATE MEMBER
         <set>

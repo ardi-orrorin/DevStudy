@@ -13,6 +13,7 @@ interface MMember {
     fun selectByChoose(member: Member): List<Member>
     fun selectByType(member: Member): List<Member>
     fun insert(member: Member)
+    fun insertByList(members: MutableList<Member>)
     fun updateById(member: Member)
     fun deleteById(id: Long)
 
