@@ -20,17 +20,59 @@ import org.springframework.transaction.annotation.Transactional
 
 @SpringBootTest
 
-class MemberService {
+class MemberServiceTest {
 
 //    @MockBean
     @SpyBean
-    lateinit var mMember: MMember<Member>;
+    lateinit var mMember: MMember<Member>
 
     @SpyBean
     lateinit var common: Common
 
+    @SpyBean
+    lateinit var memberService: MemberService
+
 
     val log:Logger = LoggerFactory.getLogger(MemberService::class.java)
+
+    @Test
+    fun serviceSelectById(){
+        val member = memberService.selectById(34026)
+        log.info("member: $member")
+    }
+
+    @Test
+    fun serviceSelectAll(){
+        val members = memberService.selectAll()
+        log.info("members: $members")
+    }
+
+    @Test
+    fun serviceSelectByPage(){
+        val page = PageDTO<Member>(size = 10, page= 1)
+        val param = Member(name = "insert-1", birthday = "", email = "", address = "")
+        val result = memberService.selectByPage(page, param)
+
+        log.info("result: $result")
+    }
+
+    @Test
+    fun serviceInsertList() {
+        val members = mutableListOf<Member>()
+        for(i in 1..531352) {
+            val member = Member(
+                name = "test-insert-$i", birthday = "20200811",
+                email = "test.test.test@test.com"
+            )
+            members.add(member)
+        }
+
+        val result = memberService.insertByList(members)
+        log.info("result: $result")
+
+    }
+
+
 
     @Test
     fun selectAll() {
