@@ -1,20 +1,28 @@
 package com.example.demo.mapper
 
 import com.example.demo.entity.Member
+import com.example.demo.entity.PageDTO
 import org.apache.ibatis.annotations.Mapper
+import org.apache.ibatis.annotations.Param
+
 //import reactor.core.publisher.Flux
 
 @Mapper
-interface MMember {
+interface MMember<T> {
 //    fun selectAll(): List<Member>
-    fun selectAll(): List<Member>
-    fun selectById(id: Long): Member
-    fun selectByList(list: List<Long>): List<Member>
-    fun selectByChoose(member: Member): List<Member>
-    fun selectByType(member: Member): List<Member>
-    fun insert(member: Member)
-    fun insertByList(members: MutableList<Member>)
-    fun updateById(member: Member)
+
+    fun totalSelect(@Param("param") param: T?): Int
+    fun selectAll(): List<T>
+    fun selectById(id: Long): T
+    fun selectByList(list: List<Long>): List<T>
+    fun selectByChoose(member: T): List<T>
+    fun selectByType(member: T): List<T>
+
+    fun selectByPage(@Param("page") page: PageDTO<T>?, @Param("param") param: T?): List<T>
+
+    fun insert(member: T)
+    fun insertByList(members: MutableList<T>)
+    fun updateById(member: T)
     fun deleteById(id: Long)
 
 }

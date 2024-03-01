@@ -79,6 +79,48 @@
                </foreach>
     </select>
 
+    <select id="selectByPage" parameterType="Map" resultType="Member">
+        SELECT *
+          FROM ${param.getClass().getSimpleName().toUpperCase()} m
+          <if test="param != null">
+              <where>
+                  <if test="param.name != null and param.name != ''">
+                    AND m.NAME LIKE CONCAT('%', #{param.name}, '%')
+                  </if>
+                  <if test="param.birthday != null and param.birthday != ''">
+                    AND m.BIRTHDAY = #{param.birthday}
+                  </if>
+                  <if test="param.email != null and param.email != ''">
+                    AND m.EMAIL = #{param.email}
+                  </if>
+              </where>
+          </if>
+          <if test="page != null">
+              <if test="page.size != null or page.size != 0">
+                  LIMIT #{page.size}
+              </if>
+              OFFSET #{page.offset}
+          </if>
+    </select>
+
+    <select id="totalSelect" parameterType="Map" resultType="Integer">
+        SELECT COUNT(*)
+          FROM MEMBER m
+        <if test="param != null">
+            <where>
+                <if test="param.name != null and param.name != ''">
+                    AND m.NAME LIKE CONCAT('%', #{param.name}, '%')
+                </if>
+                <if test="param.birthday != null and param.birthday != ''">
+                    AND m.BIRTHDAY = #{param.birthday}
+                </if>
+                <if test="param.email != null and param.email != ''">
+                    AND m.EMAIL = #{param.email}
+                </if>
+            </where>
+        </if>
+    </select>
+
     <insert id="insert" parameterType="Member">
         INSERT INTO MEMBER
                (NAME, BIRTHDAY, EMAIL, ADDRESS)

@@ -2,6 +2,7 @@ package com.example.demo.service
 
 import com.example.demo.controller.MemberController
 import com.example.demo.entity.Member
+import com.example.demo.entity.PageDTO
 import com.example.demo.mapper.Common
 import com.example.demo.mapper.MMember
 import org.junit.jupiter.api.DisplayName
@@ -10,6 +11,7 @@ import org.junit.jupiter.api.Test
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties.Pageable
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.boot.test.mock.mockito.MockBean
@@ -22,7 +24,7 @@ class MemberService {
 
 //    @MockBean
     @SpyBean
-    lateinit var mMember: MMember;
+    lateinit var mMember: MMember<Member>;
 
     @SpyBean
     lateinit var common: Common
@@ -70,6 +72,20 @@ class MemberService {
         val list: List<Long> = listOf(1, 2, 3, 4, 5, 6, 7)
         val result = mMember.selectByList(list)
         log.info("result: $result")
+    }
+
+    @Test
+//    @Transactional(readOnly = true)
+    fun selectByPage(){
+        val page = PageDTO<Member>(size = 10, page= 1)
+        val param: Member = Member(name = "insert-1", birthday = "", email = "", address = "")
+//        page.list = mMember.selectByPage(page = page, param)
+//        pageR.list = mMember.selectByPage(page = page, param = null)
+        page.list = mMember.selectByPage(page = page, param = param)
+        page.total = mMember.totalSelect(param = param)
+        page.javaClass.name
+
+        log.info("member: $page")
     }
 
     @Test
