@@ -89,11 +89,18 @@ class MemberService(
     }
 
 
-   @Transactional
+    @Transactional
     fun updateById(member: Member):String {
        val result:Int = mMember.updateById(member)
        return if(result == 1) "success" else "fail"
     }
+
+    @Transactional
+    fun updateByList(members: List<Member>):String {
+        val result:Int = mMember.updateByList(members)
+        return if(result == 1) "success" else "fail"
+    }
+
 
     @Transactional
     fun deleteById(id: Int):String {

@@ -130,7 +130,6 @@
     <insert id="insertByList" parameterType="List">
         INSERT INTO MEMBER
                (NAME, BIRTHDAY, EMAIL, ADDRESS)
-
         VALUES
         <foreach collection="list" item="item" index="index" separator=",">
             (#{item.name}, #{item.birthday}, #{item.email}, #{item.address})
@@ -154,6 +153,27 @@
             </if>
         </set>
          WHERE ID = #{id}
+    </update>
+
+    <update id="updateByList" parameterType="List">
+        <foreach collection="list" item="member" separator=";">
+            UPDATE MEMBER
+            <set>
+                <if test="member.name != null and member.name != ''">
+                  NAME = #{member.name},
+                </if>
+                <if test="member.birthday != null and member.birthday != ''">
+                  BIRTHDAY = #{member.birthday},
+                </if>
+                <if test="member.email != null and member.email != ''">
+                  EMAIL = #{member.email},
+                </if>
+                <if test="member.address != null and member.address != ''">
+                  ADDRESS = #{member.address}
+                </if>
+            </set>
+             WHERE ID = #{member.id}
+        </foreach>
     </update>
 
     <delete id="deleteById" parameterType="long">

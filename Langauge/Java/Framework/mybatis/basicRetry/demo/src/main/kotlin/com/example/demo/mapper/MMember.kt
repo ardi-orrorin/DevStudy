@@ -31,6 +31,8 @@ interface MMember<T> {
 
     fun updateById(member: T): Int
 
+    fun updateByList(members: List<T>): Int
+
     fun deleteById(id: Long): Int
 
 }

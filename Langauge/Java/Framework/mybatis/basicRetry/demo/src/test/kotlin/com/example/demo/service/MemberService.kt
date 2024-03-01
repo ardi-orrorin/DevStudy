@@ -59,7 +59,8 @@ class MemberServiceTest {
     @Test
     fun serviceInsertList() {
         val members = mutableListOf<Member>()
-        for(i in 1..531352) {
+
+        for(i in 1..1202) {
             val member = Member(
                 name = "test-insert-$i", birthday = "20200811",
                 email = "test.test.test@test.com"
@@ -69,9 +70,46 @@ class MemberServiceTest {
 
         val result = memberService.insertByList(members)
         log.info("result: $result")
-
     }
 
+    @Test
+    fun serviceSelectByList(){
+
+        val list: List<Long> = listOf(
+            3923492, 3923493, 3923494, 3923495, 3923496,
+            3923497, 3923498, 3923499, 3923500, 3923501,
+            3923502, 3923503, 3923504, 3923505, 3923506,
+            3923507, 3923508, 3923509, 3923510, 3923511,
+            3923512, 3923513, 3923514, 3923515, 3923516,
+            3923517, 3923518, 3923519, 3923520, 3923521,
+            3923522, 3923523, 3923524, 3923525, 3923526,
+            3923527, 3923528, 3923529, 3923530, 3923531,
+            3923532, 3923533, 3923534, 3923535, 3923536,
+            3923537, 3923538, 3923539, 3923540, 3923541,
+            3923542, 3923543, 3923544, 3923545, 3923546,
+            3923547, 3923548, 3923549, 3923550, 3923551,
+            3923552, 3923553, 3923554, 3923555, 3923556,
+            3923557, 3923558, 3923559, 3923560, 3923561,
+            3923562, 3923563, 3923564, 3923565, 3923566,
+            3923567, 3923568, 3923569, 3923570,
+            1,2,3,4,5,6
+        )
+        val result = memberService.selectByList(list)
+
+        log.info("result: $result")
+        val isExist = result.filter { list.find { id -> id == it.id } != null }
+        log.info("isExist: $isExist")
+        val notExist = list.filter { result.find { member -> member.id == it } == null }
+        log.info("notExist: $notExist")
+
+        val updateMember = isExist.map {
+            it.address = "update-address-2"
+            it
+        }
+        log.info("updateMember: $updateMember")
+
+        memberService.updateByList(updateMember);
+    }
 
 
     @Test
