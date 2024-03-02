@@ -17,6 +17,7 @@ import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.boot.test.mock.mockito.MockBean
 import org.springframework.boot.test.mock.mockito.SpyBean
 import org.springframework.transaction.annotation.Transactional
+import java.sql.Time
 
 @SpringBootTest
 
@@ -58,18 +59,20 @@ class MemberServiceTest {
 
     @Test
     fun serviceInsertList() {
-        val members = mutableListOf<Member>()
+        for(i in 1..20) {
+            var members = mutableListOf<Member>()
+            for(j in 1..100202) {
+                val member = Member(
+                    name = "test-insert-$i", birthday = "20200811",
+                    email = "test.test.test@test.com"
+                )
+                members.add(member)
+            }
 
-        for(i in 1..1202) {
-            val member = Member(
-                name = "test-insert-$i", birthday = "20200811",
-                email = "test.test.test@test.com"
-            )
-            members.add(member)
+            val result = memberService.insertByList(members)
+            log.info("result: $result")
+
         }
-
-        val result = memberService.insertByList(members)
-        log.info("result: $result")
     }
 
     @Test
@@ -103,7 +106,7 @@ class MemberServiceTest {
         log.info("notExist: $notExist")
 
         val updateMember = isExist.map {
-            it.address = "update-address-2"
+            it.address = ""
             it
         }
         log.info("updateMember: $updateMember")

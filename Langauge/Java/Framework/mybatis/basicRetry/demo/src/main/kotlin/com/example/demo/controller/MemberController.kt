@@ -17,6 +17,12 @@ class MemberController(
 
     @GetMapping("/{id}")
     fun selectById(@PathVariable id: Long): ResponseEntity<Member> {
-        return ResponseEntity.ok().body(memberService.selectById(id))
+        return ResponseEntity.ok()
+            .body(memberService.selectById(id))
+    }
+    @GetMapping
+    fun selectAll(): ResponseEntity<List<Member>> {
+        return ResponseEntity.ok()
+            .body(memberService.selectAll())
     }
 }

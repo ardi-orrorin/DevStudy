@@ -1,0 +1,23 @@
+{
+  "config": {
+    "target": "http://localhost:8080/api",
+    "phases": [
+      {
+        "duration": 30,
+        "arrivalRate": 1000
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "name": "Get Members",
+      "flow": [
+        {
+          "get": {
+            "url": "/members"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -121,6 +121,9 @@
         </if>
     </select>
 
+
+
+
     <insert id="insert" parameterType="Member">
         INSERT INTO MEMBER
                (NAME, BIRTHDAY, EMAIL, ADDRESS)
@@ -159,16 +162,16 @@
         <foreach collection="list" item="member" separator=";">
             UPDATE MEMBER
             <set>
-                <if test="member.name != null and member.name != ''">
+                <if test="member.name != null">
                   NAME = #{member.name},
                 </if>
-                <if test="member.birthday != null and member.birthday != ''">
+                <if test="member.birthday != null">
                   BIRTHDAY = #{member.birthday},
                 </if>
-                <if test="member.email != null and member.email != ''">
+                <if test="member.email != null">
                   EMAIL = #{member.email},
                 </if>
-                <if test="member.address != null and member.address != ''">
+                <if test="member.address != null">
                   ADDRESS = #{member.address}
                 </if>
             </set>
@@ -181,4 +184,7 @@
           FROM MEMBER
          WHERE ID = #{id}
     </delete>
+
+    <!-- Mapper에서 2차 캐시 설정 방법 -->
+    <cache flushInterval="2000" size="512000"  />
 </mapper>

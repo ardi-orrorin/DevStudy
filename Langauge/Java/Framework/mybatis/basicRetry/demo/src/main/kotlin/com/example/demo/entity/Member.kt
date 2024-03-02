@@ -6,11 +6,11 @@ import java.time.LocalDateTime
 
 //@Table(value = "MEMBER")
 data class Member(
-    val id: Long? = 0,
-    var name: String,
-    val birthday: String,
-    var email: String? = "",
-    var address: String? = "",
-    var createAt: LocalDateTime? = null,
-    var updateAt: LocalDateTime? = null
+    val id         : Long?          = 0,
+    var name       : String         = "",
+    val birthday   : String         = "",
+    var email      : String?        = "",
+    var address    : String?        = "",
+    var createAt   : LocalDateTime? = null,
+    var updateAt   : LocalDateTime? = null
 )

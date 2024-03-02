@@ -2,12 +2,14 @@ package com.example.demo.mapper
 
 import com.example.demo.entity.Member
 import com.example.demo.entity.PageDTO
+import org.apache.ibatis.annotations.CacheNamespace
 import org.apache.ibatis.annotations.Mapper
 import org.apache.ibatis.annotations.Param
 
 //import reactor.core.publisher.Flux
 
 @Mapper
+//@CacheNamespace(flushInterval = 60000, size = 5120, readWrite = false)
 interface MMember<T> {
 //    fun selectAll(): List<Member>
 
@@ -23,7 +25,10 @@ interface MMember<T> {
 
     fun selectByType(member: T): List<T>
 
-    fun selectByPage(@Param("page") page: PageDTO<T>?, @Param("param") param: T?): List<T>
+    fun selectByPage(
+        @Param("page") page: PageDTO<T>?,
+        @Param("param") param: T?
+    ): List<T>
 
     fun insert(member: T): Int
 

@@ -50,7 +50,7 @@ class MemberService(
 
     @Transactional(readOnly = true)
     fun selectByPage(page: PageDTO<Member>, param: Member): PageDTO<Member> {
-        page.list = mMember.selectByPage(page = page, param = param)
+        page.list  = mMember.selectByPage(page = page, param = param)
         page.total = mMember.totalSelect(param = param)
         return page
     }
@@ -69,12 +69,12 @@ class MemberService(
     @Transactional
     fun insertByList(members: List<Member>):String {
 
-        val limit = 5000 // 쿼리 텍스트 길이 제한으로 인해 5000개씩 나눠서 insert
-        var result:Int = 0
+        val limit  = 10000 // 쿼리 텍스트 길이 제한으로 인해 5000개씩 나눠서 insert
+        var result = 0
         if(members.size > limit) {
             for(i in 0..(members.size / limit)) {
                 val start = i * limit
-                val end = if((i + 1) * limit > members.size) members.size else (i + 1) * limit
+                val end   = if((i + 1) * limit > members.size) members.size else (i + 1) * limit
                 mMember.insertByList(members.subList(start, end))
                 result++
             }
@@ -104,7 +104,7 @@ class MemberService(
 
     @Transactional
     fun deleteById(id: Int):String {
-        val member = selectById(id.toLong())
+        val member     = selectById(id.toLong())
         val result:Int = mMember.deleteById(member.id as Long)
         return if(result == 1) "success" else "fail"
     }
