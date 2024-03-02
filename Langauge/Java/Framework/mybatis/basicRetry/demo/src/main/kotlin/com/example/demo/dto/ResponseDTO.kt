@@ -12,8 +12,8 @@ class ResponseDTO<T> {
     private var list: List<T> = listOf()
 
     class Builder<T> {
-        var page: PageDTO<T>? = null
-        var list: List<T>? = listOf()
+        private var page: PageDTO<T>? = null
+        private var list: List<T>? = listOf()
 
         fun page(page: PageDTO<T>?): Builder<T> {
             this.page = page

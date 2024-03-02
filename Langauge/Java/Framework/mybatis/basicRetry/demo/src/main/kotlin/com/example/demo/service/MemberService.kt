@@ -26,10 +26,10 @@ class MemberService(
     }
 
     @Transactional(readOnly = true)
-    fun selectById(id: Long = 1): Member {
-        val member = mMember.selectById(id)
+    fun selectById(id: Long?): Member {
+        id == null && throw RuntimeException("id is null !!!!!")
+        val member = mMember.selectById(id!!)
         member == null && throw RuntimeException("member is null !!!!!")
-        log.info("member: $member")
         return member
     }
 

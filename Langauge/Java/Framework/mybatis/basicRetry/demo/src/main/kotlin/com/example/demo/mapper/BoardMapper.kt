@@ -28,4 +28,7 @@ interface BoardMapper {
     @Transactional
     fun deleteBoard(id: Long): Int
 
+    @Transactional
+    fun deleteBoards(ids: List<Long>): Int
+
 }

@@ -81,4 +81,32 @@
                (TITLE, CONTENT, MEMBER_ID, CREATE_AT)
         VALUES (#{title}, #{content}, #{memberId}, #{createAt})
     </insert>
+    <update id="updateBoard" parameterType="Board">
+        UPDATE BOARD
+           <set>
+                <if test="title != null and title != ''">
+                     TITLE = #{title},
+                </if>
+                <if test="content != null and content != ''">
+                     CONTENT = #{content},
+                </if>
+                <if test="createAt != null">
+                     CREATE_AT = #{createAt},
+                </if>
+                UPDATE_AT = #{updateAt}
+           </set>
+         WHERE ID = #{id}
+    </update>
+
+    <delete id="deleteBoard" parameterType="Long">
+        DELETE FROM BOARD
+         WHERE ID = #{id}
+    </delete>
+
+    <delete id="deleteBoards" parameterType="List">
+        <foreach collection="list" item="item" separator=";">
+            DELETE FROM BOARD
+             WHERE ID = #{item}
+        </foreach>
+    </delete>
 </mapper>

@@ -20,18 +20,35 @@ class BoardService(
         val data = pageDTO ?: PageDTO<BoardDTO>()
         data.total = boardMapper.selectBoardTotalCount(board)
         data.list  = boardMapper.selectBoards(pageDTO, board)
-        log.info("pageDTO: $pageDTO")
         return data
     }
 
-    fun selectById(id: Long): BoardDTO {
-        val result = boardMapper.selectById(id)
+    fun selectById(id: Long?): BoardDTO {
+        id == null && throw RuntimeException("id is null !!!!!")
+        val result = boardMapper.selectById(id!!)
         result == null && throw RuntimeException("board is null !!!!!")
         return result
     }
 
     fun insertBoard(board: Board): String {
+        board.title.isEmpty() && throw RuntimeException("title is null !!!!!")
         val result: Int = boardMapper.insertBoard(board)
+        return if (result == 1) "success" else "fail"
+    }
+
+    fun updateBoard(board: Board): String {
+        board.updateAt = System.currentTimeMillis()
+        val result: Int = boardMapper.updateBoard(board)
+        return if (result == 1) "success" else "fail"
+    }
+
+    fun deleteBoard(id: Long): String {
+        val result: Int = boardMapper.deleteBoard(id)
+        return if (result == 1) "success" else "fail"
+    }
+
+    fun deleteBoards(ids: List<Long>): String {
+        val result: Int = boardMapper.deleteBoards(ids)
         return if (result == 1) "success" else "fail"
     }
 }
