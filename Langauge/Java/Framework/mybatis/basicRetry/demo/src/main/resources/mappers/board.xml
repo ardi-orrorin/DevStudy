@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.mapper.BoardMapper">
+    <resultMap id="resultBoard" type="BoardDTO" autoMapping="true" >
+        <association property="member" javaType="Member" autoMapping="true" columnPrefix="m" />
+    </resultMap>
+
+    <select id="selectBoardTotalCount" parameterType="Map" resultType="int">
+        SELECT COUNT(IFNULL(b.ID,0))
+        FROM BOARD b
+        <if test="param.member != null">
+            JOIN MEMBER m on m.ID = b.MEMBER_ID
+        </if>
+        <if test="param != null">
+            <where>
+                <if test="param.content != null and param.content != ''">
+                    AND b.CONTENT LIKE CONCAT('%', #{param.content}, '%')
+                </if>
+                <if test="param.title != null and param.title != ''">
+                    AND b.title LIKE CONCAT('%', #{param.title}, '%')
+                </if>
+                <if test="param.member != null and param.member.name != null and param.member.name != ''">
+                    AND m.NAME LIKE CONCAT('%', #{param.member.name}, '%')
+                </if>
+            </where>
+        </if>
+    </select>
+
+    <select id="selectBoards" parameterType="Map" resultMap="resultBoard">
+        SELECT b.ID,
+               b.TITLE,
+               b.CONTENT,
+               b.CREATE_AT,
+               m.ID as mId,
+               m.NAME as mName,
+               m.EMAIL as mEmail,
+               m.BIRTHDAY as mBirthday
+          FROM BOARD b
+          JOIN MEMBER m on m.ID = b.MEMBER_ID
+        <if test="param != null">
+            <where>
+                <if test="param.content != null and param.content != ''">
+                    AND b.CONTENT LIKE CONCAT('%', #{param.content}, '%')
+                </if>
+                <if test="param.title != null and param.title != ''">
+                    AND b.title LIKE CONCAT('%', #{param.title}, '%')
+                </if>
+                <if test="param.member != null and param.member.name != null and param.member.name != ''">
+                    AND m.NAME LIKE CONCAT('%', #{param.member.name}, '%')
+                </if>
+            </where>
+        </if>
+        <if test="page != null">
+            <if test="page.size != null or page.size != 0">
+                LIMIT ${page.size}
+            </if>
+            OFFSET ${page.getOffset()}
+        </if>
+    </select>
+
+    <select id="selectById" parameterType="Long" resultMap="resultBoard">
+        SELECT b.ID,
+               b.TITLE,
+               b.CONTENT,
+               b.CREATE_AT,
+               m.ID as mId,
+               m.NAME as mName,
+               m.EMAIL as mEmail,
+               m.BIRTHDAY as mBirthday
+          FROM BOARD b
+          JOIN MEMBER m on m.ID = b.MEMBER_ID
+         WHERE b.ID = #{id}
+    </select>
+
+
+    <insert id="insertBoard" parameterType="Board">
+        INSERT INTO BOARD
+               (TITLE, CONTENT, MEMBER_ID, CREATE_AT)
+        VALUES (#{title}, #{content}, #{memberId}, #{createAt})
+    </insert>
+</mapper>

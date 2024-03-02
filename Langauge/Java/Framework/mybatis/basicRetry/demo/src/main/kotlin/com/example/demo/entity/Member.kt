@@ -11,6 +11,6 @@ data class Member(
     val birthday   : String         = "",
     var email      : String?        = "",
     var address    : String?        = "",
-    var createAt   : LocalDateTime? = null,
-    var updateAt   : LocalDateTime? = null
+    var createAt   : LocalDateTime? = LocalDateTime.now(),
+    var updateAt   : LocalDateTime? = LocalDateTime.now()
 )
