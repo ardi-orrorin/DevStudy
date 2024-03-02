@@ -10,9 +10,9 @@
 
     <select id="selectBoardTotalCount" parameterType="Map" resultType="int">
         SELECT COUNT(IFNULL(b.ID,0))
-        FROM BOARD b
-        <if test="param.member != null">
-            JOIN MEMBER m on m.ID = b.MEMBER_ID
+          FROM BOARD b
+        <if test="param != null and param.member != null">
+          JOIN MEMBER m on m.ID = b.MEMBER_ID
         </if>
         <if test="param != null">
             <where>

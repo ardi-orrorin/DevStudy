@@ -10,11 +10,11 @@ import org.springframework.transaction.annotation.Transactional
 @Mapper
 interface BoardMapper {
 
-    fun selectBoardTotalCount(@Param("param")board: BoardDTO): Int
+    fun selectBoardTotalCount(@Param("param")board: BoardDTO? = null): Int
 
     fun selectBoards(
-        @Param("page")page: PageDTO<BoardDTO>,
-        @Param("param")board: BoardDTO
+        @Param("page")page: PageDTO<BoardDTO>? = null,
+        @Param("param")board: BoardDTO? = null
     ): List<BoardDTO>
 
     fun selectById(id: Long): BoardDTO

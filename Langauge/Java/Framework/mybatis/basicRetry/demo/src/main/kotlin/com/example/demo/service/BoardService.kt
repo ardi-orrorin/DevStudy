@@ -14,11 +14,14 @@ class BoardService(
 ) {
 
     val log: Logger = LoggerFactory.getLogger(this::class.java)
-    fun selectBoards(pageDTO: PageDTO<BoardDTO>, board: BoardDTO): PageDTO<BoardDTO> {
-        pageDTO.total = boardMapper.selectBoardTotalCount(board)
-        pageDTO.list  = boardMapper.selectBoards(pageDTO, board)
+    fun selectBoards(pageDTO: PageDTO<BoardDTO>? = null,
+                     board: BoardDTO? = null
+    ): PageDTO<BoardDTO> {
+        val data = pageDTO ?: PageDTO<BoardDTO>()
+        data.total = boardMapper.selectBoardTotalCount(board)
+        data.list  = boardMapper.selectBoards(pageDTO, board)
         log.info("pageDTO: $pageDTO")
-        return pageDTO
+        return data
     }
 
     fun selectById(id: Long): BoardDTO {
