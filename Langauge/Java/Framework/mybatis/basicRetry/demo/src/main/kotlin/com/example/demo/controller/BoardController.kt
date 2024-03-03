@@ -38,26 +38,26 @@ class BoardController(
     fun insertBoard(@RequestBody board: Board): ResponseEntity<String> {
         memberService.selectById(board.memberId)
         return ResponseEntity.ok()
-            .body(boardService.insertBoard(board))
+            .body(boardService.insertBoard(board).msg)
     }
 
     @PatchMapping("")
     fun updateBoard(@RequestBody board: Board): ResponseEntity<String> {
         return ResponseEntity.ok()
-            .body(boardService.updateBoard(board))
+            .body(boardService.updateBoard(board).msg)
     }
 
 
     @DeleteMapping("{id}")
     fun deleteBoard(@PathVariable id: Long): ResponseEntity<String> {
         return ResponseEntity.ok()
-            .body(boardService.deleteBoard(id))
+            .body(boardService.deleteBoard(id).msg)
     }
 
     @DeleteMapping("")
     fun deleteBoards(@RequestBody ids: List<Long>): ResponseEntity<String> {
         return ResponseEntity.ok()
-            .body(boardService.deleteBoards(ids))
+            .body(boardService.deleteBoards(ids).msg)
     }
 
 }

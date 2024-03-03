@@ -1,5 +1,6 @@
 package com.example.demo.service
 
+import com.example.demo.dto.ResultType
 import com.example.demo.entity.Board
 import com.example.demo.entity.BoardDTO
 import com.example.demo.entity.PageDTO
@@ -30,25 +31,26 @@ class BoardService(
         return result
     }
 
-    fun insertBoard(board: Board): String {
+    fun insertBoard(board: Board): ResultType {
         board.title.isEmpty() && throw RuntimeException("title is null !!!!!")
         val result: Int = boardMapper.insertBoard(board)
-        return if (result == 1) "success" else "fail"
+
+        return if (result == 1) ResultType.SUCCESS else ResultType.FAIL
     }
 
-    fun updateBoard(board: Board): String {
+    fun updateBoard(board: Board): ResultType {
         board.updateAt = System.currentTimeMillis()
         val result: Int = boardMapper.updateBoard(board)
-        return if (result == 1) "success" else "fail"
+        return if (result == 1) ResultType.SUCCESS else ResultType.FAIL
     }
 
-    fun deleteBoard(id: Long): String {
+    fun deleteBoard(id: Long): ResultType {
         val result: Int = boardMapper.deleteBoard(id)
-        return if (result == 1) "success" else "fail"
+        return if (result == 1) ResultType.SUCCESS else ResultType.FAIL
     }
 
-    fun deleteBoards(ids: List<Long>): String {
+    fun deleteBoards(ids: List<Long>): ResultType {
         val result: Int = boardMapper.deleteBoards(ids)
-        return if (result == 1) "success" else "fail"
+        return if (result == 1) ResultType.SUCCESS else ResultType.FAIL
     }
 }

@@ -20,9 +20,7 @@ class MemberService(
 
     @Transactional(readOnly = true)
     fun selectAll(): List<Member> {
-        var members = common.selectAll()
-        log.info("member.size {}", members.size)
-        return members
+        return mMember.selectAll()
     }
 
     @Transactional(readOnly = true)
