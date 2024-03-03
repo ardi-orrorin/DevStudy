@@ -1,0 +1,131 @@
+{
+  "aggregate": {
+    "counters": {
+      "vusers.created_by_name.Get Members": 30000,
+      "vusers.created": 30000,
+      "http.requests": 30000,
+      "errors.ERR_SOCKET_CONNECTION_TIMEOUT": 22822,
+      "vusers.failed": 30000,
+      "errors.ECONNRESET": 376,
+      "errors.EPIPE": 1,
+      "errors.ETIMEDOUT": 2821,
+      "errors.EADDRNOTAVAIL": 3980
+    },
+    "rates": {
+      "http.request_rate": 786
+    },
+    "firstCounterAt": 1709351129978,
+    "lastCounterAt": 1709351160869,
+    "firstMetricAt": 1709351129978,
+    "lastMetricAt": 1709351160869,
+    "period": 1709351160000,
+    "summaries": {},
+    "histograms": {}
+  },
+  "intermediate": [
+    {
+      "counters": {
+        "vusers.created_by_name.Get Members": 3,
+        "vusers.created": 3,
+        "http.requests": 3
+      },
+      "rates": {
+        "http.request_rate": 3
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1709351129978,
+      "lastCounterAt": 1709351129997,
+      "firstMetricAt": 1709351129978,
+      "lastMetricAt": 1709351129997,
+      "period": "1709351120000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "vusers.created_by_name.Get Members": 9770,
+        "vusers.created": 9770,
+        "http.requests": 9768,
+        "errors.ECONNRESET": 376,
+        "vusers.failed": 6435,
+        "errors.ERR_SOCKET_CONNECTION_TIMEOUT": 6055,
+        "errors.EPIPE": 1,
+        "errors.ETIMEDOUT": 3
+      },
+      "rates": {
+        "http.request_rate": 996
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1709351130005,
+      "lastCounterAt": 1709351139999,
+      "firstMetricAt": 1709351130005,
+      "lastMetricAt": 1709351139999,
+      "period": "1709351130000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "vusers.created_by_name.Get Members": 10047,
+        "vusers.created": 10047,
+        "http.requests": 10049,
+        "errors.ERR_SOCKET_CONNECTION_TIMEOUT": 9966,
+        "vusers.failed": 12784,
+        "errors.ETIMEDOUT": 2818
+      },
+      "rates": {
+        "http.request_rate": 1006
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1709351140000,
+      "lastCounterAt": 1709351149999,
+      "firstMetricAt": 1709351140000,
+      "lastMetricAt": 1709351149999,
+      "period": "1709351140000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "vusers.created_by_name.Get Members": 9979,
+        "vusers.created": 9979,
+        "http.requests": 9979,
+        "errors.ERR_SOCKET_CONNECTION_TIMEOUT": 6710,
+        "vusers.failed": 9889,
+        "errors.EADDRNOTAVAIL": 3179
+      },
+      "rates": {
+        "http.request_rate": 1000
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1709351150001,
+      "lastCounterAt": 1709351159999,
+      "firstMetricAt": 1709351150001,
+      "lastMetricAt": 1709351159999,
+      "period": "1709351150000",
+      "summaries": {},
+      "histograms": {}
+    },
+    {
+      "counters": {
+        "errors.EADDRNOTAVAIL": 801,
+        "vusers.failed": 892,
+        "vusers.created_by_name.Get Members": 201,
+        "vusers.created": 201,
+        "http.requests": 201,
+        "errors.ERR_SOCKET_CONNECTION_TIMEOUT": 91
+      },
+      "rates": {
+        "http.request_rate": 201
+      },
+      "firstCounterAt": 1709351160000,
+      "lastCounterAt": 1709351160869,
+      "firstMetricAt": 1709351160000,
+      "lastMetricAt": 1709351160869,
+      "period": "1709351160000",
+      "http.request_rate": null,
+      "summaries": {},
+      "histograms": {}
+    }
+  ]
+}
