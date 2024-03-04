@@ -8,7 +8,6 @@ import com.example.demo.service.BoardService
 import com.example.demo.service.MemberService
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
-import org.springframework.web.service.annotation.PutExchange
 
 @RestController
 @RequestMapping("/api/boards")
