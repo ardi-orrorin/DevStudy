@@ -11,6 +11,8 @@ public class App {
 
         System.out.println(Level.HIGH.getValue());
         System.out.println(Level.HIGH.getNumber());
+
+        System.out.println(Level.MEDIUM.ordinal());
     }
 
     enum Level {
@@ -33,7 +35,6 @@ public class App {
         public int getNumber() {
             return number;
         }
-
     }
 }
     

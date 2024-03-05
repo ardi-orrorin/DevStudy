@@ -29,6 +29,7 @@ dependencies {
     implementation("org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     runtimeOnly("org.mariadb.jdbc:mariadb-java-client")
+    runtimeOnly("org.postgresql:postgresql")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.mybatis.spring.boot:mybatis-spring-boot-starter-test:3.0.3")
