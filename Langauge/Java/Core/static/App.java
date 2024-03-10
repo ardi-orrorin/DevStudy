@@ -2,51 +2,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class App {
-    private static List list;
+    private static List<TestDTO> list;
 
     public static void main(String[] args) {
-        list = new ArrayList();
-        for (int i = 0; i < 100000000; i++) {
-            list.add(i);
+        list = new ArrayList<>();
+
+        for (int j = 0; j < 1000000; j++) {
+            for (int i = 0; i < 500000; i++) {
+                list.add(new TestDTO("null", i, "null", "null", "null"));
+            }
+
+            System.out.println("for circle 1 : " + list.size());
+
+            for (int ij = 0; ij < 500000; ij++) {
+                list.remove(0);
+            }
+
+            System.out.println("for circle 2 : " + list.size());
         }
-
-        System.out.println("for circle 1 : " + list.size());
-
-        for (int i = 0; i < 100000000; i++) {
-            list.add(i);
-        }
-
-        System.out.println("for circle 2 : " + list.size());
-
-        for (int i = 0; i < 100000000; i++) {
-            list.add(i);
-        }
-
-        System.out.println("for circle 3 : " + list.size());
-
-        for (int i = 0; i < 100000000; i++) { // memory lick 발생
-            list.add(i);
-        }
-
-        System.out.println("for circle 4 : " + list.size());
-
-        for (int i = 0; i < 100000000; i++) {
-            list.add(i);
-        }
-
-        System.out.println("for circle 5 : " + list.size());
-
-        for (int i = 0; i < 100000000; i++) {
-            list.add(i);
-        }
-
-        System.out.println("for circle 6 : " + list.size());
-
-        for (int i = 0; i < 100000000; i++) {
-            list.add(i);
-        }
-
-        System.out.println("for circle 7 : " + list.size());
-
     }
 }
