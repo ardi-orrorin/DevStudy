@@ -39,6 +39,7 @@ public class ExampleList {
         mono.subscribe(e -> System.out.println("main 1 : " + e));
         Thread.sleep(3000);
         mono.subscribe(e -> System.out.println("main 2 : " + e));
+        
 
     }
 }
