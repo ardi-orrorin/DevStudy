@@ -22,6 +22,12 @@ dependencies {
     // https://mvnrepository.com/artifact/io.projectreactor/reactor-core
     implementation 'io.projectreactor:reactor-core:3.6.3'
 
+    implementation 'org.springframework.boot:spring-boot-starter-webflux:2.5.5'
+
+    // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core
+    implementation 'org.apache.logging.log4j:log4j-core:2.23.1'
+
+
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:31.1-jre'
 }
