@@ -26,6 +26,10 @@ dependencies {
 
     // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core
     implementation 'org.apache.logging.log4j:log4j-core:2.23.1'
+    // https://mvnrepository.com/artifact/io.projectreactor/reactor-test
+    
+    testImplementation 'io.projectreactor:reactor-test:3.6.4'
+
 
 
     // This dependency is used by the application.
