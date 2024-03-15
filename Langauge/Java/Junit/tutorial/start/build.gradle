@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/junit/junit
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+    // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core
+    implementation 'org.apache.logging.log4j:log4j-core:2.23.1'
+
+
+}
+
+test {
+    useJUnitPlatform()
+}
