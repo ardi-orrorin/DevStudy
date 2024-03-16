@@ -18,19 +18,28 @@ public class MemberService {
     private final MemberMapper memberMapper;
 
     public Mono<List<MemberResponse.Member>> findAll(Mono<MemberRequest.Member> member) {
-
-        return member.flatMap(e->
-            Flux.fromIterable(memberMapper.findAll())
-                .subscribeOn(Schedulers.boundedElastic())
-                .map(f -> MemberResponse.Member.builder()
+        return member
+            .subscribeOn(Schedulers.parallel())
+            .flatMap(e->
+                Flux.fromIterable(memberMapper.findAll())
+//                    .log()
+                    .publishOn(Schedulers.boundedElastic())
+//                    .log()
+                    .map(f -> (
+                        MemberResponse.Member.builder()
                             .id(f.getId())
                             .name(f.getName())
                             .age(String.valueOf(f.getAge()))
                             .birthDay(f.getBirthday())
                             .build()
-                )
-                .collectList()
-        );
+                    ))
+//                    .log()
+                    .publishOn(Schedulers.parallel())
+//                    .log()
+                    .collectList()
+
+        )
+        .publishOn(Schedulers.parallel());
 
 //        return member.map(e->
 //                memberMapper.findAll().stream()
@@ -48,10 +57,15 @@ public class MemberService {
     }
 
     public Mono<MemberResponse.Member> insert(Mono<MemberRequest.Member> member) {
-
-        return member.doOnNext(this::isValidParameter)
+        return member.subscribeOn(Schedulers.boundedElastic())
+                     .log()
+                     .publishOn(Schedulers.parallel())
+                     .doOnNext(this::isValidParameter)
+                     .log()
                      .flatMap(e->
                          Mono.just(memberMapper.insert(e))
+                             .publishOn(Schedulers.parallel())
+                             .log()
                              .map(g ->
                                  MemberResponse.Member.builder()
                                      .id(e.getId())
@@ -60,11 +74,13 @@ public class MemberService {
                                      .birthDay(e.getBirthday())
                                      .build()
                              )
+                             .log()
                      );
     }
 
 
     public Mono<MemberRequest.MemberIdList> delete(Mono<MemberRequest.MemberIdList> members) {
+
         return members.doOnNext(e-> {
             if (e.getId().length > 0) {
                 memberMapper.delete(e.getId());

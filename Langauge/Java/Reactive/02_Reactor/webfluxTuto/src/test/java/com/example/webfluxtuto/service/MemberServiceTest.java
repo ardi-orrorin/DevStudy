@@ -29,7 +29,7 @@ class MemberServiceTest {
 
     @Test
     void findAll() {
-        Mono<MemberRequest.Member> member = Mono.just(MemberRequest.Member.builder().build());
+        Mono<MemberRequest.Member> member = Mono.just(new MemberRequest.Member()).log();
 //        member.flatMap(e->
 //                Flux.fromIterable(memberMapper.findAll())
 //                        .log()
@@ -47,18 +47,20 @@ class MemberServiceTest {
 
         memberService.findAll(member)
 //                .publishOn(Schedulers.boundedElastic())
-                .log()
+//                .log()
                 .subscribe();
     }
 
     @Test
     void insert() {
-        MemberRequest.Member member = MemberRequest.Member.builder()
-                .id(1)
-                .age(20)
-                .name("test")
-                .birthday("210100")
-                .build();
+
+        MemberRequest.Member member = new MemberRequest.Member();
+//        MemberRequest.Member member = MemberRequest.Member.builder()
+//                .id(1)
+//                .age(20)
+//                .name("test")
+//                .birthday("210100")
+//                .build();
 
         memberService.insert(Mono.just(member))
                 .log()

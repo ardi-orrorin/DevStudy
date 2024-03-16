@@ -27,12 +27,13 @@ class MemberMapperTest {
 
     @Test
     void insert() {
-        MemberRequest.Member member = MemberRequest.Member.builder()
-                .id(1)
-                .age(20)
-                .name("test")
-                .birthday("210101")
-                .build();
+        MemberRequest.Member member = new MemberRequest.Member();
+//        MemberRequest.Member member = MemberRequest.Member.builder()
+//                .id(1)
+//                .age(20)
+//                .name("test")
+//                .birthday("210101")
+//                .build();
 
         log.info("{}", memberMapper.insert(member));
 //        memberMapper.insert(member);
