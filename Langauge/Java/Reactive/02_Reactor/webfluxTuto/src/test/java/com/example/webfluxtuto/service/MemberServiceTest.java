@@ -12,6 +12,9 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.core.scheduler.Schedulers;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -63,6 +66,24 @@ class MemberServiceTest {
 //                .build();
 
         memberService.insert(Mono.just(member))
+                .log()
+                .subscribe();
+    }
+
+
+    @Test
+    void insertAll() {
+        List<MemberRequest.Member> list = new ArrayList<>();
+
+        for (int i = 1; i < 10000; i++) {
+            MemberRequest.Member member = new MemberRequest.Member();
+            member.setAge(10);
+            member.setName("test" + i);
+            member.setBirthday("210100");
+            list.add(member);
+        }
+
+        memberService.insertAll(Mono.just(list))
                 .log()
                 .subscribe();
     }

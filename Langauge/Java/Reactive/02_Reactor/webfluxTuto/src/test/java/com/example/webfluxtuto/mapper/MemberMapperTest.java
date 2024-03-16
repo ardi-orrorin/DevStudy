@@ -6,6 +6,12 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.SpyBean;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+import reactor.core.scheduler.Schedulers;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -42,10 +48,40 @@ class MemberMapperTest {
 
     @Test
     void delete() {
-        MemberRequest.MemberIdList memberIdList = MemberRequest.MemberIdList.builder()
-                .id(new long[]{20, 23, 26})
-                .build();
+//        MemberRequest.MemberIdList memberIdList = MemberRequest.MemberIdList.builder()
+//                .id(new long[]{20, 23, 26})
+//                .build();
+//
+//        memberMapper.delete(memberIdList.getId());
+    }
 
-        memberMapper.delete(memberIdList.getId());
+    @Test
+    void insertAll(){
+        List<MemberRequest.Member> list = new ArrayList<>();
+
+        for (int i = 0; i < 9; i++) {
+            MemberRequest.Member member = new MemberRequest.Member();
+            member.setAge(i);
+            member.setName("test" + i);
+            member.setBirthday("21010" + i);
+            list.add(member);
+        }
+
+        log.info("{}", list);
+
+
+        memberMapper.insertAll(list);
+
+//        Flux.fromIterable(list)
+//                .parallel()
+//                .runOn(Schedulers.parallel())
+//                .publishOn(Schedulers.parallel())
+//                .log()
+//                .doOnNext(e-> memberMapper.insert(e))
+//                .doOnNext(e-> memberMapper.insert(e))
+//                .collectList()
+//                .log()
+//                .subscribe();
+
     }
 }

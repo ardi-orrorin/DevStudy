@@ -19,11 +19,11 @@ public class MemberService {
 
     public Mono<List<MemberResponse.Member>> findAll(Mono<MemberRequest.Member> member) {
         return member
-            .subscribeOn(Schedulers.parallel())
+//            .subscribeOn(Schedulers.parallel())
             .flatMap(e->
                 Flux.fromIterable(memberMapper.findAll())
 //                    .log()
-                    .publishOn(Schedulers.boundedElastic())
+//                    .publishOn(Schedulers.boundedElastic())
 //                    .log()
                     .map(f -> (
                         MemberResponse.Member.builder()
@@ -34,12 +34,12 @@ public class MemberService {
                             .build()
                     ))
 //                    .log()
-                    .publishOn(Schedulers.parallel())
+//                    .publishOn(Schedulers.parallel())
 //                    .log()
                     .collectList()
 
-        )
-        .publishOn(Schedulers.parallel());
+        );
+//        .publishOn(Schedulers.parallel());
 
 //        return member.map(e->
 //                memberMapper.findAll().stream()
@@ -88,6 +88,14 @@ public class MemberService {
                 throw new ParameterException("id is empty");
             }
         });
+    }
+
+    public Mono<List<MemberRequest.Member>> insertAll(Mono<List<MemberRequest.Member>> members) {
+        return members.flatMap(e-> Flux.fromIterable(e)
+                    .doOnNext(this::isValidParameter)
+                    .collectList()
+                )
+                .doOnNext(memberMapper::insertAll);
     }
 
     private void isValidParameter(MemberRequest.Member member) {

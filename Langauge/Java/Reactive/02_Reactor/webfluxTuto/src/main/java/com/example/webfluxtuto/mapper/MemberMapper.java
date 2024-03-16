@@ -16,6 +16,8 @@ public interface MemberMapper {
 
     int insert(MemberRequest.Member member);
 
+    int insertAll(List<MemberRequest.Member> list);
+
     int delete(long[] ids);
 
 }

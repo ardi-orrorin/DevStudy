@@ -20,6 +20,15 @@
         VALUES (#{id}, #{name}, #{age}, #{birthday})
     </insert>
 
+    <insert id="insertAll" parameterType="List">
+        INSERT ALL
+        <foreach collection="list" item="member">
+          INTO TBL_MEMBER (ID, NAME, AGE, BIRTHDAY)
+        VALUES (NEXT_VAL_SEQ_MEMBER_ID, #{member.name}, #{member.age}, #{member.birthday})
+        </foreach>
+        SELECT * FROM DUAL
+    </insert>
+
 
     <delete id="delete" parameterType="long">
         DELETE
