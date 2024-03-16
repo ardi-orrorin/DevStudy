@@ -20,4 +20,13 @@
         VALUES (#{id}, #{name}, #{age}, #{birthday})
     </insert>
 
+
+    <delete id="delete" parameterType="long">
+        DELETE
+          FROM TBL_MEMBER
+         WHERE ID IN
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
 </mapper>

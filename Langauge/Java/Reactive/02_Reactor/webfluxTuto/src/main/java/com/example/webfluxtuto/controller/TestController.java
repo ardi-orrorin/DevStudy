@@ -18,25 +18,20 @@ public class TestController {
     @GetMapping("/1")
     public Mono<List<String>> test(Mono<ParamTest> param) {
         return Flux.range(1, 500000)
-//                                .publishOn(Schedulers.boundedElastic())
-                                .map(i -> i.toString())
-                                .map(String::toUpperCase)
-                                .map(i -> i + " : test")
-                                .collectList();
+                   .map(String::valueOf)
+                   .map(String::toUpperCase)
+                   .map(i -> i + " : test")
+                   .collectList();
     }
 
     @GetMapping("/2")
     public Mono<List<String>> test2(Mono<ParamTest> param) {
-        return param
-//                .subscribeOn(Schedulers.boundedElastic())
-                .flatMap(e -> Flux.range(1, 500000)
-//                        .publishOn(Schedulers.boundedElastic())
-                    .map(i -> i.toString())
+        return param.flatMap(e -> Flux.range(1, 500000)
+                    .map(String::valueOf)
                     .map(String::toUpperCase)
                     .map(i -> i + " : test")
                     .collectList()
                 );
-
     }
 
     @GetMapping("/3")

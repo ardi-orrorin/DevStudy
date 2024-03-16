@@ -1,5 +1,6 @@
 package com.example.webfluxtuto.mapper;
 
+import com.example.webfluxtuto.dto.MemberRequest;
 import com.example.webfluxtuto.model.Member;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
@@ -26,7 +27,7 @@ class MemberMapperTest {
 
     @Test
     void insert() {
-        Member member = Member.builder()
+        MemberRequest.Member member = MemberRequest.Member.builder()
                 .id(1)
                 .age(20)
                 .name("test")
@@ -36,5 +37,14 @@ class MemberMapperTest {
         log.info("{}", memberMapper.insert(member));
 //        memberMapper.insert(member);
 
+    }
+
+    @Test
+    void delete() {
+        MemberRequest.MemberIdList memberIdList = MemberRequest.MemberIdList.builder()
+                .id(new long[]{20, 23, 26})
+                .build();
+
+        memberMapper.delete(memberIdList.getId());
     }
 }

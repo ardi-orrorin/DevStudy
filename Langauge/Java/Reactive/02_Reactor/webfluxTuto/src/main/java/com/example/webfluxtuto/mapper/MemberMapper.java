@@ -1,6 +1,7 @@
 package com.example.webfluxtuto.mapper;
 
 
+import com.example.webfluxtuto.dto.MemberRequest;
 import com.example.webfluxtuto.model.Member;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -13,7 +14,8 @@ public interface MemberMapper {
 
     Member findById(int id);
 
+    int insert(MemberRequest.Member member);
 
-    int insert(Member member);
+    int delete(long[] ids);
 
 }

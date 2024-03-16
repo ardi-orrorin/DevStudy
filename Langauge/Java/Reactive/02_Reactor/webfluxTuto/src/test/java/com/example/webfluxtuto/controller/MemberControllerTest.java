@@ -43,12 +43,12 @@ class MemberControllerTest {
         queryParam.add("id", "1");
         queryParam.add("name", "test");
         queryParam.add("age", "20");
-        queryParam.add("birthday", "2021-01-01");
+        queryParam.add("birthday", "20210101");
 
 
-        EntityExchangeResult<List<Member>> result =
+        EntityExchangeResult<List<MemberResponse.Member>> result =
         webTestClient.get()
-                .uri(uriBuilder -> uriBuilder.path("/member")
+                .uri(uriBuilder -> uriBuilder.path("/members")
                         .queryParams(queryParam)
 //                        .queryParam("id", "1")
 //                        .queryParam("name", "test")
@@ -58,7 +58,7 @@ class MemberControllerTest {
                 .accept(MediaType.APPLICATION_JSON)
                 .exchange()
                 .expectStatus().isOk()
-                .expectBodyList(Member.class)
+                .expectBodyList(MemberResponse.Member.class)
                 .returnResult();
 
         log.info("result: {}", result);
@@ -71,12 +71,12 @@ class MemberControllerTest {
 //                              .id(1)
                               .age(20)
                               .name("test111")
-                              .birthday("210101")
+                              .birthday("210111")
                               .build();
 
         EntityExchangeResult<MemberResponse.Member> result =
         webTestClient.post()
-                .uri("/member")
+                .uri("/members")
                 .contentType(MediaType.APPLICATION_JSON)
                 .bodyValue(member)
                 .accept(MediaType.APPLICATION_JSON)
@@ -86,6 +86,24 @@ class MemberControllerTest {
                 .returnResult();
 
         log.info("result: {}", result);
+    }
 
+    @Test
+    void delete() {
+        EntityExchangeResult result =
+        webTestClient.delete()
+                .uri(uriBuilder -> uriBuilder.path("/members")
+                        .queryParam("id", "173")
+                        .queryParam("id", "172")
+                        .queryParam("id", "171")
+                        .queryParam("id", "170")
+                        .build())
+//                .accept(MediaType.APPLICATION_JSON)
+                .exchange()
+                .expectStatus().isOk()
+                .expectBody()
+                .returnResult();
+
+        log.info("result: {}", result);
     }
 }
