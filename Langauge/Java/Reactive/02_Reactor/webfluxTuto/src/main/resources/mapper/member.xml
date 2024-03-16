@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.webfluxtuto.mapper.MemberMapper">
+    <sql id="tbl_member">
+        SELECT *
+          FROM TBL_MEMBER
+    </sql>
+    <select id="findAll" resultType="Member">
+        <include refid="tbl_member"/>
+    </select>
+
+    <insert id="insert" parameterType="Member">
+        <selectKey keyProperty="id" resultType="int" order="BEFORE">
+            SELECT SEQ_MEMBER_ID.nextval FROM DUAL
+        </selectKey>
+        INSERT INTO TBL_MEMBER (ID, NAME, AGE, BIRTHDAY)
+        VALUES (#{id}, #{name}, #{age}, #{birthday})
+    </insert>
+
+</mapper>

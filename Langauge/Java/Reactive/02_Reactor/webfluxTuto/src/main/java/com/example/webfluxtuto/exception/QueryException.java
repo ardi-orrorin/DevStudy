@@ -1,8 +1,8 @@
 package com.example.webfluxtuto.exception;
 
 
-public class SQLException extends RuntimeException {
-    public SQLException(String message) {
+public class QueryException extends RuntimeException {
+    public QueryException(String message) {
         super(message);
     }
 }

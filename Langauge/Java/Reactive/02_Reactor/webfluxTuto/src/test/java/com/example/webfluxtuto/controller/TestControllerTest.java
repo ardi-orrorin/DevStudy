@@ -34,8 +34,6 @@ class TestControllerTest {
     @SpyBean
     private WebTestClient webTestClient;
 
-
-
     private String URI;
 
 
@@ -46,12 +44,10 @@ class TestControllerTest {
     public void init() {
         webTestClient = WebTestClient.bindToServer().baseUrl("http://localhost:" + port).build();
     }
-//
-//
-//
-//    public void setUp() {
-//        this.URI = "http://localhost:" + port + "/test";
-//    }
+
+    public void setUp() {
+        this.URI = "http://localhost:" + port + "/test";
+    }
 
     @Test
     void test1() {
@@ -65,7 +61,7 @@ class TestControllerTest {
 
     @Test
     void test3() {
-//        this.setUp();
+        this.setUp();
         log.info("test3 : {}" , this.URI);
 
         UriComponents queryParam = UriComponentsBuilder.fromUriString(this.URI + "/3")
