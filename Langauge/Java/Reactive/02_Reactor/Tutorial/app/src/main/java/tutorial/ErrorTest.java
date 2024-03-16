@@ -18,10 +18,10 @@ public class ErrorTest {
                 .map(d -> d.getName())
                 // .onErrorReturn(NullTestException.class, "dfdf")
                 // .onErrorReturn(NullPointerException.class, "Error")
-                // .onErrorResume(NullPointerException.class, e -> {
-                // log.error("Error : {}", e);
-                // return Flux.just("Error");
-                // })
+                .onErrorResume(NullPointerException.class, e -> {
+                    log.error("Error : {}", e);
+                    return Flux.just("Error");
+                })
                 // .switchIfEmpty(Flux.error(new NullTestException("Nul!!!!")))
                 .subscribe(data -> log.info("data : {}", data));
     }
