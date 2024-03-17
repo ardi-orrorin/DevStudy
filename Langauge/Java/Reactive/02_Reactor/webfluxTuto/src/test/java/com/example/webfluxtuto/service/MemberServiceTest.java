@@ -75,7 +75,7 @@ class MemberServiceTest {
     void insertAll() {
         List<MemberRequest.Member> list = new ArrayList<>();
 
-        for (int i = 1; i < 10000; i++) {
+        for (int i = 1; i < 8000; i++) {
             MemberRequest.Member member = new MemberRequest.Member();
             member.setAge(10);
             member.setName("test" + i);
@@ -84,7 +84,7 @@ class MemberServiceTest {
         }
 
         memberService.insertAll(Mono.just(list))
-                .log()
+//                .log()
                 .subscribe();
     }
 

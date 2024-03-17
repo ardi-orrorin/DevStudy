@@ -2,7 +2,9 @@ package com.example.webfluxtuto.mapper;
 
 import com.example.webfluxtuto.dto.MemberRequest;
 import com.example.webfluxtuto.model.Member;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.slf4j.Logger;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.SpyBean;
@@ -10,6 +12,9 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.core.scheduler.Schedulers;
 
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalAmount;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,7 +31,6 @@ class MemberMapperTest {
 
     @Test
     void findAll() {
-
         log.info("{}", memberMapper.findAll());
 
     }
@@ -83,5 +87,14 @@ class MemberMapperTest {
 //                .log()
 //                .subscribe();
 
+    }
+
+    @Test
+//    @Disabled
+    void test(){
+        String str = "200801";
+        LocalDate parse = LocalDate.parse(str, java.time.format.DateTimeFormatter.ofPattern("yyMMdd"));
+        log.info("{}", parse);
+        log.info("{}", parse.minus(1, ChronoUnit.MONTHS));
     }
 }
