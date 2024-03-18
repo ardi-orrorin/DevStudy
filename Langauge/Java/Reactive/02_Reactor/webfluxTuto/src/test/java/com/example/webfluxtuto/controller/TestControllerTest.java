@@ -7,9 +7,13 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.SpyBean;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.test.web.server.LocalServerPort;
+import org.springframework.core.io.FileSystemResource;
+import org.springframework.http.HttpEntity;
 import org.springframework.http.MediaType;
+import org.springframework.http.client.MultipartBodyBuilder;
 import org.springframework.test.web.reactive.server.EntityExchangeResult;
 import org.springframework.test.web.reactive.server.WebTestClient;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.util.DefaultUriBuilderFactory;
 import org.springframework.web.util.UriBuilder;
 import org.springframework.web.util.UriComponents;
@@ -98,5 +102,27 @@ class TestControllerTest {
 
 
 //        log.info("result : {}", result.getResponse());
+    }
+
+    @Test
+    void test4() {
+        this.setUp();
+        MultipartBodyBuilder builder = new MultipartBodyBuilder();
+
+        builder.part("param", new FileSystemResource("/Users/yuseungcheol/Desktop/picachu-color.png"));
+
+
+        MultiValueMap<String, HttpEntity<?>> parts = builder.build();
+
+        EntityExchangeResult result = webTestClient.post()
+                .uri("/test/4")
+                .contentType(MediaType.MULTIPART_FORM_DATA)
+                .bodyValue(parts)
+                .exchange()
+                .expectStatus().isOk()
+                .expectBody()
+                .returnResult();
+
+        log.info("result : {}", result);
     }
 }
