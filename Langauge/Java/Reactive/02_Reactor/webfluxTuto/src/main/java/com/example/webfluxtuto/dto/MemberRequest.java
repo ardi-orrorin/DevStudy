@@ -1,5 +1,7 @@
 package com.example.webfluxtuto.dto;
 
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -13,6 +15,8 @@ public class MemberRequest {
     @Setter
     @ToString
     public static class Member {
+        @Max(value = 10, message = "id는 10보다 작아야 합니다.")
+        @Min(value = 1, message = "id는 1보다 커야 합니다.")
         private long id;
         private String name;
         private int age;

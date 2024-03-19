@@ -5,6 +5,7 @@ import com.example.webfluxtuto.dto.MemberRequest;
 import com.example.webfluxtuto.dto.MemberResponse;
 import com.example.webfluxtuto.model.Member;
 import com.example.webfluxtuto.service.MemberService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
@@ -19,7 +20,7 @@ public class MemberController {
     private final MemberService memberService;
 
     @GetMapping
-    public Mono<List<MemberResponse.Member>> findAll(Mono<MemberRequest.Member> member) {
+    public Mono<List<MemberResponse.Member>> findAll(@Valid Mono<MemberRequest.Member> member) {
         return memberService.findAll(member);
     }
 

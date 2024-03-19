@@ -68,6 +68,33 @@ show variables like 'optimizer_switch'; -- 옵티마이저 스위치 확인
 
 select * from information_schema.INNODB_FT_DEFAULT_STOPWORD; -- 기본 불용어 확인
 
+alter table member modify m_id int auto_increment; -- auto_increment 설정
+
+set session innodb_parallel_read_threads = 4; -- 병렬 읽기 스레드 설정
+
+set session innodb_parallel_read_threads = 8;
+explain analyze
+select count(*) from member; -- 테이블 레코드 수 확인
+set session innodb_parallel_read_threads = 1;
 
 
+select * from member order by m_area desc;
+
+set optimizer_trace = 'enabled=on'; -- 옵티마이저 트레이스 활성화
+set optimizer_trace_max_mem_size = 1000000; -- 옵티마이저 트레이스 메모리 사이즈 설정
+
+
+DELIMITER $$ -- 구분자 변경
+CREATE PROCEDURE LOOP_INSERT1()
+BEGIN
+    DECLARE i INT DEFAULT 0;
+    WHILE i < 1000000 DO
+        INSERT INTO member (m_name, m_area) VALUES ('홍길동', '서울');
+        SET i = i + 1;
+    END WHILE;
+end $$
+DELIMITER ;;
+CALL LOOP_INSERT1(); -- 프로시저 호출
+
+COMMIT ;
 
