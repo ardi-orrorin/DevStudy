@@ -73,11 +73,11 @@ alter table member modify m_id int auto_increment; -- auto_increment 설정
 set session innodb_parallel_read_threads = 4; -- 병렬 읽기 스레드 설정
 
 set session innodb_parallel_read_threads = 8;
-explain analyze
+explain
 select count(*) from member; -- 테이블 레코드 수 확인
 set session innodb_parallel_read_threads = 1;
 
-
+explain
 select * from member order by m_area desc;
 
 set optimizer_trace = 'enabled=on'; -- 옵티마이저 트레이스 활성화
@@ -98,3 +98,32 @@ CALL LOOP_INSERT1(); -- 프로시저 호출
 
 COMMIT ;
 
+explain analyze
+select distinct m_name from member group by m_name;
+
+show session status like 'Created_tmp%';
+
+show variables like 'optimizer_switch';
+
+explain
+select *
+  from member a
+  join member b on a.m_id = b.m_id
+ order by a.m_id;
+
+
+explain
+select
+       b.m_name, a.m_name
+  from member a,
+       member b
+ where b.m_id = a.m_id;
+
+
+select FOUND_ROWS();
+
+explain
+select /*+ NO_INDEX(member m_id) */ * from member where m_id = 1;
+
+explain analyze
+select /*+ BNL(a) */ * from member a inner join member c on a.m_id = c.m_id;
