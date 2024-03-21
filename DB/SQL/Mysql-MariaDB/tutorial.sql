@@ -9,7 +9,7 @@ INSTALL COMPONENT 'file://component_validate_password';
 SELECT * FROM mysql.component;
 
 SET FOREIGN_KEY_CHECKS = OFF; -- 외래키 체크 해제
-SET FOREIGN_KEY_CHECKS = ON; -- 외래키 체크 활성화
+SET FOREIGN_KEY_CHECKS = ON; - - 외래키 체크 활성화
 
 -- dabaase 생성
 CREATE DATABASE tutorial_db;
