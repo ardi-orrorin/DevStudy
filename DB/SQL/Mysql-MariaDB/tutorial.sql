@@ -127,3 +127,36 @@ select /*+ NO_INDEX(member m_id) */ * from member where m_id = 1;
 
 explain analyze
 select /*+ BNL(a) */ * from member a inner join member c on a.m_id = c.m_id;
+
+
+create table TBL_JSON (
+    id int auto_increment primary key,
+    data json
+);
+
+alter table TBL_JSON add column age varchar(10) as (data ->> '$.age'); -- 가상 컬럼 추가
+
+alter table TBL_JSON add index idx_age (age) using btree;
+alter table TBL_JSON add index idx_age2 ((CAST(data ->> '$.age' as char(3) ))) using btree;
+
+select * from TBL_JSON;
+
+insert into TBL_JSON (data) values ('{"name": "홍길동", "age": 21}');
+commit;
+
+select id, json_pretty(data) from TBL_JSON;
+
+select id, json_storage_size(data) from TBL_JSON;
+
+explain
+select id, data from TBL_JSON where data ->> '$.age' = 21; -- json 데이터 추출
+
+explain
+select id, data from TBL_JSON where json_contains(data, '{"age": 20}'); -- json 데이터 추출
+
+explain
+select id, data, age from TBL_JSON where age = 21; -- 가상 컬럼 사용
+
+
+select JSON_OBJECT('id', id, 'data', data)
+  from TBL_JSON;
