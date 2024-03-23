@@ -157,6 +157,51 @@ select id, data from TBL_JSON where json_contains(data, '{"age": 20}'); -- json 
 explain
 select id, data, age from TBL_JSON where age = 21; -- 가상 컬럼 사용
 
-
 select JSON_OBJECT('id', id, 'data', data)
   from TBL_JSON;
+
+select concat(current_date, ' ', current_time); -- 현재 시간 출력
+
+
+explain
+select count(m_area), m_id from member group by m_area, m_id; -- 인덱스 사용하는 group by
+
+explain
+select count(m_area), m_id from member group by m_id, m_area; -- 인덱스 제대로 사용하지 않는 group by
+
+explain
+select * from member order by m_id desc, m_area desc;
+
+explain
+select m_id, m_area from member order by m_area, m_id; -- 인덱스 사용하는 order by
+
+explain
+select m_name from member order by m_id, m_area; -- 인덱스 제대로 사용하지 않는 order by
+
+explain
+select m_id, m_area from member where m_id in (1, 2, 3, 4) order by m_area; -- 인덱스 사용하는 where
+
+explain
+select m_id, m_area from member where m_name = 'test' order by m_id; -- 인덱스 사용하는 where
+
+explain
+select m_id, m_area from member where m_area = 'test1'; -- 인덱스 사용하는 where
+
+explain
+select m_id, m_area from member where isnull(m_area); -- 인덱스 사용하는 where
+
+select str_to_date('20210101', '%Ymmdd'); -- 날짜 계산
+
+explain analyze
+select m_id, m_area from member limit 10, 10;
+
+explain analyze
+select a.m_id, b.m_id
+  from member a
+  left join member b on b.m_id = a.m_id and b.m_id in (1, 2, 3, 4); -- left join 사용
+
+explain analyze
+select a.m_id, b.m_id
+  from member a
+  left join member b on b.m_id = a.m_id -- inner join으로 변경
+ where b.m_id in (1, 2, 3, 4);
