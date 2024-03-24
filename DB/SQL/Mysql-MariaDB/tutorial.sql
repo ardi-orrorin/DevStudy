@@ -238,35 +238,22 @@ select *
   join member b on a.m_id = b.m_id
  order by b.m_id desc limit 10; -- join 사용
 
+explain analyze
+WITH M1 AS (SELECT * FROM member),
+     M2 AS (SELECT * FROM member)
+SELECT * FROM M1 where m_id in (select M2.m_id from M2 where M1.m_name = 'test3'); -- WITH 사용
 
-create schema anamensis;
+explain analyze
+with recursive cte as (
+    select 1 as n
+    union all
+    select n + 1 from cte where n < 1000
+)
+select * from cte; -- recursive 사용
 
 
+insert into member (m_name, m_area)
+select m_name, m_area from member; -- insert into select 사용
 
-CREATE TABLE `role` (
-	`id`	bigint	NOT NULL	COMMENT 'PK',
-	`role`	varchar(20)	NOT NULL	DEFAULT user	COMMENT '권한 정보',
-	`user_pk`	bigint	NOT NULL
-);
-
-CREATE TABLE `login_history` (
-	`id`	bigint	NOT NULL	COMMENT 'PK',
-	`user_pk`	bigint	NOT NULL,
-	`ip`	varchar(255)	NOT NULL	COMMENT '접속 IP주소',
-	`location`	varchar(255)	NOT NULL	COMMENT '접속장소',
-	`device`	varchar(255)	NOT NULL	COMMENT '단말기정보',
-	`create_at`	datetime	NOT NULL	DEFAULT current_timestamp	COMMENT '생성일자'
-);
-
-CREATE TABLE `user` (
-	`id`	bigint	NOT NULL	COMMENT 'PK',
-	`user_id`	varchar(50)	NOT NULL	COMMENT '계정 아이디',
-	`pwd`	varchar(255)	NOT NULL	COMMENT '패스워드',
-	`name`	varchar(100)	NULL	COMMENT '이름',
-	`email`	varchar(255)	NOT NULL	COMMENT '이메일',
-	`phone`	varchar(20)	NULL	COMMENT '핸드폰 번호',
-	`create_at`	datetime	NOT NULL	DEFAULT current_timestamp	COMMENT '생성일자',
-	`update_at`	datetime	NULL	DEFAULT current_timestamp	COMMENT '정보 수정 일자',
-	`is_use`	tinyInt	NOT NULL	DEFAULT 1	COMMENT '계정 사용여부'
-);
+select count(*) from member; -- 레코드 수 확인
 
